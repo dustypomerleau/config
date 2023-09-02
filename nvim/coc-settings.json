@@ -1,0 +1,26 @@
+{
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "[css][javascript][json][jsonc][lua][markdown][python][rust][svelte][toml][typescript][yaml]": {
+        "coc.preferences.formatOnSave": true
+    },
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": true,
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
+    "rust-analyzer.inlayHints.maxLength": null,
+    "rust-analyzer.restartServerOnConfigChange": true,
+    "rust-analyzer.semanticHighlighting.strings.enable": true,
+    "rust-analyzer.updates.channel": "nightly",
+    "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
+    "semanticTokens.enable": true,
+    "svelte.enable-ts-plugin": true,
+    "Lua.format.defaultConfig": {
+        "align_continuous_inline_comment": "false",
+        "continuation_indent": "2",
+        "indent_size": "4",
+        "indent_style": "space",
+        "max_line_length": "100",
+        "quote_style": "double",
+        "table_separator_style": "comma",
+        "trailing_table_separator": "always"
+    }
+}

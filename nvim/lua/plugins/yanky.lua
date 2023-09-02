@@ -1,0 +1,1 @@
+gbprod/yanky.nvim
