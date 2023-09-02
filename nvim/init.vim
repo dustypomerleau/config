@@ -9,8 +9,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'arsham/indent-tools.nvim',
     Plug 'bkad/CamelCaseMotion'
     Plug 'christoomey/vim-sort-motion'
-    " Plug 'dustypomerleau/nord.nvim', {'branch': 'tol'}
-    Plug 'dustypomerleau/nord.nvim'
+    Plug 'dustypomerleau/nord.nvim', {'branch': 'tol'}
+    " Plug 'dustypomerleau/nord.nvim'
     " Plug 'easymotion/vim-easymotion'
     Plug 'edgedb/edgedb-vim'
     Plug 'evanleck/vim-svelte', {'branch': 'main'}
@@ -294,12 +294,12 @@ let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 " autocmd filetype netrw nmap <silent> S <Plug>(leap-backward-to)
 " autocmd filetype netrw nmap <silent> go <Plug>(leap-from-window)
 
-let g:nord_bold = v:false
-let g:nord_italic = v:false
-let g:nord_uniform_diff_background = v:true
+" let g:nord_bold = v:false
+" let g:nord_italic = v:false
+" let g:nord_uniform_diff_background = v:true
 
 set background=dark
-colorscheme nord
+colorscheme tol
 
 lua << END
 local npairs = require("nvim-autopairs")
@@ -361,7 +361,7 @@ require('leap').add_default_mappings()
 require("lualine").setup {
     options = {
         icons_enabled = true,
-        theme = 'nord',
+        theme = 'tol',
         -- component_separators = { left = '', right = ''},
         -- section_separators = { left = '', right = ''},
         component_separators = '', section_separators = '',
@@ -487,190 +487,192 @@ require("nvim-treesitter.configs").setup {
 }
 END
 
-hi rainbowcol1 guifg=#ff4ee0
-hi rainbowcol2 guifg=#f4dd64
-hi rainbowcol3 guifg=#01edf0
-hi rainbowcol4 guifg=#ff4ee0
-hi rainbowcol5 guifg=#f4dd64
-hi rainbowcol6 guifg=#01edf0
-hi rainbowcol7 guifg=#ff4ee0
+" hi rainbowcol1 guifg=#ff4ee0
+" hi rainbowcol2 guifg=#f4dd64
+" hi rainbowcol3 guifg=#01edf0
+" hi rainbowcol4 guifg=#ff4ee0
+" hi rainbowcol5 guifg=#f4dd64
+" hi rainbowcol6 guifg=#01edf0
+" hi rainbowcol7 guifg=#ff4ee0
 
-hi RainbowDelimiterRed guifg=#ff4ee0
-hi RainbowDelimiterYellow guifg=#f4dd64
-hi RainbowDelimiterBlue guifg=#01edf0
+" hi RainbowDelimiterRed guifg=#ff4ee0
+" hi RainbowDelimiterYellow guifg=#f4dd64
+" hi RainbowDelimiterBlue guifg=#01edf0
 
-hi link EasyMotionShade Comment
+" hi link EasyMotionShade Comment
 
-hi CursorLine guifg=none guibg=#242837
-hi Normal guifg=#cac0a9 guibg=#292d3e
-hi CommandMode guifg=red
+" hi CursorLine guifg=none guibg=#242837
+" hi Normal guifg=#cac0a9 guibg=#292d3e
+" hi CommandMode guifg=red
 
-hi @boolean guifg=#ffaabb
-hi @character.special guifg=#99ddff
-hi @comment guifg=#7e818b
-hi @conditional guifg=#ee8866
-hi @constant guifg=#dddddd
-hi @constant.builtin guifg=#dddddd
-hi @constant.builtin.lua guifg=#ffaabb
-hi @constructor guifg=#44bb99
-" hi link @error Error
-hi @error guifg=#f46a80
-hi @exception guifg=#ee8866
-hi @field guifg=#dddddd
-hi @function guifg=#44bb99
-hi @function.builtin guifg=#44bb99
-hi @function.call guifg=#44bb99
-hi @function.macro.rust guifg=#dddddd
-" hi link @function.macro Macro
-hi @include guifg=#ee8866
-hi @keyword guifg=#ee8866
-hi @keyword.function guifg=#ee8866
-hi @keyword.operator guifg=#ee8866
-hi @keyword.return guifg=#ee8866
-hi @label guifg=#dddddd
-hi @method guifg=#44bb99
-hi @namespace guifg=#cac0a9
-hi @number guifg=#ffaabb
-hi @operator guifg=#ee8866
-hi @parameter guifg=#cac0a9
-hi @preproc guifg=#ee8866
-hi @property guifg=#dddddd
-hi @punctuation guifg=#99ddff
-" hi @punctuation.bracket guifg=#99ddff
-hi @punctuation.bracket guifg=#ff4ee0 " try making this match rainbow1 as a stopgap until rainbow works - certainly makes your toml look nicer
-hi @punctuation.delimiter guifg=#99ddff
-hi @punctuation.special guifg=#99ddff
-hi @repeat guifg=#ee8866
-hi @storageclass.lifetime.rust guifg=#ffaabb
-hi @string guifg=#bbcc33
-hi @string.escape guifg=#44bb99
-hi @string.regex guifg=#ffaabb
-hi @string.special guifg=#bbcc33
-hi @symbol guifg=#dddddd
-hi @tag guifg=#ffaabb
-hi @tag.attribute guifg=#dddddd
-hi Search guifg=#f8f6f1 guibg=#5e81ac " just keep nord for this
-hi @tag.delimiter guifg=#99ddff
-hi @text guifg=#cac0a9
-hi @text.title guifg=#ee8866
-hi Todo guibg=none guifg=#dddddd
-hi @text.uri guifg=#bbcc33
-hi @type guifg=#70b2f3
-hi @type.builtin guifg=#eedd88
-hi @type.qualifier guifg=#ee8866
-hi @variable guifg=#cac0a9
-hi @variable.builtin guifg=#cac0a9
-hi @variable.builtin.rust guifg=#dddddd
-hi @variable.builtin.typescript guifg=#eedd88
-hi Boolean guifg=#ffaabb " done
-hi CocFadeOut guibg=none guifg=none " unused code
-hi CocInlayHint guibg=none guifg=#7e818b
-hi CocSemClass guifg=#70b2f3
-hi CocSemDecorator guifg=#dddddd
-hi CocSemEnum guifg=#dddddd
-hi CocSemFunction guifg=#44bb99
-hi CocSemFunctionDeclaration guifg=#ffff00
-hi CocSemInterface guifg=#ffaabb
-hi CocSemKeyword guifg=#ee8866
-hi CocSemMacro guifg=#eedd88
-hi CocSemMethod guifg=#44bb99
-hi CocSemNamespace guifg=#cac0a9
-hi CocSemParameter guifg=#cac0a9
-hi CocSemProperty guifg=#dddddd
-hi CocSemStruct guifg=#70b2f3
-hi CocSemType guifg=#70b2f3
-hi CocSemTypeParameter guifg=#70b2f3
-hi CocSemVariable guifg=#cac0a9
-hi Comment guifg=#7e818b
-hi Conditional guifg=#ee8866
-hi CursorLineNr guifg=#ff4ee0 guibg=#202431
-hi LineNr guifg=#616e88
-hi NormalFloat guibg=#616e88
-hi Define guifg=#ee8866 " done
-hi Function guifg=#44bb99
-hi Identifier guifg=#70b2f3
-hi Keyword guifg=#ee8866
-hi link @namespace.vim @constant
-hi link @type.qualifier.rust @keyword
-hi link tmuxOptions @field
-hi link zshOperator Operator
-hi link zshParentheses Punctuation
-hi link zshPrecommand Keyword
-hi link zshShortDeref zshDeref
-hi link zshSubstDelim Punctuation
-hi link zshSubstQuoted Macro
-hi Macro guifg=#eedd88
-hi MatchParen guibg=#474e6c guifg=#ff218c gui=bold
-hi Number guifg=#ffaabb " done
-hi Operator guifg=#ee8866 " done
-hi Punctuation guifg=#99ddff
-hi SignColumn guibg=#292d3e " i.e. GitSigns and the like
-hi Special guifg=#cac0a9 " done: chosen due to zshPrecommand, but influences tmux config"
-hi SpecialChar guifg=#44bb99 " done
-hi StatusLine guifg=#242837 guibg=#242837 " the active status line (lualine styles this)
-hi StatusLineNC guifg=#242837 guibg=#242837 " this bg is the one that makes that square between the active and inactive status bars! It stands for "status line, not current"
-hi StatusLineTermNC guifg=#242837 guibg=#242837
-hi StorageClass guifg=#ee8866 " done
-hi String guifg=#bbcc33
-hi Title guifg=#ee8866
-hi Type guifg=#70b2f3 " done
-hi VertSplit guifg=#292d3e guibg=#292d3e " the line between windows
-hi zshBrackets guifg=#ee8866
-hi zshDeref guifg=#ffaabb
+" hi @boolean guifg=#ffaabb
+" hi @character.special guifg=#99ddff
+" hi @comment guifg=#7e818b
+" hi @conditional guifg=#ee8866
+" hi @constant guifg=#dddddd
+" hi @constant.builtin guifg=#dddddd
+" hi @constant.builtin.lua guifg=#ffaabb
+" hi @constructor guifg=#44bb99
+" " hi link @error Error
+" hi @error guifg=#f46a80
+" hi @exception guifg=#ee8866
+" hi @field guifg=#dddddd
+" hi @function guifg=#44bb99
+" hi @function.builtin guifg=#44bb99
+" hi @function.call guifg=#44bb99
+" hi @function.macro.rust guifg=#dddddd
+" " hi link @function.macro Macro
+" hi @include guifg=#ee8866
+" hi @keyword guifg=#ee8866
+" hi @keyword.function guifg=#ee8866
+" hi @keyword.operator guifg=#ee8866
+" hi @keyword.return guifg=#ee8866
+" hi @label guifg=#dddddd
+" hi @method guifg=#44bb99
+" hi @namespace guifg=#cac0a9
+" hi @number guifg=#ffaabb
+" hi @operator guifg=#ee8866
+" hi @parameter guifg=#cac0a9
+" hi @preproc guifg=#ee8866
+" hi @property guifg=#dddddd
+" hi @punctuation guifg=#99ddff
+" " hi @punctuation.bracket guifg=#99ddff
+" hi @punctuation.bracket guifg=#ff4ee0 " try making this match rainbow1 as a stopgap until rainbow works - certainly makes your toml look nicer
+" hi @punctuation.delimiter guifg=#99ddff
+" hi @punctuation.special guifg=#99ddff
+" hi @repeat guifg=#ee8866
+" hi @storageclass.lifetime.rust guifg=#ffaabb
+" hi @string guifg=#bbcc33
+" hi @string.escape guifg=#44bb99
+" hi @string.regex guifg=#ffaabb
+" hi @string.special guifg=#bbcc33
+" hi @symbol guifg=#dddddd
+" hi @tag guifg=#ffaabb
+" hi @tag.attribute guifg=#dddddd
+" hi Search guifg=#f8f6f1 guibg=#5e81ac " just keep nord for this
+" hi CurSearch guibg=#96c065
+" hi @tag.delimiter guifg=#99ddff
+" hi @text guifg=#cac0a9
+" hi @text.title guifg=#ee8866
+" hi Todo guibg=none guifg=#dddddd
+" hi @text.uri guifg=#bbcc33
+" hi @type guifg=#70b2f3
+" hi @type.builtin guifg=#eedd88
+" hi @type.qualifier guifg=#ee8866
+" hi @variable guifg=#cac0a9
+" hi @variable.builtin guifg=#cac0a9
+" hi @variable.builtin.rust guifg=#dddddd
+" hi @variable.builtin.typescript guifg=#eedd88
+" hi Boolean guifg=#ffaabb " done
+" hi CocFadeOut guibg=none guifg=none " unused code
+" hi CocInlayHint guibg=none guifg=#7e818b
+" hi CocSemClass guifg=#70b2f3
+" hi CocSemDecorator guifg=#dddddd
+" hi CocSemEnum guifg=#dddddd
+" hi CocSemFunction guifg=#44bb99
+" hi CocSemFunctionDeclaration guifg=#ffff00
+" hi CocSemInterface guifg=#ffaabb
+" hi CocSemKeyword guifg=#ee8866
+" hi CocSemMacro guifg=#eedd88
+" hi CocSemMethod guifg=#44bb99
+" hi CocSemNamespace guifg=#cac0a9
+" hi CocSemParameter guifg=#cac0a9
+" hi CocSemProperty guifg=#dddddd
+" hi CocSemStruct guifg=#70b2f3
+" hi CocSemType guifg=#70b2f3
+" hi CocSemTypeParameter guifg=#70b2f3
+" hi CocSemVariable guifg=#cac0a9
+" hi Comment guifg=#7e818b
+" hi Conditional guifg=#ee8866
+" hi CursorLineNr guifg=#ff4ee0 guibg=#202431
+" hi LineNr guifg=#616e88
+" hi NormalFloat guibg=#616e88
+" hi Define guifg=#ee8866 " done
+" hi Function guifg=#44bb99
+" hi Identifier guifg=#70b2f3
+" hi Keyword guifg=#ee8866
+" hi link @namespace.vim @constant
+" hi link @type.qualifier.rust @keyword
+" hi link tmuxOptions @field
+" hi link zshOperator Operator
+" hi link zshParentheses Punctuation
+" hi link zshPrecommand Keyword
+" hi link zshShortDeref zshDeref
+" hi link zshSubstDelim Punctuation
+" hi link zshSubstQuoted Macro
+" hi Macro guifg=#eedd88
+" hi MatchParen guibg=#474e6c guifg=#ff218c gui=bold
+" hi Number guifg=#ffaabb " done
+" hi Operator guifg=#ee8866 " done
+" hi Punctuation guifg=#99ddff
+" hi SignColumn guibg=#292d3e " i.e. GitSigns and the like
+" hi Special guifg=#cac0a9 " done: chosen due to zshPrecommand, but influences tmux config"
+" hi SpecialChar guifg=#44bb99 " done
+" hi StatusLine guifg=#242837 guibg=#242837 " the active status line (lualine styles this)
+" hi StatusLineNC guifg=#242837 guibg=#242837 " this bg is the one that makes that square between the active and inactive status bars! It stands for "status line, not current"
+" hi StatusLineTermNC guifg=#242837 guibg=#242837
+" hi StorageClass guifg=#ee8866 " done
+" hi String guifg=#bbcc33
+" hi Title guifg=#ee8866
+" hi Type guifg=#70b2f3 " done
+" hi VertSplit guifg=#292d3e guibg=#292d3e " the line between windows
+" hi zshBrackets guifg=#ee8866
+" hi zshDeref guifg=#ffaabb
 
-" hi (Added) guifg=#96c065 " added
-hi link CocInfoSign Info
-hi CocFloating guibg=#33384d
-hi CocHintFloat guifg=#cac0a9
-hi link CocWarningFloat Warning
-hi link CocErrorFloat Error
-hi link CocInfoVirtualText Info
-hi Error guifg=#f46a80 " deleted, error
-hi Hint guifg=#616e88
-hi Info guifg=#5ebdea " info
-hi link @text.warning Warning
-hi link CocErrorSign Error
-hi link CocErrorVirtualText Error
-hi link CocWarningSign Warning
-hi link CocWarningVirtualText Warning
-hi link healthWarning Warning
-hi link healthError Error
-hi link LspDiagnosticsDefaultInformation Info
-hi link LspDiagnosticsDefaultWarning Warning
-hi link LspDiagnosticsFloatingInformation Info
-hi link LspDiagnosticsFloatingWarning Warning
-hi link LspDiagnosticsHint Hint
-hi link LspDiagnosticsInformation Info
-hi link LspDiagnosticsSignHint Info
-hi link LspDiagnosticsSignError Error
-hi link LspDiagnosticsSignInformation Info
-hi link LspDiagnosticsSignWarning Warning
-hi link LspDiagnosticsUnderlineInformation Info
-hi link LspDiagnosticsVirtualTextInformation Info
-hi link LspDiagnosticsVirtualTextWarning Warning
-hi link LspDiagnosticsWarning Warning
-hi link WarningMsg Warning
-hi link Warnings Warning
-hi Warning guifg=#f5c68f " warning
-hi link DiagnosticWarn Warning
-hi link DiagnosticError Error
-hi link DiagnosticInfo Info
-hi link DiagnosticHint Hint
-hi link healthWarning Warning
+" " hi (Added) guifg=#96c065 " added
+" hi link CocInfoSign Info
+" hi CocFloating guibg=#33384d
+" hi CocHintFloat guifg=#cac0a9
+" hi link CocWarningFloat Warning
+" hi link CocErrorFloat Error
+" hi link CocInfoVirtualText Info
+" hi Error guifg=#f46a80 " deleted, error
+" hi Hint guifg=#616e88
+" hi Info guifg=#5ebdea " info
+" hi link @text.warning Warning
+" hi link CocErrorSign Error
+" hi link CocErrorVirtualText Error
+" hi link CocWarningSign Warning
+" hi link CocWarningVirtualText Warning
+" hi link healthWarning Warning
+" hi link healthError Error
+" hi link LspDiagnosticsDefaultInformation Info
+" hi link LspDiagnosticsDefaultWarning Warning
+" hi link LspDiagnosticsFloatingInformation Info
+" hi link LspDiagnosticsFloatingWarning Warning
+" hi link LspDiagnosticsHint Hint
+" hi link LspDiagnosticsInformation Info
+" hi link LspDiagnosticsSignHint Info
+" hi link LspDiagnosticsSignError Error
+" hi link LspDiagnosticsSignInformation Info
+" hi link LspDiagnosticsSignWarning Warning
+" hi link LspDiagnosticsUnderlineInformation Info
+" hi link LspDiagnosticsVirtualTextInformation Info
+" hi link LspDiagnosticsVirtualTextWarning Warning
+" hi link LspDiagnosticsWarning Warning
+" hi link WarningMsg Warning
+" hi link Warnings Warning
+" hi Warning guifg=#f5c68f " warning
+" hi link DiagnosticWarn Warning
+" hi link DiagnosticError Error
+" hi link DiagnosticInfo Info
+" hi link DiagnosticHint Hint
+" hi link healthWarning Warning
 
-" hi GitSignsChange guifg=#616e88 " modified
-hi GitSignsChange guifg=#5ebdea " modified
-hi GitSignsAdd guifg=#96c065
-hi GitSignsDelete guifg=#f46a80
+" " hi GitSignsChange guifg=#616e88 " modified
+" hi GitSignsChange guifg=#5ebdea " modified
+" hi GitSignsAdd guifg=#96c065
+" hi GitSignsDelete guifg=#f46a80
 
-hi IndentBlanklineChar guifg=#616e88
+" hi IndentBlanklineChar guifg=#616e88
+" hi IndentBlanklineContextChar guifg=#cac0a9
 
-" leap
-hi LeapMatch guifg=yellow guibg=#5e81ac
-hi LeapLabelPrimary guifg=yellow guibg=#474e6c
-hi LeapLabelSecondary guifg=cyan guibg=#474e6c
-hi LeapLabelSelected guifg=yellow guibg=#ff218c
-hi LeapBackdrop guifg=#7e818b
+" " leap
+" hi LeapMatch guifg=yellow guibg=#5e81ac
+" hi LeapLabelPrimary guifg=yellow guibg=#474e6c
+" hi LeapLabelSecondary guifg=cyan guibg=#474e6c
+" hi LeapLabelSelected guifg=yellow guibg=#ff218c
+" hi LeapBackdrop guifg=#7e818b
 onoremap <silent> o <Plug>(leap-forward-to)
 xnoremap <silent> o <Plug>(leap-forward-to)
 onoremap <silent> O <Plug>(leap-backward-to)
