@@ -5,7 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'arsham/indent-tools.nvim',
     Plug 'bkad/CamelCaseMotion'
     Plug 'christoomey/vim-sort-motion'
-    Plug 'dustypomerleau/tol.nvim'
+    Plug 'dustypomerleau/tol.nvim', {'branch': 'dev'}
     Plug 'edgedb/edgedb-vim'
     Plug 'evanleck/vim-svelte', {'branch': 'main'}
     Plug 'ggandor/leap.nvim'
