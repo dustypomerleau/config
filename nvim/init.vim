@@ -1,20 +1,15 @@
 " Look in github.com/vim-scripts for mirrors if needed
 call plug#begin('~/.local/share/nvim/plugged')
-    " Plug 'folke/tokyonight.nvim'
-    " Plug 'hzchirs/vim-material'
-    " Plug 'nvim-neo-tree/neo-tree.nvim'
-    " Plug 'shaunsingh/nord.nvim'
     Plug 'andymass/vim-matchup'
     Plug 'arsham/arshlib.nvim',
     Plug 'arsham/indent-tools.nvim',
     Plug 'bkad/CamelCaseMotion'
     Plug 'christoomey/vim-sort-motion'
-    Plug 'dustypomerleau/nord.nvim', {'branch': 'tol'}
-    " Plug 'dustypomerleau/nord.nvim'
-    " Plug 'easymotion/vim-easymotion'
+    Plug 'dustypomerleau/tol.nvim'
     Plug 'edgedb/edgedb-vim'
     Plug 'evanleck/vim-svelte', {'branch': 'main'}
     Plug 'ggandor/leap.nvim'
+    Plug 'hiphish/rainbow-delimiters.nvim'
     Plug 'inkarkat/vim-ReplaceWithRegister'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -32,8 +27,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     Plug 'othree/html5.vim'
-    " Plug 'p00f/nvim-ts-rainbow'
-    Plug 'hiphish/rainbow-delimiters.nvim'
     Plug 'pangloss/vim-javascript'
     Plug 'rust-lang/rust.vim'
     Plug 'tpope/vim-commentary'
@@ -550,7 +543,7 @@ END
 " hi @tag guifg=#ffaabb
 " hi @tag.attribute guifg=#dddddd
 " hi Search guifg=#f8f6f1 guibg=#5e81ac " just keep nord for this
-" hi CurSearch guibg=#96c065
+" hi CurSearch guifg=#fbfc86 guibg=#72aa00
 " hi @tag.delimiter guifg=#99ddff
 " hi @text guifg=#cac0a9
 " hi @text.title guifg=#ee8866
