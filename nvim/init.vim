@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'bkad/CamelCaseMotion'
     Plug 'christoomey/vim-sort-motion'
     Plug 'dustypomerleau/tol.nvim', {'branch': 'dev'}
+    " Plug 'dustypomerleau/tol.nvim'
     Plug 'edgedb/edgedb-vim'
     Plug 'evanleck/vim-svelte', {'branch': 'main'}
     Plug 'ggandor/leap.nvim'
@@ -287,10 +288,6 @@ let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 " autocmd filetype netrw nmap <silent> S <Plug>(leap-backward-to)
 " autocmd filetype netrw nmap <silent> go <Plug>(leap-from-window)
 
-" let g:nord_bold = v:false
-" let g:nord_italic = v:false
-" let g:nord_uniform_diff_background = v:true
-
 set background=dark
 colorscheme tol
 
@@ -355,8 +352,6 @@ require("lualine").setup {
     options = {
         icons_enabled = true,
         theme = 'tol',
-        -- component_separators = { left = '', right = ''},
-        -- section_separators = { left = '', right = ''},
         component_separators = '', section_separators = '',
         disabled_filetypes = {
             statusline = {},
@@ -479,6 +474,8 @@ require("nvim-treesitter.configs").setup {
     -- },
 }
 END
+
+" hi RainbowDelimiterRed guifg=#ffff00
 
 onoremap <silent> o <Plug>(leap-forward-to)
 xnoremap <silent> o <Plug>(leap-forward-to)
