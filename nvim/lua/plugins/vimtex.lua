@@ -1,7 +1,7 @@
 return {
     {
         "lervag/vimtex",
-        opts = {
+        config = function()
             vim.g.vimtex_compiler_latexmk = {
                 options = {
                     "--shell-escape",
@@ -11,10 +11,10 @@ return {
                     "-synctex=1",
                     "-verbose",
                 },
-            },
-            vim.g.vimtex_compiler_latexmk_engines = { ['_'] = "-lualatex", },
-            vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull", },
-        },
+            }
+            vim.g.vimtex_compiler_latexmk_engines = { ["_"] = "-lualatex", }
+            vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull", }
+        end,
         keys = {
             {
                 "<localleader>v",
@@ -34,5 +34,4 @@ return {
             },
         },
     },
-},
-
+}
