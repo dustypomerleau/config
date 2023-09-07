@@ -19,10 +19,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'lukas-reineke/headlines.nvim'
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'luochen1990/rainbow'
-    Plug 'MunifTanjim/nui.nvim'
+    Plug 'MunifTanjim/nui.nvim' " dep?
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'NvChad/nvim-colorizer.lua'
-    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/plenary.nvim' " dep?
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -476,6 +476,8 @@ require("nvim-treesitter.configs").setup {
 END
 
 " hi RainbowDelimiterRed guifg=#ffff00
+
+" hi link CocUnusedHighlight Warning
 
 onoremap <silent> o <Plug>(leap-forward-to)
 xnoremap <silent> o <Plug>(leap-forward-to)
