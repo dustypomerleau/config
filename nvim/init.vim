@@ -31,7 +31,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'pangloss/vim-javascript'
     Plug 'rust-lang/rust.vim'
     Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-fugitive' " remove for lua config
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
@@ -476,8 +476,6 @@ require("nvim-treesitter.configs").setup {
 END
 
 " hi RainbowDelimiterRed guifg=#ffff00
-
-" hi link CocUnusedHighlight Warning
 
 onoremap <silent> o <Plug>(leap-forward-to)
 xnoremap <silent> o <Plug>(leap-forward-to)
