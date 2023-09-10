@@ -12,13 +12,13 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'ggandor/leap.nvim'
     Plug 'hiphish/rainbow-delimiters.nvim'
     Plug 'inkarkat/vim-ReplaceWithRegister'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " change to fzf.lua
+    Plug 'junegunn/fzf.vim' " remove
     Plug 'lervag/vimtex'
     Plug 'lewis6991/gitsigns.nvim'
-    Plug 'lukas-reineke/headlines.nvim'
+    Plug 'lukas-reineke/headlines.nvim' " remove
     Plug 'lukas-reineke/indent-blankline.nvim'
-    Plug 'luochen1990/rainbow'
+    Plug 'luochen1990/rainbow' " remove
     Plug 'MunifTanjim/nui.nvim' " dep?
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'NvChad/nvim-colorizer.lua'
@@ -27,11 +27,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-    Plug 'othree/html5.vim'
-    Plug 'pangloss/vim-javascript'
+    Plug 'othree/html5.vim' " defer
+    Plug 'pangloss/vim-javascript' " defer
     Plug 'rust-lang/rust.vim'
     Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-fugitive' " remove for lua config
+    Plug 'tpope/vim-fugitive' " remove
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-vinegar'
