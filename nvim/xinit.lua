@@ -14,4 +14,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("keys")
-require("plugins").setup()
+require("plugins").setup() -- I think plugins.lua is optional, but not sure how that plays with this invocation
