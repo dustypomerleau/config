@@ -1,1 +1,1 @@
-return { { "inkarkat/vim-replacewithregister", config = true, }, }
+return { { "inkarkat/vim-replacewithregister", }, }

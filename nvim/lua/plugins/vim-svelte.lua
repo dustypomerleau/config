@@ -1,1 +1,1 @@
-return { { "evanleck/vim-svelte", branch = "main", config = true, }, }
+return { { "evanleck/vim-svelte", branch = "main", }, }

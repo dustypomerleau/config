@@ -1,1 +1,1 @@
-return { { "tpope/vim-repeat", config = true, }, }
+return { { "tpope/vim-repeat", }, }

@@ -1,1 +1,1 @@
-return { { "tpope/vim-vinegar", config = true, }, }
+return { { "tpope/vim-vinegar", }, }
