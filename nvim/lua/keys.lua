@@ -1,3 +1,5 @@
+local key = vim.api.nvim_set_keymap
+
 return {
-    -- vim.keymap.set() or use helper functions
+    key("n", "\\", ",", { noremap = true, }),
 }
