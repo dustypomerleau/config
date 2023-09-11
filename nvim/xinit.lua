@@ -1,6 +1,7 @@
 local let = vim.g
 local set = vim.opt
 
+-- leaders must be declared before lazy.nvim does any mappings
 vim.api.nvim_set_keymap("n", " ", "", { noremap = true, })
 let.mapleader = ","
 let.maplocalleader = " "
