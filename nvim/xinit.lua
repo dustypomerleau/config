@@ -19,11 +19,13 @@ set.matchpairs:append("<:>")
 set.nolist = true -- hide whitespace characters
 set.number = true -- line numbers
 set.shiftwidth = 4 -- number of spaces used for autoindent
+set.signcolumn = "yes"
 set.smartcase = true -- uppercase search is case sensitive
 set.softtabstop = 4 -- number of spaces in a tab when editing
 set.synmaxcol = 0 -- highlight lines of any length
 set.tabstop = 4 -- number of visual spaces per tab
 set.termguicolors = true
+set.updatetime = 300
 set.wrap = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
