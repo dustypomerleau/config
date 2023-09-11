@@ -4,12 +4,20 @@ return {
         config = true,
         keys = {
             {
+                "<leader><leader>g",
+                function()
+                    require("gitsigns").cmd("toggle_signs")
+                end,
+                mode = { "n", },
+                noremap = true,
+            },
+            {
                 "<localleader>gb",
                 function()
                     require("gitsigns").cmd("stage_buffer")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gc",
@@ -17,7 +25,7 @@ return {
                     require("gitsigns").cmd("change_base")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gd",
@@ -25,7 +33,7 @@ return {
                     require("gitsigns").cmd("diffthis")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gh",
@@ -33,7 +41,7 @@ return {
                     require("gitsigns").cmd("stage_hunk")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gm",
@@ -41,7 +49,7 @@ return {
                     require("gitsigns").cmd("toggle_current_line_blame")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gn",
@@ -49,7 +57,7 @@ return {
                     require("gitsigns").cmd("next_hunk")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gN",
@@ -57,7 +65,7 @@ return {
                     require("gitsigns").cmd("previous_hunk")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gp",
@@ -65,7 +73,7 @@ return {
                     require("gitsigns").cmd("preview_hunk")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>grb",
@@ -73,7 +81,7 @@ return {
                     require("gitsigns").cmd("reset_buffer")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>grc",
@@ -81,7 +89,7 @@ return {
                     require("gitsigns").cmd("reset_base")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>grh",
@@ -89,7 +97,7 @@ return {
                     require("gitsigns").cmd("reset_hunk")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gu",
@@ -97,7 +105,7 @@ return {
                     require("gitsigns").cmd("undo_stage_hunk")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gv",
@@ -105,7 +113,7 @@ return {
                     require("gitsigns").cmd("select_hunk")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gw",
@@ -113,7 +121,7 @@ return {
                     require("gitsigns").cmd("toggle_word_diff")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<localleader>gx",
@@ -121,7 +129,7 @@ return {
                     require("gitsigns").cmd("toggle_deleted")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 -- not sure this will work — official docs have:
@@ -131,10 +139,8 @@ return {
                     require("gitsigns").cmd("select_hunk")
                 end,
                 mode = { "o", "x", },
-                silent = true,
+                noremap = true,
             },
         },
     },
 }
-
--- keep the gitsigns theme colors from nord, they're fine
