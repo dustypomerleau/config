@@ -38,7 +38,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'windwp/nvim-autopairs'
 call plug#end()
 
-syntax on
+syntax on " not needed in neovim
 let g:lsp_semantic_enabled=1
 
 nnoremap <space> <nop>
