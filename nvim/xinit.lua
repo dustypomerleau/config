@@ -7,6 +7,8 @@ let.mapleader = ","
 let.maplocalleader = " "
 
 let.lsp_semantic_enabled = 1
+-- "non-modifiable, not-modified, numbers, nowrap, read-only, not-buflisted"
+let.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
 
 set.breakindent = true -- keep indent when lines break
 set.breakindentopt = "shift:2" -- but shift by 2 spaces
