@@ -4,7 +4,9 @@ return {
         "ibhagwan/fzf-lua",
         dependencies = { "nvim-tree/nvim-web-devicons", },
         config = function()
-            require("fzf-lua").setup({ winopts = { height = 1.0, width = 1.0, }, })
+            require("fzf-lua").setup(
+                { winopts = { height = 1.0, width = 1.0, }, }
+            )
         end,
         keys = {
             {
@@ -13,7 +15,7 @@ return {
                     require("fzf-lua").cmd("buffers")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<leader>f",
@@ -21,7 +23,7 @@ return {
                     require("fzf-lua").cmd("grep_project")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<leader>g",
@@ -29,7 +31,7 @@ return {
                     require("fzf-lua").cmd("git_files")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<leader>h",
@@ -37,7 +39,7 @@ return {
                     require("fzf-lua").cmd("oldfiles")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<leader>l",
@@ -45,7 +47,7 @@ return {
                     require("fzf-lua").cmd("blines")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<leader>m",
@@ -53,7 +55,7 @@ return {
                     require("fzf-lua").cmd("lsp_workspace_symbols")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<leader>p",
@@ -61,7 +63,7 @@ return {
                     require("fzf-lua").cmd("files")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
             {
                 "<leader>r",
@@ -69,7 +71,7 @@ return {
                     require("fzf-lua").cmd("registers")
                 end,
                 mode = { "n", },
-                silent = false,
+                noremap = true,
             },
         },
     },
