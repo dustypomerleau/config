@@ -387,7 +387,6 @@ require("lualine").setup {
     winbar = {},
     inactive_winbar = {},
     extensions = {},
-    always_divide_middle = false,
 }
 
 -- require("neo-tree").setup({
@@ -492,4 +491,4 @@ nnoremap <silent> gs <Plug>SortMotion
 xnoremap <silent> gs <Plug>SortMotionVisual
 
 " check for conflicts in maps on:
-" s, o, gs, go, S, O, gS, gO
+" s, o, gs, go, s, o, gs, go
