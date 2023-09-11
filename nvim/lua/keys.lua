@@ -1,3 +1,8 @@
+-- you could do something like:
+-- local function map(mode, keys, exec, opts)
+--     vim.keymap.set(mode, keys, exec, opts or { silent = true, noremap = true })
+-- end
+
 local key = vim.api.nvim_set_keymap
 
 key("n", "<c-h>", "<c-w><c-h>", { noremap = true, })
