@@ -1,143 +1,108 @@
 return {
     {
         "lewis6991/gitsigns.nvim",
+        lazy = false,
         config = true,
         keys = {
             {
                 "<leader><leader>g",
-                function()
-                    require("gitsigns").cmd("toggle_signs")
-                end,
+                "<cmd>Gitsigns toggle_signs<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gb",
-                function()
-                    require("gitsigns").cmd("stage_buffer")
-                end,
+                "<cmd>Gitsigns stage_buffer<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gc",
-                function()
-                    require("gitsigns").cmd("change_base")
-                end,
+                "<cmd>Gitsigns change_base<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gd",
-                function()
-                    require("gitsigns").cmd("diffthis")
-                end,
+                "<cmd>Gitsigns diffthis<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gh",
-                function()
-                    require("gitsigns").cmd("stage_hunk")
-                end,
+                "<cmd>Gitsigns stage_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gm",
-                function()
-                    require("gitsigns").cmd("toggle_current_line_blame")
-                end,
+                "<cmd>Gitsigns toggle_current_line_blame<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gn",
-                function()
-                    require("gitsigns").cmd("next_hunk")
-                end,
+                "<cmd>Gitsigns next_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gN",
-                function()
-                    require("gitsigns").cmd("previous_hunk")
-                end,
+                "<cmd>Gitsigns previous_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gp",
-                function()
-                    require("gitsigns").cmd("preview_hunk")
-                end,
+                "<cmd>Gitsigns preview_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>grb",
-                function()
-                    require("gitsigns").cmd("reset_buffer")
-                end,
+                "<cmd>Gitsigns reset_buffer<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>grc",
-                function()
-                    require("gitsigns").cmd("reset_base")
-                end,
+                "<cmd>Gitsigns reset_base<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>grh",
-                function()
-                    require("gitsigns").cmd("reset_hunk")
-                end,
+                "<cmd>Gitsigns reset_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gu",
-                function()
-                    require("gitsigns").cmd("undo_stage_hunk")
-                end,
+                "<cmd>Gitsigns undo_stage_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gv",
-                function()
-                    require("gitsigns").cmd("select_hunk")
-                end,
+                "<cmd>Gitsigns select_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gw",
-                function()
-                    require("gitsigns").cmd("toggle_word_diff")
-                end,
+                "<cmd>Gitsigns toggle_word_diff<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
                 "<localleader>gx",
-                function()
-                    require("gitsigns").cmd("toggle_deleted")
-                end,
+                "<cmd>Gitsigns toggle_deleted<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
-                -- not sure this will work — official docs have:
-                -- map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
                 "ih",
-                function()
-                    require("gitsigns").cmd("select_hunk")
-                end,
+                "<cmd>Gitsigns select_hunk<cr>",
                 mode = { "o", "x", },
                 noremap = true,
             },
