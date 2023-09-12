@@ -1,21 +1,37 @@
--- use spider to replace camelcasemotion
-return {}
--- return {
---     {
---         'chrisgrieser/nvim-spider',
---         lazy = true,
---         config = true,
---         keys = {
---             {
---                 "b",
---             },
---         }
+return {
+    {
+        "chrisgrieser/nvim-spider",
+        config = true,
+        keys = {
+            {
+                "b",
+                "<cmd>lua require('spider').motion('b')<cr>",
+                mode = { "n", "o", "x", },
+                silent = true,
+                noremap = true,
+            },
+            {
+                "e",
+                "<cmd>lua require('spider').motion('e')<cr>",
+                mode = { "n", "o", "x", },
+                silent = true,
+                noremap = true,
+            },
+            {
+                "w",
+                "<cmd>lua require('spider').motion('w')<cr>",
+                mode = { "n", "o", "x", },
+                silent = true,
+                noremap = true,
+            },
+            {
+                "ge",
+                "<cmd>lua require('spider').motion('ge')<cr>",
+                mode = { "n", "o", "x", },
+                silent = true,
+                noremap = true,
+            },
+        },
 
---     }
--- }
-
-
--- vim.keymap.set({"n", "o", "x"}, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
--- vim.keymap.set({"n", "o", "x"}, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
--- vim.keymap.set({"n", "o", "x"}, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
--- vim.keymap.set({"n", "o", "x"}, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
+    },
+}
