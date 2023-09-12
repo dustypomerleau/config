@@ -8,26 +8,38 @@ return {
         end,
         keys = {
             {
+                "<c-n>",
+                "<Plug>(YankyCycleForward)",
+                mode = { "n", },
+                silent = true,
+            },
+            {
+                "<c-p>",
+                "<Plug>(YankyCycleBackward)",
+                mode = { "n", },
+                silent = true,
+            },
+            {
                 "p",
-                function() require("yanky").cmd("YankyPutAfter") end,
+                "<Plug>(YankyPutAfter)",
                 mode = { "n", "x", },
                 silent = true,
             },
             {
                 "P",
-                function() require("yanky").cmd("YankyPutBefore") end,
+                "<Plug>(YankyPutBefore)",
                 mode = { "n", "x", },
                 silent = true,
             },
             {
                 "gp",
-                function() require("yanky").cmd("YankyGPutAfter") end,
+                "<Plug>(YankyGPutAfter)",
                 mode = { "n", "x", },
                 silent = true,
             },
             {
                 "gP",
-                function() require("yanky").cmd("YankyGPutBefore") end,
+                "<Plug>(YankyGPutBefore)",
                 mode = { "n", "x", },
                 silent = true,
             },
