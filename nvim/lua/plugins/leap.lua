@@ -1,18 +1,18 @@
 return {
     {
         "ggandor/leap.nvim",
+        lazy = false,
         config = function() require("leap").add_default_mappings() end,
         keys = {
             {
                 "o",
-                function()
-                    require("leap").cmd("leap-forward-to")
-                end,
+                "<Plug>(leap-forward-to)",
                 mode = { "o", "x", },
                 silent = true,
             },
             {
                 "O",
+                "<Plug>(leap-backward-to)",
                 function()
                     require("leap").cmd("leap-backward-to")
                 end,
@@ -21,9 +21,7 @@ return {
             },
             {
                 "go",
-                function()
-                    require("leap").cmd("leap-from-window")
-                end,
+                "<Plug>(leap-from-window)",
                 mode = { "n", },
                 silent = true,
             },
