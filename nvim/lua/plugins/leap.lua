@@ -13,9 +13,6 @@ return {
             {
                 "O",
                 "<Plug>(leap-backward-to)",
-                function()
-                    require("leap").cmd("leap-backward-to")
-                end,
                 mode = { "o", "x", },
                 silent = true,
             },
