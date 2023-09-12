@@ -6,6 +6,6 @@ return {
             "nvim-treesitter/nvim-treesitter-textobjects",
         },
         config = true,
-        keys = { "]i", "[i", { "v", "ii", }, { "o", "ii", }, },
+        -- keys = { "]i", "[i", { "v", "ii", }, { "o", "ii", }, },
     },
 }
