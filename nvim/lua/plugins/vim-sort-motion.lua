@@ -5,18 +5,14 @@ return {
         keys = {
             {
                 "gs",
-                function()
-                    require("vim-sort-motion").cmd("SortMotion")
-                end,
+                "<Plug>SortMotion",
                 mode = { "n", },
                 silent = true,
                 noremap = true,
             },
             {
                 "gs",
-                function()
-                    require("vim-sort-motion").cmd("SortMotionVisual")
-                end,
+                "<Plug>SortMotionVisual",
                 mode = { "x", },
                 silent = true,
                 noremap = true,
