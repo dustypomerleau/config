@@ -14,6 +14,8 @@ let.lsp_semantic_enabled = 1
 let.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
 
 set.breakindent = true -- keep indent when lines break
+set.splitbelow = true
+set.splitright = true
 set.breakindentopt = "shift:2" -- but shift by 2 spaces
 set.cursorline = true -- highlight the cursor line
 set.expandtab = true -- tabs are spaces
