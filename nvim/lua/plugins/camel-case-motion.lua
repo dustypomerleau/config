@@ -1,7 +1,6 @@
 return {
     {
         "bkad/camelcasemotion",
-        config = true,
         keys = {
             {
                 "b",
