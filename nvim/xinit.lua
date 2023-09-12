@@ -1,3 +1,6 @@
+-- a full list of vim options in lua can be found in the generated file:
+-- https://github.com/neovim/neovim/blob/master/runtime/lua/vim/_meta/options.lua
+
 local let = vim.g
 local set = vim.opt
 
@@ -16,9 +19,8 @@ set.cursorline = true -- highlight the cursor line
 set.expandtab = true -- tabs are spaces
 set.ignorecase = true -- lowercase search is case insensitive
 set.iskeyword:remove("_") -- move by word in snake_case
-set.linebreak = true -- soft wrap at certain chars, not in the middle of words
+set.linebreak = true
 set.matchpairs:append("<:>")
-set.nolist = true -- hide whitespace characters
 set.number = true -- line numbers
 set.shiftwidth = 4 -- number of spaces used for autoindent
 set.signcolumn = "yes"
@@ -29,6 +31,12 @@ set.tabstop = 4 -- number of visual spaces per tab
 set.termguicolors = true
 set.updatetime = 300
 set.wrap = true
+-- set.list = false -- looks like this is set by default in neovim
+
+-- -- wrapping is a window option
+-- vim.wo.wrap = true
+-- vim.wo.linebreak = true
+-- vim.wo.list = false
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
