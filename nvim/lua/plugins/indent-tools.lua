@@ -5,6 +5,7 @@ return {
             "arsham/arshlib.nvim",
             "nvim-treesitter/nvim-treesitter-textobjects",
         },
-        config = function() require("indent-tools").config() end,
+        config = true,
+        keys = { "]i", "[i", { "v", "ii", }, { "o", "ii", }, },
     },
 }
