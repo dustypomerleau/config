@@ -5,7 +5,7 @@ local let = vim.g
 local set = vim.opt
 
 -- leaders must be declared before lazy.nvim does any mappings
-vim.api.nvim_set_keymap("n", " ", "", { noremap = true, })
+vim.api.nvim_set_keymap("n", " ", "", { noremap = true })
 let.mapleader = ","
 let.maplocalleader = " "
 
@@ -33,27 +33,25 @@ set.tabstop = 4 -- number of visual spaces per tab
 set.termguicolors = true
 set.updatetime = 300
 set.wrap = true
--- set.list = false -- looks like this is set by default in neovim
-
--- -- wrapping is a window option
--- vim.wo.wrap = true
--- vim.wo.linebreak = true
--- vim.wo.list = false
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable",
-        lazypath,
-    })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
 
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 require("keys")
+
+-- highlight playground
+-- local t = require("tol.colors")
+-- vim.api.nvim_set_hl(0, "PMenuSel", { fg = t.orange, bg = t.bg_tint1 })
