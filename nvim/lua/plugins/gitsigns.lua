@@ -1,7 +1,7 @@
 return {
     {
         "lewis6991/gitsigns.nvim",
-        lazy = false,
+        event = "VeryLazy",
         config = true,
         keys = {
             {

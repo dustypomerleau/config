@@ -1,7 +1,8 @@
 return {
     {
         "tpope/vim-commentary",
-        config = function()
+        event = "VeryLazy",
+        init = function()
             vim.api.nvim_create_autocmd(
                 { "Filetype", }, {
                     pattern = "edgeql",

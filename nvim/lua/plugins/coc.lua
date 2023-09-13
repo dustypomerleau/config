@@ -12,7 +12,7 @@ return {
     {
         "neoclide/coc.nvim",
         branch = "release",
-        lazy = false,
+        event = "VeryLazy",
         config = function()
             vim.api.nvim_create_user_command(
                 "Prettier",

@@ -2,6 +2,7 @@
 
 return {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     version = false, -- last release is very old
     build = ":TSUpdate",
     dependencies = { "nvim-treesitter/nvim-treesitter-textobjects", },
