@@ -15,6 +15,7 @@ return {
             vim.g.vimtex_compiler_latexmk_engines = { ["_"] = "-lualatex", }
             vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull", }
         end,
+        ft = { "tex", "latex", },
         keys = {
             {
                 "<localleader>v",

@@ -1,1 +1,1 @@
-return { { "tpope/vim-vinegar", }, }
+return { { "tpope/vim-vinegar", event = "VeryLazy", }, }
