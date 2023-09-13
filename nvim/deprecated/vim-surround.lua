@@ -1,9 +1,10 @@
 return {
     {
         "tpope/vim-surround",
-        config = true,
         keys = {
             -- default mappings (ys.. ds.. cs..)
+            -- todo: this is broken, you need to use <plug> to call this
+            -- but in any event, you aren't using this as you're switching to nvim-surround
             {
                 "s",
                 function() require("vim-surround").cmd("VSurround") end,
