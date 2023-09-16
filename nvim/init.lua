@@ -5,7 +5,7 @@ local let = vim.g
 local set = vim.opt
 
 -- leaders must be declared before lazy.nvim does any mappings
-vim.api.nvim_set_keymap("n", " ", "", { noremap = true })
+vim.api.nvim_set_keymap("n", " ", "", { noremap = true, })
 let.mapleader = ","
 let.maplocalleader = " "
 
@@ -37,14 +37,14 @@ set.wrap = true
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable",
-		lazypath,
-	})
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable",
+        lazypath,
+    })
 end
 
 vim.opt.rtp:prepend(lazypath)
@@ -58,19 +58,5 @@ require("keys")
 --     "@lsp.type.property", { fg = t.gray,}
 -- )
 
-    -- "@lsp.type.builtinType", { fg = t.yellow,}
-    -- "@lsp.type.decorator", { fg = t.gray, }
-    -- "@lsp.type.enum", { fg = t.gray, }
-    -- "@lsp.type.function", { fg = t.green, }
-    -- "@lsp.type.interface", { fg = t.pink, }
-    -- "@lsp.type.keyword", { fg = t.orange, }
-    -- "@lsp.type.macro", { fg = t.yellow,}
-    -- "@lsp.type.method", { fg = t.green,}
-    -- "@lsp.type.namespace", { fg = t.taupe, }
-    -- "@lsp.type.parameter", { fg = t.taupe,}
-    -- "@lsp.type.property", { fg = t.gray,}
-    -- "@lsp.type.selfKeyword", { fg = t.gray,}
-    -- "@lsp.type.selfTypeKeyword", { fg = t.blue,}
-    -- "@lsp.type.struct", { fg = t.blue, }
-    -- "@lsp.type.typeParameter", { fg = t.blue,}
-    -- "@lsp.type.variable", { fg = t.taupe,}
+-- format on save
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
