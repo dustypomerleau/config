@@ -1,8 +1,9 @@
--- see a full list of cmp sources at https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources
--- in future consider adding https://github.com/hrsh7th/cmp-nvim-lsp but leave as-is for now
+-- for reference
+-- https://github.com/Integralist/dotfiles/blob/a77a154b245e092084e4e1b9e06f365482c30e62/.config/nvim/lua/plugin-manager.lua#L169
+-- see config options at https://github.com/williamboman/mason.nvim#configuration
 
 return {
-    "hrsh7th/nvim-cmp",
+    "williamboman/mason.nvim",
     config = function()
         require("mason").setup({
             ui = {
@@ -14,5 +15,4 @@ return {
             },
         })
     end,
-    -- config = true, -- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 }
