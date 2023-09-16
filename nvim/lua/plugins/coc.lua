@@ -11,14 +11,12 @@ end
 return {
     {
         "neoclide/coc.nvim",
+        enabled = false, -- disable while using native LSP
         branch = "release",
         event = "VeryLazy",
         config = function()
-            vim.api.nvim_create_user_command(
-                "Prettier",
-                ":call CocAction('runCommand', 'prettier.formatFile')",
-                { nargs = 0, }
-            )
+            vim.api.nvim_create_user_command("Prettier",
+                "call CocAction('runCommand', 'prettier.formatFile')", {})
         end,
         keys = {
             {
@@ -93,7 +91,9 @@ return {
                 -- test this, not certain it's correct
                 -- for reference: https://github.com/jonwalstedt/dotfiles/blob/4aeb6914948cd354765961738f42f68d1a7083db/config/nvim-coc/lua/plugin/coc.lua#L106
                 "K",
-                function() ShowDocumentation() end,
+                function()
+                    ShowDocumentation()
+                end,
                 mode = { "n", },
                 silent = true,
                 noremap = true,
@@ -102,7 +102,9 @@ return {
             {
                 "if",
                 "<Plug>(coc-funcobj-i)",
-                function() require("coc.nvim").cmd("coc-funcobj-i") end,
+                function()
+                    require("coc.nvim").cmd("coc-funcobj-i")
+                end,
                 mode = { "o", "x", },
                 silent = true,
             },
