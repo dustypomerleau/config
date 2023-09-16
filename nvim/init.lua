@@ -52,6 +52,25 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("keys")
 
--- highlight playground
+-- -- highlight playground
 -- local t = require("tol.colors")
--- vim.api.nvim_set_hl(0, "PMenuSel", { fg = t.orange, bg = t.bg_tint1 })
+-- vim.api.nvim_set_hl(0,
+--     "@lsp.type.property", { fg = t.gray,}
+-- )
+
+    -- "@lsp.type.builtinType", { fg = t.yellow,}
+    -- "@lsp.type.decorator", { fg = t.gray, }
+    -- "@lsp.type.enum", { fg = t.gray, }
+    -- "@lsp.type.function", { fg = t.green, }
+    -- "@lsp.type.interface", { fg = t.pink, }
+    -- "@lsp.type.keyword", { fg = t.orange, }
+    -- "@lsp.type.macro", { fg = t.yellow,}
+    -- "@lsp.type.method", { fg = t.green,}
+    -- "@lsp.type.namespace", { fg = t.taupe, }
+    -- "@lsp.type.parameter", { fg = t.taupe,}
+    -- "@lsp.type.property", { fg = t.gray,}
+    -- "@lsp.type.selfKeyword", { fg = t.gray,}
+    -- "@lsp.type.selfTypeKeyword", { fg = t.blue,}
+    -- "@lsp.type.struct", { fg = t.blue, }
+    -- "@lsp.type.typeParameter", { fg = t.blue,}
+    -- "@lsp.type.variable", { fg = t.taupe,}
