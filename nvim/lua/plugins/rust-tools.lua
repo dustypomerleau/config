@@ -1,6 +1,8 @@
 return {
     {
-        "simrat39/rust-tools.nvim",
+        -- "simrat39/rust-tools.nvim", -- try the fork below, but keep this in case
+        -- see discussion on reddit https://www.reddit.com/r/neovim/comments/13rbam2/forking_of_rusttoolsnvim/
+        "ciel-mc/rust-tools.nvim",
         dependencies = {
             "neovim/nvim-lspconfig",
             -- debug
