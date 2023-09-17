@@ -6,6 +6,7 @@ return {
     event = "VeryLazy",
     config = function()
         local lsp = require("lspconfig")
+
         lsp.clangd.setup({})
 
         lsp.lua_ls.setup({

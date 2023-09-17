@@ -3,8 +3,9 @@
 
 return {
     "hrsh7th/nvim-cmp",
+    event = "VeryLazy",
     config = function()
-        local cmp = require("nvim-cmp")
+        local cmp = require("cmp")
 
         cmp.setup({
             snippet = {
@@ -59,6 +60,7 @@ return {
         })
 
         -- Set up lspconfig.
+        local lsp = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
         lsp.clangd.setup({ capabilities = capabilities, })

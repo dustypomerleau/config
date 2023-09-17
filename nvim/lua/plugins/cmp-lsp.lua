@@ -1,6 +1,6 @@
 return {
     {
-        "nvim-telescope/telescope.nvim",
+        "/hrsh7th/cmp-nvim-lsp",
         event = "VeryLazy",
         config = true,
     },
