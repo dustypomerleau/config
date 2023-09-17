@@ -49,13 +49,20 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins", { ui = { border = "rounded", }, })
+require("lazy").setup(
+    "plugins",
+    {
+        checker = { enabled = true, },
+        ui = { border = "rounded", },
+    }
+)
+
 require("keys")
 
--- -- highlight playground
+-- -- -- -- highlight playground
 -- local t = require("tol.colors")
 -- vim.api.nvim_set_hl(0,
---     "@lsp.type.property", { fg = t.gray,}
+--     "LspInfoBorder", { fg = t.ui_gray, }
 -- )
 
 -- format on save
