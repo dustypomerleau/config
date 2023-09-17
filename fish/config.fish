@@ -26,8 +26,9 @@ bind \cg _fzf_search_git_log
 bind \ch _fzf_search_history
 
 # variables
-set -x BAT_THEME Dracula
+# set -gx TERM alacritty-direct
 set -U EDITOR nvim
+set -x BAT_THEME Dracula
 
 # fish prompt
 set fish_prompt_pwd_full_dirs 2

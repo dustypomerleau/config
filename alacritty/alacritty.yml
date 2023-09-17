@@ -21,7 +21,12 @@
 # each instance of Alacritty. If it is not present, alacritty will
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
+#
+# original:
 # TERM: alacritty
+#
+# previously attempted modifications, but none of these work better than leaving it as just `alacritty` (for bold/italic/undercurl):
+# TERM: alacritty-direct
 # TERM: xterm-256color # previously you had this set from alacritty to xterm-256color to make tmux colors work, but it appears you can leave it unset, as the problem setting is in tmux.conf
 
 window:
