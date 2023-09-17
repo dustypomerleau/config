@@ -24,6 +24,6 @@ return {
         lsp.tailwindcss.setup({})
         lsp.tsserver.setup({})
 
-        require("lspconfig.ui.windows").default_options.border = "rounded"
+        -- require("lspconfig.ui.windows").default_options.border = "rounded"
     end,
 }
