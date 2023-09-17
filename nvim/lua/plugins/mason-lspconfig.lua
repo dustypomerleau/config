@@ -11,7 +11,7 @@ return {
                 -- ltex, texlab
                 "lua_ls",
                 -- "marksman",
-                -- "pyright",
+                "pyright",
                 "rust_analyzer",
                 "svelte",
                 "tailwindcss",
