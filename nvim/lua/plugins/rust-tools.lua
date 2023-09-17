@@ -22,6 +22,12 @@ return {
                             { buffer = bufnr, })
                     end,
                 },
+                tools = {
+                    inlay_hints = {
+                        parameter_hints_prefix = "",
+                        other_hints_prefix = ": ",
+                    },
+                },
             })
         end,
     },

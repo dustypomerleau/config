@@ -19,7 +19,7 @@ return {
         })
 
         -- todo:
-        lsp.rust_analyzer.setup({})
+        lsp.rust_analyzer.setup({}) -- use rust-tools for config
         lsp.svelte.setup({})
         lsp.tailwindcss.setup({})
         lsp.tsserver.setup({})
