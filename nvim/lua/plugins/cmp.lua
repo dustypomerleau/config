@@ -27,7 +27,8 @@ return {
             }),
             sources = cmp.config.sources(
                 { { name = "luasnip", }, },
-                { { name = "buffer", }, }
+                { { name = "buffer", }, },
+                { { name = "cmdline", }, }
             ),
         })
 
