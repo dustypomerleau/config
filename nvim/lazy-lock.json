@@ -1,7 +1,7 @@
 {
   "arshlib.nvim": { "branch": "master", "commit": "e76e35c927098d07445c72e9416cce243f6aae59" },
   "edgedb-vim": { "branch": "master", "commit": "7f2516bec3a5ad137347fb703d0b2c88f1478f5b" },
-  "fzf-lua": { "branch": "main", "commit": "30df82df8f5f0932bc07ff11f64b94bdf89b884d" },
+  "fzf-lua": { "branch": "main", "commit": "e39faa506bd76ce0b101ba362dfde6e3f743bd49" },
   "gitsigns.nvim": { "branch": "main", "commit": "907ae8636016aab2f283576fc60d46ca3427e579" },
   "indent-blankline.nvim": { "branch": "master", "commit": "9637670896b68805430e2f72cf5d16be5b97a22a" },
   "indent-tools.nvim": { "branch": "master", "commit": "cda3cf350d04a58ca47f698068e20ba75c382a81" },
