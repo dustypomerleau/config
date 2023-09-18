@@ -10,7 +10,7 @@ return {
                 -- "jsonls",
                 -- ltex, texlab
                 "lua_ls",
-                -- "marksman",
+                "marksman",
                 "pyright",
                 "rust_analyzer",
                 "svelte",
