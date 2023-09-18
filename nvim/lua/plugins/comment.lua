@@ -1,6 +1,6 @@
 return {
     {
-        "numToStr/Comment.nvim",
+        "numtostr/comment.nvim",
         event = "BufEnter",
         config = true,
     },
