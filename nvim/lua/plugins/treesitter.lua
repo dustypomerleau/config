@@ -22,7 +22,7 @@ return {
                 "latex",
                 "lua",
                 "markdown",
-                "markdown-inline",
+                -- "markdown-inline", -- works if you :TSInstall
                 "python",
                 "rust",
                 "sql",
