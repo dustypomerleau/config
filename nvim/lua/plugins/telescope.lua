@@ -6,7 +6,7 @@ return {
                 defaults = {
                     layout_config = {
                         horizontal = {
-                            height = 0.99,
+                            height = 0.95,
                             width = 0.99,
                         },
                     },
