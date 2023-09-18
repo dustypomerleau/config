@@ -22,6 +22,7 @@ return {
                 "latex",
                 "lua",
                 "markdown",
+                "markdown-inline",
                 "python",
                 "rust",
                 "sql",
