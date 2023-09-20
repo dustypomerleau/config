@@ -2,7 +2,7 @@ return {
     "folke/flash.nvim",
     event = "VeryLazy",
     opts = {
-        labels = "tnseriaodhcplfuwygmqvkzj",
+        labels = "tnseriaodhcplfuwygmqvkzxjb",
         -- search = {
         --     -- search/jump in all windows
         --     multi_window = true,
