@@ -55,9 +55,9 @@ require("keys")
 
 -- -- highlight playground
 -- local t = require("tol.colors")
--- vim.api.nvim_set_hl(0,
---     "NormalFloat", { fg = t.none, bg = t.bg_mono1, }
--- )
+-- vim.api.nvim_set_hl(0, "FlashCurrent", { link = "CurSearch", })
+-- vim.api.nvim_set_hl(0, "FlashMatch", { fg = t.search_fg, bg = t.bg_mono3, })
+-- vim.api.nvim_set_hl(0, "FlashLabel", { fg = "yellow", })
 
 -- format on save
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
