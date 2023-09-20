@@ -195,6 +195,7 @@ abbr --add md "gmkdir -pv"
 abbr --add mkdir "gmkdir -pv"
 abbr --add mktemp "gmktemp" # macOS mktemp is not POSIX compliant
 abbr --add mv "gmv -iv"
+abbr --add n "nvim"
 abbr --add ofd "open ."
 abbr --add p "pnpm"
 abbr --add pa "pnpm add"
