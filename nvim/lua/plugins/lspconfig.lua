@@ -19,7 +19,7 @@ return {
             },
         })
 
-        lsp.marksman.setup({}) -- use rust-tools for config
+        lsp.marksman.setup({})
         lsp.rust_analyzer.setup({}) -- use rust-tools for config
         lsp.svelte.setup({})
         lsp.tailwindcss.setup({})
