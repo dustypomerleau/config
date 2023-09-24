@@ -61,5 +61,5 @@ require("keys")
 
 -- format on save
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
--- vim.cmd([[autocmd BufWritePre * :Neoformat]]) -- this works for getting prettier to run but it is slow
+-- vim.cmd([[autocmd BufWritePre *.js,*.ts :Neoformat]]) -- this works for getting prettier to run but it is slow
 -- instead, I've set up a manual mapping in keys.lua, so that it doesn't run on every save
