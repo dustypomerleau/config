@@ -6,6 +6,7 @@
 local key = vim.api.nvim_set_keymap
 
 key("n", "<localleader>u", ":Lazy update<cr>", { noremap = true, })
+key("n", "<localleader>l", ":LspInfo<cr>", { noremap = true, })
 key("n", "<c-h>", "<c-w><c-h>", { noremap = true, })
 key("n", "<c-j>", "<c-w><c-j>", { noremap = true, })
 key("n", "<c-k>", "<c-w><c-k>", { noremap = true, })
