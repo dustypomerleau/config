@@ -228,6 +228,9 @@ rustup update && \
 pnpm update -g && \
 sudo tlmgr update --self --all --reinstall-forcibly-removed"
 # mas upgrade && \
+# keep in mind that you will still need to manually upgrade neovim if you want nightly
+# brew upgrade neovim --fetch-head
+# unless you want to explicitly add that to the abbr
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"
