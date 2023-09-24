@@ -70,6 +70,6 @@ return {
         lsp.rust_analyzer.setup({ capabilities = capabilities, })
         lsp.svelte.setup({ capabilities = capabilities, })
         lsp.tailwindcss.setup({ capabilities = capabilities, })
-        lsp.tsserver.setup({ capabilities = capabilities, })
+        -- lsp.tsserver.setup({ capabilities = capabilities, })
     end,
 }

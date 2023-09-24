@@ -23,8 +23,6 @@ return {
         lsp.rust_analyzer.setup({}) -- use rust-tools for config
         lsp.svelte.setup({})
         lsp.tailwindcss.setup({})
-        lsp.tsserver.setup({})
-
-        -- require("lspconfig.ui.windows").default_options.border = "rounded"
+        -- setup for tsserver removed, as this is now handled by typescript-tools
     end,
 }
