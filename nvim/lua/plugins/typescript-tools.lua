@@ -14,3 +14,5 @@ return {
 --
 -- (previously you ran this setup in cmp.lua with the others)
 -- but get typescript tools working by itself first
+-- perhaps you should do this setup just once wherever it happens first, and delete the calls to
+-- setup() in cmp
