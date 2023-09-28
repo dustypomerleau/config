@@ -3,16 +3,16 @@ return {
         "lukas-reineke/indent-blankline.nvim",
         lazy = false,
         config = function()
-            require("indent_blankline").setup(
-                {
-                    show_current_context = true,
-                    --    char_highlight_list = {
-                    --        "IndentBlanklineIndent1",
-                    --        "IndentBlanklineIndent2",
-                    --        "IndentBlanklineIndent3",
-                    --    },
-                }
-            )
+            require("ibl").setup({
+                indent = {
+                    char = "│", -- box drawings light vertical (U+2502)
+                    highlight = "LineNr",
+                },
+                scope = {
+                    show_start = false,
+                    highlight = { "RainbowRed", "RainbowYellow", "RainbowBlue", },
+                },
+            })
         end,
     },
 }
