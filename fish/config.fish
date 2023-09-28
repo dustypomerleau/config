@@ -223,7 +223,7 @@ abbr --add sup "\
 sudo softwareupdate -aiR && \
 brew update && \
 brew upgrade && \
-brew upgrade neovim --fetch-head \
+brew upgrade neovim --fetch-head && \
 brew upgrade --cask && \
 rustup update && \
 pnpm update -g && \
