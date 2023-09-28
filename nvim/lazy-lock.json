@@ -22,7 +22,7 @@
   "nvim-cmp": { "branch": "main", "commit": "5dce1b778b85c717f6614e3f4da45e9f19f54435" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "dde3084106a70b9a79d48f426f6d6fec6fd203f7" },
   "nvim-dap": { "branch": "master", "commit": "b3d4408e29d924fe130c9397a7c3b3630b3ea671" },
-  "nvim-lspconfig": { "branch": "master", "commit": "bfdf2e91e7297a54bcc09d3e092a12bff69a1cf4" },
+  "nvim-lspconfig": { "branch": "master", "commit": "c7077400d004c1a424d210af76ce198250db72fd" },
   "nvim-notify": { "branch": "master", "commit": "94859430020f5cf32a1b97ddd9e596fed9db7981" },
   "nvim-spider": { "branch": "main", "commit": "be7273858d75673a0ae594552742eb8769f35d6a" },
   "nvim-surround": { "branch": "main", "commit": "1c2ef599abeeb98e40706830bcd27e90e259367a" },
@@ -33,7 +33,7 @@
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "6b9fc617ad52f25372d1855e049cae3af348bc09" },
   "rust-tools.nvim": { "branch": "master", "commit": "e39cb933981a21b9f71d4594686d4fd8b435078b" },
   "telescope.nvim": { "branch": "master", "commit": "84d53dfdbefbdf84e861a288abc71ef8ccafd04e" },
-  "tol.nvim": { "branch": "dev", "commit": "4d1259b8655063276cc96d6457ea9ed30d1fbb80" },
+  "tol.nvim": { "branch": "dev", "commit": "2e8d6ed9882a018b7b13be0f800ba76c3aacb733" },
   "trouble.nvim": { "branch": "main", "commit": "3f85d8ed30e97ceeddbbcf80224245d347053711" },
   "typescript-tools.nvim": { "branch": "master", "commit": "f7c45763fe1513e257ebf45bedfc5e6dd1aade78" },
   "vim-matchup": { "branch": "master", "commit": "6dbe108230c7dbbf00555b7d4d9f6a891837ef07" },
@@ -41,5 +41,5 @@
   "vim-svelte": { "branch": "main", "commit": "0e93ec53c3667753237282926fec626785622c1c" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" },
   "vimtex": { "branch": "master", "commit": "d08da8034bab1fae423bd36aa606ee3012cf2833" },
-  "yanky.nvim": { "branch": "main", "commit": "d6fb4a1575fb692f4594b0f7791a5462bc46eddd" }
+  "yanky.nvim": { "branch": "main", "commit": "590a713b0372485f595eea36e7e3ab2069946794" }
 }
