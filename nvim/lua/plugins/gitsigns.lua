@@ -48,7 +48,7 @@ return {
             },
             {
                 "<localleader>gN",
-                "<cmd>Gitsigns previous_hunk<cr>",
+                "<cmd>Gitsigns prev_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
