@@ -1,0 +1,26 @@
+return {
+    {
+        "stevearc/conform.nvim",
+        event = "BufWritePre",
+        config = function()
+            require("conform").setup({
+                formatters_by_ft = {
+                    -- using a sublist will run only the first available formatter
+                    javascript = { { "prettierd", "prettier", }, },
+                    markdown = { { "prettierd", "prettier", }, },
+                    rust = { "rustfmt", },
+                    svelte = { { "prettierd", "prettier", }, },
+                    typescript = { { "prettierd", "prettier", }, },
+                },
+                -- setting format_on_save will automatically generate an autocommand like:
+                -- vim.api.nvim_create_autocmd("BufWritePre", {
+                --     pattern = "*",
+                --     callback = function(args)
+                --         require("conform").format({ bufnr = args.buf })
+                --     end,
+                -- })
+                format_on_save = { timeout_ms = 500, lsp_fallback = true, },
+            })
+        end,
+    },
+}
