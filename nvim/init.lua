@@ -59,6 +59,5 @@ require("keys")
 -- vim.api.nvim_set_hl(0, "FlashMatch", { fg = t.search_fg, bg = t.bg_mono3, })
 -- vim.api.nvim_set_hl(0, "FlashLabel", { fg = "yellow", })
 
--- format on save
--- commented out, because this will be called automatically by conform if needed
--- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+-- format on save (seems to be needed, even with conform fallback setting)
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])

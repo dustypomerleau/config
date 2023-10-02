@@ -7,6 +7,7 @@ return {
                 formatters_by_ft = {
                     -- using a sublist will run only the first available formatter
                     javascript = { { "prettierd", "prettier", }, },
+                    lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called.
                     markdown = { { "prettierd", "prettier", }, },
                     rust = { "rustfmt", },
                     svelte = { { "prettierd", "prettier", }, },
