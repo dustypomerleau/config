@@ -5,6 +5,7 @@
 
 local key = vim.api.nvim_set_keymap
 
+-- key("n", "<localleader>f", ":Neoformat prettier<cr>", { noremap = true, })
 key("n", "<c-h>", "<c-w><c-h>", { noremap = true, })
 key("n", "<c-j>", "<c-w><c-j>", { noremap = true, })
 key("n", "<c-k>", "<c-w><c-k>", { noremap = true, })
@@ -19,7 +20,6 @@ key("n", "<leader>s", "<cmd>w<cr>", { noremap = true, })
 key("n", "<leader>w", "<cmd>q<cr>", { noremap = true, })
 key("n", "<leader>W", "<cmd>qa<cr>", { noremap = true, })
 key("n", "<leader>x", "<cmd>bd<cr>", { noremap = true, })
-key("n", "<localleader>f", ":Neoformat prettier<cr>", { noremap = true, })
 key("n", "<localleader>i", "<cmd>Inspect<cr>", { noremap = true, })
 key("n", "<localleader>l", ":LspInfo<cr>", { noremap = true, })
 key("n", "<localleader>p", "<cmd>pwd<cr>", { noremap = true, })

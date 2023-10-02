@@ -60,6 +60,5 @@ require("keys")
 -- vim.api.nvim_set_hl(0, "FlashLabel", { fg = "yellow", })
 
 -- format on save
-vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
--- vim.cmd([[autocmd BufWritePre *.js,*.ts :Neoformat]]) -- this works for getting prettier to run but it is slow
--- instead, I've set up a manual mapping in keys.lua, so that it doesn't run on every save
+-- commented out, because this will be called automatically by conform if needed
+-- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
