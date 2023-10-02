@@ -1,7 +1,7 @@
 return {
     {
         "stevearc/conform.nvim",
-        event = "BufWritePre",
+        event = "VeryLazy",
         config = function()
             require("conform").setup({
                 formatters_by_ft = {
@@ -19,7 +19,7 @@ return {
                 --         require("conform").format({ bufnr = args.buf })
                 --     end,
                 -- })
-                format_on_save = { timeout_ms = 500, lsp_fallback = true, },
+                format_on_save = { lsp_fallback = true, },
             })
         end,
     },
