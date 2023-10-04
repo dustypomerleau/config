@@ -14,6 +14,7 @@ let.lsp_semantic_enabled = 1
 let.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
 
 set.breakindent = true -- keep indent when lines break
+set.completeopt = { "menuone", "noselect", "noinsert", }
 set.splitbelow = true
 set.splitright = true
 set.breakindentopt = "shift:2" -- but shift by 2 spaces
@@ -25,6 +26,7 @@ set.linebreak = true
 set.matchpairs:append("<:>")
 set.number = true -- line numbers
 set.shiftwidth = 4 -- number of spaces used for autoindent
+set.shortmess = vim.opt.shortmess + { c = true, } -- don't give completion messages (:h shortmess)
 set.signcolumn = "yes"
 set.smartcase = true -- uppercase search is case sensitive
 set.softtabstop = 4 -- number of spaces in a tab when editing
