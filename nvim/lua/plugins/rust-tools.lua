@@ -3,6 +3,7 @@ return {
         -- "simrat39/rust-tools.nvim", -- try the fork below, but keep this in case
         -- see discussion on reddit https://www.reddit.com/r/neovim/comments/13rbam2/forking_of_rusttoolsnvim/
         "ciel-mc/rust-tools.nvim",
+        enabled = false,
         dependencies = {
             "neovim/nvim-lspconfig",
             -- debug
@@ -12,6 +13,7 @@ return {
         ft = "rust",
         config = function()
             local rt = require("rust-tools")
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             rt.setup({
                 server = {
@@ -23,6 +25,7 @@ return {
                         vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group,
                             { buffer = bufnr, })
                     end,
+                    capabilities = capabilities,
                 },
                 tools = {
                     inlay_hints = {
@@ -35,3 +38,10 @@ return {
         end,
     },
 }
+
+-- you need to somehow marry
+-- https://github.com/hrsh7th/nvim-cmp/wiki/Language-Server-Specific-Samples#rust-with-rust-toolsnvim
+-- with the setup in cmp - i think you should only be calling setup once
+--
+-- start with:
+-- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
