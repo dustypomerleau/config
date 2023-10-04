@@ -25,10 +25,14 @@ return {
                 ["<C-e>"] = cmp.mapping.abort(),
                 ["<CR>"] = cmp.mapping.confirm({ select = false, }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
             }),
+            -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
             sources = cmp.config.sources(
-                { { name = "luasnip", }, },
-                { { name = "buffer", }, },
-                { { name = "cmdline", }, }
+                { { name = "buffer", keyword_length = 2, }, },
+                { { name = "cmdline", keyword_length = 2, }, },
+                { { name = "luasnip", keyword_length = 2, }, },
+                { { name = "nvim_lsp", keyword_length = 3, }, },
+                { { name = "nvim_lsp_signature_help", }, },
+                { { name = "path", }, }
             ),
         })
 
@@ -53,11 +57,10 @@ return {
         -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
         cmp.setup.cmdline(":", {
             mapping = cmp.mapping.preset.cmdline(),
-            sources = cmp.config.sources({
-                { name = "path", },
-            }, {
-                { name = "cmdline", },
-            }),
+            sources = cmp.config.sources(
+                { { name = "path", }, },
+                { { name = "cmdline", }, }
+            ),
         })
 
         -- Set up lspconfig.
@@ -66,8 +69,9 @@ return {
 
         lsp.clangd.setup({ capabilities = capabilities, })
         lsp.lua_ls.setup({ capabilities = capabilities, })
+        lsp.marksman.setup({ capabilities = capabilities, })
         lsp.pyright.setup({ capabilities = capabilities, })
-        lsp.rust_analyzer.setup({ capabilities = capabilities, })
+        lsp.rust_analyzer.setup({ capabilities = capabilities, }) -- add config from rust-tools directly here
         lsp.svelte.setup({ capabilities = capabilities, })
         lsp.tailwindcss.setup({ capabilities = capabilities, })
         -- lsp.tsserver.setup({ capabilities = capabilities, })
