@@ -3,16 +3,8 @@ return {
     event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig", },
     opts = {},
+    config = function()
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        require("typescript-tools").setup({ capabilities = capabilities, })
+    end,
 }
-
--- you may need
---
--- local capabilities = require("cmp_nvim_lsp").default_capabilities()
--- config = function()
---     require("typescript-tools").setup({ capabilities = capabilities, })
--- end
---
--- (previously you ran this setup in cmp.lua with the others)
--- but get typescript tools working by itself first
--- perhaps you should do this setup just once wherever it happens first, and delete the calls to
--- setup() in cmp

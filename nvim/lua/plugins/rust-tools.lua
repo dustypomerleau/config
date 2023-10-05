@@ -9,10 +9,10 @@ return {
             "nvim-lua/plenary.nvim",
             "mfussenegger/nvim-dap",
         },
-        ft = "rust",
+        event = "VeryLazy", -- loading on ft = "rust" does not cause server to attach
         config = function()
             local rt = require("rust-tools")
-            -- local capabilities = require("cmp_nvim_lsp").default_capabilities() -- see cmp.lua
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             rt.setup({
                 server = {
@@ -24,7 +24,7 @@ return {
                         vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group,
                             { buffer = bufnr, })
                     end,
-                    -- capabilities = capabilities,
+                    capabilities = capabilities,
                 },
                 tools = {
                     inlay_hints = {
@@ -38,9 +38,6 @@ return {
     },
 }
 
--- you need to somehow marry
+-- resources:
 -- https://github.com/hrsh7th/nvim-cmp/wiki/Language-Server-Specific-Samples#rust-with-rust-toolsnvim
--- with the setup in cmp - i think you should only be calling setup once
---
--- start with:
 -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/

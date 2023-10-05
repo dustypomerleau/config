@@ -67,13 +67,13 @@ return {
         local lsp = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+        -- rust_analyzer setup is called by rust-tools
+        -- tsserver setup is called by typescript-tools
         lsp.clangd.setup({ capabilities = capabilities, })
         lsp.lua_ls.setup({ capabilities = capabilities, })
         lsp.marksman.setup({ capabilities = capabilities, })
         lsp.pyright.setup({ capabilities = capabilities, })
-        lsp.rust_analyzer.setup({ capabilities = capabilities, }) -- seems that this call shouldn't be necessary with rust-tools.setup(), but for some reason the ls isn't attaching to the buffer without it
         lsp.svelte.setup({ capabilities = capabilities, })
         lsp.tailwindcss.setup({ capabilities = capabilities, })
-        -- lsp.tsserver.setup({ capabilities = capabilities, })
     end,
 }
