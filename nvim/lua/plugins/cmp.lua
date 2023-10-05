@@ -27,8 +27,8 @@ return {
             }),
             -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
             sources = cmp.config.sources(
-                { { name = "buffer", keyword_length = 2, }, },
-                { { name = "cmdline", keyword_length = 2, }, },
+                { { name = "buffer", keyword_length = 3, }, },
+                { { name = "cmdline", keyword_length = 3, }, },
                 { { name = "luasnip", keyword_length = 2, }, },
                 { { name = "nvim_lsp", keyword_length = 3, }, },
                 { { name = "nvim_lsp_signature_help", }, },
