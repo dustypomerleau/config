@@ -71,7 +71,7 @@ return {
         lsp.lua_ls.setup({ capabilities = capabilities, })
         lsp.marksman.setup({ capabilities = capabilities, })
         lsp.pyright.setup({ capabilities = capabilities, })
-        lsp.rust_analyzer.setup({ capabilities = capabilities, }) -- add config from rust-tools directly here
+        lsp.rust_analyzer.setup({ capabilities = capabilities, }) -- seems that this call shouldn't be necessary with rust-tools.setup(), but for some reason the ls isn't attaching to the buffer without it
         lsp.svelte.setup({ capabilities = capabilities, })
         lsp.tailwindcss.setup({ capabilities = capabilities, })
         -- lsp.tsserver.setup({ capabilities = capabilities, })
