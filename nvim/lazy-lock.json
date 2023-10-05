@@ -42,5 +42,5 @@
   "vim-svelte": { "branch": "main", "commit": "0e93ec53c3667753237282926fec626785622c1c" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" },
   "vimtex": { "branch": "master", "commit": "a59a49b54ae039f1a439c9a16c2ea7b461b8e925" },
-  "yanky.nvim": { "branch": "main", "commit": "f2375d09e71637aaf3d50298f4e734a432132cad" }
+  "yanky.nvim": { "branch": "main", "commit": "538af19b7fafcdb295a943b8b84bae8bb8fc9bb7" }
 }
