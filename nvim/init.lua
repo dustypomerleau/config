@@ -57,7 +57,7 @@ require("keys")
 
 -- -- highlight playground
 -- local t = require("tol.colors")
--- vim.api.nvim_set_hl(0, "FlashCurrent", { link = "CurSearch", })
+-- vim.api.nvim_set_hl(0, "@lsp.type.formatSpecifier", { fg = t.sky, })
 -- vim.api.nvim_set_hl(0, "FlashMatch", { fg = t.search_fg, bg = t.bg_mono3, })
 -- vim.api.nvim_set_hl(0, "FlashLabel", { fg = "yellow", })
 
