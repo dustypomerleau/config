@@ -35,7 +35,7 @@
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "652345bd1aa333f60c9cbb1259f77155786e5514" },
   "rust-tools.nvim": { "branch": "master", "commit": "a718b1f22ac34b60ab2ae91df0b80280556aa454" },
   "telescope.nvim": { "branch": "master", "commit": "205f469244916716c49cc2b9026566749425c5ba" },
-  "tol.nvim": { "branch": "dev", "commit": "bc67be57a9a0b0cbd1e2369332d2c7c6c49bd15a" },
+  "tol.nvim": { "branch": "dev", "commit": "2bbcc1d1f62144958a34e9db25ed2bd4419eece7" },
   "trouble.nvim": { "branch": "main", "commit": "3f85d8ed30e97ceeddbbcf80224245d347053711" },
   "typescript-tools.nvim": { "branch": "master", "commit": "ebddb35900bbf5fa41fffa0463b676bf08e474e6" },
   "vim-matchup": { "branch": "master", "commit": "6dbe108230c7dbbf00555b7d4d9f6a891837ef07" },
