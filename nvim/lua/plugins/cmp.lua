@@ -48,7 +48,12 @@ return {
                             return vim_item
                         end
                     end
-                    return require("lspkind").cmp_format({ with_text = true, })(entry, vim_item)
+                    return require("lspkind").cmp_format(
+                        {
+                            with_text = true,
+                            maxwidth = 50,
+                        }
+                    )(entry, vim_item)
                 end,
             },
         })
