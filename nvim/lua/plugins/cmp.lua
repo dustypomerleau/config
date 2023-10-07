@@ -35,8 +35,8 @@ return {
                         ),
                         ""
                     )
-                end),
-                -- todo: i think this is broken
+                end, { "c", "i", "s", }), -- perhaps these have no effect as you are only mapping for insert here
+                -- todo: this remains broken
                 ["<c-h>"] = cmp.mapping(function()
                     vim.fn.feedkeys(
                         vim.api.nvim_replace_termcodes(
@@ -44,7 +44,7 @@ return {
                         ),
                         ""
                     )
-                end),
+                end, { "c", "i", "s", }),
             }),
             -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
             sources = cmp.config.sources(
