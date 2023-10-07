@@ -21,10 +21,30 @@ return {
             },
             mapping = cmp.mapping.preset.insert({
                 ["<c-b>"] = cmp.mapping.scroll_docs(-4),
-                ["<c-f>"] = cmp.mapping.scroll_docs(4),
                 ["<c-c>"] = cmp.mapping.complete(),
                 ["<c-e>"] = cmp.mapping.abort(),
+                ["<c-f>"] = cmp.mapping.scroll_docs(4),
+                ["<c-n>"] = cmp.mapping.select_next_item(),
+                ["<c-p>"] = cmp.mapping.select_prev_item(),
+                ["<c-y"] = cmp.mapping.confirm({ select = false, }), -- accept currently selected item. set `select` to `false` to only confirm explicitly selected items.
                 ["<cr>"] = cmp.mapping.confirm({ select = false, }), -- accept currently selected item. set `select` to `false` to only confirm explicitly selected items.
+                ["<tab>"] = cmp.mapping(function()
+                    vim.fn.feedkeys(
+                        vim.api.nvim_replace_termcodes(
+                            "<Plug>luasnip-expand-or-jump", true, true, true
+                        ),
+                        ""
+                    )
+                end),
+                -- todo: i think this is broken
+                ["<s-tab>"] = cmp.mapping(function()
+                    vim.fn.feedkeys(
+                        vim.api.nvim_replace_termcodes(
+                            "<Plug>luasnip-jump-prev", true, true, true
+                        ),
+                        ""
+                    )
+                end),
             }),
             -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
             sources = cmp.config.sources(
