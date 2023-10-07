@@ -28,12 +28,12 @@ return {
             }),
             -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
             sources = cmp.config.sources(
+            -- sources for insert in buffer
             -- order determines display order
                 { { name = "luasnip", }, },
                 { { name = "nvim_lsp_signature_help", }, },
                 { { name = "nvim_lsp", }, },
                 { { name = "buffer", }, },
-                { { name = "cmdline", }, },
                 { { name = "path", }, }
             ),
             -- icons
