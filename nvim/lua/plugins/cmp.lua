@@ -28,7 +28,7 @@ return {
                 ["<c-p>"] = cmp.mapping.select_prev_item(),
                 ["<c-y"] = cmp.mapping.confirm({ select = false, }), -- accept currently selected item. set `select` to `false` to only confirm explicitly selected items.
                 ["<cr>"] = cmp.mapping.confirm({ select = false, }), -- accept currently selected item. set `select` to `false` to only confirm explicitly selected items.
-                ["<tab>"] = cmp.mapping(function()
+                ["<c-l>"] = cmp.mapping(function()
                     vim.fn.feedkeys(
                         vim.api.nvim_replace_termcodes(
                             "<Plug>luasnip-expand-or-jump", true, true, true
@@ -37,7 +37,7 @@ return {
                     )
                 end),
                 -- todo: i think this is broken
-                ["<s-tab>"] = cmp.mapping(function()
+                ["<c-h>"] = cmp.mapping(function()
                     vim.fn.feedkeys(
                         vim.api.nvim_replace_termcodes(
                             "<Plug>luasnip-jump-prev", true, true, true
