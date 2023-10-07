@@ -57,9 +57,9 @@ require("keys")
 
 -- -- highlight playground
 -- local t = require("tol.colors")
--- vim.api.nvim_set_hl(0, "PmenuSel", { fg = t.search_fg, bg = t.bg_mono3, })
--- vim.api.nvim_set_hl(0, "FlashMatch", { fg = t.search_fg, bg = t.bg_mono3, })
--- vim.api.nvim_set_hl(0, "FlashLabel", { fg = "yellow", })
+-- vim.api.nvim_set_hl(0, "GitSignsAddInline", { bg = t.diff_emph_plus, })
+-- vim.api.nvim_set_hl(0, "GitSignsDeleteInline", { bg = t.diff_emph_minus, })
+-- vim.api.nvim_set_hl(0, "GitSignsChangeInline", { bg = t.bg_mono3, })
 
 -- format on save (seems to be needed, even with conform fallback setting)
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
