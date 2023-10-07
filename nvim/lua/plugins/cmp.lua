@@ -33,7 +33,7 @@ return {
                 { { name = "luasnip", }, },
                 { { name = "nvim_lsp_signature_help", }, },
                 { { name = "nvim_lsp", }, },
-                { { name = "buffer", }, },
+                { { name = "buffer", keyword_length = 3, max_item_count = 10, }, },
                 { { name = "path", }, }
             ),
             -- icons
