@@ -29,15 +29,21 @@ return {
             }),
             -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
             sources = cmp.config.sources(
-                { { name = "buffer", keyword_length = 2, }, },
-                { { name = "cmdline", keyword_length = 2, }, },
-                { { name = "luasnip", keyword_length = 2, }, },
-                { { name = "nvim_lsp", keyword_length = 2, }, },
+            -- order determines display order
+                { { name = "luasnip", }, },
                 { { name = "nvim_lsp_signature_help", }, },
+                { { name = "nvim_lsp", }, },
+                { { name = "buffer", }, },
+                { { name = "cmdline", }, },
                 { { name = "path", }, }
             ),
             -- icons
             formatting = {
+                fields = {
+                    cmp.ItemField.Abbr,
+                    cmp.ItemField.Kind,
+                    cmp.ItemField.Menu,
+                },
                 format = function(entry, vim_item)
                     if vim.tbl_contains({ "path", }, entry.source.name) then
                         local icon, hl_group = require("nvim-web-devicons").get_icon(entry
