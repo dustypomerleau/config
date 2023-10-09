@@ -54,7 +54,7 @@ return {
             },
             {
                 "<localleader>gp",
-                "<cmd>Gitsigns preview_hunk<cr>",
+                "<cmd>Gitsigns preview_hunk_inline<cr>",
                 mode = { "n", },
                 noremap = true,
             },
