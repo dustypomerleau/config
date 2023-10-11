@@ -226,6 +226,7 @@ brew upgrade && \
 brew upgrade neovim --fetch-head && \
 brew upgrade --cask && \
 rustup update && \
+cargo install-update -a \
 pnpm update -g && \
 sudo tlmgr update --self --all --reinstall-forcibly-removed"
 # mas upgrade && \
