@@ -7,7 +7,7 @@ set fish_color_autosuggestion "#7e818b"
 set fish_color_command red
 set fish_color_comment "#7e818b"
 set fish_color_end cyan
-# set fish_color_error "#bf616a"
+set fish_color_error "#f46a80"
 set fish_color_error "#ff218c"
 set fish_color_escape brgreen
 set fish_color_keyword red
