@@ -10,7 +10,7 @@ return {
             npairs.setup({})
             npairs.add_rules({
                 Rule("<", ">", { "edgeql", "html", "rust", "svelte", "typescript", }
-                ):with_pair(cond.not_after_text(" ")),
+                ):with_pair(cond.not_before_text(" ")), -- not after space
 
                 Rule("\"", "\"", { "-vim", }),
             })
