@@ -1,7 +1,1 @@
-return {
-    {
-        "numtostr/comment.nvim",
-        event = "BufEnter",
-        config = true,
-    },
-}
+return { { "numtostr/comment.nvim", event = "BufEnter", config = true, }, }

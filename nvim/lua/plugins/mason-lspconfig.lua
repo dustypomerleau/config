@@ -6,9 +6,6 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "clangd",
-                -- "html",
-                -- "jsonls",
-                -- ltex, texlab
                 "lua_ls",
                 "marksman",
                 "pyright",

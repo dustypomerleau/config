@@ -5,7 +5,7 @@ return {
             "arsham/arshlib.nvim",
             "nvim-treesitter/nvim-treesitter-textobjects",
         },
-        event = "VeryLazy",
+        event = "BufEnter",
         config = true,
     },
 }

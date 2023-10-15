@@ -1,7 +1,2 @@
-return {
-    {
-        "saadparwaiz1/cmp_luasnip",
-        event = "VeryLazy",
-        -- no config function
-    },
-}
+-- no config function
+return { { "saadparwaiz1/cmp_luasnip", event = "BufEnter", }, }
