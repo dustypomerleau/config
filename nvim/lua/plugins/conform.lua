@@ -6,9 +6,8 @@ return {
             require("conform").setup({
                 formatters_by_ft = {
                     -- using a sublist will run only the first available formatter
-                    -- my impression is that it's best to lean on vim.lsp.buf.format()
-                    -- from init.vim, but if it's not giving the desired result, like
-                    -- typescript, then add it here
+                    -- if fallback calling vim.lsp.buf.format() works as desired, no need to add the
+                    -- language here - but these are cases where i want to be more specific
                     javascript = { { "prettierd", "prettier", }, },
                     -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
                     markdown = { { "prettierd", "prettier", }, },
