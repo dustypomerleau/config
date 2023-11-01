@@ -50,8 +50,8 @@ abbr --add ... "../.."
 abbr --add .... "../../.."
 abbr --add ..... "../../../.."
 abbr --add cb "cargo build"
-abbr --add chmod gchmod
-abbr --add cp "gcp -iv"
+abbr --add chmod uchmod
+abbr --add cp "ucp -iv"
 abbr --add cr "cargo run"
 abbr --add ct "cargo test"
 abbr --add ctr "cargo tree --depth"
@@ -61,7 +61,7 @@ abbr --add el "exa -aFhlmT --color-scale -L3" # eventually once https://github.c
 # abbr --add et "grm -frv ~/.Trash" # disallowed by SIP
 # abbr --add erlv "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), io:fwrite(Version), halt().' -noshell"
 abbr --add ev "evcxr"
-abbr --add find "gfind"
+abbr --add find "ufind"
 abbr --add g "git status -bs"
 abbr --add ga "git add"
 abbr --add gaa "git add -A"
@@ -110,22 +110,22 @@ abbr --add gsd "git switch dev"
 abbr --add gsm "git switch main"
 
 abbr --add l "\
-gls -1A \
+uls -1A \
 --color=auto \
 --group-directories-first"
 
 abbr --add la "\
-gls -Alh \
+uls -Alh \
 --color=auto \
 --group-directories-first"
 
 abbr --add lc "\
-gls -A \
+uls -A \
 --color=auto \
 --group-directories-first"
 
 abbr --add lr "\
-gls -1AR \
+uls -1AR \
 -I{node_modules,.git} \
 --color=auto \
 --group-directories-first"
@@ -190,10 +190,10 @@ git \
 --work-tree=$HOME \
 status -bs"
 
-abbr --add md "gmkdir -pv"
-abbr --add mkdir "gmkdir -pv"
-abbr --add mktemp "gmktemp" # macOS mktemp is not POSIX compliant
-abbr --add mv "gmv -iv"
+abbr --add md "umkdir -pv"
+abbr --add mkdir "umkdir -pv"
+abbr --add mktemp "umktemp" # macOS mktemp is not POSIX compliant
+abbr --add mv "umv -iv"
 abbr --add n "nvim"
 abbr --add ofd "open ."
 abbr --add p "pnpm"
@@ -214,8 +214,8 @@ abbr --add pug "pnpm update -g"
 abbr --add pul "pnpm update --latest" # ignores package.json and fetches latest
 abbr --add px "pnpm dlx" # equivalent to npx
 abbr --add renamer "renamer -e nvim"
-abbr --add rm "grm -iv"
-abbr --add sed "gsed -r"
+abbr --add rm "urm -iv"
+abbr --add sed "used -r"
 abbr --add so "source ~/.config/fish/config.fish"
 
 abbr --add sup "\
@@ -236,7 +236,7 @@ abbr --add tm "top -o mem"
 abbr --add tr "tree -CR --dirsfirst -I '.git|node_modules|target'"
 abbr --add vim "nvim"
 abbr --add x "extract"
-abbr --add xargs "gxargs"
+abbr --add xargs "uxargs"
 
 # future considerations:
 # - colored man pages
