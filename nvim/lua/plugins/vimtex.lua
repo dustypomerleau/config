@@ -19,17 +19,13 @@ return {
         keys = {
             {
                 "<localleader>v",
-                function()
-                    require("vimtex").cmd("vimtex-view")
-                end,
+                "<cmd>VimtexView<cr>",
                 mode = { "n", },
                 silent = false,
             },
             {
                 "<localleader>k",
-                function()
-                    require("vimtex").cmd("vimtex-compile")
-                end,
+                "<cmd>VimtexCompile<cr>",
                 mode = { "n", },
                 silent = false,
             },
