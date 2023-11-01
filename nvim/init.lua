@@ -55,8 +55,13 @@ require("lazy").setup("plugins", { checker = { enabled = true, }, })
 
 require("keys")
 
--- format on save (seems to be needed, even with conform fallback setting)
-vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+-- add filetypes as needed:
+-- skipping JS, TS, MD, as conform handles these.
+-- skipping Rust, as rust-tools appears to call rustfmt via rust analyzer without it
+-- format should be *.lua,*.rs,*.py etc. without spaces
+-- ATM it appears that conform is falling back without this being explicitly called (for all
+-- filetypes)
+-- vim.cmd([[autocmd BufWritePre *.lua lua vim.lsp.buf.format()]])
 
 -- use nvim-notify as the default notify function
 vim.notify = require("notify")
