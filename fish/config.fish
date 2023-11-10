@@ -55,8 +55,7 @@ abbr --add cp "ucp -iv"
 abbr --add cr "cargo run"
 abbr --add ct "cargo test"
 abbr --add ctr "cargo tree --depth"
-abbr --add e "exa -FhlmT --color-scale --git --git-ignore --no-permissions --no-user -L3"
-abbr --add el "exa -aFhlmT --color-scale -L3" # eventually once https://github.com/ogham/exa/issues/1214 is fixed, you can add -a to `e` and remove this
+abbr --add e "eza -aFhlmT --color-scale=size --git --git-ignore --icons=auto --no-permissions --no-user -L3"
 # abbr --add epub "asciidoctor-epub3 -D ebook"
 # abbr --add et "grm -frv ~/.Trash" # disallowed by SIP
 # abbr --add erlv "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), io:fwrite(Version), halt().' -noshell"
