@@ -3,7 +3,7 @@ return {
         "tpope/vim-surround",
         keys = {
             -- default mappings (ys.. ds.. cs..)
-            -- todo: this is broken, you need to use <plug> to call this
+            -- this is broken, you need to use <plug> to call this
             -- but in any event, you aren't using this as you're switching to nvim-surround
             {
                 "s",

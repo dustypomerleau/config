@@ -1,4 +1,4 @@
--- todo: configure this using instructions at https://github.com/L3MON4D3/LuaSnip
+-- todo: configure snippets using instructions at https://github.com/L3MON4D3/LuaSnip
 return {
     {
         "l3mon4d3/luasnip",
