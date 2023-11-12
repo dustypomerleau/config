@@ -1,5 +1,4 @@
 -- see a full list of cmp sources at https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources
--- in future consider adding https://github.com/hrsh7th/cmp-nvim-lsp but leave as-is for now
 
 return {
     {
