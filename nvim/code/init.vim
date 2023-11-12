@@ -1,3 +1,6 @@
+" This file is mostly deprecated, but provides limited vim bindings in VS Code
+" I haven't had time to update this to match my Lua config, and rarely use it.
+
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'andymass/vim-matchup'
     Plug 'arsham/arshlib.nvim',
