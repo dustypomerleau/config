@@ -30,10 +30,12 @@ set.shortmess = vim.opt.shortmess + { c = true, } -- don't give completion messa
 set.signcolumn = "yes"
 set.smartcase = true -- uppercase search is case sensitive
 set.softtabstop = 4 -- number of spaces in a tab when editing
+set.swapfile = false
 set.synmaxcol = 0 -- highlight lines of any length
 set.tabstop = 4 -- number of visual spaces per tab
 set.termguicolors = true
 set.updatetime = 300
+set.undofile = true
 set.wrap = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
