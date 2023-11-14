@@ -7,4 +7,5 @@ function fish_right_prompt
     echo -n (date '+%H:%M:%S')
     set_color ff4ee0
     printf '] '
+    set_color normal
 end
