@@ -7,6 +7,8 @@ return {
         },
     },
     keys = { { "<leader>u", "<cmd>Telescope undo<cr>", }, },
+    -- If you have found the undo state you were looking for, you can use <C-cr> or <C-r> to revert to that state.
+    -- If you'd rather not change your whole buffer, you can use <cr> to yank the additions of this undo state into your default register (use <S-cr> or <C-y> to yank the deletions).
     config = function(_, opts)
         require("telescope").setup(opts)
         require("telescope").load_extension("undo")
