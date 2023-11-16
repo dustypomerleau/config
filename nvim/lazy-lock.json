@@ -35,6 +35,7 @@
   "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "ffb31befabb165812360ba70072e04c2101317d7" },
   "rust-tools.nvim": { "branch": "master", "commit": "dcd8b10589f22fea0093abe80545d6e4d7ee792c" },
+  "telescope-undo.nvim": { "branch": "main", "commit": "13c33c173e53f14df7eec5155c52a3d2ab022d8d" },
   "telescope.nvim": { "branch": "master", "commit": "18774ec7929c8a8003a91e9e1f69f6c32258bbfe" },
   "tol.nvim": { "branch": "dev", "commit": "2fe3b4c9f1d54914acea1986a2136989bf83d7ec" },
   "trouble.nvim": { "branch": "main", "commit": "f1168feada93c0154ede4d1fe9183bf69bac54ea" },
