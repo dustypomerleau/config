@@ -17,14 +17,16 @@ return {
             rt.setup({
                 server = {
                     settings = { ["rust-analyzer"] = { cargo = { allFeatures = true, }, }, },
-                    on_attach = function(_, bufnr)
-                        -- Hover actions
-                        vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions,
-                            { buffer = bufnr, })
-                        -- Code action groups
-                        vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group,
-                            { buffer = bufnr, })
-                    end,
+                    -- Comment out this function, as you provide both hover and code
+                    -- actions generically in keys.lua (for all LSs).
+                    -- on_attach = function(_, bufnr)
+                    --     -- Hover actions
+                    --     vim.keymap.set("n", "<localleader>h", rt.hover_actions.hover_actions,
+                    --         { buffer = bufnr, })
+                    --     -- Code action groups
+                    --     vim.keymap.set("n", "<localleader>a", rt.code_action_group.code_action_group,
+                    --         { buffer = bufnr, })
+                    -- end,
                     capabilities = capabilities,
                 },
                 tools = {
