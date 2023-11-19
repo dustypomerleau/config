@@ -45,6 +45,18 @@ return {
                 noremap = true,
             },
             {
+                "<leader>j",
+                ":Telescope jumplist<cr>",
+                mode = { "n", },
+                noremap = true,
+            },
+            {
+                "<leader>k",
+                ":Telescope keymaps<cr>",
+                mode = { "n", },
+                noremap = true,
+            },
+            {
                 "<leader>l",
                 ":Telescope current_buffer_fuzzy_find<cr>",
                 mode = { "n", },
