@@ -16,7 +16,12 @@ return {
 
             rt.setup({
                 server = {
-                    settings = { ["rust-analyzer"] = { cargo = { allFeatures = true, }, }, },
+                    settings = {
+                        ["rust-analyzer"] = {
+                            cargo = { features = "all", },
+                            workspace = { symbol = { search = { kind = "all_symbols", }, }, },
+                        },
+                    },
                     -- Comment out this function, as you provide both hover and code
                     -- actions generically in keys.lua (for all LSs).
                     -- on_attach = function(_, bufnr)
