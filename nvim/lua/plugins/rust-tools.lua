@@ -22,24 +22,12 @@ return {
                             workspace = { symbol = { search = { kind = "all_symbols", }, }, },
                         },
                     },
-                    -- Comment out this function, as you provide both hover and code
-                    -- actions generically in keys.lua (for all LSs).
-                    -- on_attach = function(_, bufnr)
-                    --     -- Hover actions
-                    --     vim.keymap.set("n", "<localleader>h", rt.hover_actions.hover_actions,
-                    --         { buffer = bufnr, })
-                    --     -- Code action groups
-                    --     vim.keymap.set("n", "<localleader>a", rt.code_action_group.code_action_group,
-                    --         { buffer = bufnr, })
-                    -- end,
                     capabilities = capabilities,
-                },
-                tools = {
-                    inlay_hints = {
-                        show_parameter_hints = false,
-                        parameter_hints_prefix = "",
-                        other_hints_prefix = ": ",
-                    },
+                    -- Removed this on_attach, because inlay hints are handled for all compatible
+                    -- LSP servers using the autocmd on LspAttach in lspconfig.lua.
+                    -- on_attach = function(_, bufnr)
+                    --     vim.lsp.inlay_hint.enable(bufnr, true)
+                    -- end,
                 },
             })
         end,
