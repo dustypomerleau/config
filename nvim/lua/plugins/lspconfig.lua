@@ -12,10 +12,8 @@ return { {
                 local client = vim.lsp.get_client_by_id(args.data.client_id)
                 if client.supports_method("textDocument/inlayHint") then
                     vim.lsp.inlay_hint.enable(args.buf, true)
-                    vim.notify(
-                        string.format("LSP inlay hints are enabled for %s", client.name),
-                        "info"
-                    )
+                    -- toggle this line to help debug inlay hint problems
+                    -- vim.notify(string.format("LSP inlay hints are enabled for %s", client.name), "info")
                 end
             end,
         })
