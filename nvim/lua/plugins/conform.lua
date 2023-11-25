@@ -10,6 +10,7 @@ return {
                     -- language here - but these are cases where i want to be more specific
                     javascript = { { "prettierd", "prettier", }, },
                     json = { { "prettierd", "prettier", }, },
+                    jsonc = { { "prettierd", "prettier", }, },
                     -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
                     markdown = { { "prettierd", "prettier", }, },
                     -- rust = { "rustfmt", },
