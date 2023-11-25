@@ -1,4 +1,5 @@
 -- see a full list of cmp sources at https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources
+-- note: passing nvim-cmp's default capabilities to LSP servers has been moved to lspconfig.lua
 
 return {
     {
@@ -109,19 +110,6 @@ return {
                     { { name = "cmdline", }, }
                 ),
             })
-
-            -- Set up lspconfig.
-            local lsp = require("lspconfig")
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-            -- rust_analyzer setup is called by rust-tools
-            -- tsserver setup is called by typescript-tools
-            lsp.clangd.setup({ capabilities = capabilities, })
-            lsp.lua_ls.setup({ capabilities = capabilities, })
-            lsp.marksman.setup({ capabilities = capabilities, })
-            lsp.pyright.setup({ capabilities = capabilities, })
-            lsp.svelte.setup({ capabilities = capabilities, })
-            lsp.tailwindcss.setup({ capabilities = capabilities, })
         end,
     },
 }

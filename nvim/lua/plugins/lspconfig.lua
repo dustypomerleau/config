@@ -5,6 +5,18 @@ return { {
     "neovim/nvim-lspconfig",
     event = "VeryLazy",
     config = function()
+        local lsp = require("lspconfig")
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+        -- rust_analyzer setup is called by rust-tools
+        -- tsserver setup is called by typescript-tools
+        lsp.clangd.setup({ capabilities = capabilities, })
+        lsp.lua_ls.setup({ capabilities = capabilities, })
+        lsp.marksman.setup({ capabilities = capabilities, })
+        lsp.pyright.setup({ capabilities = capabilities, })
+        lsp.svelte.setup({ capabilities = capabilities, })
+        lsp.tailwindcss.setup({ capabilities = capabilities, })
+
         -- enable inlay hints on attach if the LSP supports them
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),
