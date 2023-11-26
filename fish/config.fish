@@ -51,10 +51,13 @@ abbr --add .... "../../.."
 abbr --add ..... "../../../.."
 abbr --add cb "cargo build"
 abbr --add chmod uchmod
+abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "ucp -iv"
 abbr --add cr "cargo run"
 abbr --add ct "cargo test"
 abbr --add ctr "cargo tree --depth"
+abbr --add cu "cargo update"
+abbr --add cud "cargo update --dry-run"
 abbr --add e "eza -aFhlmT --color-scale=size --git --git-ignore --icons=auto --no-permissions --no-user -L3"
 # abbr --add epub "asciidoctor-epub3 -D ebook"
 # abbr --add et "grm -frv ~/.Trash" # disallowed by SIP
