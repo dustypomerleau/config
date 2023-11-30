@@ -23,11 +23,6 @@ return {
                         },
                     },
                     capabilities = capabilities,
-                    -- Removed this on_attach, because inlay hints are handled for all compatible
-                    -- LSP servers using the autocmd on LspAttach in lspconfig.lua.
-                    -- on_attach = function(_, bufnr)
-                    --     vim.lsp.inlay_hint.enable(bufnr, true)
-                    -- end,
                 },
             })
         end,
