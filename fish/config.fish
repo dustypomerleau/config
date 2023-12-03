@@ -228,14 +228,14 @@ brew upgrade neovim --fetch-head && \
 brew upgrade --cask && \
 rustup update && \
 cargo install-update -a \
-pnpm update -g && \
-sudo tlmgr update --self --all --reinstall-forcibly-removed"
+pnpm update -g"
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"
 abbr --add tc "top -o cpu"
 abbr --add tm "top -o mem"
 abbr --add tr "tree -CR --dirsfirst -I '.git|node_modules|target'"
+abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add vim "nvim"
 abbr --add x "extract"
 abbr --add xargs "uxargs"
