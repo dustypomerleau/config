@@ -24,6 +24,9 @@ return {
                     },
                     capabilities = capabilities,
                 },
+                -- disable rust-tools inlay hints to avoid deprecation warning
+                -- native inlay hints are set up for all servers in lspconfig.lua
+                tools = { inlay_hints = { auto = false, }, },
             })
         end,
     },
