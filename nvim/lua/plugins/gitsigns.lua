@@ -47,13 +47,13 @@ return {
                 noremap = true,
             },
             {
-                "<localleader>gN",
+                "<localleader>gp",
                 "<cmd>Gitsigns prev_hunk<cr>",
                 mode = { "n", },
                 noremap = true,
             },
             {
-                "<localleader>gp",
+                "<localleader>ge",
                 "<cmd>Gitsigns preview_hunk_inline<cr>",
                 mode = { "n", },
                 noremap = true,
