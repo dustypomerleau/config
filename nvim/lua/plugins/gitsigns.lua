@@ -1,7 +1,13 @@
+-- function derived from:
+-- https://github.com/andrewferrier/dotfiles/blob/919719a153d34393b787e4c0a394de56e764004a/common/.config/nvim/lua/plugins/gitsigns.lua#L3
 local function visual_stage()
     local first_line = vim.fn.line("v")
     local last_line = vim.fn.getpos(".")[2]
     require("gitsigns").stage_hunk({ first_line, last_line, })
+    -- Switch back to normal mode, there may be a cleaner way to do this
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "t", false)
+end
+
 return {
     {
         "lewis6991/gitsigns.nvim",
@@ -78,6 +84,12 @@ return {
                 "<localleader>grh",
                 "<cmd>Gitsigns reset_hunk<cr>",
                 mode = { "n", },
+                noremap = true,
+            },
+            {
+                "<localleader>gs",
+                function() visual_stage() end,
+                mode = { "x", },
                 noremap = true,
             },
             {
