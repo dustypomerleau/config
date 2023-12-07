@@ -1,11 +1,13 @@
 -- function derived from:
 -- https://github.com/andrewferrier/dotfiles/blob/919719a153d34393b787e4c0a394de56e764004a/common/.config/nvim/lua/plugins/gitsigns.lua#L3
 local function visual_stage()
+    -- "v" represents the start of the visual area.
     local first_line = vim.fn.line("v")
+    -- "." represents the current cursor position. `getpos()` returns a list with lnum at [2].
     local last_line = vim.fn.getpos(".")[2]
     require("gitsigns").stage_hunk({ first_line, last_line, })
-    -- Switch back to normal mode, there may be a cleaner way to do this
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "t", false)
+    -- switch back to normal mode
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<esc>", true, false, true), "t", false)
 end
 
 return {
