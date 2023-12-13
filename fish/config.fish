@@ -49,6 +49,7 @@ set __fish_git_prompt_showupstream "informative"
 abbr --add ... "../.."
 abbr --add .... "../../.."
 abbr --add ..... "../../../.."
+abbr --add b "btm"
 abbr --add cb "cargo build"
 abbr --add chmod uchmod
 abbr --add co "cargo outdated -R" # root dependencies only
@@ -232,8 +233,6 @@ pnpm update -g"
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"
-abbr --add tc "top -o cpu"
-abbr --add tm "top -o mem"
 abbr --add tr "tree -CR --dirsfirst -I '.git|node_modules|target'"
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add vim "nvim"
