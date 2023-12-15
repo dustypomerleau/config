@@ -16,7 +16,13 @@ return { {
         lsp.pyright.setup({ capabilities = capabilities, })
         lsp.svelte.setup({ capabilities = capabilities, })
         lsp.tailwindcss.setup({ capabilities = capabilities, })
-        lsp.typst_lsp.setup({ capabilities = capabilities, settings = { exportPdf = "onType", serverPath = ".", }, })
+        lsp.typst_lsp.setup({
+            capabilities = capabilities,
+            settings = {
+                exportPdf = "onType",
+                root_dir = function() return vim.fn.getcwd() end,
+            },
+        })
 
         -- enable inlay hints on attach if the LSP supports them
         vim.api.nvim_create_autocmd("LspAttach", {
