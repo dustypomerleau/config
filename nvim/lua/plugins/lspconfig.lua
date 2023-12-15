@@ -19,9 +19,7 @@ return { {
         lsp.typst_lsp.setup({
             capabilities = capabilities,
             root_dir = function() return vim.uv.cwd() end,
-            settings = {
-                exportPdf = "onType",
-            },
+            settings = { exportPdf = "onType", },
         })
 
         -- enable inlay hints on attach if the LSP supports them
