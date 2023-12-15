@@ -18,9 +18,9 @@ return { {
         lsp.tailwindcss.setup({ capabilities = capabilities, })
         lsp.typst_lsp.setup({
             capabilities = capabilities,
+            root_dir = function() return vim.uv.cwd() end,
             settings = {
                 exportPdf = "onType",
-                root_dir = function() return vim.fn.getcwd() end,
             },
         })
 
