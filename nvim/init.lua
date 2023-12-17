@@ -57,12 +57,7 @@ require("lazy").setup("plugins", { checker = { enabled = true, }, })
 
 require("keys")
 
--- add filetypes as needed:
--- skipping JS, TS, MD, as conform handles these.
--- skipping Rust, as rust-tools appears to call rustfmt via rust analyzer without it
--- format should be *.lua,*.rs,*.py etc. without spaces
--- ATM it appears that conform is falling back without this being explicitly called (for all
--- filetypes)
+-- Commented out, as Conform is calling this as a fallback automatically.
 -- vim.cmd([[autocmd BufWritePre *.lua lua vim.lsp.buf.format()]])
 
 -- use nvim-notify as the default notify function
@@ -71,5 +66,3 @@ vim.notify = require("notify")
 -- -- highlight playground
 -- local t = require("tol.colors")
 -- vim.api.nvim_set_hl(0, "GitSignsAddInline", { bg = t.diff_emph_plus, })
--- vim.api.nvim_set_hl(0, "GitSignsDeleteInline", { bg = t.diff_emph_minus, })
--- vim.api.nvim_set_hl(0, "GitSignsChangeInline", { bg = t.bg_mono3, })
