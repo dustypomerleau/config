@@ -24,9 +24,15 @@ return {
                     },
                     capabilities = capabilities,
                 },
-                -- disable rust-tools inlay hints to avoid deprecation warning
-                -- native inlay hints are set up for all servers in lspconfig.lua
-                tools = { inlay_hints = { auto = false, }, },
+                tools = {
+                    -- disable rust-tools inlay hints to avoid deprecation warning
+                    -- native inlay hints are set up for all servers in lspconfig.lua
+                    inlay_hints = { auto = false, },
+                    -- disable on_type_formatting, as this throws a wicked error on every keystroke
+                    -- perhaps revisit once there has been opportunity to troubleshoot
+                    -- https://github.com/Ciel-MC/rust-tools.nvim/blob/1d005b37a6b7c216764b044573a440ff9f6f0821/lua/rust-tools/on_type_formatting.lua#L21
+                    on_type_formatting = false,
+                },
             })
         end,
     },
