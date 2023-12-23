@@ -72,6 +72,7 @@ abbr --add gc "git commit -m"
 abbr --add gca "git commit -a -m"
 abbr --add gd "git diff"
 abbr --add gds "git diff --staged"
+abbr --add gfu "git fetch upstream"
 
 abbr --add gl "\
 git log \
