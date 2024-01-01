@@ -229,7 +229,7 @@ brew upgrade && \
 brew upgrade neovim --fetch-head && \
 brew upgrade --cask && \
 rustup update && \
-cargo install-update -a \
+cargo install-update -a && \
 pnpm update -g"
 
 abbr --add t "tmux"
