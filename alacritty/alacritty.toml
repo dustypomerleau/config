@@ -12,6 +12,10 @@ yellow = "#eedd88"
 cursor = "#ff218c"
 text = "#fbfc86"
 
+[colors.hints.start]
+background = "#ff218c"
+foreground = "#fbfc86"
+
 [colors.normal]
 black = "#242837"
 blue = "#70b2f3"
@@ -28,12 +32,12 @@ bright_foreground = "#fdf1d4"
 foreground = "#cac0a9"
 
 [colors.search.focused_match]
-background = "#eedd88"
-foreground = "#474e6c"
+background = "#72aa00"
+foreground = "#fbfc86"
 
 [colors.search.matches]
-background = "#474e6c"
-foreground = "#77aadd"
+background = "#5e81ac"
+foreground = "#f8f8f8"
 
 [colors.selection]
 background = "#474e6c"
@@ -65,6 +69,16 @@ style = "Regular"
 
 [font.offset]
 y = 6
+
+[[hints.enabled]]
+binding = { key = "U", mods = "Control" }
+command = "open"
+hyperlinks = true
+mouse.enabled = true
+mouse.mods = "None"
+persist = false
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
 
 [[keyboard.bindings]]
 action = "CreateNewWindow"
