@@ -13,8 +13,8 @@ cursor = "#ff218c"
 text = "#fbfc86"
 
 [colors.hints.start]
-background = "#ff218c"
-foreground = "#fbfc86"
+background = "#474e6c"
+foreground = "#ffff00"
 
 [colors.normal]
 black = "#242837"
