@@ -15,6 +15,7 @@ return {
                     markdown = { { "prettierd", "prettier", }, },
                     -- rust = { "rustfmt", },
                     -- svelte = { { "prettierd", "prettier", }, },
+                    toml = { { "taplo", }, },
                     typescript = { { "prettierd", "prettier", }, },
                 },
                 -- setting format_on_save will automatically generate an autocommand like:

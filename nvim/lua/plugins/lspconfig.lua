@@ -4,11 +4,16 @@
 return { {
     "neovim/nvim-lspconfig",
     event = "VeryLazy",
+    opts = {
+        -- rust_analyzer is set up by rustaceanvim, these opts supposedly avoid duplication,
+        -- but I'm not certain it's actually necessary
+        servers = { rust_analyzer = {}, },
+        setup = { rust_analyzer = function() return true end, },
+    },
     config = function()
         local lsp = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        -- rust_analyzer setup is called by rust-tools
         -- tsserver setup is called by typescript-tools
         lsp.clangd.setup({ capabilities = capabilities, })
         lsp.lua_ls.setup({ capabilities = capabilities, })
@@ -16,6 +21,17 @@ return { {
         lsp.pyright.setup({ capabilities = capabilities, })
         lsp.svelte.setup({ capabilities = capabilities, })
         lsp.tailwindcss.setup({ capabilities = capabilities, })
+
+        local util = require("lspconfig.util")
+        lsp.taplo.setup({
+            capabilities = capabilities,
+            cmd = { "taplo", "lsp", "stdio", },
+            filetypes = { "toml", },
+            root_dir = function(fname)
+                return util.root_pattern("*.toml")(fname) or util.find_git_ancestor(fname)
+            end,
+            single_file_support = true,
+        })
 
         lsp.typst_lsp.setup({
             capabilities = capabilities,

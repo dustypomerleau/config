@@ -1,7 +1,7 @@
 return {
     {
         "pmizio/typescript-tools.nvim",
-        event = "VeryLazy", -- similar strategy to rust-tools, load before BufEnter to help attach
+        event = "VeryLazy", -- load before BufEnter to help attach
         dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig", },
         opts = {},
         config = function()

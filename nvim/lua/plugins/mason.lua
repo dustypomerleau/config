@@ -6,6 +6,22 @@ return {
     {
         "williamboman/mason.nvim",
         event = "VeryLazy",
+        opts = {
+            -- ensure Rust debugger is installed (codelldb)
+            ensure_installed = {
+                "codelldb",
+                "clangd",
+                "lua-language-server",
+                "marksman",
+                "pyright",
+                "rust-analyzer",
+                "svelte-language-server",
+                "tailwindcss-language-server",
+                "taplo",
+                "typescript-language-server",
+                "typst-lsp",
+            },
+        },
         config = function()
             require("mason").setup({
                 ui = {
