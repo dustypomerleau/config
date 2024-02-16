@@ -1,0 +1,43 @@
+# note: do not sort the portions unignoring directories, order matters
+
+/*
+
+!/.config/
+/.config/*
+
+!/.config/alacritty/
+!/.config/fish/
+
+!/.config/karabiner/
+/.config/karabiner/*
+!/.config/karabiner/karabiner.json
+
+!/.config/nvim/
+/.config/nvim/lazy-lock.json
+
+!/.config/tmux/
+
+!/Library/
+/Library/*
+
+!/Library/Application Support/
+/Library/Application Support/*
+
+!/Library/Application Support/Code/
+/Library/Application Support/Code/*
+
+!/Library/Application Support/Code/User/
+/Library/Application Support/Code/User/*
+
+!/Library/Application Support/Code/User/keybindings.json
+!/Library/Application Support/Code/User/settings.json
+
+!/Library/Application Support/jj/
+
+!.gitconfig
+!.gitignore
+!.gitignore_global
+!.psqlrc
+!.zshrc
+!taplo.toml
+!themes.gitconfig

@@ -1,0 +1,31 @@
+/*
+!.gitignore
+!alacritty
+!fish
+!karabiner/karabiner.json
+!nvim
+!tmux
+.DS_Store
+nvim/lazy-lock.json
+
+# The only things from mc that aren't included in this git repo would be like 
+# ~/{.gitconfig,.gitignore,.gitignore_global}
+
+# If you exclude application/, then everything under it will always be excluded (even if some later negative exclusion pattern (“unignore”) might match something under application/).
+
+# To do what you want, you have to “unignore” every parent directory of anything that you want to “unignore”. Usually you end up writing rules for this situation in pairs: ignore everything in a directory, but not some certain subdirectory.
+
+# # you can skip this first one if it is not already excluded by prior patterns
+# !application/
+
+# application/*
+# !application/language/
+
+# application/language/*
+# !application/language/gr/
+# Note
+# The trailing /* is significant:
+
+# The pattern dir/ excludes a directory named dir and (implicitly) everything under it.
+# With dir/, Git will never look at anything under dir, and thus will never apply any of the “un-exclude” patterns to anything under dir.
+# The pattern dir/* says nothing about dir itself; it just excludes everything under dir. With dir/*, Git will process the direct contents of dir, giving other patterns a chance to “un-exclude” some bit of the content (!dir/sub/).

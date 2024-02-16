@@ -1,0 +1,105 @@
+<leader>
+    a
+    b
+    c
+    d
+    e
+    f
+    g
+    h
+    i
+    j
+    k
+    l
+    m
+    n
+    o
+    p
+    q
+    r
+    s
+    t
+    u
+    v
+    w
+    x
+    y
+    z
+
+<localleader>
+    a
+    b
+    c
+    d
+    e
+    f
+    g
+    h
+    i
+    j
+    k
+    l
+    m
+    n
+    o
+    p
+    q
+    r
+    s
+    t
+    u
+    v
+    w
+    x
+    y
+    z
+
+C (stolen from duplicate of c$)
+
+D (stolen from duplicate of d$)
+
+Q
+
+R (stolen from replace ongoing)
+
+S (stolen from duplicate of cc, and then stolen again from Flash treesitter)
+
+U (stolen from undo last changed line)
+
+Y (stolen from duplicate of y$)
+
+Z (stolen from quit aliases)
+
+g
+    a (stolen from give codes for character under the cursor)
+    b
+    c 
+    d (stolen from move to local declaration)
+    h (stolen from select mode)
+    i
+    l
+    m (stolen from half a screen to the right)
+    o (stolen from same as gg I think)
+    q
+    r (another great one)
+    s (reserved for sort-motion)
+    t (stolen from tab navigation)
+    x (reserved for gx)
+    y
+    z
+
+s (stolen from substitute - reserve for Flash)
+    
+y
+    c
+    d
+    m
+    o (currently set to nvim-surround)
+    z
+    q 
+    v (stolen from: modifies yank to exclude the last character of the motion)
+
+87 available bindings if capitals are not used as namespaces
+
+Current breakdown:
+
