@@ -135,6 +135,7 @@ abbr --add jgf "jj git fetch"
 abbr --add jgi "jj git init --git-repo=."
 abbr --add jgp "jj git push"
 abbr --add jgpa "jj git push --all"
+abbr --add jh "jj show"
 abbr --add ji "jj describe -m"
 abbr --add jl "jj log"
 abbr --add jla "jj log -r 'all()'"
@@ -143,7 +144,7 @@ abbr --add jnm "jj new -m"
 abbr --add jo "jj obslog"
 abbr --add jq "jj squash"
 abbr --add jr "jj rebase"
-abbr --add js "jj show"
+abbr --add js "jj split"
 
 abbr --add l "\
 uls -1A \
