@@ -7,10 +7,7 @@
     pager = delta
 
 [delta]
-    ; comment out settings that are already present in your squirrel theme
     ; see ~/themes.gitconfig for available themes
-    ; line-numbers = true
-    ; syntax-theme = Dracula
     features = squirrel
     light = false
     navigate = true # use n and N to move between diff sections
