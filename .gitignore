@@ -39,5 +39,6 @@
 !.gitignore_global
 !.psqlrc
 !.zshrc
+!prettier.config.cjs
 !taplo.toml
 !themes.gitconfig
