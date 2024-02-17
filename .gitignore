@@ -38,6 +38,7 @@
 !.gitignore
 !.gitignore_global
 !.psqlrc
+!.tmpl.yaml
 !.zshrc
 !prettier.config.cjs
 !taplo.toml
