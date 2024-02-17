@@ -145,6 +145,7 @@ abbr --add jo "jj obslog"
 abbr --add jq "jj squash"
 abbr --add jr "jj rebase"
 abbr --add js "jj split"
+abbr --add jt "jj root"
 
 abbr --add l "\
 uls -1A \
