@@ -30,10 +30,13 @@ timestamp = "bright black"
 "working_copy empty" = "red"
 "working_copy timestamp" = "blue"
 
+[diff]
+format = "git"
+
 [template-aliases]
 "format_short_id(id)" = "id.shortest()"
 
 [ui]
-diff = { tool = "delta" }
 editor = "nvim"
 merge-editor = "vscode"
+pager = "delta"
