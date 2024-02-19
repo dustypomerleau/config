@@ -14,7 +14,7 @@ return {
                     -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
                     markdown = { { "prettierd", "prettier", }, },
                     -- rust = { "rustfmt", },
-                    -- svelte = { { "prettierd", "prettier", }, },
+                    svelte = { { "prettierd", "prettier", }, },
                     toml = { { "taplo", }, },
                     typescript = { { "prettierd", "prettier", }, },
                 },
