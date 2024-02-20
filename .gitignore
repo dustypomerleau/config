@@ -2,6 +2,10 @@
 
 /*
 
+!/.cargo/
+/.cargo/*
+!.cargo/config.toml
+
 !/.config/
 /.config/*
 
