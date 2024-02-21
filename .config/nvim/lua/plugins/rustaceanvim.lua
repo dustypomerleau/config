@@ -24,7 +24,7 @@ vim.g.rustaceanvim = {
 
 return {
     "mrcjkb/rustaceanvim",
-    version = "^3", -- pin to release to avoid breaking changes
+    version = "^4", -- pin to release to avoid breaking changes
     ft = { "rust", },
     keys = {
         {
