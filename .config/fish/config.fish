@@ -57,6 +57,7 @@ abbr --add chmod uchmod
 abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "ucp -iv"
 abbr --add cr "cargo run"
+abbr --add cs "crates search"
 abbr --add ct "cargo test"
 abbr --add ctn "cargo test -- --nocapture"
 abbr --add ctr "cargo tree --depth"
