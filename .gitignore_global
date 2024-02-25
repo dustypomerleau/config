@@ -9,6 +9,7 @@
 *.xdv
 .DS_Store
 .elixir_ls/
+.env*
 .envrc
 .jj/
 .tool-versions
