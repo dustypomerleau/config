@@ -469,3 +469,5 @@ alias xargs="gxargs"
 # alias zsy='noglob zmv -Ls'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /Users/dustinpomerleau/.config/broot/launcher/bash/br
