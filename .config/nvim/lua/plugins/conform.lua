@@ -8,6 +8,7 @@ return {
                     -- using a sublist will run only the first available formatter
                     -- if fallback calling vim.lsp.buf.format() works as desired, no need to add the
                     -- language here - but these are cases where i want to be more specific
+                    css = { { "prettierd", "prettier", }, },
                     javascript = { { "prettierd", "prettier", }, },
                     json = { { "prettierd", "prettier", }, },
                     jsonc = { { "prettierd", "prettier", }, },
