@@ -38,6 +38,10 @@
 
 !/Library/Application Support/jj/
 
+!/Library/Application Support/org.dystroy.broot/
+/Library/Application Support/org.dystroy.broot/*
+!/Library/Application Support/org.dystroy.broot/conf.toml
+
 !.gitconfig
 !.gitignore
 !.gitignore_global
