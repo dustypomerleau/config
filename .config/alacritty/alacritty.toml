@@ -94,7 +94,7 @@ mods = "Command"
 history = 100000
 
 [shell]
-program = "/usr/local/bin/fish"
+program = "/run/current-system/sw/bin/fish"
 
 [window]
 decorations = "buttonless"
