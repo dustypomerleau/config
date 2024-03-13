@@ -1,5 +1,8 @@
 # note: do not sort the portions unignoring directories, order matters
 
+# This is already ignored by .gitignore_global, but jj doesn't seem to be observing it
+.DS_Store
+
 /*
 
 !/.cargo/
