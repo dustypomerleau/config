@@ -1,22 +1,8 @@
--- todo: review these settings (these are just defaults)
 return {
     "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
-    dependencies = { "nvim-lua/plenary.nvim", },
-    config = function()
-        require("neorg").setup({
-            load = {
-                ["core.defaults"] = {}, -- Loads default behaviour
-                ["core.concealer"] = {}, -- Adds pretty icons to your documents
-                ["core.dirman"] = { -- Manages Neorg workspaces
-                    config = {
-                        workspaces = {
-                            notes = "~/notes",
-                        },
-                    },
-                },
-            },
-        })
-    end,
-    ft = "norg",
+    lazy = false,
+    version = "*", -- pin to latest stable
+    dependencies = { "luarocks.nvim", },
+    config = true,
+    ft = "norg", -- probably no effect with `lazy = false`
 }
