@@ -1,3 +1,5 @@
+# https://librephoenix.com/2023-11-02-how-to-manage-your-dotfiles-the-nix-way-with-home-manager
+
 {
   description = "DP MBP system flake";
 
