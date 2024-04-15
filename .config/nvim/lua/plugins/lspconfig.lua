@@ -49,8 +49,9 @@ return { {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),
             callback = function(args)
                 local client = vim.lsp.get_client_by_id(args.data.client_id)
+                local bufnr = vim.api.nvim_get_current_buf()
                 if client.supports_method("textDocument/inlayHint") then
-                    vim.lsp.inlay_hint.enable(args.buf, true)
+                    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr, })
                     -- toggle this line to help debug inlay hint problems
                     -- vim.notify(string.format("LSP inlay hints are enabled for %s", client.name), "info")
                 end
