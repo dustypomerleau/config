@@ -16,6 +16,7 @@ return {
                     markdown = { { "prettierd", "prettier", }, },
                     nix = { { "nixfmt", }, },
                     -- rust = { "rustfmt", },
+                    sql = { { "sqlfmt", }, },
                     svelte = { { "prettierd", "prettier", }, },
                     toml = { { "taplo", }, },
                     typescript = { { "prettierd", "prettier", }, },
