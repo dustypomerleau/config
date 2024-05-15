@@ -265,11 +265,11 @@ abbr --add sup "\
 sudo softwareupdate -aiR && \
 brew update && \
 brew upgrade && \
-brew upgrade neovim --fetch-head && \
 brew upgrade --cask && \
 rustup update && \
 cargo install-update -a && \
 pnpm update -g"
+# brew upgrade neovim --fetch-head && \
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"
