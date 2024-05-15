@@ -8,18 +8,18 @@ return {
                     -- using a sublist will run only the first available formatter
                     -- if fallback calling vim.lsp.buf.format() works as desired, no need to add the
                     -- language here - but these are cases where i want to be more specific
-                    css = { { "prettierd", "prettier", }, },
-                    javascript = { { "prettierd", "prettier", }, },
-                    json = { { "prettierd", "prettier", }, },
-                    jsonc = { { "prettierd", "prettier", }, },
+                    css = { { "prettier", }, },
+                    javascript = { { "prettier", }, },
+                    json = { { "prettier", }, },
+                    jsonc = { { "prettier", }, },
                     -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
-                    markdown = { { "prettierd", "prettier", }, },
+                    markdown = { { "prettier", }, },
                     nix = { { "nixfmt", }, },
                     -- rust = { "rustfmt", },
                     sql = { { "sqlfmt", }, },
-                    svelte = { { "prettierd", "prettier", }, },
+                    svelte = { { "prettier", }, },
                     toml = { { "taplo", }, },
-                    typescript = { { "prettierd", "prettier", }, },
+                    typescript = { { "prettier", }, },
                 },
                 -- setting format_on_save will automatically generate an autocommand like:
                 -- vim.api.nvim_create_autocmd("BufWritePre", {
