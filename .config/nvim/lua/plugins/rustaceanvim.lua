@@ -15,6 +15,7 @@ vim.g.rustaceanvim = {
                     extraArgs = { "--no-deps", },
                 },
                 procMacro = { ignored = { leptos_macro = { "server", }, }, },
+                -- rustfmt = { override_command = { "leptosfmt", "--stdin", "--rustfmt", }, },
                 workspace = { symbol = { search = { kind = "all_symbols", }, }, },
             },
             capabilities = capabilities,
