@@ -24,21 +24,23 @@ vim.g.rustaceanvim = {
 }
 
 return {
-    "mrcjkb/rustaceanvim",
-    version = "^4", -- pin to release to avoid breaking changes
-    ft = { "rust", },
-    keys = {
-        {
-            "<localleader>sj",
-            ":RustLsp moveItem down<cr>",
-            mode = { "n", },
-            noremap = true,
-        },
-        {
-            "<localleader>sk",
-            ":RustLsp moveItem up<cr>",
-            mode = { "n", },
-            noremap = true,
+    {
+        "mrcjkb/rustaceanvim",
+        version = "^4", -- pin to release to avoid breaking changes
+        ft = { "rust", },
+        keys = {
+            {
+                "<localleader>sj",
+                ":RustLsp moveItem down<cr>",
+                mode = { "n", },
+                noremap = true,
+            },
+            {
+                "<localleader>sk",
+                ":RustLsp moveItem up<cr>",
+                mode = { "n", },
+                noremap = true,
+            },
         },
     },
 }
