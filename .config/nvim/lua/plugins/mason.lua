@@ -9,17 +9,18 @@ return {
         opts = {
             -- ensure Rust debugger is installed (codelldb)
             ensure_installed = {
-                "codelldb",
                 "clangd",
+                "codelldb",
                 "lua-language-server",
                 "marksman",
                 "pyright",
                 "rust-analyzer",
+                "sqlfmt",
                 "svelte-language-server",
                 "tailwindcss-language-server",
                 "taplo",
-                "typescript-language-server",
                 "typst-lsp",
+                "vtsls",
             },
         },
         config = function()
