@@ -7,7 +7,7 @@ return {
         event = "VeryLazy",
         opts = {
             -- rust_analyzer is set up by rustaceanvim, these opts supposedly avoid duplication,
-            -- but I'm not certain it's actually necessary
+            -- see :h rustaceanvim.mason
             servers = { rust_analyzer = {}, },
             setup = { rust_analyzer = function() return true end, },
         },
