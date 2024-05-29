@@ -1,18 +1,34 @@
 return {
     {
         "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons", },
         event = "VeryLazy",
-        opts = { height = 17, },
+        opts = {
+            modes = {
+                diagnostics = { -- use `s` to cycle the filter
+                    win = { size = 0.6, },
+                    preview = { -- use `p` to toggle preview
+                        type = "split",
+                        relative = "win",
+                        position = "right",
+                        size = 0.5,
+                    },
+                },
+            },
+            focus = true,
+            warn_no_results = false,
+            open_no_results = true,
+        },
         keys = {
             {
                 "<leader>d",
-                "<cmd>TroubleToggle document_diagnostics<cr>",
+                "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+                desc = "Toggle buffer diagnostics",
                 { noremap = true, },
             },
             {
                 "<localleader>d",
-                "<cmd>TroubleToggle workspace_diagnostics<cr>",
+                "<cmd>Trouble diagnostics toggle<cr>",
+                desc = "Toggle workspace diagnostics",
                 { noremap = true, },
             },
         },
