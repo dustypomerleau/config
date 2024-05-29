@@ -24,7 +24,26 @@ return {
                 },
                 sections = {
                     lualine_a = { "mode", },
-                    lualine_b = { "branch", "diff", "diagnostics", },
+                    lualine_b = {
+                        "branch",
+                        {
+                            "diff",
+                            symbols = {
+                                added    = " ",
+                                modified = " ",
+                                removed  = " ",
+                            },
+                        },
+                        {
+                            "diagnostics",
+                            symbols = {
+                                error = " ",
+                                hint = " ",
+                                info = " ",
+                                warn = " ",
+                            },
+                        },
+                    },
                     lualine_c = { { "filename", path = 1, shorting_target = 60, }, },
                     lualine_x = { "filetype", },
                     lualine_y = { "progress", },
