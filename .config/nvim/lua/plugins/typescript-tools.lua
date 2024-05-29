@@ -1,6 +1,7 @@
 return {
     {
         "pmizio/typescript-tools.nvim",
+        enabled = false,
         event = "VeryLazy", -- load before BufEnter to help attach
         dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig", },
         opts = {},
