@@ -5,7 +5,7 @@ return {
     {
         "hrsh7th/nvim-cmp",
         event = "VeryLazy",
-        dependencies = { "onsails/lspkind.nvim", }, -- icons
+        dependencies = { "onsails/lspkind.nvim", "nvim-tree/nvim-web-devicons", }, -- icons
         config = function()
             local cmp = require("cmp")
 
