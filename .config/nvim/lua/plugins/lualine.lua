@@ -34,7 +34,7 @@ return {
                                 warn = " ",
                             },
                         },
-                        "branch",
+                        -- "branch", -- branch is not really informative with jj
                         {
                             "diff",
                             symbols = {
