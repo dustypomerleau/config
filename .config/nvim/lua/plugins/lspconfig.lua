@@ -1,6 +1,9 @@
 -- default server configs for reference:
 -- https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/server_configurations
 
+-- You can paste icons directly from nerd fonts:
+-- https://www.nerdfonts.com/cheat-sheet
+
 return {
     {
         "neovim/nvim-lspconfig",
@@ -27,10 +30,10 @@ return {
                 severity_sort = true,
                 signs = {
                     text = {
-                        [vim.diagnostic.severity.ERROR] = " ",
-                        [vim.diagnostic.severity.HINT] = " ",
-                        [vim.diagnostic.severity.INFO] = " ",
-                        [vim.diagnostic.severity.WARN] = " ",
+                        [vim.diagnostic.severity.ERROR] = " ",
+                        [vim.diagnostic.severity.HINT] = " ",
+                        [vim.diagnostic.severity.INFO] = " ",
+                        [vim.diagnostic.severity.WARN] = " ",
                     },
                 },
             })

@@ -29,18 +29,18 @@ return {
                         {
                             "diff",
                             symbols = {
-                                added    = " ",
-                                modified = " ",
-                                removed  = " ",
+                                added    = " ",
+                                modified = " ",
+                                removed  = " ",
                             },
                         },
                         {
                             "diagnostics",
                             symbols = {
-                                error = " ",
-                                hint = " ",
-                                info = " ",
-                                warn = " ",
+                                error = " ",
+                                hint = " ",
+                                info = " ",
+                                warn = " ",
                             },
                         },
                     },
