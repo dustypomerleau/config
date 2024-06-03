@@ -25,15 +25,6 @@ return {
                 sections = {
                     lualine_a = { "mode", },
                     lualine_b = {
-                        "branch",
-                        {
-                            "diff",
-                            symbols = {
-                                added    = " ",
-                                modified = " ",
-                                removed  = " ",
-                            },
-                        },
                         {
                             "diagnostics",
                             symbols = {
@@ -41,6 +32,15 @@ return {
                                 hint = " ",
                                 info = " ",
                                 warn = " ",
+                            },
+                        },
+                        "branch",
+                        {
+                            "diff",
+                            symbols = {
+                                added    = " ",
+                                modified = " ",
+                                removed  = " ",
                             },
                         },
                     },
