@@ -7,8 +7,7 @@ vim.g.rustaceanvim = {
                 -- for a list of all possible config, see:
                 -- https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/config.rs
                 cargo = { features = "all", },
-                checkOnSave = {
-                    enable = true,
+                check = {
                     allTargets = true,
                     features = "all",
                     command = "clippy",
