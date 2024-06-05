@@ -10,6 +10,7 @@ return {
             -- ensure Rust debugger is installed (codelldb)
             ensure_installed = {
                 "clangd",
+                "css-lsp",
                 "codelldb",
                 "lua-language-server",
                 "marksman",

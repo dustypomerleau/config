@@ -40,6 +40,7 @@ return {
 
             -- vtsls config is in vtsls.lua
             lsp.clangd.setup({ capabilities = capabilities, })
+            lsp.cssls.setup({ capabilities = capabilities, })
             lsp.lua_ls.setup({ capabilities = capabilities, })
             lsp.marksman.setup({ capabilities = capabilities, })
             lsp.pyright.setup({ capabilities = capabilities, })
