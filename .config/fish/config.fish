@@ -54,10 +54,10 @@ abbr --add b "btm"
 abbr --add cb "cargo build"
 abbr --add ch "cargo check"
 abbr --add chmod uchmod
+abbr --add ci "crates-tui"
 abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "ucp -iv"
 abbr --add cr "cargo run"
-abbr --add cs "crates search"
 abbr --add ct "cargo test"
 abbr --add ctn "cargo test -- --nocapture"
 abbr --add ctr "cargo tree --depth"
