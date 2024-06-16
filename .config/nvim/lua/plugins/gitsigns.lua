@@ -71,6 +71,12 @@ return {
                 noremap = true,
             },
             {
+                "<localleader>gl",
+                "<cmd>Gitsigns blame_line<cr>",
+                mode = { "n", },
+                noremap = true,
+            },
+            {
                 "<localleader>grb",
                 "<cmd>Gitsigns reset_buffer<cr>",
                 mode = { "n", },
