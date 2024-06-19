@@ -40,6 +40,12 @@ return {
                 mode = { "n", },
                 noremap = true,
             },
+            {
+                "<localleader>sw",
+                ":RustLsp reloadWorkspace<cr>",
+                mode = { "n", },
+                noremap = true,
+            },
         },
     },
 }
