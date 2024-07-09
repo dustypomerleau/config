@@ -90,6 +90,9 @@ chars = "\u0015"
 key = "Back"
 mods = "Command"
 
+[mouse]
+hide_when_typing = true
+
 [scrolling]
 history = 100000
 
