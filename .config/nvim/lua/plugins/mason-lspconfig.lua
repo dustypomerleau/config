@@ -8,7 +8,7 @@ return {
                     "clangd",
                     "lua_ls",
                     "marksman",
-                    "pyright",
+                    "pyright", -- todo: replace with basedpyright
                     "rust_analyzer",
                     "svelte",
                     "tailwindcss",

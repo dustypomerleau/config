@@ -14,7 +14,7 @@ return {
                 "codelldb",
                 "lua-language-server",
                 "marksman",
-                "pyright",
+                "pyright", -- todo: replace with basedpyright
                 "rust-analyzer",
                 "sqlfmt",
                 "svelte-language-server",

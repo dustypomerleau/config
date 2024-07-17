@@ -43,7 +43,7 @@ return {
             lsp.cssls.setup({ capabilities = capabilities, })
             lsp.lua_ls.setup({ capabilities = capabilities, })
             lsp.marksman.setup({ capabilities = capabilities, })
-            lsp.pyright.setup({ capabilities = capabilities, })
+            lsp.pyright.setup({ capabilities = capabilities, }) -- todo: replace with basedpyright
             lsp.svelte.setup({ capabilities = capabilities, })
             lsp.tailwindcss.setup({ capabilities = capabilities, })
 
