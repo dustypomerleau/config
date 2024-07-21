@@ -14,22 +14,19 @@ return {
                 --     },
                 -- },
                 formatters_by_ft = {
-                    -- using a sublist will run only the first available formatter
-                    -- if fallback calling vim.lsp.buf.format() works as desired, no need to add the
-                    -- language here - but these are cases where i want to be more specific
-                    css = { { "prettierd", "prettier", }, },
-                    javascript = { { "prettierd", "prettier", }, },
-                    json = { { "prettierd", "prettier", }, },
-                    jsonc = { { "prettierd", "prettier", }, },
+                    -- `stop_after_first = true` runs only the first available formatter
+                    css = { "prettier", },
+                    javascript = { "prettier", },
+                    json = { "prettier", },
+                    jsonc = { "prettier", },
                     -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
-                    markdown = { { "prettierd", "prettier", }, },
-                    nix = { { "nixfmt", }, },
-                    -- when there's no sublist, the formatters are run sequentially:
+                    markdown = { "prettier", },
+                    nix = { "nixfmt", },
                     -- rust = { "rustfmt", },
-                    sql = { { "sqlfmt", }, },
-                    svelte = { { "prettierd", "prettier", }, },
-                    toml = { { "taplo", }, },
-                    typescript = { { "prettierd", "prettier", }, },
+                    sql = { "sqlfmt", },
+                    svelte = { "prettier", },
+                    toml = { "taplo", },
+                    typescript = { "prettier", },
                 },
                 -- setting format_on_save will automatically generate an autocommand like:
                 -- vim.api.nvim_create_autocmd("BufWritePre", {
@@ -38,6 +35,7 @@ return {
                 --         require("conform").format({ bufnr = args.buf })
                 --     end,
                 -- })
+                -- fallback calls vim.lsp.buf.format() if nothing is specified
                 format_on_save = { lsp_fallback = true, },
             })
         end,
