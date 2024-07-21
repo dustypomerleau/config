@@ -38,12 +38,14 @@ return {
                 },
             })
 
+            -- rust analyzer config is in rustaceanvim.lua
             -- vtsls config is in vtsls.lua
+            lsp.basedpyright.setup({ capabilities = capabilities, })
             lsp.clangd.setup({ capabilities = capabilities, })
             lsp.cssls.setup({ capabilities = capabilities, })
+            lsp.html.setup({ capabilities = capabilities, })
             lsp.lua_ls.setup({ capabilities = capabilities, })
             lsp.marksman.setup({ capabilities = capabilities, })
-            lsp.pyright.setup({ capabilities = capabilities, }) -- todo: replace with basedpyright
             lsp.svelte.setup({ capabilities = capabilities, })
             lsp.tailwindcss.setup({ capabilities = capabilities, })
 

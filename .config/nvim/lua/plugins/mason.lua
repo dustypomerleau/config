@@ -8,13 +8,16 @@ return {
         event = "VeryLazy",
         opts = {
             -- ensure Rust debugger is installed (codelldb)
+            -- mapping from mason package names to lspconfig server names:
+            -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
             ensure_installed = {
+                "basedpyright",
                 "clangd",
-                "css-lsp",
                 "codelldb",
+                "css-lsp",
+                "html",
                 "lua-language-server",
                 "marksman",
-                "pyright", -- todo: replace with basedpyright
                 "rust-analyzer",
                 "sqlfmt",
                 "svelte-language-server",
