@@ -4,6 +4,7 @@ return {
         event = "VeryLazy",
         config = function()
             require("conform").setup({
+                -- -- no need to override the rustfmt command, as this is done via rust-analyzer.toml
                 -- formatters = {
                 --     rustfmt = {
                 --         command = "leptosfmt",
@@ -15,14 +16,14 @@ return {
                 -- },
                 formatters_by_ft = {
                     -- `stop_after_first = true` runs only the first available formatter
+                    -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
+                    -- rust = { "rustfmt", },
                     css = { "prettier", },
                     javascript = { "prettier", },
                     json = { "prettier", },
                     jsonc = { "prettier", },
-                    -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
                     markdown = { "prettier", },
                     nix = { "nixfmt", },
-                    -- rust = { "rustfmt", },
                     sql = { "sqlfmt", },
                     svelte = { "prettier", },
                     toml = { "taplo", },
