@@ -25,7 +25,7 @@ vim.g.rustaceanvim = {
 return {
     {
         "mrcjkb/rustaceanvim",
-        version = "^4", -- pin to release to avoid breaking changes
+        version = "^5", -- pin to release to avoid breaking changes
         lazy = false, -- the plugin handles its own lazy loading
         keys = {
             {
