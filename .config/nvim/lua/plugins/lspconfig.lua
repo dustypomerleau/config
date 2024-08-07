@@ -69,7 +69,8 @@ return {
                 -- for nvim-lspconfig specifically), and the recommended solution is still git-dependent.
                 -- See https://github.com/neovim/nvim-lspconfig/blob/master/CONTRIBUTING.md#adding-a-server-to-lspconfig
                 root_dir = function() return vim.uv.cwd() end,
-                settings = { exportPdf = "onType", },
+                -- `exportPdf` can be `onType`, `onSave`, or `never`
+                settings = { exportPdf = "onSave", },
             })
 
             -- enable inlay hints on attach if the LSP supports them
