@@ -62,7 +62,7 @@
             # todo: include omnifocus in casks and run casks
             casks = [ ];
 
-            cask_args = {
+            caskArgs = {
               require_sha = true;
             };
 
