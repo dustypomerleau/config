@@ -210,10 +210,11 @@
                 TrackpadThreeFingerDrag = true;
               };
 
-              # universalaccess = {
-              #   reduceMotion = true;
-              #   reduceTransparency = true;
-              # };
+              # requires that the terminal you use has full disk access in System Settings
+              universalaccess = {
+                reduceMotion = true;
+                reduceTransparency = true;
+              };
             };
             # can system.patches be used to run a script containing defaults write commands that aren't covered here?
           };
