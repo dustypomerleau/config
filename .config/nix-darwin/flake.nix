@@ -159,9 +159,8 @@
                 orientation = "left";
                 show-recents = false;
                 tilesize = 10; # not sure how low this can go...
-                wvous-bl-corner = "Mission Control";
-                wvous-br-corner = "Application Windows";
-                wvous-tl-corner = "-";
+                wvous-bl-corner = 2; # mission control
+                wvous-br-corner = 3; # application windows
               };
 
               finder = {
