@@ -25,6 +25,8 @@
     }:
     let
       hostname = "DP-2018-MBP";
+      system = "x86_64-darwin";
+      username = "dustinpomerleau";
 
       configuration =
         { pkgs, ... }:
@@ -94,28 +96,113 @@
             ];
 
             hostName = hostname;
+            localHostName = hostname;
           };
 
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
 
-          programs.fish.enable = true;
+          # The platform the configuration will be used on.
+          nixpkgs.hostPlatform = system;
 
-          # Auto upgrade nix package and the daemon service.
-          services.nix-daemon.enable = true;
-          # nix.package = pkgs.nix;
-
-          system = {
-            # Set Git commit hash for darwin-version.
-            configurationRevision = self.rev or self.dirtyRev or null;
-
-            # Used for backwards compatibility, please read the changelog before changing.
-            # $ darwin-rebuild changelog
-            stateVersion = 4;
+          programs = {
+            fish.enable = true;
+            tmux.enable = true;
           };
 
-          # The platform the configuration will be used on.
-          nixpkgs.hostPlatform = "x86_64-darwin";
+          security.pam.enableSudoTouchIdAuth = true;
+
+          services = {
+            karabiner-elements.enable = true;
+            nix-daemon.enable = true;
+            # many options in services.postgresql.* left off for now
+            tailscale.enable = true;
+          };
+
+          system = {
+            # The Git revision of the top-level flake from which this configuration was built.
+            configurationRevision = self.rev or self.dirtyRev or null;
+
+            defaults = {
+              ".GlobalPreferences"."com.apple.mouse.scaling" = 1.0;
+
+              NSGlobalDomain = {
+                AppleICUForce24HourTime = true;
+                AppleInterfaceStyle = "Dark";
+                AppleShowAllExtensions = true;
+                NSAutomaticCapitalizationEnabled = false;
+                NSAutomaticDashSubstitutionEnabled = false;
+                NSAutomaticInlinePredictionEnabled = false;
+                NSAutomaticPeriodSubstitutionEnabled = false;
+                NSAutomaticQuoteSubstitutionEnabled = false;
+                NSAutomaticSpellingCorrectionEnabled = false;
+                NSNavPanelExpandedStateForSaveMode = true;
+                NSNavPanelExpandedStateForSaveMode2 = true;
+                PMPrintingExpandedStateForPrint = true;
+                PMPrintingExpandedStateForPrint2 = true;
+                _HIHideMenuBar = true;
+                "com.apple.mouse.tapBehavior" = 1; # tap to click
+                "com.apple.sound.beep.feedback" = 0; # feedback when volume is changed
+                "com.apple.trackpad.forceClick" = false;
+                "com.apple.trackpad.scaling" = 3; # 3 is maximum tracking speed
+              };
+
+              SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
+              WindowManager.StandardHideDesktopIcons = true;
+              WindowManager.StandardHideWidgets = true;
+
+              alf.globalstate = 1; # firewall enabled
+
+              dock = {
+                autohide = true;
+                autohide-delay = 1.0e-2;
+                orientation = "left";
+                show-recents = false;
+                tilesize = 10; # not sure how low this can go...
+                wvous-bl-corner = "Mission Control";
+                wvous-br-corner = "Application Windows";
+                wvous-tl-corner = "-";
+              };
+
+              finder = {
+                AppleShowAllExtensions = true;
+                CreateDesktop = false;
+                FXPreferredViewStyle = "clmv"; # column view
+                ShowPathbar = true;
+                ShowStatusBar = true;
+                _FXShowPosixPathInTitle = true;
+              };
+
+              loginwindow.GuestEnabled = false;
+
+              menuExtraClock = {
+                Show24Hour = true;
+                ShowDate = 1;
+                ShowDayOfWeek = true;
+                ShowSeconds = false;
+              };
+
+              screencapture = {
+                disable-shadow = true;
+                location = "/Users/${username}/Pictures/screenshots/";
+              };
+
+              trackpad = {
+                ActuationStrength = 0;
+                Clicking = true; # enable tap to click
+                Dragging = true; # tap to drag (same as drag lock?)
+                TrackpadRightClick = true;
+                TrackpadThreeFingerDrag = true;
+              };
+
+              universal_access = {
+                reduceMotion = true;
+                reduceTransparency = true;
+              };
+            };
+
+            # can system.patches be used to run a script containing defaults write commands that aren't covered here?
+          };
         };
     in
     {
