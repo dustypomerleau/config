@@ -195,7 +195,7 @@
                 TrackpadThreeFingerDrag = true;
               };
 
-              universal_access = {
+              universalaccess = {
                 reduceMotion = true;
                 reduceTransparency = true;
               };
