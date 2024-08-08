@@ -24,6 +24,8 @@
       nixpkgs,
     }:
     let
+      hostname = "DP-2018-MBP";
+
       configuration =
         { pkgs, ... }:
         {
@@ -90,6 +92,8 @@
               "8.8.8.8"
               "8.8.4.4"
             ];
+
+            hostName = hostname;
           };
 
           # Necessary for using flakes on this system.
@@ -117,28 +121,9 @@
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#DP-2018-MBP
-      darwinConfigurations."DP-2018-MBP" = nix-darwin.lib.darwinSystem { modules = [ configuration ]; };
+      darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem { modules = [ configuration ]; };
 
       # Expose the package set, including overlays, for convenience.
-      darwinPackages = self.darwinConfigurations."DP-2018-MBP".pkgs;
+      darwinPackages = self.darwinConfigurations.${hostname}.pkgs;
     };
 }
-
-# outputs = { self, nixpkgs, fh, .. } @ inputs:
-#     let
-#       supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-#       forEachSupportedSystem = f: nixpkgs.lib.genAttrs supportedSystems (system: f {
-#         inherit system;
-#         pkgs = import nixpkgs { inherit system; };
-#       });
-#     in
-#     {
-#       devShells = forEachSupportedSystem ({ pkgs, system }: {
-#         default = pkgs.mkShell {
-#           packages = [
-#             fh.packages.${system}.fh
-#           ];
-#         };
-#       });
-#     };
-# }
