@@ -5,6 +5,13 @@
 # available configuration options:
 # https://daiderd.com/nix-darwin/manual/
 
+# todo: 
+# - [ ] migrate packages from brew to nix
+# - [ ] add all casks
+# - [ ] add home manager
+# - [ ] code splitting
+# - [ ] scripts for all defaults write
+
 {
   description = "DP MBP system flake";
 
@@ -24,6 +31,7 @@
       nixpkgs,
     }:
     let
+      computername = "DP MBP";
       hostname = "DP-2018-MBP";
       system = "x86_64-darwin";
       username = "dustinpomerleau";
@@ -38,7 +46,8 @@
             ];
 
             # List packages installed in system profile. To search by name, run:
-            # $ nix-env -qaP | grep wget
+            # $ nix-env -qaP | rg <name>
+            # systemPackages are installed for all users, unlike profile packages
             systemPackages = [
               # todo: add remaining packages
               pkgs.nixd
@@ -60,6 +69,7 @@
             brews = [ ];
 
             # todo: include omnifocus in casks and run casks
+            # it's ok to install Karabiner Elements as a cask, but DO NOT enable via programs.enable...
             casks = [ ];
 
             caskArgs = {
@@ -95,7 +105,14 @@
               "8.8.4.4"
             ];
 
+            computerName = computername;
             hostName = hostname;
+
+            knownNetworkServices = [
+              "Thunderbold Ethernet"
+              "Wi-Fi"
+            ];
+
             localHostName = hostname;
           };
 
@@ -113,7 +130,6 @@
           security.pam.enableSudoTouchIdAuth = true;
 
           services = {
-            karabiner-elements.enable = true;
             nix-daemon.enable = true;
             # many options in services.postgresql.* left off for now
             tailscale.enable = true;
@@ -140,11 +156,11 @@
                 NSNavPanelExpandedStateForSaveMode2 = true;
                 PMPrintingExpandedStateForPrint = true;
                 PMPrintingExpandedStateForPrint2 = true;
-                _HIHideMenuBar = true;
                 "com.apple.mouse.tapBehavior" = 1; # tap to click
                 "com.apple.sound.beep.feedback" = 0; # feedback when volume is changed
                 "com.apple.trackpad.forceClick" = false;
                 "com.apple.trackpad.scaling" = 3.0; # 3 is maximum tracking speed
+
               };
 
               SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
@@ -158,7 +174,7 @@
                 autohide-delay = 1.0e-2;
                 orientation = "left";
                 show-recents = false;
-                tilesize = 10; # not sure how low this can go...
+                tilesize = 20; # not sure how low this can go...
                 wvous-bl-corner = 2; # mission control
                 wvous-br-corner = 3; # application windows
               };
@@ -194,12 +210,11 @@
                 TrackpadThreeFingerDrag = true;
               };
 
-              universalaccess = {
-                reduceMotion = true;
-                reduceTransparency = true;
-              };
+              # universalaccess = {
+              #   reduceMotion = true;
+              #   reduceTransparency = true;
+              # };
             };
-
             # can system.patches be used to run a script containing defaults write commands that aren't covered here?
           };
         };
