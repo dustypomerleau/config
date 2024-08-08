@@ -144,7 +144,7 @@
                 "com.apple.mouse.tapBehavior" = 1; # tap to click
                 "com.apple.sound.beep.feedback" = 0; # feedback when volume is changed
                 "com.apple.trackpad.forceClick" = false;
-                "com.apple.trackpad.scaling" = 3; # 3 is maximum tracking speed
+                "com.apple.trackpad.scaling" = 3.0; # 3 is maximum tracking speed
               };
 
               SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
