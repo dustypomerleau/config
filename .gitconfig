@@ -1,0 +1,47 @@
+[color]
+	ui = true
+
+[core]
+	editor = nvim
+	excludesfile = /Users/dustinpomerleau/.gitignore_global
+    pager = delta
+
+[delta]
+    ; see ~/themes.gitconfig for available themes
+    features = squirrel
+    light = false
+    navigate = true # use n and N to move between diff sections
+    side-by-side = true
+    true-color = always
+
+[diff]
+    colorMoved = default
+    tool = nvimdiff
+
+[difftool]
+    prompt = true
+
+[difftool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+
+[include]
+    path = /Users/dustinpomerleau/themes.gitconfig
+
+[init]
+	defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[user]
+	name = Dusty Pomerleau
+	email = dustypomerleau@users.noreply.github.com

@@ -1,0 +1,306 @@
+{
+    "[asciidoc]": {
+        "editor.tabSize": 2,
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 100
+    },
+    "[dockercompose]": {
+        "editor.tabSize": 4
+    },
+    "[elixir]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[haskell]": {
+        "editor.defaultFormatter": "haskell.haskell",
+        "editor.formatOnSave": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[html-eex]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[latex]": {
+        "editor.tabSize": 4
+    },
+    "[Log]": {
+        "editor.wordWrap": "bounded"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 100
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "asciidoc.use_asciidoctorpdf": true,
+    // "C_Cpp.enhancedColorization": "Disabled",
+    "color-highlight.markRuler": false,
+    "colorInfo.fields": ["preview-xl", "lch", "hsl", "hex", "cmyk"],
+    "colorInfo.languages": [{ "selector": "*", "colors": "css" }],
+    "colorize.include": ["**/*.*"],
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.accessibilitySupport": "off",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.colorDecorators": false,
+    "editor.cursorBlinking": "solid",
+    // "editor.cursorStyle": "line-thin",
+    // "editor.cursorSurroundingLines": 2,
+    "editor.cursorWidth": 2,
+    "editor.find.autoFindInSelection": "multiline",
+    "editor.fontFamily": "Source Code Pro",
+    // "editor.fontFamily": "CommitMono",
+    // "editor.fontWeight": "500",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    // "editor.inlayHints.enabled": "off",
+    "editor.inlayHints.fontSize": 14,
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.minimap.showSlider": "always",
+    "editor.occurrencesHighlight": "off",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "selection",
+    // "editor.rulers": [80],
+    "editor.semanticHighlighting.enabled": true,
+    // "editor.semanticTokenColorCustomizations": {
+    //     "[Tol]": {
+    //         "rules": {
+    //             "function.declaration:rust": "#aabbccff"
+    //         }
+    //     }
+    // },
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 4,
+    "editor.tokenColorCustomizations": {
+        // "semanticHighlighting": true,
+        // or for a specific theme:
+        // "[Yarra Valley]": {
+        //     "semanticHighlighting": true
+        // },
+        "[Tol]": {
+            "textMateRules": [
+                {
+                    "scope": ["constant.numeric.windicss"],
+                    "settings": {
+                        "foreground": "#bbcc33"
+                    }
+                },
+                {
+                    "scope": ["support.class.windicss"],
+                    "settings": {
+                        "foreground": "#77aadd"
+                    }
+                }
+            ]
+        }
+    },
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 100,
+    "editor.wrappingIndent": "indent",
+    "elixirLS.dialyzerEnabled": false,
+    "elixirLS.fetchDeps": false,
+    "emmet.includeLanguages": {
+        "html-eex": "html",
+        "postcss": "css"
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.associations": {
+        "*.eex": "html-eex",
+        "*.ipynb": "json",
+        "*.JSON-tmLanguage": "json",
+        "*.leex": "html-eex",
+        "*.pgf": "tex",
+        "*.rkt": "racket",
+        "*.rmd": "markdown",
+        "*.YAML-tmLanguage": "yaml"
+    },
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        "**/*.log": true,
+        "**/*.nav": true,
+        "**/*.out": true,
+        "**/*.snm": true,
+        "**/*.synctex.gz": true,
+        "**/*.toc": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/Thumbs.db": true,
+        "**/svg-inkscape": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "always",
+    "gitlens.blame.toggleMode": "window",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.defaultDateFormat": "YYYY–MM–DD, HH:MM",
+    "gitlens.defaultDateShortFormat": "YYYY–MM–DD",
+    "gitlens.defaultTimeFormat": "HH:MM",
+    "gitlens.heatmap.toggleMode": "window",
+    "gitlens.keymap": "alternate",
+    "gitlens.statusBar.reduceFlicker": true,
+    "gitlens.views.repositories.branches.layout": "list",
+    // "idris.executablePath": "idris2",
+    "keyboard.touchbar.ignored": [
+        "workbench.action.debug.continue",
+        "workbench.action.debug.pause",
+        "workbench.action.debug.restart",
+        "workbench.action.debug.run",
+        "workbench.action.debug.start",
+        "workbench.action.debug.stepInto",
+        "workbench.action.debug.stepOut",
+        "workbench.action.debug.stepOver",
+        "workbench.action.debug.stop",
+        "workbench.action.navigateBack",
+        "workbench.action.navigateForward"
+    ],
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.message.badbox.show": false,
+    // "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                // to use pygmentize with minted
+                "--shell-escape",
+                "-file-line-error",
+                "-interaction=nonstopmode",
+                "-lualatex",
+                "-pdflua",
+                "-synctex=1",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latexindent.path": "latexindent",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "markdown.preview.fontSize": 16,
+    "material-icon-theme.folders.color": "#90a4ae",
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.opacity": 0.8,
+    "prettier.documentSelectors": ["**/*.svelte"],
+    "prettier.tabWidth": 4,
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "rust-analyzer.inlayHints.maxLength": 100,
+    // "rust-analyzer.lens.implementations.enable": false,
+    "scm.alwaysShowRepositories": true,
+    "search.exclude": {
+        "**/*.code-search": true,
+        "**/bower_components": true,
+        "**/node_modules": true,
+        "**/.parcel-cache": true
+    },
+    "search.useIgnoreFiles": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "svelte.enable-ts-plugin": true,
+    "svelte.plugin.svelte.note-new-transformation": false,
+    "tailwindCSS.emmetCompletions": true,
+    // "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "terminal.integrated.fontFamily": "Source Code Pro",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontWeightBold": "600",
+    "terminal.integrated.minimumContrastRatio": 4.5,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/dustinpomerleau/.config/nvim/code/init.vim",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.nativeFullScreen": true,
+    "window.newWindowDimensions": "fullscreen",
+    "window.restoreFullscreen": true,
+    "window.titleBarStyle": "custom",
+    "workbench.colorCustomizations": {
+        // "editorInlayHint.background": "#292d3e00",
+        // "editorInlayHint.foreground": "#7e818b"
+        "editorCursor.foreground": "#ff218c",
+        "editorCursor.background": "#fbfc86",
+        "terminalCursor.foreground": "#ff218c",
+        "terminalCursor.background": "#fbfc86"
+    },
+    "workbench.colorTheme": "Tol",
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default",
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.editor.decorations.colors": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.labelFormat": "medium",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 8,
+    "workbench.editor.showTabs": "single",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultKeybindings": true,
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.sideBar.location": "left",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.indent": 22,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.activityBar.location": "hidden",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false
+}

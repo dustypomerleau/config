@@ -1,0 +1,43 @@
+{ specialArgs, ... }:
+{
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = specialArgs;
+
+    users.${specialArgs.username} = {
+      home = {
+        username = specialArgs.username;
+        homeDirectory = "/Users/${specialArgs.username}";
+
+        # this is impure, but you can gradually migrate these files to nix
+        # https://discourse.nixos.org/t/how-to-manage-dotfiles-with-home-manager/30576/2
+        # https://github.com/chrisportela/dotfiles/tree/main
+        file = {
+          ".cargo/config.toml".source = /Users/${specialArgs.username}/.config/cargo/config.toml;
+          ".gitconfig".source = /Users/${specialArgs.username}/.config/.gitconfig;
+          ".gitignore_global".source = /Users/${specialArgs.username}/.config/.gitignore_global;
+          ".psqlrc".source = /Users/${specialArgs.username}/.config/.psqlrc;
+          ".zshrc".source = /Users/${specialArgs.username}/.config/.zshrc;
+          "/Library/ApplicationSupport/Code/User/keybindings.json".source = /Users/${specialArgs.username}/.config/code/keybindings.json;
+          "/Library/ApplicationSupport/Code/User/settings.json".source = /Users/${specialArgs.username}/.config/code/settings.json;
+          "/Library/ApplicationSupport/jj/config.toml".source = /Users/${specialArgs.username}/.config/jj/config.toml;
+          "/Library/ApplicationSupport/org.dystroy.broot/conf.toml".source = /Users/${specialArgs.username}/.config/broot/conf.toml;
+          "taplo.toml".source = /Users/${specialArgs.username}/.config/taplo.toml;
+          "themes.gitconfig".source = /Users/${specialArgs.username}/.config/themes.gitconfig;
+        };
+
+        packages = [ ];
+        stateVersion = "23.11";
+      };
+
+      # Let Home Manager install and manage itself.
+      programs.home-manager.enable = true;
+    };
+  };
+
+  users.users.${specialArgs.username} = {
+    home = "/Users/${specialArgs.username}";
+  };
+
+}

@@ -1,0 +1,17 @@
+*.afdesign
+*.aux
+*.code-workspace
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex*
+*.xdv
+.DS_Store
+.elixir_ls/
+.env*
+.envrc
+.jj/
+.tool-versions
+completer.hist
+node_modules/

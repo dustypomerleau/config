@@ -1,0 +1,8 @@
+// available options are documented at:
+// https://luals.github.io/wiki/settings/
+
+{
+    "completion.callSnippet": "Both",
+    "completion.displayContext": 4,
+    "hint.enable": true
+}

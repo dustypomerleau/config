@@ -1,0 +1,107 @@
+[colors.bright]
+black = "#7e818b"
+blue = "#9fc3e7"
+cyan = "#99ddff"
+green = "#44bb99"
+magenta = "#ffaabb"
+red = "#ee8866"
+white = "#dddddd"
+yellow = "#eedd88"
+
+[colors.cursor]
+cursor = "#ff218c"
+text = "#fbfc86"
+
+[colors.hints.start]
+background = "#474e6c"
+foreground = "#ffff00"
+
+[colors.normal]
+black = "#242837"
+blue = "#70b2f3"
+cyan = "#99ddff"
+green = "#bbcc33"
+magenta = "#ffaabb"
+red = "#ee8866"
+white = "#fdf1d4"
+yellow = "#eedd88"
+
+[colors.primary]
+background = "#292d3e"
+bright_foreground = "#fdf1d4"
+foreground = "#cac0a9"
+
+[colors.search.focused_match]
+background = "#72aa00"
+foreground = "#fbfc86"
+
+[colors.search.matches]
+background = "#5e81ac"
+foreground = "#f8f8f8"
+
+[colors.selection]
+background = "#474e6c"
+text = "#cac0a9"
+
+[cursor]
+thickness = 0.3
+
+[cursor.style]
+shape = "Beam"
+
+[font]
+size = 15
+
+[font.bold]
+family = "SauceCodePro Nerd Font"
+style = "SemiBold"
+
+[font.glyph_offset]
+y = 4
+
+[font.italic]
+family = "SauceCodePro Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "SauceCodePro Nerd Font"
+style = "Regular"
+
+[font.offset]
+y = 6
+
+[[hints.enabled]]
+binding = { key = "U", mods = "Control|Shift" }
+command = "open"
+hyperlinks = true
+mouse.enabled = true
+mouse.mods = "None"
+persist = false
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 100000
+
+[shell]
+program = "/run/current-system/sw/bin/fish"
+
+[window]
+decorations = "buttonless"
+startup_mode = "Fullscreen"
+
+[window.padding]
+x = 5

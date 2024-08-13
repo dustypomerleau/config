@@ -1,0 +1,19 @@
+# DP commented this out after failure to find this command when upgrading to direnv 2.22.0
+# source $(asdf which direnv_use_asdf)
+
+# Uncomment the following line to make direnv silent by default.
+# export DIRENV_LOG_FORMAT=""
+
+# The .envrc file in your project root.
+# Once hooked into your shell, direnv will expect to find a .envrc file whenever you need to change tool versions.
+
+# On your project directory, create an .envrc file like this:
+
+# # File: /your/project/.envrc
+# use asdf # activates plugins listed by `asdf current`
+# Finally, run asdf exec direnv allow .envrc to trust your new file.
+
+# Cached environment
+# To speed up things a lot, this plugin creates direnv envrc files that contain your plugins environment. They are created whenever your .envrc or your .tool-versions files change, and are cached under the current direnv installation directory inside env/*.
+
+# If you ever need to regenerate a cached environment file, just touch .envrc.

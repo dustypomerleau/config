@@ -1,0 +1,11 @@
+[profile.dev]
+debug = 0
+panic = "abort"
+split-debuginfo = "unpacked" # not relevant with debug = 0
+
+[profile.release]
+lto = "thin"
+
+[target.x86_64-apple-darwin]
+# not actively maintained, monitor for any issues
+rustflags = ["-C", "link-arg=--ld-path=/usr/local/bin/ld64.sold"]

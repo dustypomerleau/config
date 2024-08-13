@@ -1,0 +1,42 @@
+-- you could do something like:
+-- local function map(mode, keys, exec, opts)
+--     vim.keymap.set(mode, keys, exec, opts or { silent = true, noremap = true })
+-- end
+
+local key = vim.api.nvim_set_keymap
+local nr = { noremap = true, }
+local nrs = { noremap = true, silent = true, }
+
+key("n", "<c-h>", "<c-w><c-h>", nr)
+key("n", "<c-j>", "<c-w><c-j>", nr)
+key("n", "<c-k>", "<c-w><c-k>", nr)
+key("n", "<c-l>", "<c-w><c-l>", nr)
+key("n", "<c-w>h", "<c-w>H", nr)
+key("n", "<c-w>j", "<c-w>J", nr)
+key("n", "<c-w>k", "<c-w>K", nr)
+key("n", "<c-w>l", "<c-w>L", nr)
+key("n", "<leader>c", "<cmd>noh<cr>", nr)
+key("n", "<leader>o", "<cmd>so $MYVIMRC<cr>", nr)
+key("n", "<leader>s", "<cmd>w<cr>", nr)
+key("n", "<leader>w", "<cmd>q<cr>", nr)
+key("n", "<leader>W", "<cmd>qa<cr>", nr)
+key("n", "<leader>x", "<cmd>bd<cr>", nr)
+key("n", "<leader>X", "<cmd>%bd<cr>", nr)
+key("n", "<localleader>i", "<cmd>Inspect<cr>", nr)
+key("n", "<localleader>l", ":LspInfo<cr>", nrs)
+key("n", "<localleader>m", ":Mason<cr>", nrs)
+key("n", "<localleader>p", "<cmd>pwd<cr>", nr)
+key("n", "<localleader>sa", "<cmd>lua vim.lsp.buf.code_action()<cr>", nrs)
+key("n", "<localleader>sd", "<cmd>lua vim.lsp.buf.definition()<cr>", nrs)
+key("n", "<localleader>si", "<cmd>lua vim.lsp.buf.implementation()<cr>", nrs)
+key("n", "<localleader>sn", "<cmd>lua vim.lsp.buf.rename()<cr>", nrs)
+key("n", "<localleader>sr", "<cmd>lua vim.lsp.buf.references()<cr>", nrs)
+key("n", "<localleader>ss", "<cmd>lua vim.lsp.buf.signature_help()<cr>", nrs)
+key("n", "<localleader>st", "<cmd>lua vim.lsp.buf.type_definition()<cr>", nrs)
+key("n", "<localleader>u", ":Lazy update<cr>", nrs)
+key("n", "\\", ",", nr)
+key("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", nrs)
+key("n", "∆", ":<c-u> m+<cr>==", nrs)
+key("n", "˚", ":<c-u> m-2<cr>==", nrs)
+key("x", "∆", ":<c-u> '<,'>move'>+<cr>gv=gv", nrs)
+key("x", "˚", ":<c-u> '<,'>m-2<cr>gv=gv", nrs)
