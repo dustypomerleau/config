@@ -282,7 +282,6 @@ abbr --add tl "tldr"
 abbr --add tm "tmpl"
 abbr --add tr "tree -CR --dirsfirst -I '.git|node_modules|target'"
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
-abbr --add vim "nvim"
 abbr --add x "extract"
 abbr --add xargs "uxargs"
 
