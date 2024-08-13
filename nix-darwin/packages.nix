@@ -17,18 +17,47 @@
       pkgs.bfg-repo-cleaner
       pkgs.bottom
       pkgs.broot # docs: https://dystroy.org/broot/
-      pkgs.cloc
       pkgs.cmake
       pkgs.curl
+      pkgs.delta
       pkgs.edgedb
       pkgs.eza
-      pkgs.gawk
-      pkgs.nixd
-      pkgs.nixfmt-rfc-style
-      pkgs.vim
       pkgs.fd
       pkgs.ffmpeg_7
       pkgs.findutils
+      pkgs.gawk
+      pkgs.gh
+      pkgs.git
+      pkgs.glow
+      pkgs.gnused
+      pkgs.luajitPackages.luarocks
+      pkgs.mas
+      pkgs.neovim
+      pkgs.nixd
+      pkgs.nixfmt-rfc-style
+      pkgs.nodejs_22
+      pkgs.ocrmypdf
+      pkgs.pandoc
+      pkgs.parallel
+      pkgs.pnpm
+      pkgs.podman
+      pkgs.pom
+      pkgs.postgresql_16
+      pkgs.python3
+      pkgs.qmk
+      pkgs.ripgrep
+      pkgs.ripgrep-all
+      pkgs.rustup
+      pkgs.taplo
+      pkgs.tealdeer
+      pkgs.timer
+      pkgs.tmux
+      pkgs.tmuxp # docs: https://tmuxp.git-pull.com/
+      pkgs.tokei
+      pkgs.typst
+      pkgs.typstfmt
+      pkgs.uutils-coreutils
+      pkgs.zoxide
     ];
 
     variables = {
@@ -40,59 +69,3 @@
   fonts.packages = [ ];
 
 }
-
-# packages to migrate from brew:
-# 
-# fzf
-# gdb
-# gh
-# git
-# git-delta
-# glow
-# gnu-sed
-# grep
-# haskell-stack
-# helix
-# idris
-# idris2
-# jq
-# libpq
-# librsvg
-# libzip
-# luarocks
-# mas
-# mysql
-# nasm
-# neovim
-# node
-# ocrmypdf
-# pandoc
-# parallel
-# pnpm
-# podman
-# postgresql@11
-# postgresql@13
-# postgresql@14
-# python@3.8
-# qmk/qmk/qmk
-# r
-# ripgrep-all
-# rlue/utils/timer
-# rust-parallel
-# rustup
-# showkey
-# taplo
-# tealdeer
-# tere
-# tmux
-# tokei
-# tree
-# typst
-# uutils-coreutils
-# watchman
-# yarn
-# youtube-dl
-# zola
-# zoxide
-# zsh
-# zsh-syntax-highlighting
