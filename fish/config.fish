@@ -241,6 +241,7 @@ abbr --add mkdir "umkdir -pv"
 abbr --add mktemp "umktemp" # macOS mktemp is not POSIX compliant
 abbr --add mv "umv -iv"
 abbr --add n "nvim"
+abbr --add ni "darwin-rebuild switch --flake ~/.config/nix-darwin --impure"
 abbr --add ns "darwin-rebuild switch --flake ~/.config/nix-darwin"
 abbr --add nu "nix flake update ~/.config/nix-darwin"
 abbr --add ofd "open ."
