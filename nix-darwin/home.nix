@@ -18,6 +18,7 @@
           ".gitconfig".source = /Users/${specialArgs.username}/.config/.gitconfig;
           ".gitignore_global".source = /Users/${specialArgs.username}/.config/.gitignore_global;
           ".psqlrc".source = /Users/${specialArgs.username}/.config/.psqlrc;
+          ".ssh/config".source = /Users/${specialArgs.username}/.config/ssh/config;
           ".zshrc".source = /Users/${specialArgs.username}/.config/.zshrc;
           "/Library/ApplicationSupport/Code/User/keybindings.json".source = /Users/${specialArgs.username}/.config/code/keybindings.json;
           "/Library/ApplicationSupport/Code/User/settings.json".source = /Users/${specialArgs.username}/.config/code/settings.json;

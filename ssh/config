@@ -1,0 +1,19 @@
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+
+Host git.auxolotl.org
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/aux_ed25519
+
+# DevPod Start refs.devpod
+Host refs.devpod
+  ForwardAgent yes
+  LogLevel error
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  ProxyCommand /usr/local/bin/devpod ssh --stdio --context default --user vscode refs
+  User vscode
+# DevPod End refs.devpod
