@@ -16,7 +16,7 @@
       pkgs.bat
       pkgs.bfg-repo-cleaner
       pkgs.bottom
-      pkgs.broot
+      pkgs.broot # docs: https://dystroy.org/broot/
       pkgs.cloc
       pkgs.cmake
       pkgs.curl
@@ -26,6 +26,9 @@
       pkgs.nixd
       pkgs.nixfmt-rfc-style
       pkgs.vim
+      pkgs.fd
+      pkgs.ffmpeg_7
+      pkgs.findutils
     ];
 
     variables = {
@@ -40,26 +43,6 @@
 
 # packages to migrate from brew:
 # 
-# x asciidoctor
-# x awk
-# x awscli
-# x bat
-# x bottom
-# x broot
-# cabal-install
-# x cloc
-# x cmake
-# x curl
-# difftastic
-# duti
-# x edgedb/tap/edgedb-cli
-# elixir
-# exercism
-# x eza
-# fd
-# ffmpeg@4
-# findutils
-# fontforge
 # fzf
 # gdb
 # gh

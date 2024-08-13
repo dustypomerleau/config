@@ -34,7 +34,7 @@
         # cleanup = "zap";
       };
 
-      taps = [ "edgedb/tap" ];
+      taps = [ ];
     };
   };
 }
