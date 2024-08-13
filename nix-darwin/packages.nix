@@ -14,6 +14,7 @@
       pkgs.asciidoctor
       pkgs.awscli2
       pkgs.bat
+      pkgs.bfg-repo-cleaner
       pkgs.bottom
       pkgs.broot
       pkgs.cloc
