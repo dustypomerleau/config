@@ -28,6 +28,7 @@ return {
                     svelte = { "prettier", },
                     toml = { "taplo", },
                     typescript = { "prettier", },
+                    typst = { "typstfmt", },
                 },
                 -- setting format_on_save will automatically generate an autocommand like:
                 -- vim.api.nvim_create_autocmd("BufWritePre", {
