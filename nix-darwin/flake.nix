@@ -6,12 +6,8 @@
 # https://daiderd.com/nix-darwin/manual/
 
 # todo: 
-# - [ ] migrate packages from brew to nix
 # - [ ] add all casks
-# - [x] add home manager
-# - [ ] code splitting
 # - [ ] scripts for all defaults write?
-# - [ ] add home manager files
 
 {
   description = "DP MBP system flake";

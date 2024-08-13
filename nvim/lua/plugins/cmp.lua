@@ -37,7 +37,6 @@ return {
                             ""
                         )
                     end, { "c", "i", "s", }), -- perhaps these have no effect as you are only mapping for insert here
-                    -- todo: this remains broken
                     ["<c-h>"] = cmp.mapping(function()
                         vim.fn.feedkeys(
                             vim.api.nvim_replace_termcodes(
