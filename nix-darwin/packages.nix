@@ -27,6 +27,10 @@
       pkgs.nixfmt-rfc-style
       pkgs.vim
     ];
+
+    variables = {
+      EDITOR = "nvim";
+    };
   };
 
   # todo: add any available fonts you use
