@@ -10,7 +10,7 @@
     # $ nix-env -qaP | rg <name>
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
-      # todo: add remaining packages
+      # pkgs.tmux # already enabled in core.nix
       pkgs.asciidoctor
       pkgs.awscli2
       pkgs.bat
@@ -51,7 +51,6 @@
       pkgs.taplo
       pkgs.tealdeer
       pkgs.timer
-      pkgs.tmux
       pkgs.tmuxp # docs: https://tmuxp.git-pull.com/
       pkgs.tokei
       pkgs.typst
