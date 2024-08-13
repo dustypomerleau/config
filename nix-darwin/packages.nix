@@ -10,6 +10,7 @@
     # $ nix-env -qaP | rg <name>
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
+      # pkgs.alacritty # todo: enable last
       # pkgs.tmux # already enabled in core.nix
       pkgs.asciidoctor
       pkgs.awscli2
@@ -30,6 +31,8 @@
       pkgs.git
       pkgs.glow
       pkgs.gnused
+      pkgs.google-cloud-sdk
+      pkgs.inkscape
       pkgs.luajitPackages.luarocks
       pkgs.mas
       pkgs.neovim
@@ -48,6 +51,7 @@
       pkgs.ripgrep
       pkgs.ripgrep-all
       pkgs.rustup
+      pkgs.skimpdf
       pkgs.taplo
       pkgs.tealdeer
       pkgs.timer
@@ -65,6 +69,6 @@
   };
 
   # todo: add any available fonts you use
-  fonts.packages = [ ];
+  fonts.packages = [ pkgs.nerdfonts ];
 
 }
