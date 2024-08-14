@@ -1,65 +1,63 @@
 { config, ... }:
 {
-  config = {
-    # make sure homebrew packages are available in PATH
-    # (given the way fish handles paths, not sure this is necessary)
-    environment.systemPath = [ config.homebrew.brewPrefix ];
+  # make sure homebrew packages are available in PATH
+  # (given the way fish handles paths, not sure this is necessary)
+  environment.systemPath = [ config.homebrew.brewPrefix ];
 
-    homebrew = {
-      enable = true;
+  homebrew = {
+    enable = true;
 
-      # if you want to install HEAD or something, you can pass a derivation instead of just a string
-      # { name = "neovim"; args = [ "--HEAD" ] }
-      # passing only a string is shorthand for { name = ""; }
-      brews = [ ];
+    # if you want to install HEAD or something, you can pass a derivation instead of just a string
+    # { name = "neovim"; args = [ "--HEAD" ] }
+    # passing only a string is shorthand for { name = ""; }
+    brews = [ ];
 
-      casks = [
-        "alacritty"
-        "inkscape"
-        "karabiner-elements" # pkgs.karabiner-elements is broken
-        "mactex"
-        "podman-desktop"
-        "skim"
-        # "affinity-designer"
-        # "alfred"
-        # "arq"
-        # "citrix-workspace"
-        # "discord"
-        # "dropbox"
-        # "firefox"
-        # "google-drive"
-        # "microsoft-office"
-        # "obsidian"
-        # "omnifocus"
-        # "papers"
-        # "pdf-expert"
-        # "signal"
-        # "sizzy"
-        # "spotify"
-        # "transmission"
-        # "viscosity"
-        # "visual-studio-code"
-        # "vlc"
-        # uncomment above for new install (on current system, these conflict with previous installs)
-        ## todo: not available from brew: exodus, homerow, openVPN connect
-      ];
+    casks = [
+      "alacritty"
+      "inkscape"
+      "karabiner-elements" # pkgs.karabiner-elements is broken
+      "mactex"
+      "podman-desktop"
+      "skim"
+      # "affinity-designer"
+      # "alfred"
+      # "arq"
+      # "citrix-workspace"
+      # "discord"
+      # "dropbox"
+      # "firefox"
+      # "google-drive"
+      # "microsoft-office"
+      # "obsidian"
+      # "omnifocus"
+      # "papers"
+      # "pdf-expert"
+      # "signal"
+      # "sizzy"
+      # "spotify"
+      # "transmission"
+      # "viscosity"
+      # "visual-studio-code"
+      # "vlc"
+      # uncomment above for new install (on current system, these conflict with previous installs)
+      ## todo: not available from brew: exodus, homerow, openVPN connect
+    ];
 
-      caskArgs.require_sha = true;
+    caskArgs.require_sha = true;
 
-      masApps = {
-        "Apple Configurator" = 1037126344;
-        "Mona for Mastodon" = 1659154653;
-        "WireGuard" = 1451685025;
-        "Xcode" = 497799835;
-      };
-
-      onActivation = {
-        autoUpdate = true;
-        upgrade = true;
-        cleanup = "zap";
-      };
-
-      taps = [ ];
+    masApps = {
+      "Apple Configurator" = 1037126344;
+      "Mona for Mastodon" = 1659154653;
+      "WireGuard" = 1451685025;
+      "Xcode" = 497799835;
     };
+
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+      cleanup = "zap";
+    };
+
+    taps = [ ];
   };
 }
