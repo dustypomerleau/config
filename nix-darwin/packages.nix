@@ -10,7 +10,7 @@
     # $ nix-env -qaP | rg <name>
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
-      # pkgs.alacritty # todo: enable last
+      pkgs.alacritty
       # pkgs.tmux # already enabled in core.nix
       pkgs.asciidoctor
       pkgs.awscli2
