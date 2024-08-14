@@ -63,7 +63,7 @@
         autohide-delay = 1.0e-2;
         orientation = "left";
         show-recents = false;
-        tilesize = 20; # not sure how low this can go...
+        tilesize = 20;
         wvous-bl-corner = 2; # mission control
         wvous-br-corner = 3; # application windows
       };
@@ -94,7 +94,7 @@
       trackpad = {
         ActuationStrength = 0;
         Clicking = true; # enable tap to click
-        Dragging = true; # tap to drag (same as drag lock?)
+        Dragging = true; # tap to drag (not the same as DragLock)
         TrackpadRightClick = true;
         TrackpadThreeFingerDrag = true;
       };

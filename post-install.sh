@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# todo: review macos defaults and determine which are already written by nix-darwin
+# BEFORE running any nix installation or post-install script,
+# boot into recovery (cmd + R) and set your firmware password
 
 # - seed the PRNG before enabling FileVault
 #   cat > /dev/random
@@ -54,12 +55,6 @@ defaults write com.apple.notificationcenterui bannerTime 10
 echo 'enabling text selection in finder quick look'
 defaults write com.apple.finder QLEnableTextSelection -bool TRUE
 
-echo 'hiding icons on the desktop'
-defaults write com.apple.finder CreateDesktop -bool false
-echo 'showing the path bar in finder windows'
-defaults write com.apple.finder ShowPathbar -bool true
-killall Finder # required by all above
-
-echo 'enabling tap to click, drag-lock AND three-finger drag for Apple trackpads'
-# only drag-lock is not addressed by nix
+echo 'enabling drag-lock for the trackpad'
+# only drag-lock is not addressed by nix in system.defaults.trackpad
 defaults write com.apple.AppleMultitouchTrackpad DragLock -bool true
