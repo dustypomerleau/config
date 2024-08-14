@@ -10,14 +10,23 @@
     # $ nix-env -qaP | rg <name>
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
-      # pkgs.tmux # already enabled in core.nix
-      # pkgs.vsce # uncomment if needed
+      # not available from cargo: crates-tui, rimage
       pkgs.asciidoctor
       pkgs.awscli2
       pkgs.bat
       pkgs.bfg-repo-cleaner
       pkgs.bottom
       pkgs.broot # docs: https://dystroy.org/broot/
+      pkgs.cargo-binstall
+      pkgs.cargo-edit
+      pkgs.cargo-expand
+      pkgs.cargo-feature
+      pkgs.cargo-generate
+      pkgs.cargo-leptos
+      pkgs.cargo-make
+      pkgs.cargo-outdated
+      pkgs.cargo-update
+      pkgs.cargo-watch
       pkgs.cmake
       pkgs.curl
       pkgs.delta
@@ -33,6 +42,7 @@
       pkgs.gnused
       pkgs.google-cloud-sdk
       pkgs.jujutsu
+      pkgs.leptosfmt
       pkgs.luajitPackages.luarocks
       pkgs.mas
       pkgs.neovim
@@ -44,6 +54,7 @@
       pkgs.ocrmypdf
       pkgs.pandoc
       pkgs.parallel
+      pkgs.pipe-rename
       pkgs.pnpm
       pkgs.podman
       pkgs.pom
@@ -54,6 +65,8 @@
       pkgs.ripgrep
       pkgs.ripgrep-all
       pkgs.rustup
+      pkgs.sqlx-cli
+      pkgs.stylua
       pkgs.taplo
       pkgs.tealdeer
       pkgs.timer
@@ -63,6 +76,7 @@
       pkgs.typst
       pkgs.typstfmt
       pkgs.uutils-coreutils
+      pkgs.wasm-pack
       pkgs.zoxide
     ];
 
