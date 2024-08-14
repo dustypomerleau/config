@@ -45,7 +45,7 @@
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "0543d6ff37d3178e37131dfd5486e8a75d52f696" },
   "rustaceanvim": { "branch": "master", "commit": "7cba8e599deca98d4b44cac1bcbd720c62937d90" },
   "telescope-undo.nvim": { "branch": "main", "commit": "51be9ae7c42fc27c0b05505e3a0162e0f05fbb6a" },
-  "telescope.nvim": { "branch": "master", "commit": "43c47ebc49ba601c7f0d06d65ce61d6aa8e670ab" },
+  "telescope.nvim": { "branch": "master", "commit": "68a6d8e8a0a8276ad56dc2a5bc29a4767a8eb5da" },
   "tol.nvim": { "branch": "dev", "commit": "8cac88ba487aea7a3f86859f30b0b4a80123c635" },
   "trouble.nvim": { "branch": "main", "commit": "6efc446226679fda0547c0fd6a7892fd5f5b15d8" },
   "vim-svelte": { "branch": "main", "commit": "0e93ec53c3667753237282926fec626785622c1c" },
