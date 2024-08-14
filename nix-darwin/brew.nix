@@ -2,7 +2,7 @@
 {
   config = {
     # make sure homebrew packages are available in PATH
-    # given the way fish handles paths, not sure this is necessary
+    # (given the way fish handles paths, not sure this is necessary)
     environment.systemPath = [ config.homebrew.brewPrefix ];
 
     homebrew = {
@@ -14,9 +14,9 @@
       brews = [ ];
 
       casks = [
-        # "karabiner-elements" # pkgs.karabiner-elements is broken
-        # "mactex"
-        # "omnifocus"
+        "karabiner-elements" # pkgs.karabiner-elements is broken
+        "mactex"
+        "omnifocus"
         "podman-desktop"
       ];
 
