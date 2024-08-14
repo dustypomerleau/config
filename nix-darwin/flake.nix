@@ -1,8 +1,7 @@
-# https://librephoenix.com/2023-11-02-how-to-manage-your-dotfiles-the-nix-way-with-home-manager
+# https://vtimofeenko.com/posts/practical-nix-flake-anatomy-a-guided-tour-of-flake.nix/
 # https://www.jetpack.io/devbox/docs/guides/using_flakes/
-# https://www.breakds.org/post/flake-part-1-packaging/
-
-# available configuration options:
+# 
+# available nix-darwin configuration options:
 # https://daiderd.com/nix-darwin/manual/
 
 {

@@ -1,13 +1,13 @@
 { config, ... }:
 {
   # make sure homebrew packages are available in PATH
-  # (given the way fish handles paths, not sure this is necessary)
+  # (given the way fish handles paths, I'm not sure this is necessary)
   environment.systemPath = [ config.homebrew.brewPrefix ];
 
   homebrew = {
     enable = true;
 
-    # if you want to install HEAD or something, you can pass a derivation instead of just a string
+    # if you want to install HEAD or pass other arguments, you can pass a derivation instead of just a string
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
     brews = [ ];
@@ -55,7 +55,7 @@
     onActivation = {
       autoUpdate = true;
       upgrade = true;
-      cleanup = "zap";
+      cleanup = "zap"; # warning: this will delete everything not explicitly installed here
     };
 
     taps = [ ];

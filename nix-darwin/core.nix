@@ -12,7 +12,7 @@
 
   services = {
     nix-daemon.enable = true;
-    # many options in services.postgresql.* left off for now
+    # see many postgres options in services.postgresql.*
     tailscale.enable = true;
   };
 }

@@ -10,9 +10,10 @@
         username = specialArgs.username;
         homeDirectory = "/Users/${specialArgs.username}";
 
-        # this is impure, but you can gradually migrate these files to nix
-        # https://discourse.nixos.org/t/how-to-manage-dotfiles-with-home-manager/30576/2
-        # https://github.com/chrisportela/dotfiles/tree/main
+        # Pulling config files in like this is impure, but it allows symlinking everything into `.config/`.
+        # If you want a pure solution, you need to rewrite all your configs in nix.
+        # For example, like: https://github.com/chrisportela/dotfiles/tree/main,
+        # which also contains an example of using secrets.
         file = {
           ".cargo/config.toml".source = /Users/${specialArgs.username}/.config/cargo/config.toml;
           ".gitconfig".source = /Users/${specialArgs.username}/.config/git/.gitconfig;
@@ -27,7 +28,7 @@
           "themes.gitconfig".source = /Users/${specialArgs.username}/.config/git/themes.gitconfig;
         };
 
-        packages = [ ];
+        packages = [ ]; # packages installed only for this user (unlike `environment.systemPackages`)
         stateVersion = "23.11";
       };
 

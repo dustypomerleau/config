@@ -6,9 +6,7 @@
       pkgs.fish
     ];
 
-    # List packages installed in system profile. To search by name, run:
-    # $ nix-env -qaP | rg <name>
-    # systemPackages are installed for all users, unlike profile packages
+    # installed for all users, unlike `home.packages`
     systemPackages = [
       ## todo: not available from cargo: crates-tui, rimage
       pkgs.asciidoctor
@@ -85,7 +83,6 @@
     };
   };
 
-  # todo: add any available fonts you use
   fonts.packages = [
     pkgs.barlow
     pkgs.nerdfonts
