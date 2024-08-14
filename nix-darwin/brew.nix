@@ -14,9 +14,12 @@
       brews = [ ];
 
       casks = [
+        "alacritty"
+        "inkscape"
         "karabiner-elements" # pkgs.karabiner-elements is broken
         "mactex"
         "podman-desktop"
+        "skim"
         # "omnifocus" # uncomment for new install
       ];
 

@@ -11,7 +11,6 @@
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
       # pkgs.tmux # already enabled in core.nix
-      pkgs.alacritty
       pkgs.asciidoctor
       pkgs.awscli2
       pkgs.bat
@@ -32,7 +31,6 @@
       pkgs.glow
       pkgs.gnused
       pkgs.google-cloud-sdk
-      pkgs.inkscape
       pkgs.jujutsu
       pkgs.luajitPackages.luarocks
       pkgs.mas
@@ -52,7 +50,6 @@
       pkgs.ripgrep
       pkgs.ripgrep-all
       pkgs.rustup
-      pkgs.skimpdf
       pkgs.taplo
       pkgs.tealdeer
       pkgs.timer
