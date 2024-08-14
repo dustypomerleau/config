@@ -10,7 +10,7 @@
     # $ nix-env -qaP | rg <name>
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
-      # not available from cargo: crates-tui, rimage
+      ## todo: not available from cargo: crates-tui, rimage
       pkgs.asciidoctor
       pkgs.awscli2
       pkgs.bat

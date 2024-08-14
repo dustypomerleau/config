@@ -20,11 +20,28 @@
         "mactex"
         "podman-desktop"
         "skim"
+        # "affinity-designer"
         # "alfred"
+        # "arq"
+        # "citrix-workspace"
+        # "discord"
+        # "dropbox"
+        # "firefox"
+        # "google-drive"
+        # "microsoft-office"
+        # "obsidian"
         # "omnifocus"
+        # "papers"
         # "pdf-expert"
+        # "signal"
+        # "sizzy"
+        # "spotify"
+        # "transmission"
+        # "viscosity"
         # "visual-studio-code"
+        # "vlc"
         # uncomment above for new install (on current system, these conflict with previous installs)
+        ## todo: not available from brew: exodus, homerow, openVPN connect
       ];
 
       caskArgs.require_sha = true;
