@@ -1,1 +1,1 @@
-# Dusty Pomerleau's dotfiles and config
+# Dusty Pomerleau: config files
