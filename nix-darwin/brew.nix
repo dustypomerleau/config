@@ -16,8 +16,8 @@
       casks = [
         "karabiner-elements" # pkgs.karabiner-elements is broken
         "mactex"
-        "omnifocus"
         "podman-desktop"
+        # "omnifocus" # uncomment for new install
       ];
 
       caskArgs.require_sha = true;
@@ -32,8 +32,7 @@
       onActivation = {
         autoUpdate = true;
         upgrade = true;
-        # uncomment below only once you have all homebrew packages in nix
-        # cleanup = "zap";
+        cleanup = "zap";
       };
 
       taps = [ ];
