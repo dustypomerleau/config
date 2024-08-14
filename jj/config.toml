@@ -37,7 +37,7 @@ format = "git"
 "format_short_id(id)" = "id.shortest()"
 
 [ui]
-diff-editor = "builtin"
+diff-editor = ":builtin"
 editor = "nvim"
 merge-editor = "vscode"
 pager = "delta"
