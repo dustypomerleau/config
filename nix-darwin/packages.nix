@@ -10,8 +10,8 @@
     # $ nix-env -qaP | rg <name>
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
-      pkgs.alacritty
       # pkgs.tmux # already enabled in core.nix
+      pkgs.alacritty
       pkgs.asciidoctor
       pkgs.awscli2
       pkgs.bat
@@ -33,6 +33,7 @@
       pkgs.gnused
       pkgs.google-cloud-sdk
       pkgs.inkscape
+      pkgs.jujutsu
       pkgs.luajitPackages.luarocks
       pkgs.mas
       pkgs.neovim
