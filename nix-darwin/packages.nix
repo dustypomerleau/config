@@ -11,6 +11,7 @@
     # systemPackages are installed for all users, unlike profile packages
     systemPackages = [
       # pkgs.tmux # already enabled in core.nix
+      # pkgs.vsce # uncomment if needed
       pkgs.asciidoctor
       pkgs.awscli2
       pkgs.bat
@@ -35,8 +36,10 @@
       pkgs.luajitPackages.luarocks
       pkgs.mas
       pkgs.neovim
+      pkgs.netlify-cli
       pkgs.nixd
       pkgs.nixfmt-rfc-style
+      pkgs.nodePackages.svgo
       pkgs.nodejs_22
       pkgs.ocrmypdf
       pkgs.pandoc
@@ -45,6 +48,7 @@
       pkgs.podman
       pkgs.pom
       pkgs.postgresql_16
+      pkgs.prettierd
       pkgs.python3
       pkgs.qmk
       pkgs.ripgrep
@@ -55,6 +59,7 @@
       pkgs.timer
       pkgs.tmuxp # docs: https://tmuxp.git-pull.com/
       pkgs.tokei
+      pkgs.trash-cli
       pkgs.typst
       pkgs.typstfmt
       pkgs.uutils-coreutils

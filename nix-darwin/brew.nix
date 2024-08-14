@@ -20,8 +20,11 @@
         "mactex"
         "podman-desktop"
         "skim"
-        "visual-studio-code"
-        # "omnifocus" # uncomment for new install
+        # "alfred"
+        # "omnifocus"
+        # "pdf-expert"
+        # "visual-studio-code"
+        # uncomment above for new install (on current system, these conflict with previous installs)
       ];
 
       caskArgs.require_sha = true;
