@@ -57,7 +57,7 @@ abbr --add ch "cargo check"
 abbr --add chmod uchmod
 abbr --add ci "crates-tui"
 abbr --add co "cargo outdated -R" # root dependencies only
-abbr --add cp "ucp -iv"
+abbr --add cp "uutils-cp -iv"
 abbr --add cr "cargo run"
 abbr --add ct "cargo test"
 abbr --add ctn "cargo test -- --nocapture"
@@ -68,7 +68,7 @@ abbr --add e "eza -ahlmT -F --color-scale=size --git --git-ignore --icons=auto -
 abbr --add ed "edgedb"
 abbr --add eg "eza -ahlmT -F --color-scale=size --git --icons=auto --no-permissions --no-user -L3"
 abbr --add ev "evcxr"
-abbr --add find "ufind"
+abbr --add find "uutils-find"
 abbr --add g "git status -bs"
 abbr --add ga "git add"
 abbr --add gaa "git add -A"
@@ -157,22 +157,22 @@ abbr --add js "jj split"
 abbr --add jt "jj root"
 
 abbr --add l "\
-uls -1A \
+uutils-ls -1A \
 --color=auto \
 --group-directories-first"
 
 abbr --add la "\
-uls -Alh \
+uutils-ls -Alh \
 --color=auto \
 --group-directories-first"
 
 abbr --add lc "\
-uls -A \
+uutils-ls -A \
 --color=auto \
 --group-directories-first"
 
 abbr --add lr "\
-uls -1AR \
+uutils-ls -1AR \
 -I{node_modules,.git} \
 --color=auto \
 --group-directories-first"
@@ -237,10 +237,10 @@ git \
 --work-tree=$HOME \
 status -bs"
 
-abbr --add md "umkdir -pv"
-abbr --add mkdir "umkdir -pv"
-abbr --add mktemp "umktemp" # macOS mktemp is not POSIX compliant
-abbr --add mv "umv -iv"
+abbr --add md "uutils-mkdir -pv"
+abbr --add mkdir "uutils-mkdir -pv"
+abbr --add mktemp "uutils-mktemp" # macOS mktemp is not POSIX compliant
+abbr --add mv "uutils-mv -iv"
 abbr --add n "nvim"
 abbr --add ni "darwin-rebuild switch --flake ~/.config/nix-darwin --impure"
 abbr --add ns "darwin-rebuild switch --flake ~/.config/nix-darwin"
@@ -264,27 +264,27 @@ abbr --add pug "pnpm update -g"
 abbr --add pul "pnpm update --latest" # ignores package.json and fetches latest
 abbr --add px "pnpm dlx" # equivalent to npx
 abbr --add renamer "renamer -e nvim"
-abbr --add rm "urm -iv"
-abbr --add sed "gsed -E"
+abbr --add rm "uutils-rm -iv"
+abbr --add sed "sed -E"
 abbr --add so "source ~/.config/fish/config.fish"
 
 abbr --add sup "\
-brew update && \
-brew upgrade && \
-brew upgrade --cask && \
 rustup update && \
 cargo install-update -a && \
 pnpm update -g && \
 sudo softwareupdate -aiR"
+# brew update && \
+# brew upgrade && \
+# brew upgrade --cask && \
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"
 abbr --add tl "tldr"
 abbr --add tm "tmpl"
-abbr --add tr "tree -CR --dirsfirst -I '.git|node_modules|target'"
+# abbr --add tr "tree -CR --dirsfirst -I '.git|node_modules|target'"
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add x "extract"
-abbr --add xargs "uxargs"
+abbr --add xargs "uutils-xargs"
 
 # future considerations:
 # - colored man pages
