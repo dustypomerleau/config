@@ -95,7 +95,6 @@
         ActuationStrength = 0;
         Clicking = true; # enable tap to click
         Dragging = true; # tap to drag (same as drag lock?)
-        DragLock = true;
         TrackpadRightClick = true;
         TrackpadThreeFingerDrag = true;
       };

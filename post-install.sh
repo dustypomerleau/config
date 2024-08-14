@@ -12,8 +12,8 @@ sudo fdesetup enable
 echo 'installing xcode command line tools'
 xcode-select --install
 
-echo 'creating the postgres user "postgres"'
-/usr/local/opt/postgres/bin/createuser -s postgres
+echo 'creating the default postgres user "postgres"'
+/run/current-system/sw/bin/postgres/bin/createuser -s postgres
 
 echo 'adding wasm target for rust'
 rustup target add wasm32-unknown-unknown wasm32-wasi
@@ -38,16 +38,8 @@ sudo pmset -a powernap 0
 sudo pmset -a standby 0
 sudo pmset -a standbydelay 0
 
-echo 'changing default location for screenshots and removing dropshadow'
-defaults write com.apple.screencapture location ~/Pictures/screenshots
-defaults write com.apple.screencapture disable-shadow -bool TRUE
-killall SystemUIServer
-
 echo 'making the crash reporter into a notification instead of a dialog'
 defaults write com.apple.CrashReporter UseUNC 1
-
-echo 'reducing the use of transparency in OS X'
-defaults write com.apple.universalaccess reduceTransparency -bool true
 
 echo 'disabling sudden motion sensor given it is useless with SSDs'
 sudo pmset -a sms 0
@@ -61,8 +53,6 @@ defaults write com.apple.notificationcenterui bannerTime 10
 
 echo 'enabling text selection in finder quick look'
 defaults write com.apple.finder QLEnableTextSelection -bool TRUE
-echo 'showing all file extensions'
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 echo 'hiding icons on the desktop'
 defaults write com.apple.finder CreateDesktop -bool false
@@ -71,10 +61,5 @@ defaults write com.apple.finder ShowPathbar -bool true
 killall Finder # required by all above
 
 echo 'enabling tap to click, drag-lock AND three-finger drag for Apple trackpads'
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-defaults write com.apple.AppleMultitouchTrackpad Dragging -bool true
+# only drag-lock is not addressed by nix
 defaults write com.apple.AppleMultitouchTrackpad DragLock -bool true
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
-
-fisher install patrickf1/colored_man_pages.fish
-
