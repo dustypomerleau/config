@@ -20,6 +20,7 @@
         "mactex"
         "podman-desktop"
         "skim"
+        "visual-studio-code"
         # "omnifocus" # uncomment for new install
       ];
 

@@ -67,6 +67,10 @@
   };
 
   # todo: add any available fonts you use
-  fonts.packages = [ pkgs.nerdfonts ];
+  fonts.packages = [
+    pkgs.barlow
+    pkgs.nerdfonts
+    pkgs.open-sans
+  ];
 
 }
