@@ -33,6 +33,7 @@
       pkgs.fd
       pkgs.ffmpeg_7
       pkgs.findutils
+      pkgs.fishPlugins.colored-man-pages
       pkgs.gawk
       pkgs.gh
       pkgs.git
