@@ -48,4 +48,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/Users/dustinpomerleau/\x2elocal/share/nvim/mason/bin\x1e/Users/dustinpomerleau/Library/pnpm\x1e/Users/dustinpomerleau/\x2ecargo/bin\x1e/Users/dustinpomerleau/\x2elocal/bin\x1e/usr/local/opt/coreutils/libexec/gnubin\x1e/usr/local/sbin\x1e/usr/local/opt/curl/bin\x1e/usr/local/opt/openssl\x401\x2e1/bin\x1e/usr/local/bin\x1e/Applications/Visual\x20Studio\x20Code\x2eapp/Contents/Resources/app/bin
+SETUVAR fish_user_paths:/run/current\x2dsystem/sw/bin\x1e/Users/dustinpomerleau/\x2elocal/share/nvim/mason/bin\x1e/Users/dustinpomerleau/Library/pnpm\x1e/Users/dustinpomerleau/\x2ecargo/bin\x1e/Users/dustinpomerleau/\x2elocal/bin\x1e/usr/local/opt/coreutils/libexec/gnubin\x1e/usr/local/sbin\x1e/usr/local/opt/curl/bin\x1e/usr/local/opt/openssl\x401\x2e1/bin\x1e/usr/local/bin\x1e/Applications/Visual\x20Studio\x20Code\x2eapp/Contents/Resources/app/bin
