@@ -5,10 +5,6 @@
 # available configuration options:
 # https://daiderd.com/nix-darwin/manual/
 
-# todo: 
-# - [ ] add all casks
-# - [ ] scripts for all defaults write?
-
 {
   description = "DP MBP system flake";
 
