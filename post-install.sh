@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# BEFORE running any nix installation or post-install script,
-# boot into recovery (cmd + R) and set your firmware password
+# Intel macs only: BEFORE running any nix installation or post-install script,
+# boot into recovery (cmd + R) and set your firmware password 
 
 # - seed the PRNG before enabling FileVault
 #   cat > /dev/random
@@ -10,21 +10,9 @@
 echo 'enabling FileVault'
 sudo fdesetup enable
 
-echo 'installing xcode command line tools'
-xcode-select --install
-
-echo 'creating the default postgres user "postgres"'
-/run/current-system/sw/bin/postgres/bin/createuser -s postgres
-
-echo 'adding wasm target for rust'
-rustup target add wasm32-unknown-unknown wasm32-wasi
-
 # make sure /Library/TeX/texbin is added to your PATH (should be automatic).
 # for annual updates that jump a major year/version you need `brew cask reinstall mactex`.
 sudo tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet
-
-echo 'improving rust compilation times by enabling developer mode'
-spctl developer-mode enable-terminal
 
 echo 'configuring aws to use endpoint plugin'
 aws configure set plugins.endpoint awscli_plugin_endpoint
@@ -39,11 +27,11 @@ sudo pmset -a powernap 0
 sudo pmset -a standby 0
 sudo pmset -a standbydelay 0
 
-echo 'making the crash reporter into a notification instead of a dialog'
-defaults write com.apple.CrashReporter UseUNC 1
-
 echo 'disabling sudden motion sensor given it is useless with SSDs'
 sudo pmset -a sms 0
+
+echo 'making the crash reporter into a notification instead of a dialog'
+defaults write com.apple.CrashReporter UseUNC 1
 
 echo 'showing hidden app icons in the dock'
 defaults write com.apple.dock showhidden -bool true
@@ -58,3 +46,22 @@ defaults write com.apple.finder QLEnableTextSelection -bool TRUE
 echo 'enabling drag-lock for the trackpad'
 # only drag-lock is not addressed by nix in system.defaults.trackpad
 defaults write com.apple.AppleMultitouchTrackpad DragLock -bool true
+
+echo 'installing xcode command line tools'
+xcode-select --install
+
+echo 'creating the default postgres user "postgres"'
+/run/current-system/sw/bin/postgres/bin/createuser -s postgres
+
+# todo: nixify all of the rust installation
+echo 'initializing rustup'
+rustup-init
+
+echo 'adding wasm target for rust'
+rustup target add wasm32-unknown-unknown wasm32-wasi
+
+echo 'installing binaries only available via `cargo-install`'
+cargo binstall rimage
+
+echo 'improving rust compilation times by enabling developer mode'
+spctl developer-mode enable-terminal
