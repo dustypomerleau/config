@@ -18,6 +18,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lix = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
@@ -26,6 +31,7 @@
       self,
       darwin,
       home-manager,
+      lix,
       nixpkgs,
       ...
     }:
@@ -56,6 +62,7 @@
           ./packages.nix
           ./system.nix
           home-manager.darwinModules.home-manager
+          lix.nixosModules.default
         ];
 
         system.configurationRevision = self.rev or self.dirtyRev or null;
