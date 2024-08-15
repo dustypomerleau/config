@@ -1,3 +1,7 @@
+# todo: nixify cargo-install packages
+# for example: https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
+# and: https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
+
 { pkgs, ... }:
 {
   environment = {
