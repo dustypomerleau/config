@@ -32,7 +32,7 @@
     let
       computername = "DP MBP";
       hostname = "DP-2018-MBP";
-      system = "x86_64-darwin";
+      system = "x86_64-darwin"; # for Apple silicon, use "aarch64-darwin"
       username = "dustinpomerleau";
 
       specialArgs = {
