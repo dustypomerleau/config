@@ -1,32 +1,42 @@
 # Dusty Pomerleau's config
 
-My dotfiles make use of `nix-darwin`, but the approach is impure.
-You can read more about the reasons for that in the [Rationale](#rationale) section.
+My dotfiles make use of `nix-darwin`, but from a Nix standpoint, my approach is impure.
+The reasons for that are explained in the [Rationale](#rationale) section.
 
-The basic approach to a new machine is:
+The basic steps to provision a new machine are:
 
 1. Power on the machine and go through initial macOS setup.
 1. Intel macs only: Reboot into recovery with cmd-R, and set a firmware password.
 1. Backup `~/.config`.
 1. Clone this repo and rename to `~/.config`.
-1. [Install Homebrew](https://brew.sh/)
-1. Run the [Determinate Systems Nix installer](https://github.com/DeterminateSystems/nix-installer)
-1. Manually give full disk access to the terminal you're using via `System Settings > Privacy & Security > Full Disk Access` (this is necessary to set `universalaccess` settings like `reduceTransparency`.
+1. [Install Homebrew](https://brew.sh/).
+1. Run the [Determinate Systems Nix installer](https://github.com/DeterminateSystems/nix-installer).
+1. Manually give full disk access to the terminal you're using via `System Settings > Privacy & Security > Full Disk Access` (this is necessary to set `universalaccess` settings like `reduceTransparency`).
 1. Edit the variables in `~/.config/nix-darwin/flake.nix` to reflect your username, system, etc.
 1. Perform initial install with `nix run nix-darwin --experimental-features "nix-command flakes" -- switch --flake ~/.config/nix-darwin --impure`.
 1. Subsequent changes are activated via `darwin-rebuild switch --flake ~/.config/nix-darwin --impure`.
 1. Run `post-install.sh` to set system settings not available via nix-darwin.
-1. Manually (ouch) adjust settings for any GUIs not configured by Nix.
-1. Update the packages with `nix flake update ~/.nix-darwin`, followed by `darwin-rebuild switch`, as above.
-1. You can update the installed version of nix with `sudo -i nix upgrade-nix`.
+1. Manually (ouch) install any GUIs not available via Nix, Homebrew, or the Mac App Store.
+1. Manually (ouch) adjust settings for GUIs not configured by Nix.
+1. Update the packages with `nix flake update ~/.config/nix-darwin`, followed by `darwin-rebuild switch`, as above.
+1. Lix can be updated by editing the input URL in `~/.config/nix-darwin/flake.nix`.
 
 ## Rationale {#rationale}
 
-This is a pragmatic approach to adding Nix to macOS via nix-darwin.
-Because of the way macOS handles GUI applications and system settings, it is effectively impossible to have a pure system derivation on macOS.
-The approach I'm currently taking is to manage plain packages via Nix, and GUI applications via Nix-managed Homebrew.
-Only some of the GUI applications are problematic when installed via Nix, but the cognitive overhead is less if all of the GUIs are in one place.
-I'm also happy for GUI applications to update themselves, even though technically this makes the environment non-reproducible.
-In addition, some system settings are not available in nix-darwin, so it is necessary to either manually adjust these, or run a shell script that sets them.
-Although config files for apps like Neovim can be translated into nix, I think this only makes sense if they are the only reason your derivation is impure.
-In my case, there are many other reasons the derivation can never be pure, so I keep my Neovim config in Lua, Fish config in Fish, etc.
+Everyone has their own solutions to machine setup: atomic operating systems, NixOS, containers.
+We have a lot of tooling aimed at helping to set up a 'development environment,' but there is much less tooling aimed at setting up the entire computer.
+
+- Atomic operating systems are focused more on allowing rollbacks than initial setup.
+- NixOS solves the setup problem, but introduces significant hardware/driver obstacles that aren't present on macOS.
+- Containers don't handle GUIs and OS/desktop settings very well (nor are they native on macOS).
+
+Assuming that—like me—you've decided that macOS is the path of least resistance, the biggest hurdle is getting GUIs installed and configured.
+Given that:
+
+1. Some GUIs are available as Nix packages
+1. Some GUIs are available as Homebrew casks
+1. Some GUIs are only available on the Mac App Store
+1. Some GUIs are not available via any of the above methods
+1. Only a small subset of the GUIs store settings in a text file
+
+ultimately I've accepted that there is no way to have a pure, reproducible, 'set it all up with one command' experience on macOS, but this approach avoids hardware/driver problems, which are an achilles heel for me.
