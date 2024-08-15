@@ -53,7 +53,6 @@ xcode-select --install
 echo 'creating the default postgres user "postgres"'
 /run/current-system/sw/bin/postgres/bin/createuser -s postgres
 
-# todo: nixify all of the rust installation
 echo 'initializing rustup'
 rustup-init
 

@@ -12,9 +12,8 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      ## todo: not available from cargo: crates-tui, rimage
-      # todo: migrate language servers to here from mason
-      # pkgs.rust-analyzer
+      ## todo: not available from cargo: rimage
+      # todo: possibly migrate language servers to here from mason
       # ✓ basedpyright
       # ✓ clangd
       # ✓ codelldb
@@ -22,6 +21,7 @@
       # ✓ html-lsp html
       # ✓ lua-language-server lua_ls
       # ✓ marksman
+      # ✓ rust-analyzer
       # ✓ sqlfmt
       # ✓ svelte-language-server svelte
       # ✓ tailwindcss-language-server tailwindcss
