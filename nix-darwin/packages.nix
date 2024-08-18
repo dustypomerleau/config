@@ -58,6 +58,7 @@
       nodePackages.svgo
       nodejs_22
       ocrmypdf
+      openssl_3_3
       pandoc
       parallel
       pipe-rename
