@@ -61,6 +61,7 @@
       pandoc
       parallel
       pipe-rename
+      pkg-config
       pnpm
       podman
       pom
