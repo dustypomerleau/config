@@ -41,7 +41,7 @@
       cargo-generate
       cargo-leptos
       cargo-make
-      cargo-outdated
+      # cargo-outdated # temporarily comment this out due to compilation error
       cargo-update
       cargo-watch
       cmake
