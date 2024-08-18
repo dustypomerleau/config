@@ -12,7 +12,6 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      ## todo: not available from cargo: rimage
       # todo: possibly migrate language servers to here from mason
       # ✓ basedpyright
       # ✓ clangd
