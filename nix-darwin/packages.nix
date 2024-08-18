@@ -1,7 +1,3 @@
-# todo: nixify cargo-install packages
-# for example: https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
-# and: https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
-
 { pkgs, ... }:
 {
   environment = {
@@ -12,7 +8,8 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      # todo: possibly migrate language servers to here from mason
+      # todo: possibly migrate language servers to here from mason (many are not available)
+      #
       # ✓ basedpyright
       # ✓ clangd
       # ✓ codelldb
@@ -28,6 +25,11 @@
       # ✓ typescript-language-server tsserver
       # ✓ typst-lsp typst_lsp
       # ✓ vtsls
+      #
+      # todo: nixify cargo-install packages
+      # for example: https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
+      # and: https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
+      #
       asciidoctor
       awscli2
       bat
@@ -52,7 +54,7 @@
       fd
       ffmpeg_7
       findutils
-      fish # use here instead of programs.enable for now
+      fish # use here instead of programs.enable
       fishPlugins.colored-man-pages
       gawk
       gh
@@ -89,7 +91,7 @@
       taplo
       tealdeer
       timer
-      tmux # use here instead of programs.enable for now
+      tmux # use here instead of programs.enable
       tmuxp # docs: https://tmuxp.git-pull.com/
       tokei
       trash-cli
