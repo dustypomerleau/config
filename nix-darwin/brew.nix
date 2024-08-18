@@ -10,7 +10,14 @@
     # if you want to install HEAD or pass other arguments, you can pass a derivation instead of just a string
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
-    brews = [ ];
+    brews = [
+      # troubleshoot a bit more: openssl and pkg-config are included here because they 
+      # couldn't be found during `cargo-install cargo-outdated`, but although there may be 
+      # path issues with the nix store, it may also be that you installed libressl instead of 
+      # openssl
+      "openssl"
+      "pkg-config"
+    ];
 
     casks = [
       "alacritty"
