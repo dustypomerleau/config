@@ -52,6 +52,7 @@
       fd
       ffmpeg_7
       findutils
+      fish # use here instead of programs.enable for now
       fishPlugins.colored-man-pages
       gawk
       gh
@@ -88,6 +89,7 @@
       taplo
       tealdeer
       timer
+      tmux # use here instead of programs.enable for now
       tmuxp # docs: https://tmuxp.git-pull.com/
       tokei
       trash-cli

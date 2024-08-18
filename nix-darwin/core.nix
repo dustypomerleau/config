@@ -6,8 +6,9 @@
   nixpkgs.hostPlatform = system;
 
   programs = {
-    fish.enable = true;
-    tmux.enable = true;
+    # note: there seem to be fundamental issues with using programs and using settings outside of nix
+    # fish.enable = true;
+    # tmux.enable = true;
   };
 
   services = {
