@@ -4,7 +4,8 @@ return {
         event = "VeryLazy",
         config = function()
             require("mason-lspconfig").setup({
-                -- mapping from mason package names to lspconfig server names:
+                -- Note: names here will not match names in mason.lua
+                -- Mapping from mason package names to lspconfig server names:
                 -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
                 ensure_installed = {
                     "basedpyright",

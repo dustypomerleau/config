@@ -8,27 +8,11 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      # todo: possibly migrate language servers to here from mason (many are not available)
-      #
-      # ✓ basedpyright
-      # ✓ clangd
-      # ✓ codelldb
-      # ✓ css-lsp cssls
-      # ✓ html-lsp html
-      # ✓ lua-language-server lua_ls
-      # ✓ marksman
-      # ✓ rust-analyzer
-      # ✓ sqlfmt
-      # ✓ svelte-language-server svelte
-      # ✓ tailwindcss-language-server tailwindcss
-      # ✓ taplo
-      # ✓ typescript-language-server tsserver
-      # ✓ typst-lsp typst_lsp
-      # ✓ vtsls
-      #
-      # todo: nixify cargo-install packages
-      # for example: https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
-      # and: https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
+      # Note: language servers are installed via Mason at present
+      # 
+      # Examples of configuring unpackaged Rust repos:
+      # https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
+      # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
       #
       asciidoctor
       awscli2
