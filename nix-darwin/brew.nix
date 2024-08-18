@@ -15,7 +15,7 @@
       # couldn't be found during `cargo-install cargo-outdated`, but although there may be 
       # path issues with the nix store, it may also be that you installed libressl instead of 
       # openssl
-      # "openssl"
+      "openssl"
       # "pkg-config"
     ];
 

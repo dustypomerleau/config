@@ -48,7 +48,6 @@
       google-cloud-sdk
       jujutsu
       leptosfmt
-      # libressl_3_8
       luajitPackages.luarocks
       mas
       neovim
@@ -58,7 +57,6 @@
       nodePackages.svgo
       nodejs_22
       ocrmypdf
-      openssl_3_3
       pandoc
       parallel
       pipe-rename
