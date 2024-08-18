@@ -16,7 +16,7 @@
       # path issues with the nix store, it may also be that you installed libressl instead of 
       # openssl
       "openssl"
-      # "pkg-config"
+      "pkg-config"
     ];
 
     casks = [
