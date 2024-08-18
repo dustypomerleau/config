@@ -11,8 +11,9 @@
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
     brews = [
-      # troubleshoot a bit more: openssl and pkg-config are included here because they 
-      # couldn't be found during `cargo-install cargo-outdated`
+      # openssl and pkg-config are included here (rather than packages.nix) because of PATH 
+      # issues during Rust builds, (for example `cargo install cargo-outdated --force`) that 
+      # I haven't had time to troubleshoot
       "openssl"
       "pkg-config"
     ];
