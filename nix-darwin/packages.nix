@@ -48,6 +48,7 @@
       google-cloud-sdk
       jujutsu
       leptosfmt
+      libressl_3_8
       luajitPackages.luarocks
       mas
       neovim
