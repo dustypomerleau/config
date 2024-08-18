@@ -21,7 +21,7 @@ The basic steps to provision a new machine are:
 1. Update the packages with `nix flake update ~/.config/nix-darwin`, followed by `darwin-rebuild switch`, as above.
 1. Lix can be updated by editing the input URL in `~/.config/nix-darwin/flake.nix`.
 
-## Rationale {#rationale}
+## Rationale
 
 Everyone has their own solutions to machine setup: atomic operating systems, NixOS, containers.
 We have a lot of tooling aimed at helping to set up a 'development environment,' but there is much less tooling aimed at setting up the entire computer.
