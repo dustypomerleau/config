@@ -27,7 +27,7 @@
       cargo-generate
       cargo-leptos
       cargo-make
-      # cargo-outdated # temporarily comment this out due to compilation error
+      # cargo-outdated # temporarily comment this out due to compilation error - see https://github.com/kbknapp/cargo-outdated/pull/393
       cargo-update
       cargo-watch
       cmake
@@ -38,7 +38,7 @@
       fd
       ffmpeg_7
       findutils
-      fish # use here instead of programs.enable
+      fish
       fishPlugins.colored-man-pages
       gawk
       gh
@@ -77,7 +77,7 @@
       taplo
       tealdeer
       timer
-      tmux # use here instead of programs.enable
+      tmux
       tmuxp # docs: https://tmuxp.git-pull.com/
       tokei
       trash-cli

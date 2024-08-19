@@ -11,9 +11,13 @@
         homeDirectory = "/Users/${specialArgs.username}";
 
         # Pulling config files in like this is impure, but it allows symlinking everything into `.config/`.
-        # If you want a pure solution, you need to rewrite all your configs in nix.
-        # For example, like: https://github.com/chrisportela/dotfiles/tree/main,
+        # If you want a pure solution, you need to rewrite your configs in nix.
+        #
+        # For example: https://github.com/chrisportela/dotfiles,
         # which also contains an example of using secrets.
+        #
+        # Or: https://github.com/gvolpe/neovim-flake
+        # used by https://github.com/gvolpe/nix-config
         file = {
           ".cargo/config.toml".source = /Users/${specialArgs.username}/.config/cargo/config.toml;
           ".gitconfig".source = /Users/${specialArgs.username}/.config/git/.gitconfig;
@@ -34,11 +38,12 @@
 
       # Let Home Manager install and manage itself.
       programs.home-manager.enable = true;
+      # Neovim, Tmux, Fish, etc. are enabled in systemPackages instead of home.programs,
+      # because I want to keep the config files in their original form for now.
     };
   };
 
   users.users.${specialArgs.username} = {
     home = "/Users/${specialArgs.username}";
   };
-
 }

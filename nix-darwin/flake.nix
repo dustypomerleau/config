@@ -1,5 +1,4 @@
 # https://vtimofeenko.com/posts/practical-nix-flake-anatomy-a-guided-tour-of-flake.nix/
-# https://www.jetpack.io/devbox/docs/guides/using_flakes/
 # 
 # available nix-darwin configuration options:
 # https://daiderd.com/nix-darwin/manual/
