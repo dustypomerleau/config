@@ -30,13 +30,13 @@ We have a lot of tooling aimed at helping to set up a 'development environment,'
 - NixOS solves the setup problem, but introduces significant hardware/driver obstacles that aren't present on macOS.
 - Containers don't handle GUIs and OS/desktop settings very well (nor are they native on macOS).
 
-Assuming that—like me—you've decided that macOS is the path of least resistance, the biggest hurdle is getting GUIs installed and configured.
-Given that:
+The biggest hurdle is getting GUIs installed and configured:
 
-1. Some GUIs are available as Nix packages
-1. Some GUIs are available as Homebrew casks
-1. Some GUIs are only available on the Mac App Store
-1. Some GUIs are not available via any of the above methods
-1. Only a small subset of the GUIs store settings in a text file
+- Some GUIs are available as Nix packages
+- Some GUIs are available as Homebrew casks
+- Some GUIs are only available on the Mac App Store
+- Some GUIs are not available via any of the above methods
+- Only a small subset of the GUIs store settings in a text file
 
-ultimately I've accepted that there is no way to have a pure, reproducible, 'set it all up with one command' experience on macOS, but this approach avoids hardware/driver problems, which are an achilles heel for me.
+Given all of the above, a truly reproducible environment is not going to be possible on macOS.
+Because of that, my approach is to avoid the indexing/Spotlight pain that comes from installing GUIs in a special `Nix Apps` directory, and instead default to installing via Homebrew casks, allowing these apps to update themselves.
