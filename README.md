@@ -1,4 +1,4 @@
-# Dusty Pomerleau's config
+# Dusty's config
 
 My dotfiles make use of `nix-darwin`, but from a Nix standpoint, my approach is impure.
 The reasons for that are explained in the [Rationale](#rationale) section.
