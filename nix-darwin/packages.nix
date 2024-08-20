@@ -52,7 +52,7 @@
       luajitPackages.luarocks
       mas
       neovim
-      netlify-cli
+      # netlify-cli # commented out because the version is way behind, use brew version
       nixd
       nixfmt-rfc-style
       nodePackages.svgo

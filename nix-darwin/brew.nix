@@ -16,6 +16,8 @@
       # troubleshoot
       "openssl"
       "pkg-config"
+      #
+      "netlify-cli"
     ];
 
     casks = [
