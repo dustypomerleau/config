@@ -11,12 +11,11 @@
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
     brews = [
-      # openssl and pkg-config are duplicated here because of PATH issues during Rust builds,
-      # (for example `cargo install cargo-outdated --force`) that I haven't had time to 
-      # troubleshoot
+      # openssl and pkg-config are duplicated here because of issues during Rust builds.
+      # This is probably related to the type inference issues in Rust 1.80.0.
+      # Try again once these are fixed.
       "openssl"
       "pkg-config"
-      #
       "netlify-cli"
     ];
 
