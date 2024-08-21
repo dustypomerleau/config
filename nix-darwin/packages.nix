@@ -85,6 +85,7 @@
       typst
       typstfmt
       uutils-coreutils
+      vsce
       wasm-pack
       yazi
       zoxide
