@@ -4,30 +4,18 @@ return {
         event = "VeryLazy",
         config = function()
             require("conform").setup({
-                -- -- no need to override the rustfmt command, as this is done via rust-analyzer.toml
-                -- formatters = {
-                --     rustfmt = {
-                --         command = "leptosfmt",
-                --         args = {
-                --             "--stdin",
-                --             "--rustfmt",
-                --         },
-                --     },
-                -- },
                 formatters_by_ft = {
-                    -- `stop_after_first = true` runs only the first available formatter
                     -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
-                    -- rust = { "rustfmt", },
-                    css = { "prettier", },
-                    javascript = { "prettier", },
-                    json = { "prettier", },
-                    jsonc = { "prettier", },
-                    markdown = { "prettier", },
+                    -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
+                    css = { "prettierd", "prettier", stop_after_first = true, },
+                    javascript = { "prettierd", "prettier", stop_after_first = true, },
+                    json = { "prettierd", "prettier", stop_after_first = true, },
+                    jsonc = { "prettierd", "prettier", stop_after_first = true, },
+                    markdown = { "prettierd", "prettier", stop_after_first = true, },
                     nix = { "nixfmt", },
-                    sql = { "sqlfmt", },
-                    svelte = { "prettier", },
+                    svelte = { "prettierd", "prettier", stop_after_first = true, },
                     toml = { "taplo", },
-                    typescript = { "prettier", },
+                    typescript = { "prettierd", "prettier", stop_after_first = true, },
                     typst = { "typstfmt", },
                 },
                 -- setting format_on_save will automatically generate an autocommand like:
@@ -38,7 +26,12 @@ return {
                 --     end,
                 -- })
                 -- fallback calls vim.lsp.buf.format() if nothing is specified
-                format_on_save = { lsp_fallback = true, },
+                format_on_save = {
+                    lsp_fallback = true,
+                    -- setting a long timeout helps prevent failure on the first invocation after
+                    -- BufEnter (subsequent invocations are usually fast).
+                    timeout_ms = 2000,
+                },
             })
         end,
     },

@@ -14,7 +14,9 @@ vim.g.rustaceanvim = {
                     extraArgs = { "--no-deps", },
                 },
                 procMacro = { ignored = { leptos_macro = { "server", }, }, },
-                -- rustfmt = { override_command = { "leptosfmt", "--stdin", "--rustfmt", }, },
+                -- The `rustfmt` override command won't work correctly if specified here.
+                -- Instead, use per-project settings in `rust-analyzer.toml`, `rustfmt.toml`,
+                -- and `leptosfmt.toml`
                 workspace = { symbol = { search = { kind = "all_symbols", }, }, },
             },
             capabilities = capabilities,
