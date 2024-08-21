@@ -14,6 +14,7 @@
       # https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
       # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
       #
+      any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
       bat
