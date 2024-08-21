@@ -244,7 +244,7 @@ abbr --add mv "uutils-mv -iv"
 abbr --add n "nvim"
 abbr --add ni "darwin-rebuild switch --flake ~/.config/nix-darwin --impure"
 abbr --add ns "darwin-rebuild switch --flake ~/.config/nix-darwin"
-abbr --add nu "cd /Users/dustinpomerleau/.config/nix-darwin && nix flake update && prevd"
+abbr --add nu "cd ~/.config/nix-darwin && nix flake update && prevd"
 abbr --add ofd "open ."
 abbr --add p "pnpm"
 abbr --add pa "pnpm add"
@@ -290,7 +290,7 @@ abbr --add xargs "uutils-xargs"
 # - colored man pages
 
 # pnpm
-set -gx PNPM_HOME "/Users/dustinpomerleau/Library/pnpm"
+set -gx PNPM_HOME "~/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
