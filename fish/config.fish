@@ -54,7 +54,7 @@ abbr --add b "br"
 abbr --add bo "btm"
 abbr --add cb "cargo build"
 abbr --add ch "cargo check"
-abbr --add chmod uchmod
+abbr --add chmod "uutils-chmod"
 abbr --add ci "crates-tui"
 abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "uutils-cp -iv"
@@ -118,7 +118,7 @@ abbr --add gs "git switch"
 abbr --add gsc "git switch -c"
 abbr --add gsd "git switch dev"
 abbr --add gsm "git switch main"
-abbr --add hs "home-manager switch"
+abbr --add hs "home-manager switch" # not relevant on darwin
 abbr --add j "jj status"
 abbr --add jb "jj branch"
 abbr --add jbc "jj branch create"
@@ -177,66 +177,6 @@ uutils-ls -1AR \
 --color=auto \
 --group-directories-first"
 
-abbr --add mc "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME"
-
-abbr --add mca "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME \
-add"
-
-abbr --add mcc "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME \
-commit -m"
-
-abbr --add mcca "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME \
-commit -am"
-
-abbr --add mcd "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME \
-diff"
-
-abbr --add mcl "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME \
-log \
---date=iso \
---graph \
---pretty=format:'\
-%C(yellow)%h%Creset\
-%C(auto)%d%Creset \
-%C(blue)%cd%Creset \
-%C(magenta)%an%Creset\
-%n\
-%s\
-%n'"
-
-abbr --add mcls "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME \
-ls-tree -r \
---full-tree \
---name-only \
-head"
-
-abbr --add mcs "\
-git \
---git-dir=$HOME/.mc/ \
---work-tree=$HOME \
-status -bs"
-
 abbr --add md "uutils-mkdir -pv"
 abbr --add mkdir "uutils-mkdir -pv"
 abbr --add mktemp "uutils-mktemp" # macOS mktemp is not POSIX compliant
@@ -271,23 +211,15 @@ abbr --add so "source ~/.config/fish/config.fish"
 abbr --add sup "\
 rustup update && \
 cargo install-update -a && \
-pnpm update -g && \
 sudo softwareupdate -aiR"
-# brew update && \
-# brew upgrade && \
-# brew upgrade --cask && \
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"
 abbr --add tl "tldr"
 abbr --add tm "tmpl"
-# abbr --add tr "tree -CR --dirsfirst -I '.git|node_modules|target'"
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add x "extract"
 abbr --add xargs "uutils-xargs"
-
-# future considerations:
-# - colored man pages
 
 # pnpm
 set -gx PNPM_HOME "/Users/dustinpomerleau/Library/pnpm"
