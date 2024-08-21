@@ -35,6 +35,7 @@
       curl
       delta
       edgedb
+      evcxr
       eza
       fd
       ffmpeg_7
