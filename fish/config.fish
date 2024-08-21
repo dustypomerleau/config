@@ -290,7 +290,7 @@ abbr --add xargs "uutils-xargs"
 # - colored man pages
 
 # pnpm
-set -gx PNPM_HOME "~/Library/pnpm"
+set -gx PNPM_HOME "/Users/dustinpomerleau/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
