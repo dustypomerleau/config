@@ -15,7 +15,7 @@ return {
                 "clangd",
                 "codelldb", -- rust debugger (configure via nvim-dap)
                 "css-lsp",
-                "html",
+                "html-lsp",
                 "lua-language-server",
                 "marksman",
                 "rust-analyzer",
