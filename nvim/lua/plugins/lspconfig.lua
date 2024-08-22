@@ -45,7 +45,7 @@ return {
             lsp.cssls.setup({ capabilities = capabilities, })
             lsp.html.setup({ capabilities = capabilities, })
             lsp.lua_ls.setup({ capabilities = capabilities, })
-            lsp.marksman.setup({ capabilities = capabilities, })
+            lsp.markdown_oxide.setup({ capabilities = capabilities, })
             lsp.nil_ls.setup({ capabilities = capabilities, })
             lsp.svelte.setup({ capabilities = capabilities, })
             lsp.tailwindcss.setup({ capabilities = capabilities, })

@@ -13,7 +13,7 @@ return {
                     "cssls",
                     "html",
                     "lua_ls",
-                    "marksman",
+                    "markdown_oxide",
                     "nil_ls",
                     "rust_analyzer",
                     "svelte",
