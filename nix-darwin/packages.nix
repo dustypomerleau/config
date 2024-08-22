@@ -56,7 +56,8 @@
       mas
       neovim
       # netlify-cli # commented out because the version is way behind, use brew version for now
-      nixd
+      nil
+      # nixd # switch to nil, given nixd stability issues in nvim
       nixfmt-rfc-style
       nodePackages.svgo
       nodejs_22

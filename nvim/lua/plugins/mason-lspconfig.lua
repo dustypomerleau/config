@@ -14,6 +14,7 @@ return {
                     "html",
                     "lua_ls",
                     "marksman",
+                    "nil_ls",
                     "rust_analyzer",
                     "svelte",
                     "tailwindcss",
