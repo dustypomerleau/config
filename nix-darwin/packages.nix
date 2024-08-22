@@ -42,6 +42,7 @@
       findutils
       fish
       fishPlugins.colored-man-pages
+      fzf
       gawk
       gh
       git
