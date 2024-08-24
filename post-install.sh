@@ -4,9 +4,11 @@
 # boot into recovery (cmd + R) and set your firmware password 
 
 # - seed the PRNG before enabling FileVault
-#   cat > /dev/random
-#   (type random stuff for a long while)
-#   Control-D
+# - cat > /dev/random
+# - (type random stuff for a long while)
+# - Control-D
+#
+# will error if already enabled
 echo 'enabling FileVault'
 sudo fdesetup enable
 
