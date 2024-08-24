@@ -9,8 +9,8 @@ The basic steps to provision a new machine are:
 1. Intel macs only: Reboot into recovery with cmd-R, and set a firmware password.
 1. Backup `~/.config`.
 1. Clone this repo and rename to `~/.config`.
-1. [Install Homebrew](https://brew.sh/).
-1. Run the [Determinate Systems Nix installer](https://github.com/DeterminateSystems/nix-installer).
+1. Install [Homebrew](https://brew.sh/) via `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`.
+1. Run the [Lix](https://lix.systems/) installer via `curl -sSf -L https://install.lix.systems/lix | sh -s -- install` (or use the [Determinate Systems Nix installer](https://github.com/DeterminateSystems/nix-installer)).
 1. Manually give full disk access to the terminal you're using via `System Settings > Privacy & Security > Full Disk Access` (this is necessary to set `universalaccess` settings like `reduceTransparency`).
 1. Edit the variables in `~/.config/nix-darwin/flake.nix` to reflect your username, system, etc.
 1. Perform initial install with `nix run nix-darwin --experimental-features "nix-command flakes" -- switch --flake ~/.config/nix-darwin --impure`.
