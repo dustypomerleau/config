@@ -12,6 +12,7 @@ sudo fdesetup enable
 
 # make sure /Library/TeX/texbin is added to your PATH (should be automatic).
 # for annual updates that jump a major year/version you need `brew cask reinstall mactex`.
+echo 'configuring tlmgr default repository'
 sudo tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet
 
 echo 'configuring aws to use endpoint plugin'
@@ -50,17 +51,39 @@ defaults write com.apple.AppleMultitouchTrackpad DragLock -bool true
 echo 'installing xcode command line tools'
 xcode-select --install
 
-echo 'creating the default postgres user "postgres"'
-/run/current-system/sw/bin/postgres/bin/createuser -s postgres
+# TODO: if you actually need this postgres install, arrange proper config
+# echo 'creating the default postgres user "postgres"'
+# /run/current-system/sw/bin/postgres/bin/createuser -s postgres
 
 echo 'initializing rustup'
 rustup-init
 
+# NOTE: miri is not available on stable
+echo 'adding components to stable'
+rustup component add \
+    clippy \
+    rust-analyzer \
+    rust-docs \
+    rust-src
+
+echo 'adding nightly toolchain'
+rustup toolchain install nightly --component \
+    clippy \
+    miri \
+    rust-analyzer \
+    rust-docs \
+    rust-src
+
+echo 'setting nightly as default'
+rustup default nightly
+
 echo 'adding wasm target for rust'
-rustup target add wasm32-unknown-unknown wasm32-wasi
+rustup target add \
+    wasm32-unknown-unknown \
+    wasm32-wasi
 
 echo 'installing binaries only available via `cargo-install`'
-cargo binstall rimage
+cargo binstall rimage crates-tui
 
 echo 'improving rust compilation times by enabling developer mode'
 spctl developer-mode enable-terminal
