@@ -209,9 +209,10 @@ abbr --add sed "sed -E"
 abbr --add so "source ~/.config/fish/config.fish"
 
 abbr --add sup "\
-rustup update && \
-sudo softwareupdate -aiR"
-# cargo install-update -a && \
+pnpm update -g \
+&& rustup update \
+&& sudo softwareupdate -aiR"
+# && cargo install-update -a \
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"

@@ -5,6 +5,7 @@
 return {
     {
         "williamboman/mason.nvim",
+        enabled = false, -- trial this off, as packages have been moved to nix
         event = "VeryLazy",
         opts = {
             -- Note: names here will not match names in mason-lspconfig.lua
@@ -17,12 +18,12 @@ return {
                 -- "css-lsp", -- pkgs.vscode-langservers-extracted
                 -- "html-lsp", -- pkgs.vscode-langservers-extracted
                 -- "lua-language-server", -- pkgs.lua-language-server
-                "rust-analyzer",
+                -- "rust-analyzer", -- for now, using RA as a rustup component
                 -- "svelte-language-server", -- pkgs.svelte-language-server
                 -- "tailwindcss-language-server", -- pkgs.tailwindcss-language-server
                 -- "taplo", -- pkgs.taplo
                 -- "typst-lsp", -- pkgs.typst-lsp
-                "vtsls",
+                -- "vtsls", -- installed via pnpm global for now - will provide tsserver on first activation
             },
         },
         config = function()
