@@ -17,6 +17,7 @@
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
+      basedpyright
       bat
       bfg-repo-cleaner
       bottom
@@ -31,6 +32,7 @@
       # cargo-outdated # temporarily comment this out due to compilation error - see https://github.com/kbknapp/cargo-outdated/pull/393
       cargo-update
       cargo-watch
+      clang-tools
       cmake
       curl
       delta
@@ -53,6 +55,7 @@
       leptosfmt
       libressl_3_8
       luajitPackages.luarocks
+      lua-language-server
       markdown-oxide
       mas
       neovim
@@ -78,6 +81,8 @@
       rustup
       sqlx-cli
       stylua
+      svelte-language-server
+      tailwindcss-language-server
       taplo
       tealdeer
       timer
@@ -87,8 +92,11 @@
       trash-cli
       typst
       typstfmt
+      typst-lsp
       uutils-coreutils
       vsce
+      vscode-extensions.vadimcn.vscode-lldb # mason
+      vscode-langservers-extracted # (markdown, html, css, json, eslint)
       wasm-pack
       yazi
       zoxide

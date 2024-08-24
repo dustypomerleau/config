@@ -10,19 +10,18 @@ return {
             -- Note: names here will not match names in mason-lspconfig.lua
             -- Mapping from mason package names to lspconfig server names:
             -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
-            ensure_installed = {
-                "basedpyright",
-                "clangd",
-                "codelldb", -- rust debugger (configure via nvim-dap)
-                "css-lsp",
-                "html-lsp",
-                "lua-language-server",
-                "marksman",
+            ensure_installed = { -- nix replacements listed as pkgs.<name>
+                -- "basedpyright", -- pkgs.basedpyright
+                -- "clangd", -- pkgs.clang-tools
+                -- "codelldb", -- pkgs.vscode-extensions.vadimcn.vscode-lldb (rust debugger, configure via nvim-dap)
+                -- "css-lsp", -- pkgs.vscode-langservers-extracted
+                -- "html-lsp", -- pkgs.vscode-langservers-extracted
+                -- "lua-language-server", -- pkgs.lua-language-server
                 "rust-analyzer",
-                "svelte-language-server",
-                "tailwindcss-language-server",
-                "taplo",
-                "typst-lsp",
+                -- "svelte-language-server", -- pkgs.svelte-language-server
+                -- "tailwindcss-language-server", -- pkgs.tailwindcss-language-server
+                -- "taplo", -- pkgs.taplo
+                -- "typst-lsp", -- pkgs.typst-lsp
                 "vtsls",
             },
         },
