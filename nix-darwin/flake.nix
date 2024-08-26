@@ -12,6 +12,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,6 +34,7 @@
     inputs@{
       self,
       darwin,
+      fenix,
       home-manager,
       lix,
       nixpkgs,
@@ -57,6 +63,7 @@
         modules = [
           ./brew.nix
           ./core.nix
+          ./fenix.nix
           ./home.nix
           ./packages.nix
           ./system.nix

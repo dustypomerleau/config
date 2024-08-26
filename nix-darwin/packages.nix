@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ fenix, pkgs, ... }:
 {
   environment = {
     shells = with pkgs; [
@@ -8,12 +8,6 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      # Note: language servers are installed via Mason at present
-      # 
-      # Examples of configuring unpackaged Rust repos:
-      # https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
-      # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
-      #
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
