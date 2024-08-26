@@ -58,7 +58,7 @@
     in
     {
       darwinConfigurations.${hostname} = darwin.lib.darwinSystem {
-        inherit specialArgs;
+        inherit fenix specialArgs;
 
         modules = [
           ./brew.nix
