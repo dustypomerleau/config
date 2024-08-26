@@ -57,23 +57,38 @@
       };
     in
     {
-      packages.${specialArgs.system}.default = fenix.packages.${specialArgs.system}.minimal.toolchain;
-
       darwinConfigurations.${hostname} = darwin.lib.darwinSystem {
-        inherit fenix specialArgs;
+        inherit specialArgs;
 
         modules = [
           ./brew.nix
           ./core.nix
-          ./fenix.nix
+          (
+            { pkgs, ... }:
+            {
+              nixpkgs.overlays = [ fenix.overlays.default ];
+
+              # fenix rustc includes rust-std
+              environment.systemPackages = with pkgs; [
+                (fenix.packages.${system}.complete.withComponents [
+                  "cargo"
+                  "clippy"
+                  "miri"
+                  "rust-docs"
+                  "rust-src"
+                  "rustc"
+                  "rustfmt"
+                ])
+                rust-analyzer-nightly
+              ];
+            }
+          )
           ./home.nix
           ./packages.nix
           ./system.nix
           home-manager.darwinModules.home-manager
           lix.nixosModules.default
         ];
-
-        system.configurationRevision = self.rev or self.dirtyRev or null;
       };
     };
 }

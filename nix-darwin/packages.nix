@@ -1,4 +1,4 @@
-{ fenix, pkgs, ... }:
+{ pkgs, ... }:
 {
   environment = {
     shells = with pkgs; [
@@ -72,7 +72,7 @@
       qmk
       ripgrep
       ripgrep-all
-      rustup
+      # rustup # remove due to fenix collisions
       sqlx-cli
       stylua
       svelte-language-server

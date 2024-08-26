@@ -2,13 +2,18 @@
 # https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md
 # https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/development/tools/rust/cargo-generate/default.nix#L56
 
-{ fenix, pkgs, ... }:
+{
+  fenix,
+  pkgs,
+  system,
+  ...
+}:
 {
   nixpkgs.overlays = [ fenix.overlays.default ];
 
   # fenix rustc includes rust-std
   environment.systemPackages = with pkgs; [
-    (fenix.complete.withComponents [
+    (fenix.packages.${system}.complete.withComponents [
       "cargo"
       "clippy"
       "miri"
