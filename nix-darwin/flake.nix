@@ -57,7 +57,7 @@
       };
     in
     {
-      packages.${system}.default = fenix.packages.${system}.minimal.toolchain;
+      packages.${specialArgs.system}.default = fenix.packages.${specialArgs.system}.minimal.toolchain;
 
       darwinConfigurations.${hostname} = darwin.lib.darwinSystem {
         inherit fenix specialArgs;

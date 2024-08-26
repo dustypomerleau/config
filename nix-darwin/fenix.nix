@@ -6,6 +6,7 @@
 {
   nixpkgs.overlays = [ fenix.overlays.default ];
 
+  # fenix rustc includes rust-std
   environment.systemPackages = with pkgs; [
     (fenix.complete.withComponents [
       "cargo"
@@ -13,7 +14,7 @@
       "miri"
       "rust-docs"
       "rust-src"
-      "rustc" # includes rust-std
+      "rustc"
       "rustfmt"
     ])
     rust-analyzer-nightly
