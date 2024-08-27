@@ -70,15 +70,20 @@
 
               # fenix rustc includes rust-std
               environment.systemPackages = with pkgs; [
-                (fenix.packages.${system}.complete.withComponents [
-                  "cargo"
-                  "clippy"
-                  "miri"
-                  "rust-docs"
-                  "rust-src"
-                  "rustc"
-                  "rustfmt"
-                ])
+                (
+                  with fenix.packages.${system};
+                  with complete;
+                  combine [
+                    cargo
+                    clippy
+                    miri
+                    rust-docs
+                    rust-src
+                    rustc
+                    rustfmt
+                    targets.wasm32-unknown-unknown.latest.rust-std
+                  ]
+                )
                 rust-analyzer-nightly
               ];
             }
