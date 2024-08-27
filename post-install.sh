@@ -17,6 +17,8 @@ sudo fdesetup enable
 echo 'configuring tlmgr default repository'
 sudo tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet
 
+# todo: set up secrets and version control the contents of ~/.aws
+# then delete this, as it's handled by the config file     
 echo 'configuring aws to use endpoint plugin'
 aws configure set plugins.endpoint awscli_plugin_endpoint
 
