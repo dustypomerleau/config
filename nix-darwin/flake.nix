@@ -63,31 +63,7 @@
         modules = [
           ./brew.nix
           ./core.nix
-          (
-            { pkgs, ... }:
-            {
-              nixpkgs.overlays = [ fenix.overlays.default ];
-
-              # fenix rustc includes rust-std
-              environment.systemPackages = with pkgs; [
-                (
-                  with fenix.packages.${system};
-                  with complete;
-                  combine [
-                    cargo
-                    clippy
-                    miri
-                    rust-docs
-                    rust-src
-                    rustc
-                    rustfmt
-                    targets.wasm32-unknown-unknown.latest.rust-std
-                  ]
-                )
-                rust-analyzer-nightly
-              ];
-            }
-          )
+          ./fenix.nix
           ./home.nix
           ./packages.nix
           ./system.nix
