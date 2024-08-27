@@ -53,37 +53,6 @@ defaults write com.apple.AppleMultitouchTrackpad DragLock -bool true
 echo 'installing xcode command line tools'
 xcode-select --install
 
-# TODO: if you actually need this postgres install, arrange proper config
-# echo 'creating the default postgres user "postgres"'
-# /run/current-system/sw/bin/postgres/bin/createuser -s postgres
-
-echo 'initializing rustup'
-rustup-init
-
-# NOTE: miri is not available on stable
-echo 'adding components to stable'
-rustup component add \
-    clippy \
-    rust-analyzer \
-    rust-docs \
-    rust-src
-
-echo 'adding nightly toolchain'
-rustup toolchain install nightly --component \
-    clippy \
-    miri \
-    rust-analyzer \
-    rust-docs \
-    rust-src
-
-echo 'setting nightly as default'
-rustup default nightly
-
-echo 'adding wasm target for rust'
-rustup target add \
-    wasm32-unknown-unknown \
-    wasm32-wasi
-
 echo 'installing binaries only available via `cargo-install`'
 cargo binstall rimage crates-tui
 
