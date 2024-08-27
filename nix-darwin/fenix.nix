@@ -15,22 +15,21 @@ in
   nixpkgs.overlays = [ fenix.overlays.default ];
 
   # fenix rustc includes rust-std
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     (
       with fenix.packages.${system};
-      with complete;
       combine [
-        cargo
-        clippy
-        miri
-        rust-docs
-        rust-src
-        rustc
-        rustfmt
+        complete.cargo
+        complete.clippy
+        complete.miri
+        complete.rust-docs
+        complete.rust-src
+        complete.rustc
+        complete.rustfmt
         targets.wasm32-unknown-unknown.latest.rust-std
         targets.wasm32-wasi.latest.rust-std
       ]
     )
-    rust-analyzer-nightly
+    pkgs.rust-analyzer-nightly
   ];
 }
