@@ -89,7 +89,7 @@
       typst-lsp
       uutils-coreutils
       vsce
-      vscode-extensions.vadimcn.vscode-lldb # mason
+      vscode-extensions.vadimcn.vscode-lldb
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       wasm-pack
       yazi
