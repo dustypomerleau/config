@@ -30,6 +30,7 @@
       # "alfred"
       # "arq"
       # "citrix-workspace"
+      # "daisydisk"
       # "discord"
       # "dropbox"
       # "firefox"
