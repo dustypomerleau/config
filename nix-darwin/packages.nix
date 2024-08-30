@@ -46,6 +46,8 @@
       gnused
       google-cloud-sdk
       jujutsu
+      kind
+      kubectl
       leptosfmt
       libressl_3_8
       luajitPackages.luarocks
