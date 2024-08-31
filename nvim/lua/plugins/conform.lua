@@ -1,6 +1,7 @@
 return {
     {
         "stevearc/conform.nvim",
+        -- enabled = false, -- toggle if you need to turn formatting off for some reason
         event = "VeryLazy",
         config = function()
             require("conform").setup({
