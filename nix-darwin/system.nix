@@ -66,6 +66,11 @@
         tilesize = 20;
         wvous-bl-corner = 2; # mission control
         wvous-br-corner = 3; # application windows
+        # # DP PR testing below this point - uncomment after merge
+        # showAppExposeGestureEnabled = true;
+        # showDesktopGestureEnabled = false;
+        # showLaunchpadGestureEnabled = false;
+        # showMissionControlGestureEnabled = true;
       };
 
       finder = {
@@ -95,8 +100,26 @@
         ActuationStrength = 0;
         Clicking = true; # enable tap to click
         Dragging = true; # tap to drag (not the same as DragLock)
+        FirstClickThreshold = 0;
+        SecondClickThreshold = 0;
         TrackpadRightClick = true;
         TrackpadThreeFingerDrag = true;
+        # DP PR testing below this comment - uncomment after merge
+        # ActuateDetents = false;
+        # DragLock = true;
+        # ForceSuppressed = true;
+        # TrackpadCornerSecondaryClick = 0;
+        # TrackpadFourFingerHorizSwipeGesture = 0;
+        # TrackpadFourFingerPinchGesture = 0;
+        # TrackpadFourFingerVertSwipeGesture = 0;
+        # TrackpadMomentumScroll = true;
+        # TrackpadPinch = true;
+        # TrackpadRotate = true;
+        # TrackpadThreeFingerHorizSwipeGesture = 0;
+        # TrackpadThreeFingerTapGesture = 2;
+        # TrackpadThreeFingerVertSwipeGesture = 0;
+        # TrackpadTwoFingerDoubleTapGesture = true;
+        # TrackpadTwoFingerFromRightEdgeSwipeGesture = 0;
       };
 
       # setting this is only possible if the terminal you use has full disk access in System Settings
