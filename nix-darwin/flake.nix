@@ -9,6 +9,7 @@
   inputs = {
     darwin = {
       url = "github:lnl7/nix-darwin";
+      # url = "/Users/dustinpomerleau/me/er/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
