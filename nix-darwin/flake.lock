@@ -7,17 +7,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1725349119,
-        "narHash": "sha256-sLYnXbP+jy0ZVAjCwhp2G19eGQeagIlEdXzmV1d9f5Y=",
-        "ref": "ed156974c631b9fd6e635eb1f5c3e98c4ab3f1c0",
-        "rev": "ed156974c631b9fd6e635eb1f5c3e98c4ab3f1c0",
-        "revCount": 1682,
-        "type": "git",
-        "url": "file:///Users/dustinpomerleau/me/er/nix-darwin"
+        "lastModified": 1725189302,
+        "narHash": "sha256-IhXok/kwQqtusPsoguQLCHA+h6gKvgdCrkhIaN+kByA=",
+        "owner": "lnl7",
+        "repo": "nix-darwin",
+        "rev": "7c4b53a7d9f3a3df902b3fddf2ae245ef20ebcda",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///Users/dustinpomerleau/me/er/nix-darwin"
+        "owner": "lnl7",
+        "repo": "nix-darwin",
+        "type": "github"
       }
     },
     "fenix": {
