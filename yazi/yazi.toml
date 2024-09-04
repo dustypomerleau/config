@@ -1,0 +1,12 @@
+[manager]
+ratio = [2, 3, 6]
+show_hidden = true
+
+[preview]
+image_quality = 90
+sixel_fraction = 20
+tab_size = 4
+wrap = "yes"
+
+[opener]
+edit = [{ run = 'nvim "$@"', block = true }]
