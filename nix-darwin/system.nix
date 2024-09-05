@@ -49,6 +49,7 @@
         "com.apple.sound.beep.feedback" = 0; # feedback when volume is changed
         "com.apple.trackpad.forceClick" = false;
         "com.apple.trackpad.scaling" = 3.0; # 3 is maximum tracking speed
+        # "com.apple.trackpad.scrolling" = 0.5; # 1 is maximum scrolling speed, todo: PR this, it goes in modules/system/defaults/NSGlobalDomain.nix below trackpad.scaling
 
       };
 
