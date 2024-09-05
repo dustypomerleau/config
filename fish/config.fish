@@ -222,7 +222,7 @@ abbr --add tm "tmpl"
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add x "extract"
 abbr --add xargs "uutils-xargs"
-abbr --add y "yazi"
+abbr --add yz "yazi"
 
 # pnpm
 set -gx PNPM_HOME "/Users/dustinpomerleau/Library/pnpm"
