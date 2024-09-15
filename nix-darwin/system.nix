@@ -129,6 +129,9 @@
         reduceTransparency = true;
       };
     };
-    # can system.patches be used to run a script containing defaults write commands that aren't covered here?
+
+    # Current default is 5, if something breaks, you can change this back to 4
+    stateVersion = 5;
+
   };
 }
