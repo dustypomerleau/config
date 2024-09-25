@@ -44,6 +44,12 @@ return {
                 mode = { "n", "x", },
                 silent = true,
             },
+            {
+                "gy",
+                "<cmd>YankyRingHistory<cr>",
+                mode = { "n", "x", },
+                silent = true,
+            },
         },
     },
 }
