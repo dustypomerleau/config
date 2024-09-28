@@ -13,10 +13,8 @@ vim.g.rustaceanvim = {
                     command = "clippy",
                     extraArgs = { "--no-deps", },
                 },
-                procMacro = { ignored = { leptos_macro = { "server", }, }, },
-                -- The `rustfmt` override command won't work correctly if specified here.
-                -- Instead, use per-project settings in `rust-analyzer.toml`, `rustfmt.toml`,
-                -- and `leptosfmt.toml`
+                -- toggle below if needed, see: https://book.leptos.dev/getting_started/leptos_dx.html#2-editor-autocompletion-inside-component-and-server
+                -- procMacro = { ignored = { leptos_macro = { "server", }, }, },
                 workspace = { symbol = { search = { kind = "all_symbols", }, }, },
             },
             capabilities = capabilities,
