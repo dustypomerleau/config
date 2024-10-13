@@ -23,7 +23,7 @@
   "lualine.nvim": { "branch": "master", "commit": "b431d228b7bbcdaea818bdc3e25b8cdbe861f056" },
   "luarocks.nvim": { "branch": "main", "commit": "1db9093915eb16ba2473cfb8d343ace5ee04130a" },
   "luasnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
-  "mini.nvim": { "branch": "main", "commit": "c2352031124e90cac9d038cb8a1f1b406f7465ea" },
+  "mini.nvim": { "branch": "main", "commit": "df1559e2ed7ece458e0a97a8bb9556d465d1c775" },
   "neorg": { "branch": "main", "commit": "81ee90cb2d72ac43bfadb7dd276646f34c8f85be" },
   "nui.nvim": { "branch": "main", "commit": "b58e2bfda5cea347c9d58b7f11cf3012c7b3953f" },
   "nvim-autopairs": { "branch": "master", "commit": "ee297f215e95a60b01fde33275cc3c820eddeebe" },
@@ -47,6 +47,6 @@
   "tol.nvim": { "branch": "dev", "commit": "8cac88ba487aea7a3f86859f30b0b4a80123c635" },
   "trouble.nvim": { "branch": "main", "commit": "254145ffd528b98eb20be894338e2d5c93fa02c2" },
   "vim-svelte": { "branch": "main", "commit": "0e93ec53c3667753237282926fec626785622c1c" },
-  "vimtex": { "branch": "master", "commit": "a4db0ee3271f58a08596ba853ea1e167f41ff9d6" },
+  "vimtex": { "branch": "master", "commit": "9a5ef1d4ac8e4e06071179ebe8121350fcb97861" },
   "yanky.nvim": { "branch": "main", "commit": "73215b77d22ebb179cef98e7e1235825431d10e4" }
 }
