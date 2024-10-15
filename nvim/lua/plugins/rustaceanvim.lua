@@ -41,6 +41,12 @@ return {
                 noremap = true,
             },
             {
+                "<localleader>sm",
+                ":RustLsp expandMacro<cr>",
+                mode = { "n", },
+                noremap = true,
+            },
+            {
                 "<localleader>sw",
                 ":RustLsp reloadWorkspace<cr>",
                 mode = { "n", },
