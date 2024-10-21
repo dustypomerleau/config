@@ -73,7 +73,7 @@
       python3
       qmk
       ripgrep
-      ripgrep-all
+      # ripgrep-all # temporarily remove due to compilation error
       # rustup # remove due to fenix collisions
       sqlx-cli
       stylua
