@@ -231,5 +231,4 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
-any-nix-shell fish --info-right | source
 zoxide init fish | source
