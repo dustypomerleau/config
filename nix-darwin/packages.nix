@@ -10,7 +10,7 @@
     systemPackages = with pkgs; [
       any-nix-shell # allows fish in nix-shell
       asciidoctor
-      awscli2
+      awscli2 # temporary comment
       basedpyright
       bat
       bfg-repo-cleaner
@@ -73,7 +73,7 @@
       python3
       qmk
       ripgrep
-      # ripgrep-all # temporarily remove due to compilation error
+      ripgrep-all # temporary comment
       # rustup # remove due to fenix collisions
       sqlx-cli
       stylua
