@@ -10,7 +10,7 @@
     systemPackages = with pkgs; [
       any-nix-shell # allows fish in nix-shell
       asciidoctor
-      awscli2 # temporary comment
+      awscli2
       basedpyright
       bat
       bfg-repo-cleaner
@@ -23,7 +23,7 @@
       cargo-generate
       cargo-leptos
       cargo-make
-      # cargo-outdated # temporarily comment this out due to compilation error - see https://github.com/kbknapp/cargo-outdated/pull/393
+      # cargo-outdated # build failure, move to brew: https://github.com/kbknapp/cargo-outdated/pull/393
       cargo-update
       cargo-watch
       clang-tools
@@ -55,11 +55,11 @@
       markdown-oxide
       mas
       neovim
-      # netlify-cli # commented out because the version is way behind, use brew version for now
+      # netlify-cli # too old, move to brew
       nil
       nixfmt-rfc-style
       nodePackages.svgo
-      nodejs_22
+      # nodejs_22 # build failure, move to brew
       ocrmypdf
       pandoc
       parallel
@@ -73,7 +73,7 @@
       python3
       qmk
       ripgrep
-      ripgrep-all # temporary comment
+      # ripgrep-all # build failure, move to brew: https://github.com/NixOS/nixpkgs/issues/350367
       # rustup # remove due to fenix collisions
       sqlx-cli
       stylua
