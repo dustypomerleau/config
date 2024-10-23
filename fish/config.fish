@@ -223,7 +223,7 @@ abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add x "extract"
 abbr --add xargs "uutils-xargs"
 abbr --add yz "yazi"
-abbr --add z "zellij"
+abbr --add ze "zellij" # z is bound to zoxide
 
 # pnpm
 set -gx PNPM_HOME "/Users/dustinpomerleau/Library/pnpm"
