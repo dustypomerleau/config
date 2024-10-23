@@ -95,6 +95,7 @@
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       wasm-pack
       yazi
+      zellij
       zoxide
     ];
 
