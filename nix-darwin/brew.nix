@@ -47,6 +47,7 @@
       # "transmission"
       # "viscosity"
       # "visual-studio-code"
+      # "vivaldi"
       # "vlc"
       # uncomment above for new install (on current system, these conflict with previous installs)
       ## todo: not available from brew: exodus, homerow, openVPN connect
