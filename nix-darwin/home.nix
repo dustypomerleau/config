@@ -29,6 +29,7 @@
           "/Library/ApplicationSupport/Code/User/settings.json".source = /Users/${specialArgs.username}/.config/code/settings.json;
           "/Library/ApplicationSupport/jj/config.toml".source = /Users/${specialArgs.username}/.config/jj/config.toml;
           "/Library/ApplicationSupport/org.dystroy.broot/conf.toml".source = /Users/${specialArgs.username}/.config/broot/conf.toml;
+          "/Users/${specialArgs.username}/Library/Preferences/glow/glow.yml".source = /Users/${specialArgs.username}/.config/glow/glow.yml;
           "themes.gitconfig".source = /Users/${specialArgs.username}/.config/git/themes.gitconfig;
         };
 
