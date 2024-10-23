@@ -1,6 +1,9 @@
-{ system, ... }:
+{ config, system, ... }:
 {
-  nix.settings.experimental-features = "nix-command flakes";
+  nix.settings = {
+    experimental-features = "nix-command flakes";
+    nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
+  };
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = system;
