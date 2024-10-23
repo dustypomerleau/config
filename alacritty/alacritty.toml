@@ -101,6 +101,7 @@ program = "/run/current-system/sw/bin/fish"
 
 [window]
 decorations = "buttonless"
+option_as_alt = "Both"
 startup_mode = "Fullscreen"
 
 [window.padding]
