@@ -18,6 +18,7 @@ return {
                     toml = { "taplo", },
                     typescript = { "prettierd", "prettier", stop_after_first = true, },
                     typst = { "typstfmt", },
+                    yaml = { "yamlfmt", },
                 },
                 -- setting format_on_save will automatically generate an autocommand like:
                 -- vim.api.nvim_create_autocmd("BufWritePre", {

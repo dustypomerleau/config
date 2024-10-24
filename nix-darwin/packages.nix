@@ -94,6 +94,7 @@
       vscode-extensions.vadimcn.vscode-lldb
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       wasm-pack
+      yamlfmt
       yazi
       zellij
       zoxide
