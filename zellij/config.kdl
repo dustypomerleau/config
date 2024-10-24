@@ -228,7 +228,7 @@ plugins {
 //   - true (default)
 //   - false
 //
-// pane_frames true
+pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -260,31 +260,31 @@ plugins {
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
-// themes {
-//     dracula {
-//         fg 248 248 242
-//         bg 40 42 54
-//         red 255 85 85
-//         green 80 250 123
-//         yellow 241 250 140
-//         blue 98 114 164
-//         magenta 255 121 198
-//         orange 255 184 108
-//         cyan 139 233 253
-//         black 0 0 0
-//         white 255 255 255
-//     }
-// }
+themes {
+    tol {
+        fg "#cac0a9"
+        bg "#292d3e"
+        red "#ee8866"
+        green "#bbcc33"
+        yellow "#eedd88"
+        blue "#70b2f3"
+        magenta "#ffaabb"
+        orange "#eedd88"
+        cyan "#99ddff"
+        black "#242837"
+        white "#dddddd"
+    }
+}
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "default"
+theme "tol"
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "compact" // dp
+default_layout "min"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -346,7 +346,7 @@ plugins {
 
 // The folder in which Zellij will look for layouts
 //
-// layout_dir "/path/to/my/layout_dir"
+layout_dir "/Users/dustinpomerleau/.config/zellij/layouts/"
 
 // The folder in which Zellij will look for themes
 //

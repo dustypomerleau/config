@@ -1,0 +1,14 @@
+layout {
+    default_tab_template {
+        pane borderless=true
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+    }
+
+    tab name="config" cwd="~/.config"
+    tab name="db" cwd="~/me/audit" 
+    tab name="watch" cwd="~/me/audit"
+    tab name="sh" cwd="~/me/audit"
+    tab name="audit" cwd="~/me/audit"
+}
