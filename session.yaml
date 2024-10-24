@@ -1,0 +1,9 @@
+session_name: config
+windows:
+  - window_name: config
+    panes:
+      - nvim nix-darwin/packages.nix
+  - window_name: sh
+    focus: true
+    panes:
+      - jj status
