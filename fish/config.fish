@@ -220,6 +220,7 @@ abbr --add ta "tmux attach"
 abbr --add td "tldr"
 abbr --add tl "tmux list-sessions" # use `<c-a> w` for an interactive version of this
 abbr --add tm "tmuxp load session.yaml"
+abbr --add tn "tmux new -s"
 abbr --add ts "tmux attach -t" # s for 'session'
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add x "extract"
