@@ -1,5 +1,9 @@
 { config, ... }:
 {
+  # note: you may need to `sudo rm -r /usr/local/lib/docker/cli-plugins`
+  # see: https://github.com/Homebrew/homebrew-core/issues/45009
+  # and: https://stackoverflow.com/questions/72784094/homebrew-error-permission-denied-apply2files-usr-local-lib-docker-cli-pl
+
   # make sure homebrew packages are available in PATH
   # (given the way fish handles paths, I'm not sure this is necessary)
   environment.systemPath = [ config.homebrew.brewPrefix ];
