@@ -217,9 +217,9 @@ pnpm update -g \
 
 abbr --add t "tmux"
 abbr --add ta "tmux attach"
+abbr --add tat "tmux attach -t"
 abbr --add td "tldr"
 abbr --add tl "tmux list-sessions" # use `<c-a> w` for an interactive version of this
-# abbr --add tm "tmpl" # removed after switch to tmuxp
 abbr --add tm "tmuxp load session.yaml"
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
 abbr --add x "extract"
