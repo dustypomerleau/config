@@ -19,7 +19,7 @@
       cargo-binstall
       cargo-edit
       cargo-expand
-      cargo-feature
+      # cargo-feature # build failure
       cargo-generate
       cargo-leptos
       cargo-make
@@ -73,7 +73,7 @@
       python3
       qmk
       ripgrep
-      # ripgrep-all # build failure, move to brew: https://github.com/NixOS/nixpkgs/issues/350367
+      ripgrep-all # build failure, move to brew: https://github.com/NixOS/nixpkgs/issues/350367
       # rustup # remove due to fenix collisions
       sqlx-cli
       stylua
