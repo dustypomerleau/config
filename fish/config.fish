@@ -212,6 +212,7 @@ abbr --add so "source ~/.config/fish/config.fish"
 abbr --add sup "\
 pnpm update -g \
 && cargo install-update -a \
+&& fisher update \
 && sudo softwareupdate -aiR"
 # && rustup update \
 
