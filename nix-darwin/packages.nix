@@ -73,7 +73,7 @@
       python3
       qmk
       ripgrep
-      ripgrep-all # build failure, move to brew: https://github.com/NixOS/nixpkgs/issues/350367
+      ripgrep-all
       # rustup # remove due to fenix collisions
       sqlx-cli
       stylua

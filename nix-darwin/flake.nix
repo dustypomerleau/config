@@ -9,7 +9,7 @@
   inputs = {
     darwin = {
       url = "github:lnl7/nix-darwin";
-      # url = "/Users/dustinpomerleau/me/er/nix-darwin";
+      # url = "/Users/dn/me/er/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,8 +42,8 @@
       ...
     }:
     let
-      computername = "DP MBP";
-      hostname = "DP-2018-MBP";
+      computername = "mp";
+      hostname = "mp";
       system = "x86_64-darwin"; # for Apple silicon, use "aarch64-darwin"
       username = "dustinpomerleau";
 

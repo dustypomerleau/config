@@ -262,7 +262,7 @@
     "terminal.integrated.tabs.enabled": true,
     "terminal.integrated.tabs.focusMode": "singleClick",
     "vscode-neovim.neovimExecutablePaths.darwin": "/run/current-system/sw/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/dustinpomerleau/.config/nvim/code/init.vim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/dn/.config/nvim/code/init.vim",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "window.nativeFullScreen": true,
     "window.newWindowDimensions": "fullscreen",
