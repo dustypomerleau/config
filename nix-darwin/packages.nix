@@ -23,6 +23,7 @@
       cargo-generate
       cargo-leptos
       cargo-make
+      cargo-semver-checks
       # cargo-outdated # build failure, move to brew: https://github.com/kbknapp/cargo-outdated/pull/393
       cargo-update
       cargo-watch
