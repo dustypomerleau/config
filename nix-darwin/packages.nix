@@ -11,6 +11,7 @@
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
+      bacon
       basedpyright
       bat
       bfg-repo-cleaner
