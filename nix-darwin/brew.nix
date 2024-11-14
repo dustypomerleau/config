@@ -18,7 +18,7 @@
       # openssl and pkg-config are duplicated here because of issues during Rust builds.
       # This is probably related to the type inference issues in Rust 1.80.0.
       # Try again once these are fixed.
-      "netlify-cli"
+      # "netlify-cli" # should be updated now
       "node"
       "openssl"
       "pkg-config"

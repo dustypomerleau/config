@@ -57,7 +57,7 @@
       markdown-oxide
       mas
       neovim
-      # netlify-cli # too old, move to brew
+      netlify-cli
       nil
       nixfmt-rfc-style
       nodePackages.svgo
