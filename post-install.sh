@@ -58,5 +58,9 @@ xcode-select --install
 echo 'installing binaries only available via `cargo-install`'
 cargo binstall rimage crates-tui
 
+# this enables macOS Terminal.app, but you should manually add Alacritty in System Settings > Privacy & Security > Developer Tools
 echo 'improving rust compilation times by enabling developer mode'
 spctl developer-mode enable-terminal
+
+echo 'installing fisher to ensure post-install hook'
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
