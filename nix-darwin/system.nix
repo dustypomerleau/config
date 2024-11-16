@@ -18,7 +18,7 @@
     hostName = specialArgs.hostname;
 
     knownNetworkServices = [
-      "Thunderbold Ethernet"
+      "Thunderbolt Ethernet"
       "Wi-Fi"
     ];
 

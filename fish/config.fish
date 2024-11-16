@@ -233,7 +233,7 @@ abbr --add yz "yazi"
 abbr --add ze "zellij" # z is bound to zoxide
 
 # pnpm
-set -gx PNPM_HOME "/Users/dustinpomerleau/Library/pnpm"
+set -gx PNPM_HOME "/Users/dn/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end

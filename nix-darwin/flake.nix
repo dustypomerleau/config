@@ -9,7 +9,7 @@
   inputs = {
     darwin = {
       url = "github:lnl7/nix-darwin";
-      # url = "/Users/dn/me/er/nix-darwin";
+      # url = "/Users/dn/me/er/nix-darwin"; # for testing of PRs
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -44,8 +44,8 @@
     let
       computername = "mp";
       hostname = "mp";
-      system = "x86_64-darwin"; # for Apple silicon, use "aarch64-darwin"
-      username = "dustinpomerleau";
+      system = "aarch64-darwin";
+      username = "dn";
 
       specialArgs = {
         inherit
