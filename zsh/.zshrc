@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dustinpomerleau/.oh-my-zsh
+export ZSH=/Users/dn/.oh-my-zsh
 
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="theunraveler"
@@ -174,7 +174,7 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pnpm
-export PNPM_HOME="/Users/dustinpomerleau/Library/pnpm"
+export PNPM_HOME="/Users/dn/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

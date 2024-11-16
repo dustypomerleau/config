@@ -1,1 +1,1 @@
-/Users/dustinpomerleau/Library/Application Support/org.dystroy.broot/launcher/fish/br.fish
+/Users/dn/Library/Application Support/org.dystroy.broot/launcher/fish/br.fish

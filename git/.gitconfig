@@ -3,7 +3,7 @@
 
 [core]
 	editor = nvim
-	excludesfile = /Users/dustinpomerleau/.gitignore_global
+	excludesfile = /Users/dn/.gitignore_global
     pager = delta
 
 [delta]
@@ -31,7 +31,7 @@
 	process = git-lfs filter-process
 
 [include]
-    path = /Users/dustinpomerleau/themes.gitconfig
+    path = /Users/dn/themes.gitconfig
 
 [init]
 	defaultBranch = main

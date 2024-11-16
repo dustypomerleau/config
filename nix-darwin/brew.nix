@@ -20,11 +20,13 @@
       # Try again once these are fixed.
       # "netlify-cli" # should be updated now
       "node"
-      "openssl"
-      "pkg-config"
+      # "openssl"
+      # "pkg-config"
+      "tree-sitter" # CLI required for latex grammar installation
     ];
 
     casks = [
+      "1password"
       "affinity-designer"
       "alacritty"
       "alfred"
@@ -56,7 +58,7 @@
       # todo: not available from brew: exodus, homerow, openVPN connect
     ];
 
-    caskArgs.require_sha = true;
+    caskArgs.require_sha = false;
 
     masApps = {
       "Apple Configurator" = 1037126344;

@@ -12,6 +12,9 @@
 echo 'enabling FileVault'
 sudo fdesetup enable
 
+echo 'changing default shell to fish'
+chsh -s $(which fish)
+
 # make sure /Library/TeX/texbin is added to your PATH (should be automatic).
 # for annual updates that jump a major year/version you need `brew cask reinstall mactex`.
 echo 'configuring tlmgr default repository'

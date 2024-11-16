@@ -6,6 +6,7 @@ return {
             require("Comment").setup({})
             local ft = require("Comment.ft")
             ft.edgeql = "#%s"
+            ft.hjson = "#%s"
         end,
     },
 }

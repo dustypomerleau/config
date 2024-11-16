@@ -18,19 +18,24 @@
         #
         # Or: https://github.com/gvolpe/neovim-flake
         # used by https://github.com/gvolpe/nix-config
+        #
+        # Note: these file paths are relative to $HOME
         file = {
           ".cargo/config.toml".source = /Users/${specialArgs.username}/.config/cargo/config.toml;
           ".gitconfig".source = /Users/${specialArgs.username}/.config/git/.gitconfig;
           ".gitignore_global".source = /Users/${specialArgs.username}/.config/git/.gitignore_global;
           ".psqlrc".source = /Users/${specialArgs.username}/.config/postgres/.psqlrc;
           ".ssh/config".source = /Users/${specialArgs.username}/.config/ssh/config;
-          ".zshrc".source = /Users/${specialArgs.username}/.config/zsh/.zshrc;
-          "/Library/ApplicationSupport/Code/User/keybindings.json".source = /Users/${specialArgs.username}/.config/code/keybindings.json;
-          "/Library/ApplicationSupport/Code/User/settings.json".source = /Users/${specialArgs.username}/.config/code/settings.json;
-          "/Library/ApplicationSupport/jj/config.toml".source = /Users/${specialArgs.username}/.config/jj/config.toml;
-          "/Library/ApplicationSupport/org.dystroy.broot/conf.toml".source = /Users/${specialArgs.username}/.config/broot/conf.toml;
-          "/Users/${specialArgs.username}/Library/Preferences/glow/glow.yml".source = /Users/${specialArgs.username}/.config/glow/glow.yml;
+          "Library/Application Support/Code/User/keybindings.json".source = /Users/${specialArgs.username}/.config/code/keybindings.json;
+          "Library/Application Support/Code/User/settings.json".source = /Users/${specialArgs.username}/.config/code/settings.json;
+          "Library/Application Support/jj/config.toml".source = /Users/${specialArgs.username}/.config/jj/config.toml;
+          "Library/Application Support/org.dystroy.broot/conf.hjson".source = /Users/${specialArgs.username}/.config/broot/conf.hjson;
+          "Library/Application Support/org.dystroy.broot/conf.toml".source = /Users/${specialArgs.username}/.config/broot/conf.toml;
+          "Library/Application Support/org.dystroy.broot/skins/dark-blue.hjson".source = /Users/${specialArgs.username}/.config/broot/skins/dark-blue.hjson;
+          "Library/Application Support/org.dystroy.broot/verbs.hjson".source = /Users/${specialArgs.username}/.config/broot/verbs.hjson;
+          "Users/${specialArgs.username}/Library/Preferences/glow/glow.yml".source = /Users/${specialArgs.username}/.config/glow/glow.yml;
           "themes.gitconfig".source = /Users/${specialArgs.username}/.config/git/themes.gitconfig;
+          # ".zshrc".source = /Users/${specialArgs.username}/.config/zsh/.zshrc; # comment rather than setting up oh-my-zsh
         };
 
         packages = [ ]; # packages installed only for this user (unlike `environment.systemPackages`)
