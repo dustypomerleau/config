@@ -25,9 +25,11 @@ bind \cg _fzf_search_git_log
 bind \ch _fzf_search_history
 
 # variables
-# set -gx TERM alacritty-direct
-set -U EDITOR nvim
-set -x BAT_THEME Dracula
+# setting -x will ensure they are exported
+# setting -U makes them universal (stored on disk, persisted after reboot)
+# setting -g makes them global, but specific to the current session 
+set -Ux EDITOR nvim
+set -Ux BAT_THEME Dracula
 
 # fish prompt
 set fish_prompt_pwd_full_dirs 2
@@ -50,7 +52,7 @@ set __fish_git_prompt_showupstream "informative"
 abbr --add ... "../.."
 abbr --add .... "../../.."
 abbr --add ..... "../../../.."
-abbr --add b "br"
+abbr --add b "br" # br is a specific verb within broot
 abbr --add bo "btm"
 abbr --add cb "cargo build"
 abbr --add ch "cargo check"
