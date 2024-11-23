@@ -27,6 +27,9 @@ chsh -s $(which fish)
 # echo 'configuring aws to use endpoint plugin'
 # aws configure set plugins.endpoint awscli_plugin_endpoint
 
+echo 'softlinking ApplicationSupport'
+ln -s ~/Library/Application\ Support ~/Library/ApplicationSupport
+
 echo 'forcing hibernation and destruction of filevault keys in memory'
 # sudo pmset -a destroyfvkeyonstandby 1
 sudo pmset -a hibernatemode 25
