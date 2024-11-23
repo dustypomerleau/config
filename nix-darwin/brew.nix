@@ -15,13 +15,8 @@
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
     brews = [
-      # openssl and pkg-config are duplicated here because of issues during Rust builds.
-      # This is probably related to the type inference issues in Rust 1.80.0.
-      # Try again once these are fixed.
-      # "netlify-cli" # should be updated now
-      "node"
-      # "openssl"
-      # "pkg-config"
+      # openssl and pkg-config were previously duplicated here because of issues during Rust builds.
+      # This is probably related to the type inference issues in Rust 1.80.0, and appears to be fixed now
       "tree-sitter" # CLI required for latex grammar installation
     ];
 

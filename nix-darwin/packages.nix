@@ -8,6 +8,9 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
+      # cargo-feature # build failure
+      # cargo-outdated # build failure, move to brew: https://github.com/kbknapp/cargo-outdated/pull/393
+      # rustup # remove due to fenix collisions
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -20,12 +23,10 @@
       cargo-binstall
       cargo-edit
       cargo-expand
-      # cargo-feature # build failure
       cargo-generate
       cargo-leptos
       cargo-make
       cargo-semver-checks
-      # cargo-outdated # build failure, move to brew: https://github.com/kbknapp/cargo-outdated/pull/393
       cargo-update
       cargo-watch
       clang-tools
@@ -47,13 +48,14 @@
       glow
       gnused
       google-cloud-sdk
+      hyperfine
       jujutsu
       kind
       kubectl
       leptosfmt
       libressl_3_8
-      luajitPackages.luarocks
       lua-language-server
+      luajitPackages.luarocks
       markdown-oxide
       mas
       neovim
@@ -61,7 +63,7 @@
       nil
       nixfmt-rfc-style
       nodePackages.svgo
-      # nodejs_22 # build failure, move to brew
+      nodejs_23
       ocrmypdf
       pandoc
       parallel
@@ -76,7 +78,6 @@
       qmk
       ripgrep
       ripgrep-all
-      # rustup # remove due to fenix collisions
       sqlx-cli
       stylua
       svelte-language-server
@@ -89,8 +90,8 @@
       tokei
       trash-cli
       typst
-      typstfmt
       typst-lsp
+      typstfmt
       uutils-coreutils
       vsce
       vscode-extensions.vadimcn.vscode-lldb
