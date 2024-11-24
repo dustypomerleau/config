@@ -33,14 +33,19 @@ echo 'softlinking ApplicationSupport'
 ln -s ~/Library/Application\ Support ~/Library/ApplicationSupport
 
 echo 'forcing hibernation and destruction of filevault keys in memory'
-# sudo pmset -a destroyfvkeyonstandby 1
-sudo pmset -a hibernatemode 25
+sudo pmset -a destroyfvkeyonstandby 1
+# sudo pmset -a hibernatemode 25 # changed back to 3 for convenience, but use 25 for better battery life
 
 echo 'disabling powernap and standby for compatibility with FV key eviction'
-sudo pmset -a autopoweroff 0
+# to be clear, FV keys will not be evicted until standbydelay is met
+# you may need to play with these values to get the right compromise between battery life and convenience
+#
+# sudo pmset -a autopoweroff 0 # does not apply on your laptop
 sudo pmset -a powernap 0
-sudo pmset -a standby 0
-sudo pmset -a standbydelay 0
+sudo pmset -a standby 1
+sudo pmset -a standbydelayhigh 3600 # seconds until memory is powered off
+sudo pmset -a standbydelaylow 600 # seconds
+sudo pmset -a highstandbythreshold 30 # 30% battery remaining
 
 echo 'disabling sudden motion sensor given it is useless with SSDs'
 sudo pmset -a sms 0
