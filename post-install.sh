@@ -80,8 +80,11 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 #
 # for f in "$@"
 # do
-# 	/opt/homebrew/bin/alacritty -e /run/current-system/sw/bin/nvim "$f"
+# 	alacritty -e nvim "$f"
 # done
 #
 # if you get PATH errors first run:
 # PATH=/run/current-system/sw/bin:/opt/homebrew/bin:$PATH
+#
+# Set keybindings for Mission Control (switch spaces with ctrl + alt N/E)
+# Set application keybinding for Fill (cmd + shift F)
