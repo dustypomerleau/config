@@ -26,6 +26,7 @@
           ".gitignore_global".source = /Users/${specialArgs.username}/.config/git/.gitignore_global;
           ".psqlrc".source = /Users/${specialArgs.username}/.config/postgres/.psqlrc;
           ".ssh/config".source = /Users/${specialArgs.username}/.config/ssh/config;
+          ".zshenv".source = /Users/${specialArgs.username}/.config/zsh/.zshenv;
           "Library/Application Support/Code/User/keybindings.json".source = /Users/${specialArgs.username}/.config/code/keybindings.json;
           "Library/Application Support/Code/User/settings.json".source = /Users/${specialArgs.username}/.config/code/settings.json;
           "Library/Application Support/jj/config.toml".source = /Users/${specialArgs.username}/.config/jj/config.toml;
@@ -35,7 +36,7 @@
           "Library/Application Support/org.dystroy.broot/verbs.hjson".source = /Users/${specialArgs.username}/.config/broot/verbs.hjson;
           "Users/${specialArgs.username}/Library/Preferences/glow/glow.yml".source = /Users/${specialArgs.username}/.config/glow/glow.yml;
           "themes.gitconfig".source = /Users/${specialArgs.username}/.config/git/themes.gitconfig;
-          # ".zshrc".source = /Users/${specialArgs.username}/.config/zsh/.zshrc; # comment rather than setting up oh-my-zsh
+          # ".zshrc".source = /Users/${specialArgs.username}/.config/zsh/.zshrc;
         };
 
         packages = [ ]; # packages installed only for this user (unlike `environment.systemPackages`)

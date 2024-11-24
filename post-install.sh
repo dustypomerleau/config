@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# todo: system.defaults.CustomSystemPreferences and CustomUserPreferences may fix most of your post-install script
+
 # 2024-11-21 commenting all steps not needed on 2024 MBP
 
 # Intel macs only: BEFORE running any nix installation or post-install script,
@@ -72,3 +74,14 @@ cargo binstall rimage crates-tui
 
 echo 'installing fisher to ensure post-install hook'
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+
+# copy your NvimLauncher.app to /Applications/ on your new machine
+# This is simply applescript to run a shell script, which contains:
+#
+# for f in "$@"
+# do
+# 	/opt/homebrew/bin/alacritty -e /run/current-system/sw/bin/nvim "$f"
+# done
+#
+# if you get PATH errors first run:
+# PATH=/run/current-system/sw/bin:/opt/homebrew/bin:$PATH
