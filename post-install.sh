@@ -37,7 +37,7 @@ sudo pmset -a destroyfvkeyonstandby 1
 # sudo pmset -a hibernatemode 25 # changed back to 3 for convenience, but use 25 for better battery life
 
 echo 'disabling powernap and standby for compatibility with FV key eviction'
-# to be clear, FV keys will not be evicted until standbydelay is met
+# to be clear, FV keys will not be evicted until standbydelay is met - set standby to 0 and hibernatemode to 25 if you want to skip standbydelay and just evict
 # you may need to play with these values to get the right compromise between battery life and convenience
 #
 # sudo pmset -a autopoweroff 0 # does not apply on your laptop
