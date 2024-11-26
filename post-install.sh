@@ -90,6 +90,8 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 #
 # if you get PATH errors first run:
 # PATH=/run/current-system/sw/bin:/opt/homebrew/bin:$PATH
-#
+
 # Set keybindings for Mission Control (switch spaces with ctrl + alt N/E)
 # Set application keybinding for Fill (cmd + shift F)
+
+# see notes in tmux.conf for ensuring you have working undercurl/colors in tmux
