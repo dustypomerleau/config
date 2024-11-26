@@ -57,7 +57,7 @@ family = "SauceCodePro Nerd Font"
 style = "SemiBold"
 
 [font.glyph_offset]
-y = 4
+y = 5
 
 [font.italic]
 family = "SauceCodePro Nerd Font"
