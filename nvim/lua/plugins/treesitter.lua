@@ -73,6 +73,7 @@ return {
             })
 
             vim.treesitter.language.register("xml", "tmTheme")
+            vim.treesitter.language.register("xml", "plist")
         end,
     },
 }
