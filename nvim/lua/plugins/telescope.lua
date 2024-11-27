@@ -1,3 +1,10 @@
+local function jj_files()
+    require("telescope.builtin").git_files {
+        prompt_title = "jj Files",
+        git_command = { "jj", "file", "list", "--no-pager", },
+    }
+end
+
 return {
     {
         "nvim-telescope/telescope.nvim",
@@ -55,7 +62,7 @@ return {
             },
             {
                 "<leader>g",
-                ":Telescope git_files<cr>",
+                jj_files,
                 mode = { "n", },
                 noremap = true,
             },
