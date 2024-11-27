@@ -1,3 +1,11 @@
+local telescopeConfig = require("telescope.config")
+local rg_args = { unpack(telescopeConfig.values.vimgrep_arguments), }
+local extra_args = { "--hidden", "--glob", "!**/.git/*", "--glob", "!**/.jj/*", }
+
+for _, v in ipairs(extra_args) do
+    table.insert(rg_args, v)
+end
+
 local function jj_files()
     require("telescope.builtin").git_files {
         prompt_title = "jj Files",
@@ -17,6 +25,8 @@ return {
                             width = 0.99,
                         },
                     },
+                    -- `hidden = true` is not supported in text grep commands.
+                    vimgrep_arguments = rg_args,
                 },
                 extensions = {
                     -- these bindings need to be wrapped in a function if you include theme in the
@@ -37,6 +47,12 @@ return {
                                 ["u"] = require("telescope-undo.actions").restore,
                             },
                         },
+                    },
+                },
+                pickers = {
+                    find_files = {
+                        -- `hidden = true` will still show the inside of `.git/` and `.jj/`as it isn't in `.gitignore`.
+                        find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*", "--glob", "!**/.jj/*", },
                     },
                 },
             })
