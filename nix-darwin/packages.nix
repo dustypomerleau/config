@@ -110,7 +110,7 @@
 
   fonts.packages = with pkgs; [
     google-fonts
-    nerdfonts
+    nerd-fonts.sauce-code-pro
   ];
 
 }
