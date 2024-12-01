@@ -14,8 +14,8 @@
     };
 
     fenix = {
-      url = "github:nix-community/fenix";
-      # url = "git+file:///Users/dn/me/er/fenix";
+      # url = "github:nix-community/fenix";
+      url = "git+file:///Users/dn/me/er/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
