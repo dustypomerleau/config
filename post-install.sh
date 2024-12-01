@@ -95,3 +95,11 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 # Set application keybinding for Fill (cmd + shift F)
 
 # see notes in tmux.conf for ensuring you have working undercurl/colors in tmux
+
+# install spectre_oxi (after installing nvim plugins)
+cd ~/.local/share/nvim/lazy/nvim-spectre
+./build.sh nvim-oxi
+# for reference, on darwin this basically just does:
+# cd spectre_oxi
+# cargo build --release
+# cp target/release/libspectre_oxi.dylib ../lua/spectre_oxi.so
