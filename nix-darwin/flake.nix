@@ -1,5 +1,5 @@
 # https://vtimofeenko.com/posts/practical-nix-flake-anatomy-a-guided-tour-of-flake.nix/
-# 
+#
 # available nix-darwin configuration options:
 # https://daiderd.com/nix-darwin/manual/
 
@@ -8,14 +8,14 @@
 
   inputs = {
     darwin = {
-      url = "github:lnl7/nix-darwin";
       # url = "/Users/dn/me/er/nix-darwin"; # for testing of PRs
+      url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     fenix = {
-      # url = "github:nix-community/fenix";
-      url = "git+file:///Users/dn/me/er/fenix";
+      # url = "git+file:///Users/dn/me/er/fenix";
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
