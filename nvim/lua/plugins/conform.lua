@@ -5,6 +5,7 @@ return {
         event = "VeryLazy",
         config = function()
             require("conform").setup({
+                formatters = { ["tex-fmt"] = { prepend_args = { "--tab", "4", "--wrap", "100", }, }, },
                 formatters_by_ft = {
                     -- lua = {}, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
                     -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
