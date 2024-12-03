@@ -15,6 +15,7 @@ return {
                     markdown = { "prettierd", "prettier", stop_after_first = true, },
                     nix = { "nixfmt", },
                     svelte = { "prettierd", "prettier", stop_after_first = true, },
+                    tex = { "tex-fmt", },
                     toml = { "taplo", },
                     typescript = { "prettierd", "prettier", stop_after_first = true, },
                     typst = { "typstfmt", },

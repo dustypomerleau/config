@@ -9,7 +9,7 @@
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
       # cargo-feature # build failure
-      # cargo-outdated # build failure, move to brew: https://github.com/kbknapp/cargo-outdated/pull/393
+      # cargo-outdated # build failure should be fixed, try again after 2024120406
       # rustup # remove due to fenix collisions
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -84,6 +84,7 @@
       tailwindcss-language-server
       taplo
       tealdeer
+      tex-fmt
       timer
       tmux
       tmuxp # docs: https://tmuxp.git-pull.com/
