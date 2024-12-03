@@ -5,7 +5,7 @@ return {
         opts = {
             modes = {
                 diagnostics = { -- use `s` to cycle the filter
-                    win = { size = 0.6, },
+                    win = { size = 0.6, wo = { wrap = true, }, },
                     preview = { -- use `p` to toggle preview
                         type = "split",
                         relative = "win",
