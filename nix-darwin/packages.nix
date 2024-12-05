@@ -86,12 +86,12 @@
       tealdeer
       tex-fmt
       timer
+      tinymist
       tmux
       tmuxp # docs: https://tmuxp.git-pull.com/
       tokei
       trash-cli # trash goes to ~/.local/share/Trash/
       typst
-      typst-lsp
       typstfmt
       uutils-coreutils
       vsce
