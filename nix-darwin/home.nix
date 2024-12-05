@@ -19,7 +19,7 @@
         # Or: https://github.com/gvolpe/neovim-flake
         # used by https://github.com/gvolpe/nix-config
         #
-        # Note: these file paths are relative to $HOME
+        # Note: these file paths are relative to $HOME, so references are to ~/Library/..., for example.
         file = {
           ".cargo/config.toml".source = /Users/${specialArgs.username}/.config/cargo/config.toml;
           ".gitconfig".source = /Users/${specialArgs.username}/.config/git/.gitconfig;
@@ -34,7 +34,7 @@
           "Library/Application Support/org.dystroy.broot/conf.toml".source = /Users/${specialArgs.username}/.config/broot/conf.toml;
           "Library/Application Support/org.dystroy.broot/skins/dark-blue.hjson".source = /Users/${specialArgs.username}/.config/broot/skins/dark-blue.hjson;
           "Library/Application Support/org.dystroy.broot/verbs.hjson".source = /Users/${specialArgs.username}/.config/broot/verbs.hjson;
-          "Users/${specialArgs.username}/Library/Preferences/glow/glow.yml".source = /Users/${specialArgs.username}/.config/glow/glow.yml;
+          "Library/Preferences/glow/glow.yml".source = /Users/${specialArgs.username}/.config/glow/glow.yml;
           "themes.gitconfig".source = /Users/${specialArgs.username}/.config/git/themes.gitconfig;
           # ".zshrc".source = /Users/${specialArgs.username}/.config/zsh/.zshrc;
         };
