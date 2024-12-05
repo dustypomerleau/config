@@ -62,6 +62,10 @@ return {
             lsp.svelte.setup({ capabilities = capabilities, })
             lsp.tailwindcss.setup({ capabilities = capabilities, })
 
+            -- todo: install and configure tinymist for typst:
+            -- https://myriad-dreamin.github.io/tinymist//frontend/neovim.html
+            -- probably also add chomosuke/typst-preview.nvim
+
             local util = require("lspconfig.util")
             lsp.taplo.setup({
                 capabilities = capabilities,
@@ -71,18 +75,6 @@ return {
                     return util.root_pattern("*.toml")(fname) or util.find_git_ancestor(fname)
                 end,
                 single_file_support = true,
-            })
-
-            lsp.typst_lsp.setup({
-                capabilities = capabilities,
-                -- This is a temporary hack to get typst-lsp working outside of a git repo.
-                -- nvim-lspconfig docs explicitly recommend against adding CWD to root_dir` like this, but they haven't yet
-                -- implemented a single-file mode (this is not part of the LSP spec, but it is planned
-                -- for nvim-lspconfig specifically), and the recommended solution is still git-dependent.
-                -- See https://github.com/neovim/nvim-lspconfig/blob/master/CONTRIBUTING.md#adding-a-server-to-lspconfig
-                root_dir = function() return vim.uv.cwd() end,
-                -- `exportPdf` can be `onType`, `onSave`, or `never`
-                settings = { exportPdf = "onSave", },
             })
 
             -- enable inlay hints on attach if the LSP supports them
