@@ -62,9 +62,10 @@ return {
             lsp.svelte.setup({ capabilities = capabilities, })
             lsp.tailwindcss.setup({ capabilities = capabilities, })
 
-            -- todo: install and configure tinymist for typst:
-            -- https://myriad-dreamin.github.io/tinymist//frontend/neovim.html
-            -- probably also add chomosuke/typst-preview.nvim
+            lsp.tinymist.setup({
+                capabilities = capabilities,
+                settings = { exportPdf = "onSave", },
+            })
 
             local util = require("lspconfig.util")
             lsp.taplo.setup({
