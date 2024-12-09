@@ -92,7 +92,7 @@
       tokei
       trash-cli # trash goes to ~/.local/share/Trash/
       typst
-      typstfmt
+      typstyle
       uutils-coreutils
       vsce
       vscode-extensions.vadimcn.vscode-lldb

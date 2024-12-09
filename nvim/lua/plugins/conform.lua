@@ -19,7 +19,7 @@ return {
                     tex = { "tex-fmt", },
                     toml = { "taplo", },
                     typescript = { "prettierd", "prettier", stop_after_first = true, },
-                    typst = { "typstfmt", },
+                    typst = { "typstyle", },
                     yaml = { "yamlfmt", },
                 },
                 -- setting format_on_save will automatically generate an autocommand like:
