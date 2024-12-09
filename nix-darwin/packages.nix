@@ -8,8 +8,6 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      # cargo-feature # build failure
-      # cargo-outdated # build failure should be fixed, try again after 2024120406
       # rustup # remove due to fenix collisions
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -23,9 +21,11 @@
       cargo-binstall
       cargo-edit
       cargo-expand
+      cargo-feature
       cargo-generate
       cargo-leptos
       cargo-make
+      cargo-outdated
       cargo-semver-checks
       cargo-update
       cargo-watch
