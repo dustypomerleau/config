@@ -8,13 +8,13 @@
 
   inputs = {
     darwin = {
-      # url = "/Users/dn/me/er/nix-darwin"; # for testing of PRs
+      # url = "git+file///Users/dn/me/er/nix-darwin"; # for local testing
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     fenix = {
-      # url = "git+file:///Users/dn/me/er/fenix";
+      # url = "git+file:///Users/dn/me/er/fenix"; # for local testing
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
