@@ -12,21 +12,21 @@ return {
                     "-verbose",
                 },
             }
-            vim.g.vimtex_compiler_latexmk_engines = { ["_"] = "-lualatex", }
-            vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull", }
+            vim.g.vimtex_compiler_latexmk_engines = { ["_"] = "-lualatex" }
+            vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull" }
         end,
-        ft = { "tex", "latex", },
+        ft = { "tex", "latex" },
         keys = {
             {
                 "<localleader>v",
                 "<cmd>VimtexView<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 silent = false,
             },
             {
                 "<localleader>k",
                 "<cmd>VimtexCompile<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 silent = false,
             },
         },

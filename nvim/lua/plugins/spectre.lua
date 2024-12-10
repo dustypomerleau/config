@@ -15,17 +15,17 @@
 return {
     {
         "nvim-pack/nvim-spectre",
-        dependencies = { "nvim-lua/plenary.nvim", },
+        dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             require("spectre").setup({
-                default = { replace = { cmd = "oxi", }, },
+                default = { replace = { cmd = "oxi" } },
             })
         end,
         keys = {
             {
                 "<leader>e",
                 '<cmd>lua require("spectre").toggle()<cr>',
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
         },

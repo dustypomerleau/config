@@ -23,7 +23,7 @@ return {
                     },
                 },
                 sections = {
-                    lualine_a = { "mode", },
+                    lualine_a = { "mode" },
                     lualine_b = {
                         {
                             "diagnostics",
@@ -38,21 +38,21 @@ return {
                         {
                             "diff",
                             symbols = {
-                                added    = " ",
+                                added = " ",
                                 modified = " ",
-                                removed  = " ",
+                                removed = " ",
                             },
                         },
                     },
-                    lualine_c = { { "filename", path = 1, shorting_target = 60, }, },
-                    lualine_x = { "filetype", },
-                    lualine_y = { "progress", },
-                    lualine_z = { "location", },
+                    lualine_c = { { "filename", path = 1, shorting_target = 60 } },
+                    lualine_x = { "filetype" },
+                    lualine_y = { "progress" },
+                    lualine_z = { "location" },
                 },
                 inactive_sections = {
                     lualine_a = {},
                     lualine_b = {},
-                    lualine_c = { { "filename", path = 1, shorting_target = 60, }, },
+                    lualine_c = { { "filename", path = 1, shorting_target = 60 } },
                     lualine_x = {},
                     lualine_y = {},
                     lualine_z = {},

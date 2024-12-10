@@ -4,8 +4,8 @@
 -- end
 
 local key = vim.api.nvim_set_keymap
-local nr = { noremap = true, }
-local nrs = { noremap = true, silent = true, }
+local nr = { noremap = true }
+local nrs = { noremap = true, silent = true }
 
 -- key("n", "˚", ":<c-u> m-2<cr>==", nrs)
 -- key("n", "∆", ":<c-u> m+<cr>==", nrs)

@@ -5,7 +5,7 @@ return {
         opts = {
             modes = {
                 diagnostics = { -- use `s` to cycle the filter
-                    win = { size = 0.6, wo = { wrap = true, }, },
+                    win = { size = 0.6, wo = { wrap = true } },
                     preview = { -- use `p` to toggle preview
                         type = "split",
                         relative = "win",
@@ -23,13 +23,13 @@ return {
                 "<leader>d",
                 "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
                 desc = "Toggle buffer diagnostics",
-                { noremap = true, },
+                { noremap = true },
             },
             {
                 "<localleader>d",
                 "<cmd>Trouble diagnostics toggle<cr>",
                 desc = "Toggle workspace diagnostics",
-                { noremap = true, },
+                { noremap = true },
             },
         },
     },

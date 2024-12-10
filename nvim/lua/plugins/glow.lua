@@ -14,7 +14,7 @@ return {
             {
                 "<localleader>w",
                 "<cmd>Glow<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 silent = true,
                 noremap = true,
             },

@@ -15,6 +15,6 @@ return {
                 },
             })
         end,
-        keys = { { "<localleader>c", "<cmd>ColorizerToggle<cr>", }, },
+        keys = { { "<localleader>c", "<cmd>ColorizerToggle<cr>" } },
     },
 }

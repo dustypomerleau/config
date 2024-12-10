@@ -142,8 +142,8 @@ return {
                     -- when `true`, flash will be activated during regular search by default.
                     -- You can always toggle when searching with `require("flash").toggle()`
                     enabled = true,
-                    highlight = { backdrop = true, },
-                    jump = { history = true, register = true, nohlsearch = true, },
+                    highlight = { backdrop = true },
+                    jump = { history = true, register = true, nohlsearch = true },
                     search = {
                         -- `forward` will be automatically set to the search direction
                         -- `mode` is always set to `search`
@@ -173,12 +173,12 @@ return {
                     -- multi_line = true,
                     -- -- When using jump labels, don't use these keys
                     -- -- This allows using those keys directly after the motion
-                    label = { exclude = "iardc", },
+                    label = { exclude = "iardc" },
                     -- by default all keymaps are enabled, but you can disable some of them,
                     -- by removing them from the list.
                     -- If you rather use another key, you can map them
                     -- to something else, e.g., { [";"] = "L", [","] = H }
-                    keys = { "f", "F", "t", "T", ";", "\\", },
+                    keys = { "f", "F", "t", "T", ";", "\\" },
                     -- ---@alias Flash.CharActions table<string, "next" | "prev" | "right" | "left">
                     -- -- The direction for `prev` and `next` is determined by the motion.
                     -- -- `left` and `right` are always left and right.
@@ -250,13 +250,13 @@ return {
         keys = {
             {
                 "s",
-                mode = { "n", "o", "x", },
+                mode = { "n", "o", "x" },
                 function() require("flash").jump() end,
                 desc = "Flash",
             },
             {
                 "S",
-                mode = { "n", "o", "x", },
+                mode = { "n", "o", "x" },
                 function() require("flash").treesitter() end,
                 desc = "Flash Treesitter",
             },
@@ -268,13 +268,13 @@ return {
             },
             {
                 "R",
-                mode = { "o", "x", },
+                mode = { "o", "x" },
                 function() require("flash").treesitter_search() end,
                 desc = "Treesitter Search",
             },
             {
                 "<c-s>",
-                mode = { "c", },
+                mode = { "c" },
                 function() require("flash").toggle() end,
                 desc = "Toggle Flash Search",
             },

@@ -9,10 +9,11 @@ return {
 
             npairs.setup({})
             npairs.add_rules({
-                Rule("<", ">", { "html", "rust", "svelte", "typescript", }
-                ):with_pair(cond.not_before_text(" ")), -- not after space
+                Rule("<", ">", { "html", "rust", "svelte", "typescript" }):with_pair(
+                    cond.not_before_text(" ")
+                ), -- not after space
 
-                Rule("\"", "\"", { "-vim", }),
+                Rule('"', '"', { "-vim" }),
             })
         end,
     },

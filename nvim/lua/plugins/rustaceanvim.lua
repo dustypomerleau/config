@@ -6,16 +6,16 @@ vim.g.rustaceanvim = {
             ["rust-analyzer"] = {
                 -- for a list of all possible config, see:
                 -- https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/config.rs
-                cargo = { features = "all", },
+                cargo = { features = "all" },
                 check = {
                     allTargets = true,
                     features = "all",
                     command = "clippy",
-                    extraArgs = { "--no-deps", },
+                    extraArgs = { "--no-deps" },
                 },
                 -- toggle below if needed, see: https://book.leptos.dev/getting_started/leptos_dx.html#2-editor-autocompletion-inside-component-and-server
                 -- procMacro = { ignored = { leptos_macro = { "server", }, }, },
-                workspace = { symbol = { search = { kind = "all_symbols", }, }, },
+                workspace = { symbol = { search = { kind = "all_symbols" } } },
             },
             capabilities = capabilities,
         },
@@ -31,25 +31,25 @@ return {
             {
                 "<localleader>sj",
                 ":RustLsp moveItem down<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<localleader>sk",
                 ":RustLsp moveItem up<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<localleader>sm",
                 ":RustLsp expandMacro<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<localleader>sw",
                 ":RustLsp reloadWorkspace<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
         },

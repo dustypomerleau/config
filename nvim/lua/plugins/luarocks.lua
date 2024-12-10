@@ -1,1 +1,1 @@
-return { { "vhyrro/luarocks.nvim", priority = 999, config = true, }, }
+return { { "vhyrro/luarocks.nvim", priority = 999, config = true } }

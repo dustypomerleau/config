@@ -1,16 +1,16 @@
 local telescopeConfig = require("telescope.config")
-local rg_args = { unpack(telescopeConfig.values.vimgrep_arguments), }
-local extra_args = { "--hidden", "--glob", "!**/.git/*", "--glob", "!**/.jj/*", "--trim", }
+local rg_args = { unpack(telescopeConfig.values.vimgrep_arguments) }
+local extra_args = { "--hidden", "--glob", "!**/.git/*", "--glob", "!**/.jj/*", "--trim" }
 
 for _, v in ipairs(extra_args) do
     table.insert(rg_args, v)
 end
 
 local function jj_files()
-    require("telescope.builtin").git_files {
+    require("telescope.builtin").git_files({
         prompt_title = "jj Files",
-        git_command = { "jj", "file", "list", "--no-pager", },
-    }
+        git_command = { "jj", "file", "list", "--no-pager" },
+    })
 end
 
 return {
@@ -52,7 +52,15 @@ return {
                 pickers = {
                     find_files = {
                         -- `hidden = true` will still show the inside of `.git/` and `.jj/`as it isn't in `.gitignore`.
-                        find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*", "--glob", "!**/.jj/*", },
+                        find_command = {
+                            "rg",
+                            "--files",
+                            "--hidden",
+                            "--glob",
+                            "!**/.git/*",
+                            "--glob",
+                            "!**/.jj/*",
+                        },
                     },
                 },
             })
@@ -61,67 +69,67 @@ return {
             {
                 "<leader>t",
                 ":Telescope<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>b",
                 ":Telescope buffers<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>f",
                 ":Telescope live_grep<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>g",
                 jj_files,
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>h",
                 ":Telescope oldfiles<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>j",
                 ":Telescope jumplist<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>k",
                 ":Telescope keymaps<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>l",
                 ":Telescope current_buffer_fuzzy_find<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>m",
                 ":Telescope lsp_dynamic_workspace_symbols<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>p",
                 ":Telescope find_files<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>r",
                 ":Telescope registers<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
         },

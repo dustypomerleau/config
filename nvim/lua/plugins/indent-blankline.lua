@@ -10,7 +10,7 @@ return {
                 },
                 scope = {
                     show_start = false,
-                    highlight = { "RainbowRed", "RainbowYellow", "RainbowBlue", },
+                    highlight = { "RainbowRed", "RainbowYellow", "RainbowBlue" },
                 },
             })
         end,

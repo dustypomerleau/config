@@ -7,7 +7,7 @@ return {
             {
                 "<localleader>t",
                 ":TypstPreviewToggle<cr>",
-                mode = { "n", },
+                mode = { "n" },
                 noremap = true,
             },
         },
