@@ -74,6 +74,7 @@
       pom
       postgresql_16
       prettierd
+      prettypst
       python3
       qmk
       ripgrep
@@ -92,6 +93,7 @@
       tokei
       trash-cli # trash goes to ~/.local/share/Trash/
       typst
+      typstfmt
       typstyle
       uutils-coreutils
       vsce
