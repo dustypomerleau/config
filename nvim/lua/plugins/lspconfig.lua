@@ -54,10 +54,12 @@ return {
                 }),
             })
 
+            -- LS for Nix, by Oxalica
             lsp.nil_ls.setup({ capabilities = capabilities })
             lsp.svelte.setup({ capabilities = capabilities })
             lsp.tailwindcss.setup({ capabilities = capabilities })
 
+            -- LS for Typst
             lsp.tinymist.setup({
                 capabilities = capabilities,
                 settings = { exportPdf = "onSave" },
