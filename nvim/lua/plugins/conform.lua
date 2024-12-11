@@ -1,3 +1,4 @@
+-- For troubleshooting, logfiles are located at: ~/.local/state/nvim/conform.log
 return {
     {
         "stevearc/conform.nvim",
@@ -6,7 +7,9 @@ return {
         config = function()
             require("conform").setup({
                 formatters = {
-                    ["prettypst"] = { prepend_args = { "--use-configuration" } },
+                    ["prettypst"] = {
+                        prepend_args = { "--use-configuration", "--use-std-in", "--use-std-out" },
+                    },
                     ["tex-fmt"] = { prepend_args = { "--tab", "4", "--wrap", "100" } },
                 },
                 formatters_by_ft = {
@@ -28,10 +31,8 @@ return {
                 -- setting format_on_save will automatically generate an autocommand like:
                 -- vim.api.nvim_create_autocmd("BufWritePre", {
                 --     pattern = "*",
-                --     callback = function(args)
-                --         require("conform").format({ bufnr = args.buf })
-                --     end,
-                -- })
+                --     callback = function(args) require("conform").format({ bufnr = args.buf }) end,
+                -- }),
                 -- fallback calls vim.lsp.buf.format() if nothing is specified
                 format_on_save = {
                     lsp_fallback = true,
