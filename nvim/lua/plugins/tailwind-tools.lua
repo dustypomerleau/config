@@ -1,7 +1,7 @@
 return {
     {
         "luckasRanarison/tailwind-tools.nvim",
-        enabled = false, -- not clear what this adds over tailwind prettier sorting, etc.
+        -- enabled = false, -- monitor for any conflicts with tailwind prettier sorting
         name = "tailwind-tools",
         dependencies = {
             "neovim/nvim-lspconfig",
