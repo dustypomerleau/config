@@ -70,3 +70,5 @@ cd ~/.local/share/nvim/lazy/nvim-spectre
 # see notes in tmux.conf for ensuring you have working undercurl/colors in tmux
 
 # manually add your terminal to System Settings > Privacy & Security > Developer Tools
+
+# In Arq setup, import your excludes from ~/.config/arq/yyyymmdd-arq-mp-backup-exclusions.json 
