@@ -82,7 +82,7 @@
       sqlx-cli
       stylua
       svelte-language-server
-      tailwindcss-language-server
+      tailwindcss-language-server # see below for permissions issue
       taplo
       tealdeer
       tex-fmt
@@ -104,6 +104,10 @@
       zellij
       zoxide
     ];
+
+    # current install of tailwindcss-language-server is not made executable
+    # you ran something similar to sudo uutils-chmod +x /nix/store/<hash>-tailwindcss-language-server-0.0.27/lib/tailwindcss-language-server/packages/tailwindcss-language-server/bin/tailwindcss-language-server
+    # but i suspect that won't survive an update
 
     variables = {
       EDITOR = "nvim";
