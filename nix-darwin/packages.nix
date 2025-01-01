@@ -8,10 +8,14 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      # rustup # remove due to fenix collisions
+      # awscli2 # temp brew build failure (needs old python)
+      # cargo-semver-checks # temp build failure
+      # lua-language-server # temp brew build failure https://github.com/NixOS/nixpkgs/issues/367960
+      # netlify-cli # temp brew build failure
+      # prettierd # temp build failure
+      # vscode-extensions.vadimcn.vscode-lldb # temp build failure 2/2 lldb build failure
       any-nix-shell # allows fish in nix-shell
       asciidoctor
-      awscli2
       bacon
       basedpyright
       bat
@@ -26,7 +30,6 @@
       cargo-leptos
       cargo-make
       cargo-outdated
-      cargo-semver-checks
       cargo-update
       cargo-watch
       clang-tools
@@ -54,12 +57,10 @@
       kubectl
       leptosfmt
       libressl_3_8
-      lua-language-server
       luajitPackages.luarocks
       markdown-oxide
       mas
       neovim
-      netlify-cli
       nil
       nixfmt-rfc-style
       nodePackages.svgo
@@ -73,7 +74,6 @@
       podman
       pom
       postgresql_16
-      prettierd
       prettypst
       python3
       qmk
@@ -96,7 +96,6 @@
       typstyle
       uutils-coreutils
       vsce
-      vscode-extensions.vadimcn.vscode-lldb
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       wasm-pack
       yamlfmt
