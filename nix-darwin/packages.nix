@@ -8,12 +8,14 @@
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
-      # awscli2 # temp brew build failure (needs old python)
-      # cargo-semver-checks # temp build failure
-      # lua-language-server # temp brew build failure https://github.com/NixOS/nixpkgs/issues/367960
-      # netlify-cli # temp brew build failure
-      # prettierd # temp build failure
-      # vscode-extensions.vadimcn.vscode-lldb # temp build failure 2/2 lldb build failure
+      ### build failures
+      awscli2 # temp brew build failure (needs old python)
+      cargo-semver-checks # temp build failure
+      lua-language-server # temp brew build failure https://github.com/NixOS/nixpkgs/issues/367960
+      netlify-cli # temp brew build failure
+      prettierd # temp build failure
+      vscode-extensions.vadimcn.vscode-lldb # temp build failure 2/2 lldb build failure
+      ###
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       bacon
