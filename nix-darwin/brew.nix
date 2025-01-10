@@ -15,10 +15,6 @@
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
     brews = [
-      "awscli" # temp nixpkgs build failure
-      "lua-language-server" # temp nixpkgs build failure
-      "netlify-cli" # temp nixpkgs build failure
-      "prettierd" # temp nixpkgs build failure
       "tree-sitter" # CLI required for latex grammar installation
     ];
 
