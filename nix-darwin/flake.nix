@@ -3,6 +3,9 @@
 # available nix-darwin configuration options:
 # https://daiderd.com/nix-darwin/manual/
 
+# to add a linux builder, you can follow the flake example here:
+# https://ryantm.github.io/nixpkgs/builders/special/darwin-builder/#sec-darwin-builder
+
 {
   description = "DP MBP system flake";
 
