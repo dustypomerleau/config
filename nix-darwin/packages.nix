@@ -67,6 +67,7 @@ in
       nixfmt-rfc-style
       nodePackages.svgo
       nodejs_23
+      nomino
       ocrmypdf
       pandoc
       parallel
