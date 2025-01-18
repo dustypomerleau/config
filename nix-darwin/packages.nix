@@ -11,6 +11,7 @@ in
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
+      # cargo-interactive-update # todo
       # cargo-semver-checks # temp build failure
       # vscode-extensions.vadimcn.vscode-lldb # temp build failure 2/2 lldb build failure
       any-nix-shell # allows fish in nix-shell
@@ -119,6 +120,7 @@ in
 
   fonts.packages = with pkgs; [
     google-fonts
+    nerd-fonts.commit-mono
     nerd-fonts.sauce-code-pro
   ];
 
