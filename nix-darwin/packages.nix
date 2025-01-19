@@ -11,9 +11,9 @@ in
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
+      # cargo-expand # build failure: https://github.com/NixOS/nixpkgs/issues/374458
       # cargo-interactive-update # todo
-      # cargo-semver-checks # temp build failure
-      # vscode-extensions.vadimcn.vscode-lldb # temp build failure 2/2 lldb build failure
+      # vscode-extensions.vadimcn.vscode-lldb # build failure: https://github.com/NixOS/nixpkgs/pull/373933
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -25,12 +25,12 @@ in
       broot # docs: https://dystroy.org/broot/
       cargo-binstall
       cargo-edit
-      cargo-expand
       cargo-feature
       cargo-generate
       cargo-leptos
       cargo-make
       cargo-outdated
+      cargo-semver-checks
       cargo-update
       cargo-watch
       clang-tools
