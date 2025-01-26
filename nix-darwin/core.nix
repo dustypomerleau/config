@@ -9,7 +9,7 @@
   nixpkgs.hostPlatform = system;
 
   # Normally the instructions would tell you to use programs to enable fish, tmux, etc.
-  # But if you are managing the settings for those programs outside of Nix, 
+  # But if you are managing the settings for those programs outside of Nix,
   # it's better to just install them as packages (see system.pkgs)
   programs = { };
 

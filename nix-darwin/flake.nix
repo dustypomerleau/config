@@ -28,7 +28,13 @@
     };
 
     lix = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1-2.tar.gz";
+      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
+      flake = false;
+    };
+
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      inputs.lix.follows = "lix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,7 +48,7 @@
       darwin,
       fenix,
       home-manager,
-      lix,
+      lix-module,
       nixpkgs,
       ...
     }:
@@ -74,7 +80,7 @@
           ./packages.nix
           ./system.nix
           home-manager.darwinModules.home-manager
-          lix.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
     };

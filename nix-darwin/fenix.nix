@@ -27,7 +27,7 @@ in
         complete.rustc
         complete.rustfmt
         targets.wasm32-unknown-unknown.latest.rust-std
-        targets.wasm32-wasi.latest.rust-std
+        targets.wasm32-wasip2.latest.rust-std
       ]
     )
     pkgs.rust-analyzer-nightly

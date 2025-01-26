@@ -34,7 +34,7 @@ timestamp = "bright black"
 format = "git"
 
 [git]
-auto-local-bookmark = true
+auto-local-bookmark = false
 
 [template-aliases]
 "format_short_id(id)" = "id.shortest()"
