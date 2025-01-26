@@ -13,7 +13,6 @@ in
     systemPackages = with pkgs; [
       # cargo-expand # build failure: https://github.com/NixOS/nixpkgs/issues/374458
       # cargo-interactive-update # todo
-      # nodejs_23 # build failure try again after getting lix sorted
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -67,6 +66,7 @@ in
       nil
       nixfmt-rfc-style
       nodePackages.svgo
+      nodejs_23
       nomino
       ocrmypdf
       pandoc

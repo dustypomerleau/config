@@ -15,7 +15,6 @@
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
     brews = [
-      "node"
       "tree-sitter" # CLI required for latex grammar installation
     ];
 
