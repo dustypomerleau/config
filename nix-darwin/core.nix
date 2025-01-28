@@ -3,6 +3,10 @@
   nix.settings = {
     experimental-features = "nix-command flakes";
     nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
+    trusted-users = [
+      "@admin"
+      "@root"
+    ]; # required to use darwin.linux-builder
   };
 
   # The platform the configuration will be used on.
