@@ -35,6 +35,7 @@ format = "git"
 
 [git]
 auto-local-bookmark = false
+push-bookmark-prefix = "dustypomerleau::"
 
 [template-aliases]
 "format_short_id(id)" = "id.shortest()"
