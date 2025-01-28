@@ -53,6 +53,7 @@
       ...
     }:
     let
+      inherit (darwin.lib) darwinSystem;
       computername = "mp";
       hostname = "mp";
       system = "aarch64-darwin";
@@ -69,7 +70,7 @@
       };
     in
     {
-      darwinConfigurations.${hostname} = darwin.lib.darwinSystem {
+      darwinConfigurations.${hostname} = darwinSystem {
         inherit specialArgs;
 
         modules = [
