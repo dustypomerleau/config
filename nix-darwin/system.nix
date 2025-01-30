@@ -7,7 +7,7 @@
       "2606:4700:4700::1001"
       "1.1.1.1"
       "1.0.0.1"
-      # google 
+      # google
       "2001:4860:4860::8888"
       "2001:4860:4860::8844"
       "8.8.8.8"
@@ -25,6 +25,7 @@
     localHostName = specialArgs.hostname;
   };
 
+  # todo: waiting on https://github.com/LnL7/nix-darwin/pull/1020 for this to work
   security.pam.enableSudoTouchIdAuth = true;
 
   system = {
