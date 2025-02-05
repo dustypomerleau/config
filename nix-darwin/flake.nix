@@ -38,7 +38,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    #
+    # temporarily pin nixpkgs
+    # see https://github.com/LnL7/nix-darwin/issues/1317
+    nixpkgs.url = "github:NixOS/nixpkgs?rev=d2faa1bbca1b1e4962ce7373c5b0879e5b12cef2";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
