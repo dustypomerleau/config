@@ -53,6 +53,9 @@ cd ~/.local/share/nvim/lazy/nvim-spectre
 # cargo build --release
 # cp target/release/libspectre_oxi.dylib ../lua/spectre_oxi.so
 
+echo 'adding SSH keys to agent'
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
 # copy your NvimLauncher.app to /Applications/ on your new machine
 # This is simply applescript to run a shell script, which contains:
 #
