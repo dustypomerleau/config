@@ -48,6 +48,7 @@ in
       gawk
       gh
       git
+      git-filter-repo
       glow
       gnused
       google-cloud-sdk
