@@ -18,7 +18,6 @@
   programs = { };
 
   services = {
-    nix-daemon.enable = true;
     # see many postgres options in services.postgresql.*
     tailscale.enable = true;
   };
