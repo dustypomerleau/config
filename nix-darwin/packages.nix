@@ -17,7 +17,7 @@ in
       asciidoctor
       awscli2
       bacon
-      # basedpyright # temp build failure, fixed in https://github.com/NixOS/nixpkgs/pull/371176
+      basedpyright # temp build failure, fixed in https://github.com/NixOS/nixpkgs/pull/371176
       bat
       bfg-repo-cleaner
       bottom
