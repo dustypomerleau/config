@@ -33,6 +33,31 @@
       ".GlobalPreferences"."com.apple.mouse.scaling" = 1.0;
 
       CustomSystemPreferences = {
+        "com.apple.CrashReporter" = {
+          UseUnc = 1;
+        };
+
+        "com.apple.finder" = {
+          QLEnableTextSelection = true;
+        };
+
+        "com.apple.notificationcenterui" = {
+          bannerTime = 10;
+        };
+
+        # todo: move this to defaults.dock if they merge https://github.com/LnL7/nix-darwin/pull/1053
+        dock = {
+          showAppExposeGestureEnabled = true;
+          showDesktopGestureEnabled = false;
+          showLaunchpadGestureEnabled = false;
+          showMissionControlGestureEnabled = true;
+        };
+
+        # todo: PR this, it goes in modules/system/defaults/NSGlobalDomain.nix below trackpad.scaling
+        NSGlobalDomain = {
+          "com.apple.trackpad.scrolling" = 0.5; # 1 is maximum
+        };
+
         # todo: move this to defaults.trackpad if they merge https://github.com/LnL7/nix-darwin/pull/1053
         trackpad = {
           ActuateDetents = false;
@@ -73,8 +98,6 @@
         "com.apple.sound.beep.feedback" = 0; # feedback when volume is changed
         "com.apple.trackpad.forceClick" = false;
         "com.apple.trackpad.scaling" = 3.0; # 3 is maximum tracking speed
-        # "com.apple.trackpad.scrolling" = 0.5; # 1 is maximum scrolling speed, todo: PR this, it goes in modules/system/defaults/NSGlobalDomain.nix below trackpad.scaling
-
       };
 
       SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
@@ -91,11 +114,6 @@
         tilesize = 20;
         wvous-bl-corner = 2; # mission control
         wvous-br-corner = 3; # application windows
-        # # DP PR testing below this point - uncomment after merge
-        # showAppExposeGestureEnabled = true;
-        # showDesktopGestureEnabled = false;
-        # showLaunchpadGestureEnabled = false;
-        # showMissionControlGestureEnabled = true;
       };
 
       finder = {
@@ -138,7 +156,8 @@
       };
     };
 
-    # Current default is 5, if something breaks, you can change this back to 4
+    # This value should match the default at the time of first nix-darwin
+    # install on a given machine.
     stateVersion = 5;
 
   };
