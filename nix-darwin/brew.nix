@@ -28,6 +28,7 @@
       "daisydisk"
       "discord"
       "dropbox"
+      "element"
       "figma"
       "firefox"
       "google-drive"
