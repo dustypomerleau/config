@@ -32,6 +32,29 @@
     defaults = {
       ".GlobalPreferences"."com.apple.mouse.scaling" = 1.0;
 
+      CustomSystemPreferences = {
+        # todo: move this to defaults.trackpad if they merge https://github.com/LnL7/nix-darwin/pull/1053
+        trackpad = {
+          ActuateDetents = false;
+          DragLock = true;
+          ForceSuppressed = true;
+          TrackpadCornerSecondaryClick = 0;
+          TrackpadFourFingerHorizSwipeGesture = 0;
+          TrackpadFourFingerPinchGesture = 0;
+          TrackpadFourFingerVertSwipeGesture = 0;
+          TrackpadMomentumScroll = true;
+          TrackpadPinch = true;
+          TrackpadRotate = true;
+          TrackpadThreeFingerHorizSwipeGesture = 0;
+          TrackpadThreeFingerTapGesture = 2;
+          TrackpadThreeFingerVertSwipeGesture = 0;
+          TrackpadTwoFingerDoubleTapGesture = true;
+          TrackpadTwoFingerFromRightEdgeSwipeGesture = 0;
+        };
+      };
+
+      CustomUserPreferences = { };
+
       NSGlobalDomain = {
         AppleICUForce24HourTime = true;
         AppleInterfaceStyle = "Dark";
@@ -106,22 +129,6 @@
         SecondClickThreshold = 0;
         TrackpadRightClick = true;
         TrackpadThreeFingerDrag = true;
-        # DP PR testing below this comment - uncomment after merge
-        # ActuateDetents = false;
-        # DragLock = true;
-        # ForceSuppressed = true;
-        # TrackpadCornerSecondaryClick = 0;
-        # TrackpadFourFingerHorizSwipeGesture = 0;
-        # TrackpadFourFingerPinchGesture = 0;
-        # TrackpadFourFingerVertSwipeGesture = 0;
-        # TrackpadMomentumScroll = true;
-        # TrackpadPinch = true;
-        # TrackpadRotate = true;
-        # TrackpadThreeFingerHorizSwipeGesture = 0;
-        # TrackpadThreeFingerTapGesture = 2;
-        # TrackpadThreeFingerVertSwipeGesture = 0;
-        # TrackpadTwoFingerDoubleTapGesture = true;
-        # TrackpadTwoFingerFromRightEdgeSwipeGesture = 0;
       };
 
       # setting this is only possible if the terminal you use has full disk access in System Settings
