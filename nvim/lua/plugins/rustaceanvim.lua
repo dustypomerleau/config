@@ -14,8 +14,7 @@ vim.g.rustaceanvim = {
                     extraArgs = { "--no-deps" },
                 },
                 inlayHints = { maxLength = 100 },
-                -- toggle below if needed, see: https://book.leptos.dev/getting_started/leptos_dx.html#2-editor-autocompletion-inside-component-and-server
-                -- procMacro = { ignored = { leptos_macro = { "server", }, }, },
+                procMacro = { ignored = { leptos_macro = { "component", "server" } } },
                 workspace = { symbol = { search = { kind = "all_symbols" } } },
             },
             capabilities = capabilities,
