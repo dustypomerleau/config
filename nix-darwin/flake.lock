@@ -28,11 +28,11 @@
         "rust-analyzer-src": "rust-analyzer-src"
       },
       "locked": {
-        "lastModified": 1740033308,
-        "narHash": "sha256-jE2/p3DRT12W8wYhryj5TG59IeaF1WCS3bC692l3dHo=",
+        "lastModified": 1740119667,
+        "narHash": "sha256-8LsFuU6ORym0DUIqp0Kga95w5T+9UnN3aHaephEakvw=",
         "owner": "nix-community",
         "repo": "fenix",
-        "rev": "89c587146615948531987c338cbcffabf13df148",
+        "rev": "019d950c784141c8f3ba6ad5d8a53f72fee0953f",
         "type": "github"
       },
       "original": {
@@ -222,11 +222,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740060750,
-        "narHash": "sha256-FOC9OzJ5Ckh6VjzGSRh4F3UCUOdM8NrzQT19PQcQJ44=",
+        "lastModified": 1740188029,
+        "narHash": "sha256-pnPs+XSpR633G/q0gj+SDyL4RaDfiKlom86zEBPtq+M=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0c0b0ac8af6ca76b1fcb514483a9bd73c18f1e8c",
+        "rev": "765cb91e9d5ab06ed8c92c25fc0e51d6c11d43cb",
         "type": "github"
       },
       "original": {
@@ -238,11 +238,11 @@
     "lix": {
       "flake": false,
       "locked": {
-        "lastModified": 1740025708,
-        "narHash": "sha256-TQ8EQoulNFD2nP94Aw3W17cjlV3F+fMpDsV6LOrrkbY=",
-        "rev": "e335a26d5cd8371ea836d1166b627eaf17427299",
+        "lastModified": 1740188830,
+        "narHash": "sha256-5oNhuRYf/RNh058TwmvalGMlsq2gOSVihz2j+0pfQYE=",
+        "rev": "148f4eefe9136e722752c0f73633ea271f271278",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/e335a26d5cd8371ea836d1166b627eaf17427299.tar.gz?rev=e335a26d5cd8371ea836d1166b627eaf17427299"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/148f4eefe9136e722752c0f73633ea271f271278.tar.gz?rev=148f4eefe9136e722752c0f73633ea271f271278"
       },
       "original": {
         "type": "tarball",
@@ -283,11 +283,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1740034565,
-        "narHash": "sha256-fuTCAi//E0WVGNjLk+9juJMfVmCMZXy66hOpXAbZX90=",
+        "lastModified": 1740184342,
+        "narHash": "sha256-1mGvCI3KlJPcnK+ttaGhvMfzhvTdt7AjMPSoGd/coII=",
         "owner": "nix-community",
         "repo": "neovim-nightly-overlay",
-        "rev": "a56e9f2bfce06729a418081fda1dfa1c0dd18f81",
+        "rev": "1b313b2d3fafd50aaf06733cc8753660068ec19b",
         "type": "github"
       },
       "original": {
@@ -299,11 +299,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1739988796,
-        "narHash": "sha256-oldU5hcEGlMLknn/q0NFFnAUWfPYeJHRTlJtrLjpQQg=",
+        "lastModified": 1740181035,
+        "narHash": "sha256-B0IflO5lsfiP5N7NOzEOWTOkWpm8Gw2eh+PHpQaxByY=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "b0bbe25c4808158e8c806959e4d185244073647a",
+        "rev": "db2c3d1143fb5888602a2cee84578bd8a9c88bd7",
         "type": "github"
       },
       "original": {
@@ -314,11 +314,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1739863612,
-        "narHash": "sha256-UbtgxplOhFcyjBcNbTVO8+HUHAl/WXFDOb6LvqShiZo=",
+        "lastModified": 1740019556,
+        "narHash": "sha256-vn285HxnnlHLWnv59Og7muqECNMS33mWLM14soFIv2g=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "632f04521e847173c54fa72973ec6c39a371211c",
+        "rev": "dad564433178067be1fbdfcce23b546254b6d641",
         "type": "github"
       },
       "original": {
@@ -358,11 +358,11 @@
     "rust-analyzer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1739947021,
-        "narHash": "sha256-f+a8HcKuZMqRg2C1jTkllMJKyAWlio5eBa5T5drlChI=",
+        "lastModified": 1740077634,
+        "narHash": "sha256-KlYdDhon/hy91NutuBeN8e3qTKf3FXgsudWsjnHud68=",
         "owner": "rust-lang",
         "repo": "rust-analyzer",
-        "rev": "9691da7707ea7c50922fe1647b1c2af47934b9fa",
+        "rev": "88fbdcd510e79ef3bcd81d6d9d4f07bdce84be8c",
         "type": "github"
       },
       "original": {
