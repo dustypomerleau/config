@@ -36,7 +36,7 @@ in
       cmake
       curl
       delta
-      edgedb
+      edgedb # todo: replace with gel upon release
       evcxr
       eza
       fd

@@ -67,7 +67,6 @@ abbr --add ctr "cargo tree --depth"
 abbr --add cu "cargo update"
 abbr --add cud "cargo update --dry-run"
 abbr --add e "eza -ahlmT -F --color-scale=size --git --git-ignore --icons=auto --no-permissions --no-user -L3"
-abbr --add ed "edgedb"
 abbr --add eg "eza -ahlmT -F --color-scale=size --git --icons=auto --no-permissions --no-user -L3"
 abbr --add ev "evcxr"
 abbr --add find "uutils-find"
@@ -79,6 +78,7 @@ abbr --add gca "git commit -a -m"
 abbr --add gcae "git commit -a" # e for editor
 abbr --add gce "git commit" # e for editor
 abbr --add gd "git diff"
+abbr --add ge "gel"
 abbr --add gds "git diff --staged"
 abbr --add gfu "git fetch upstream"
 
