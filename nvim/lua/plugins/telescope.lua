@@ -15,7 +15,10 @@ end
 
 return {
     {
-        "nvim-telescope/telescope.nvim",
+        -- "nvim-telescope/telescope.nvim",
+        -- The next 2 lines are a temporary workaround until your PR is merged:
+        "dustypomerleau/telescope.nvim",
+        commit = "702edddf9283b8175778936cfe0a9f3ad2fe640e",
         config = function()
             require("telescope").setup({
                 defaults = {
