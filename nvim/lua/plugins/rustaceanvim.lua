@@ -14,7 +14,7 @@ vim.g.rustaceanvim = {
                     extraArgs = { "--no-deps" },
                 },
                 inlayHints = { maxLength = 100 },
-                procMacro = { ignored = { leptos_macro = { "server" } } },
+                -- procMacro = { ignored = { leptos_macro = { "component", "server" } } },
                 workspace = { symbol = { search = { kind = "all_symbols" } } },
             },
             capabilities = capabilities,
