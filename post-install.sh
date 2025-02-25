@@ -56,11 +56,12 @@ cd ~/.local/share/nvim/lazy/nvim-spectre
 echo 'adding SSH keys to agent'
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
-echo 'setting up touchID as sudo'
-sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
-sudo nvim /etc/pam.d/sudo_local
-# then add:
-# auth       sufficient     pam_tid.so
+# no longer needed, as this is done by nix-darwin
+# echo 'setting up touchID as sudo'
+# sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
+# sudo nvim /etc/pam.d/sudo_local
+# # then add:
+# # auth       sufficient     pam_tid.so
 
 # copy your NvimLauncher.app to /Applications/ on your new machine
 # This is simply applescript to run a shell script, which contains:

@@ -25,7 +25,6 @@
     localHostName = specialArgs.hostname;
   };
 
-  # todo: waiting on https://github.com/LnL7/nix-darwin/pull/1020 for this to work
   security.pam.enableSudoTouchIdAuth = true;
 
   system = {
