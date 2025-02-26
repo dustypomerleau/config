@@ -45,7 +45,7 @@
   "rustaceanvim": { "branch": "master", "commit": "2b0f0b7e03751cf8ed123322f9b02d8f73fa9df7" },
   "tailwind-tools": { "branch": "master", "commit": "abe7368392345c53174979c2cf033e832de80ef8" },
   "telescope-undo.nvim": { "branch": "main", "commit": "928d0c2dc9606e01e2cc547196f48d2eaecf58e5" },
-  "telescope.nvim": { "branch": "master", "commit": "702edddf9283b8175778936cfe0a9f3ad2fe640e" },
+  "telescope.nvim": { "branch": "master", "commit": "e67962f674a9048589d1421412e90de6d6d11aed" },
   "tol.nvim": { "branch": "dev", "commit": "028a289b56e232f31493914b4d683fbc3b0dfacd" },
   "trouble.nvim": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
   "typst-preview.nvim": { "branch": "master", "commit": "df393b47c5bc35abe4d60bb479afd0c15802fda8" },
