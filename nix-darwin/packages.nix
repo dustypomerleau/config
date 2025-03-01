@@ -60,34 +60,33 @@ let
 
   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 
-  # currently fails on tests, because it can't find the path of the input image files in the nix store
-  #
-  # rimage = rustPlatform.buildRustPackage rec {
-  #   pname = "rimage";
-  #   version = "0.11.0-next.3";
-  #
-  #   src = fetchCrate {
-  #     inherit pname version;
-  #     hash = "sha256-lss5JDpDvZ7M4VNBsQYLOHO1cy7OYKsgYoh/nzYMN3w=";
-  #   };
-  #
-  #   useFetchCargoVendor = true;
-  #   cargoHash = "sha256-r/xAoqyl1wn0CcgjrXolsPb4hvlviGmqLTc5w74C584=";
-  #
-  #   nativeBuildInputs = with pkgs; [
-  #     cmake
-  #     nasm
-  #     perl
-  #   ];
-  #
-  #   meta = {
-  #     description = "A powerful Rust image optimization CLI tool inspired by squoosh!.";
-  #     homepage = "https://github.com/SalOne22/rimage";
-  #     license = lib.licenses.mit;
-  #     mainProgram = "rimage";
-  #   };
-  # };
+  rimage = rustPlatform.buildRustPackage rec {
+    pname = "rimage";
+    version = "0.11.0-next.3";
 
+    src = fetchCrate {
+      inherit pname version;
+      hash = "sha256-lss5JDpDvZ7M4VNBsQYLOHO1cy7OYKsgYoh/nzYMN3w=";
+    };
+
+    useFetchCargoVendor = true;
+    cargoHash = "sha256-r/xAoqyl1wn0CcgjrXolsPb4hvlviGmqLTc5w74C584=";
+    # tests fail because it can't find the path of the input image files in the nix store
+    doCheck = false;
+
+    nativeBuildInputs = with pkgs; [
+      cmake
+      nasm
+      perl
+    ];
+
+    meta = {
+      description = "A powerful Rust image optimization CLI tool inspired by squoosh!.";
+      homepage = "https://github.com/SalOne22/rimage";
+      license = lib.licenses.mit;
+      mainProgram = "rimage";
+    };
+  };
 in
 {
   environment = {
@@ -98,7 +97,6 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      gel
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -134,6 +132,7 @@ in
       fishPlugins.colored-man-pages
       fzf
       gawk
+      gel
       gh
       git
       git-filter-repo
@@ -170,7 +169,7 @@ in
       prettypst
       python3
       qmk
-      # rimage # build failure
+      rimage
       ripgrep
       ripgrep-all
       sqlx-cli
