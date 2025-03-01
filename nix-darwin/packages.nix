@@ -32,6 +32,32 @@ let
     };
   };
 
+  gel = rustPlatform.buildRustPackage rec {
+    pname = "gel-cli";
+    version = "7.0.3";
+
+    src = fetchFromGitHub {
+      inherit pname version;
+      owner = "geldata";
+      repo = pname;
+      rev = "v${version}";
+      hash = "sha256-DFra+gUvS+vofGNX270JqoGItDXDM3KNIrNezNRUqMg=";
+    };
+
+    useFetchCargoVendor = true;
+    cargoHash = "sha256-s8UKYZs4GorM0qvAvE+HL+Qma2x05IDtuqYebMDrZHk=";
+    nativeBuildInputs = [ pkgs.perl ];
+    # `tests/func`requires the `gel-server binary in $PATH`
+    doCheck = false;
+
+    meta = {
+      description = "This repository contains the implementation of gel command-line tool.";
+      homepage = src.url;
+      license = lib.licenses.mit;
+      mainProgram = "gel";
+    };
+  };
+
   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 
   # currently fails on tests, because it can't find the path of the input image files in the nix store
@@ -72,6 +98,7 @@ in
 
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
+      gel
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
