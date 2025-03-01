@@ -1,5 +1,38 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 let
+  inherit (pkgs)
+    curl
+    fetchCrate
+    fetchFromGitHub
+    rustPlatform
+    ;
+
+  cargo-interactive-update = rustPlatform.buildRustPackage rec {
+    pname = "cargo-interactive-update";
+    version = "0.6.2";
+
+    src = fetchCrate {
+      inherit pname version;
+      hash = "sha256-WgN63LavUBNjtIu5O/y7cL2gY5DeROHSxABB/b5rBHU=";
+    };
+
+    useFetchCargoVendor = true;
+    cargoHash = "sha256-J9j4+JlsTnVXly9Y/cLYZlAWBZaHy9p7oWP0ciRy0Q8=";
+    buildInputs = [ curl ];
+
+    meta = {
+      description = "A cargo extension CLI tool to update your cargo direct dependencies interactively to the latest version";
+      homepage = "https://github.com/BenJeau/cargo-interactive-update";
+      license = lib.licenses.mit;
+      mainProgram = "cargo-interactive-update";
+    };
+  };
+
   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 in
 {
@@ -12,7 +45,6 @@ in
     # installed for all users, unlike `home.packages`
     systemPackages = with pkgs; [
       # cargo-expand # build failure: https://github.com/NixOS/nixpkgs/issues/374458
-      # cargo-interactive-update # todo
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -26,6 +58,7 @@ in
       cargo-edit
       cargo-feature
       cargo-generate
+      cargo-interactive-update
       cargo-leptos
       cargo-make
       cargo-outdated
