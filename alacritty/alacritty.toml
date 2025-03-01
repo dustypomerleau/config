@@ -96,6 +96,9 @@ hide_when_typing = true
 [scrolling]
 history = 100000
 
+[selection]
+save_to_clipboard = true
+
 [terminal.shell]
 program = "/run/current-system/sw/bin/fish"
 
