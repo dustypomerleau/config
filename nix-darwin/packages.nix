@@ -5,6 +5,7 @@
   ...
 }:
 let
+  # todo: split out to `crates/`
   inherit (pkgs)
     fetchCrate
     fetchFromGitHub
