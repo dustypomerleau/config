@@ -96,7 +96,7 @@ in
       fish
     ];
 
-    # installed for all users, unlike `home.packages`
+    # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
       gel
       any-nix-shell # allows fish in nix-shell
