@@ -6,7 +6,6 @@
 }:
 let
   inherit (pkgs)
-    curl
     fetchCrate
     fetchFromGitHub
     rustPlatform
@@ -23,7 +22,7 @@ let
 
     useFetchCargoVendor = true;
     cargoHash = "sha256-J9j4+JlsTnVXly9Y/cLYZlAWBZaHy9p7oWP0ciRy0Q8=";
-    buildInputs = [ curl ];
+    buildInputs = [ pkgs.curl ];
 
     meta = {
       description = "A cargo extension CLI tool to update your cargo direct dependencies interactively to the latest version";
@@ -34,6 +33,35 @@ let
   };
 
   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+
+  # currently fails on tests, because it can't find the path of the input image files in the nix store
+  #
+  # rimage = rustPlatform.buildRustPackage rec {
+  #   pname = "rimage";
+  #   version = "0.11.0-next.3";
+  #
+  #   src = fetchCrate {
+  #     inherit pname version;
+  #     hash = "sha256-lss5JDpDvZ7M4VNBsQYLOHO1cy7OYKsgYoh/nzYMN3w=";
+  #   };
+  #
+  #   useFetchCargoVendor = true;
+  #   cargoHash = "sha256-r/xAoqyl1wn0CcgjrXolsPb4hvlviGmqLTc5w74C584=";
+  #
+  #   nativeBuildInputs = with pkgs; [
+  #     cmake
+  #     nasm
+  #     perl
+  #   ];
+  #
+  #   meta = {
+  #     description = "A powerful Rust image optimization CLI tool inspired by squoosh!.";
+  #     homepage = "https://github.com/SalOne22/rimage";
+  #     license = lib.licenses.mit;
+  #     mainProgram = "rimage";
+  #   };
+  # };
+
 in
 {
   environment = {
@@ -115,6 +143,7 @@ in
       prettypst
       python3
       qmk
+      # rimage # build failure
       ripgrep
       ripgrep-all
       sqlx-cli
