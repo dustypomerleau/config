@@ -33,31 +33,31 @@ let
     };
   };
 
-  gel = rustPlatform.buildRustPackage rec {
-    pname = "gel-cli";
-    version = "7.0.3";
-
-    src = fetchFromGitHub {
-      inherit pname version;
-      owner = "geldata";
-      repo = pname;
-      rev = "v${version}";
-      hash = "sha256-DFra+gUvS+vofGNX270JqoGItDXDM3KNIrNezNRUqMg=";
-    };
-
-    useFetchCargoVendor = true;
-    cargoHash = "sha256-s8UKYZs4GorM0qvAvE+HL+Qma2x05IDtuqYebMDrZHk=";
-    nativeBuildInputs = [ pkgs.perl ];
-    # `tests/func`requires the `gel-server binary in $PATH`
-    doCheck = false;
-
-    meta = {
-      description = "This repository contains the implementation of gel command-line tool.";
-      homepage = src.url;
-      license = lib.licenses.mit;
-      mainProgram = "gel";
-    };
-  };
+  # gel = rustPlatform.buildRustPackage rec {
+  #   pname = "gel-cli";
+  #   version = "7.0.3";
+  #
+  #   src = fetchFromGitHub {
+  #     inherit pname version;
+  #     owner = "geldata";
+  #     repo = pname;
+  #     rev = "v${version}";
+  #     hash = "sha256-DFra+gUvS+vofGNX270JqoGItDXDM3KNIrNezNRUqMg=";
+  #   };
+  #
+  #   useFetchCargoVendor = true;
+  #   cargoHash = "sha256-s8UKYZs4GorM0qvAvE+HL+Qma2x05IDtuqYebMDrZHk=";
+  #   nativeBuildInputs = [ pkgs.perl ];
+  #   # `tests/func`requires the `gel-server binary in $PATH`
+  #   # doCheck = false;
+  #
+  #   meta = {
+  #     description = "This repository contains the implementation of gel command-line tool.";
+  #     homepage = src.url;
+  #     license = lib.licenses.mit;
+  #     mainProgram = "edgedb";
+  #   };
+  # };
 
   # nixpkgs-unstable is stuck on 0.1.30
   leptosfmt = rustPlatform.buildRustPackage rec {
@@ -68,12 +68,12 @@ let
       owner = "bram209";
       repo = pname;
       rev = version;
-      hash = lib.fakeHash;
+      hash = "sha256-+trLQFU8oP45xHQ3DsEESQzQX2WpvQcfpgGC9o5ITcY=";
       fetchSubmodules = true;
     };
 
     useFetchCargoVendor = true;
-    cargoHash = lib.fakeHash;
+    cargoHash = "sha256-m9426zuxp9GfbYoljW49BVgetLTqqcqGHCb7I+Yw+bc=";
 
     meta = {
       description = "Formatter for the leptos view! macro";
@@ -122,6 +122,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # gel # use cargo-installed version until nixpkgs is available
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -147,7 +148,6 @@ in
       cmake
       curl
       delta
-      edgedb # todo: replace with gel upon release
       evcxr
       eza
       fd
@@ -157,7 +157,6 @@ in
       fishPlugins.colored-man-pages
       fzf
       gawk
-      gel
       gh
       git
       git-filter-repo
