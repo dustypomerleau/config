@@ -112,7 +112,6 @@ git log \
 #   blink
 #   reverse
 
-abbr --add gel "edgedb" # temporary workaround until the github binary is renamed
 abbr --add glt "git ls-tree -r main --full-tree --name-only"
 abbr --add gm "git merge"
 abbr --add gmf "git merge --ff-only"
