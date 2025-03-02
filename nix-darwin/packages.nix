@@ -59,6 +59,30 @@ let
     };
   };
 
+  # nixpkgs-unstable is stuck on 0.1.30
+  leptosfmt = rustPlatform.buildRustPackage rec {
+    pname = "leptosfmt";
+    version = "0.1.33";
+
+    src = fetchFromGitHub {
+      owner = "bram209";
+      repo = pname;
+      rev = version;
+      hash = lib.fakeHash;
+      fetchSubmodules = true;
+    };
+
+    useFetchCargoVendor = true;
+    cargoHash = lib.fakeHash;
+
+    meta = {
+      description = "Formatter for the leptos view! macro";
+      mainProgram = "leptosfmt";
+      homepage = "https://github.com/bram209/leptosfmt";
+      license = lib.licenses.mit;
+    };
+  };
+
   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 
   rimage = rustPlatform.buildRustPackage rec {
