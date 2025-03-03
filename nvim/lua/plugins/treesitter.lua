@@ -81,8 +81,9 @@ return {
                 },
             })
 
-            vim.treesitter.language.register("xml", "tmTheme")
+            vim.treesitter.language.register("edgeql", "gel")
             vim.treesitter.language.register("xml", "plist")
+            vim.treesitter.language.register("xml", "tmTheme")
         end,
     },
 }
