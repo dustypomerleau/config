@@ -19,6 +19,6 @@
 
   services = {
     # see many postgres options in services.postgresql.*
-    tailscale.enable = true;
+    # tailscale.enable = true; # reenable after https://github.com/NixOS/nixpkgs/pull/387998
   };
 }
