@@ -38,6 +38,7 @@ set.undofile = true
 set.updatetime = 300
 set.wrap = true
 
+-- by default, plugins will be in ~/.local/share/nvim/lazy/
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
