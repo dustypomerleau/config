@@ -28,13 +28,20 @@
           ".psqlrc".source = /Users/${specialArgs.username}/.config/postgres/.psqlrc;
           ".ssh/config".source = /Users/${specialArgs.username}/.config/ssh/config;
           ".zshenv".source = /Users/${specialArgs.username}/.config/zsh/.zshenv;
-          "Library/Application Support/Code/User/keybindings.json".source = /Users/${specialArgs.username}/.config/code/keybindings.json;
-          "Library/Application Support/Code/User/settings.json".source = /Users/${specialArgs.username}/.config/code/settings.json;
-          "Library/Application Support/jj/config.toml".source = /Users/${specialArgs.username}/.config/jj/config.toml;
-          "Library/Application Support/org.dystroy.broot/conf.hjson".source = /Users/${specialArgs.username}/.config/broot/conf.hjson;
-          "Library/Application Support/org.dystroy.broot/conf.toml".source = /Users/${specialArgs.username}/.config/broot/conf.toml;
-          "Library/Application Support/org.dystroy.broot/skins/dark-blue.hjson".source = /Users/${specialArgs.username}/.config/broot/skins/dark-blue.hjson;
-          "Library/Application Support/org.dystroy.broot/verbs.hjson".source = /Users/${specialArgs.username}/.config/broot/verbs.hjson;
+          "Library/Application Support/Code/User/keybindings.json".source =
+            /Users/${specialArgs.username}/.config/code/keybindings.json;
+          "Library/Application Support/Code/User/settings.json".source =
+            /Users/${specialArgs.username}/.config/code/settings.json;
+          "Library/Application Support/jj/config.toml".source =
+            /Users/${specialArgs.username}/.config/jj/config.toml;
+          "Library/Application Support/org.dystroy.broot/conf.hjson".source =
+            /Users/${specialArgs.username}/.config/broot/conf.hjson;
+          "Library/Application Support/org.dystroy.broot/conf.toml".source =
+            /Users/${specialArgs.username}/.config/broot/conf.toml;
+          "Library/Application Support/org.dystroy.broot/skins/dark-blue.hjson".source =
+            /Users/${specialArgs.username}/.config/broot/skins/dark-blue.hjson;
+          "Library/Application Support/org.dystroy.broot/verbs.hjson".source =
+            /Users/${specialArgs.username}/.config/broot/verbs.hjson;
           "Library/Preferences/glow/glow.yml".source = /Users/${specialArgs.username}/.config/glow/glow.yml;
           "themes.gitconfig".source = /Users/${specialArgs.username}/.config/git/themes.gitconfig;
           # ".zshrc".source = /Users/${specialArgs.username}/.config/zsh/.zshrc;
