@@ -24,6 +24,7 @@
           ".cargo/config.toml".source = /Users/${specialArgs.username}/.config/cargo/config.toml;
           ".gitconfig".source = /Users/${specialArgs.username}/.config/git/.gitconfig;
           ".gitignore_global".source = /Users/${specialArgs.username}/.config/git/.gitignore_global;
+          ".luacheckrc".source = /Users/${specialArgs.username}/.config/.luacheckrc;
           ".psqlrc".source = /Users/${specialArgs.username}/.config/postgres/.psqlrc;
           ".ssh/config".source = /Users/${specialArgs.username}/.config/ssh/config;
           ".zshenv".source = /Users/${specialArgs.username}/.config/zsh/.zshenv;
