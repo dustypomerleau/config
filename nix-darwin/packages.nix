@@ -144,6 +144,7 @@ in
       leptosfmt
       libressl_3_8
       lua-language-server
+      luajitPackages.luacheck
       luajitPackages.luarocks
       markdown-oxide
       mas
