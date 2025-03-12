@@ -22,7 +22,7 @@
   "lualine.nvim": { "branch": "master", "commit": "f4f791f67e70d378a754d02da068231d2352e5bc" },
   "luarocks.nvim": { "branch": "main", "commit": "1db9093915eb16ba2473cfb8d343ace5ee04130a" },
   "luasnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
-  "markview.nvim": { "branch": "main", "commit": "739813a087d94ff0fdab84457654d81d1c6dc455" },
+  "markview.nvim": { "branch": "main", "commit": "cc36ad9ece2f504699484f4783884d9bf25fa3e4" },
   "mini.nvim": { "branch": "main", "commit": "d7ba1dec0082b7a542aa79c327e9554d4a27cc2c" },
   "neorg": { "branch": "main", "commit": "ed43ed58116caa0a17bbbc7aa663e32bf94bc531" },
   "nui.nvim": { "branch": "main", "commit": "8d3bce9764e627b62b07424e0df77f680d47ffdb" },
