@@ -33,6 +33,7 @@
       "firefox"
       "google-drive"
       "inkscape"
+      "insomnia"
       "karabiner-elements" # pkgs.karabiner-elements is broken
       "mactex"
       "microsoft-office"
