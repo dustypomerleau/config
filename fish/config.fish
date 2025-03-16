@@ -59,7 +59,7 @@ abbr --add ch "cargo check"
 abbr --add chmod "uutils-chmod"
 abbr --add ci "crates-tui"
 abbr --add co "cargo outdated -R" # root dependencies only
-abbr --add cp "uutils-cp -iv"
+abbr --add cp "uutils-cp -irv"
 abbr --add cr "cargo run"
 abbr --add ct "cargo test -- --nocapture"
 abbr --add ctc "cargo test"
