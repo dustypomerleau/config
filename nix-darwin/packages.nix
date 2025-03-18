@@ -96,6 +96,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # ocrmypdf # dep jbigkit marked as broken
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -155,7 +156,6 @@ in
       nodePackages.svgo
       nodejs_23
       nomino
-      ocrmypdf
       pandoc
       parallel
       pipe-rename
