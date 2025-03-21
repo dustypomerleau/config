@@ -47,6 +47,12 @@ return {
                 noremap = true,
             },
             {
+                "<localleader>sp",
+                ":RustLsp rebuildProcMacros<cr>",
+                mode = { "n" },
+                noremap = true,
+            },
+            {
                 "<localleader>sw",
                 ":RustLsp reloadWorkspace<cr>",
                 mode = { "n" },
