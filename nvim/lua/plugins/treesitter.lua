@@ -32,6 +32,7 @@ return {
                     "rust",
                     "sql",
                     "svelte",
+                    "terraform",
                     "tmux",
                     "toml",
                     "typescript",

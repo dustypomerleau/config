@@ -57,6 +57,7 @@ return {
             -- LS for Nix, by Oxalica
             lsp.nil_ls.setup({ capabilities = capabilities })
             lsp.svelte.setup({ capabilities = capabilities })
+            lsp.terraformls.setup({ capabilities = capabilities })
 
             -- Currently, setup for tailwindcss-language-server happens in tailwind-tools.lua
             -- lsp.tailwindcss.setup({ capabilities = capabilities })

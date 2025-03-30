@@ -96,6 +96,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # opentofu-ls # not yet available in lspconfig, use terraform-ls
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -156,6 +157,7 @@ in
       nodejs_23
       nomino
       ocrmypdf
+      opentofu
       pandoc
       parallel
       pipe-rename
@@ -177,6 +179,7 @@ in
       tailwindcss-language-server # see below for permissions issue
       taplo
       tealdeer
+      terraform-ls
       tex-fmt
       timer
       tinymist
