@@ -213,6 +213,7 @@ in
     google-fonts
     nerd-fonts.commit-mono
     nerd-fonts.sauce-code-pro
+    maple-mono.NF
   ];
 
 }
