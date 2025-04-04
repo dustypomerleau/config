@@ -58,6 +58,7 @@ abbr --add cb "cargo build"
 abbr --add ch "cargo check"
 abbr --add chmod "uutils-chmod"
 abbr --add ci "crates-tui"
+abbr --add cn "cargo nextest run --no-capture"
 abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "uutils-cp -irv"
 abbr --add cr "cargo run"
@@ -78,8 +79,8 @@ abbr --add gca "git commit -a -m"
 abbr --add gcae "git commit -a" # e for editor
 abbr --add gce "git commit" # e for editor
 abbr --add gd "git diff"
-abbr --add ge "gel"
 abbr --add gds "git diff --staged"
+abbr --add ge "gel"
 abbr --add gfu "git fetch upstream"
 
 abbr --add gl "\
