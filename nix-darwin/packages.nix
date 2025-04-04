@@ -114,6 +114,7 @@ in
       cargo-interactive-update
       cargo-leptos
       cargo-make
+      cargo-nextest
       cargo-outdated
       cargo-semver-checks
       cargo-update
