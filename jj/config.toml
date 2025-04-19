@@ -32,9 +32,6 @@ name = "Dusty Pomerleau"
 "working_copy empty" = "red"
 "working_copy timestamp" = "blue"
 
-[diff]
-format = "git"
-
 [git]
 auto-local-bookmark = false
 push-bookmark-prefix = ""
@@ -43,6 +40,7 @@ push-bookmark-prefix = ""
 "format_short_id(id)" = "id.shortest()"
 
 [ui]
+diff.format = "git"
 editor = "nvim"
 merge-editor = "vscode"
 pager = "delta"
