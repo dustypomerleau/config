@@ -41,13 +41,11 @@ return {
             },
         },
         keys = {
-            -- todo: this won't work as intended, rethink:
-            -- https://github.com/obsidian-nvim/obsidian.nvim?tab=readme-ov-file#commands
             {
-                "<localleader>on",
-                "<cmd>ObsidianToday +1<cr>",
+                "<localleader>ot",
+                "<cmd>ObsidianNewFromTemplate<cr>",
                 mode = { "n" },
-                desc = "Obsidian: next daily note",
+                desc = "Obsidian: new from template",
             },
         },
     },
