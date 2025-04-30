@@ -42,7 +42,25 @@ return {
         },
         keys = {
             {
+                "<localleader>od",
+                "<cmd>ObsidianDailies<cr>",
+                mode = { "n" },
+                desc = "Obsidian: new from template",
+            },
+            {
+                "<localleader>ol",
+                "<cmd>ObsidianLinks<cr>",
+                mode = { "n" },
+                desc = "Obsidian: new from template",
+            },
+            {
                 "<localleader>ot",
+                "<cmd>ObsidianTags<cr>",
+                mode = { "n" },
+                desc = "Obsidian: new from template",
+            },
+            {
+                "<localleader>on",
                 "<cmd>ObsidianNewFromTemplate<cr>",
                 mode = { "n" },
                 desc = "Obsidian: new from template",
