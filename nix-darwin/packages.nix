@@ -181,6 +181,7 @@ in
       taplo
       tealdeer
       terraform-ls
+      tesseract
       tex-fmt
       timer
       tinymist
