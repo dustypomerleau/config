@@ -35,7 +35,7 @@
       "inkscape"
       "insomnia"
       "karabiner-elements" # pkgs.karabiner-elements is broken
-      "mactex"
+      "mactex-no-gui"
       "microsoft-office"
       "obsidian"
       "omnifocus"
