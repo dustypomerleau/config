@@ -10,7 +10,7 @@ return {
                     ["prettypst"] = {
                         prepend_args = { "--use-configuration", "--use-std-in", "--use-std-out" },
                     },
-                    ["tex-fmt"] = { prepend_args = { "--tab", "4", "--wrap", "100" } },
+                    ["tex-fmt"] = { prepend_args = { "--tabsize", "4", "--wraplen", "100" } },
                 },
                 formatters_by_ft = {
                     -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
@@ -35,7 +35,7 @@ return {
                 -- }),
                 -- fallback calls vim.lsp.buf.format() if nothing is specified
                 format_on_save = {
-                    lsp_fallback = true,
+                    lsp_format = "fallback",
                     -- setting a long timeout helps prevent failure on the first invocation after
                     -- BufEnter (subsequent invocations are usually fast).
                     timeout_ms = 2000,
