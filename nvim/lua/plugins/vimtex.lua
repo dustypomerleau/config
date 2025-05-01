@@ -1,6 +1,7 @@
 return {
     {
         "lervag/vimtex",
+        enabled = false,
         config = function()
             vim.g.vimtex_compiler_latexmk = {
                 options = {
