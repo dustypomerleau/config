@@ -183,6 +183,7 @@ in
       terraform-ls
       tesseract
       tex-fmt
+      texlab
       timer
       tinymist
       tmux
