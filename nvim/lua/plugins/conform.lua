@@ -22,7 +22,7 @@ return {
                     markdown = { "prettierd", "prettier", stop_after_first = true },
                     nix = { "nixfmt" },
                     svelte = { "prettierd", "prettier", stop_after_first = true },
-                    tex = { "tex-fmt" },
+                    tex = { "tex-fmt", lsp_fallback = "never" },
                     toml = { "taplo" },
                     typescript = { "prettierd", "prettier", stop_after_first = true },
                     typst = { "prettypst", "typstyle", stop_after_first = true },

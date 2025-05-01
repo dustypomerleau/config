@@ -59,6 +59,32 @@ return {
             lsp.svelte.setup({ capabilities = capabilities })
             lsp.terraformls.setup({ capabilities = capabilities })
 
+            lsp.texlab.setup({
+                capabilities = capabilities,
+                settings = {
+                    texlab = {
+                        build = {
+                            args = {
+                                "--shell-escape",
+                                "-file-line-error",
+                                "-interaction=nonstopmode",
+                                "-lualatex",
+                                "-pdf",
+                                "-synctex=1",
+                                "-verbose",
+                                "%f",
+                            },
+                            onSave = false,
+                        },
+                        formatterLineLength = 100,
+                        chktex = { onOpenAndSave = true },
+                        diagnostics = {
+                            ignoredPatterns = { "(Over|Under)full \\[hv]box" },
+                        },
+                    },
+                },
+            })
+
             -- Currently, setup for tailwindcss-language-server happens in tailwind-tools.lua
             -- lsp.tailwindcss.setup({ capabilities = capabilities })
 
