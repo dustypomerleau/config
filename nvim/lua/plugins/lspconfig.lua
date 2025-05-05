@@ -59,6 +59,7 @@ return {
             lsp.svelte.setup({ capabilities = capabilities })
             lsp.terraformls.setup({ capabilities = capabilities })
 
+            -- todo: troubleshoot, as these settings are not being applied
             lsp.texlab.setup({
                 capabilities = capabilities,
                 settings = {
