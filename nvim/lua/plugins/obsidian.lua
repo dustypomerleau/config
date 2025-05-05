@@ -45,19 +45,19 @@ return {
                 "<localleader>od",
                 "<cmd>ObsidianDailies<cr>",
                 mode = { "n" },
-                desc = "Obsidian: new from template",
+                desc = "Obsidian: daily notes",
             },
             {
                 "<localleader>ol",
                 "<cmd>ObsidianLinks<cr>",
                 mode = { "n" },
-                desc = "Obsidian: new from template",
+                desc = "Obsidian: links",
             },
             {
                 "<localleader>ot",
                 "<cmd>ObsidianTags<cr>",
                 mode = { "n" },
-                desc = "Obsidian: new from template",
+                desc = "Obsidian: tags",
             },
             {
                 "<localleader>on",
