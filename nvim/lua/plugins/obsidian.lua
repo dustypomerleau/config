@@ -16,11 +16,6 @@ return {
                     action = function() return require("obsidian").util.gf_passthrough() end,
                     opts = { noremap = false, expr = true, buffer = true },
                 },
-                -- Toggle check-boxes.
-                ["<localleader>oc"] = {
-                    action = function() return require("obsidian").util.toggle_checkbox() end,
-                    opts = { buffer = true },
-                },
                 -- Smart action depending on context, either follow link or toggle checkbox.
                 ["<cr>"] = {
                     action = function() return require("obsidian").util.smart_action() end,
@@ -42,11 +37,18 @@ return {
         },
         keys = {
             {
+                "<localleader>oc",
+                "<cmd>lua require('obsidian').util.toggle_checkbox()<cr>",
+                mode = { "n" },
+                desc = "Obsidian: toggle checkbox",
+            },
+            {
                 "<localleader>od",
                 "<cmd>ObsidianDailies<cr>",
                 mode = { "n" },
                 desc = "Obsidian: daily notes",
             },
+
             {
                 "<localleader>ol",
                 "<cmd>ObsidianLinks<cr>",
