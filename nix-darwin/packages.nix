@@ -155,7 +155,7 @@ in
       nil
       nixfmt-rfc-style
       nodePackages.svgo
-      nodejs_23
+      nodejs_24
       nomino
       ocrmypdf
       opentofu
