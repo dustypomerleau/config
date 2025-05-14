@@ -32,8 +32,6 @@
             /Users/${specialArgs.username}/.config/code/keybindings.json;
           "Library/Application Support/Code/User/settings.json".source =
             /Users/${specialArgs.username}/.config/code/settings.json;
-          "Library/Application Support/jj/config.toml".source =
-            /Users/${specialArgs.username}/.config/jj/config.toml;
           "Library/Application Support/org.dystroy.broot/conf.hjson".source =
             /Users/${specialArgs.username}/.config/broot/conf.hjson;
           "Library/Application Support/org.dystroy.broot/conf.toml".source =
