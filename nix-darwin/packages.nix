@@ -1,3 +1,7 @@
+# note: mold breakage on darwin comes from this commit:
+# https://github.com/NixOS/nixpkgs/commit/59a57736847d941843bc210ca48885b2f771462f
+# from pull:
+# https://github.com/NixOS/nixpkgs/pull/406936
 {
   inputs,
   lib,
@@ -96,6 +100,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # evcxr # build failure https://github.com/NixOS/nixpkgs/pull/407087
       # opentofu-ls # not yet available in lspconfig, use terraform-ls
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -123,7 +128,6 @@ in
       cmake
       curl
       delta
-      evcxr
       eza
       fd
       ffmpeg_7
