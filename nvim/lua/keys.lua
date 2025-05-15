@@ -7,10 +7,6 @@ local key = vim.api.nvim_set_keymap
 local nr = { noremap = true }
 local nrs = { noremap = true, silent = true }
 
--- key("n", "˚", ":<c-u> m-2<cr>==", nrs)
--- key("n", "∆", ":<c-u> m+<cr>==", nrs)
--- key("x", "˚", ":<c-u> '<,'>m-2<cr>gv=gv", nrs)
--- key("x", "∆", ":<c-u> '<,'>move'>+<cr>gv=gv", nrs)
 key("n", "<a-j>", ":<c-u> m+<cr>==", nrs)
 key("n", "<a-k>", ":<c-u> m-2<cr>==", nrs)
 key("n", "<c-h>", "<c-w><c-h>", nr)
@@ -42,5 +38,9 @@ key("n", "<localleader>st", "<cmd>lua vim.lsp.buf.type_definition()<cr>", nrs)
 key("n", "<localleader>u", ":Lazy update<cr>", nrs)
 key("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", nrs)
 key("n", "\\", ",", nr)
+key("n", "˚", ":<c-u> m-2<cr>==", nrs)
+key("n", "∆", ":<c-u> m+<cr>==", nrs)
 key("x", "<a-j>", ":<c-u> '<,'>move'>+<cr>gv=gv", nrs)
 key("x", "<a-k>", ":<c-u> '<,'>m-2<cr>gv=gv", nrs)
+key("x", "˚", ":<c-u> '<,'>m-2<cr>gv=gv", nrs)
+key("x", "∆", ":<c-u> '<,'>move'>+<cr>gv=gv", nrs)
