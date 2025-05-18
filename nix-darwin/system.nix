@@ -155,6 +155,8 @@
       };
     };
 
+    primaryUser = "${specialArgs.username}";
+
     # This value should match the default at the time of first nix-darwin
     # install on a given machine.
     stateVersion = 5;
