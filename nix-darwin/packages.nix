@@ -63,17 +63,18 @@ let
 
   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 
+  # /nix/store/w8fw90yrw29xx7hf7bgy6j910pm2c9vx-rimage-0.11.0.drv
   rimage = rustPlatform.buildRustPackage rec {
     pname = "rimage";
-    version = "0.11.0-next.3";
+    version = "0.11.0";
 
     src = fetchCrate {
       inherit pname version;
-      hash = "sha256-lss5JDpDvZ7M4VNBsQYLOHO1cy7OYKsgYoh/nzYMN3w=";
+      hash = "sha256-sCDCAuZTpA8qmh5bia03VphuHJ4My4x7lJ4ryEB8VyI=";
     };
 
     useFetchCargoVendor = true;
-    cargoHash = "sha256-r/xAoqyl1wn0CcgjrXolsPb4hvlviGmqLTc5w74C584=";
+    cargoHash = "sha256-tsASNZaRZblzah+FqA8/82WeZ7yDpbokaVs9Mo7mI6w=";
     # tests fail because it can't find the path of the input image files in the nix store
     doCheck = false;
 
