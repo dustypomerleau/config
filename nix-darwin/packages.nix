@@ -101,7 +101,6 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # evcxr # build failure https://github.com/NixOS/nixpkgs/pull/407087
       # opentofu-ls # not yet available in lspconfig, use terraform-ls
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -129,6 +128,7 @@ in
       cmake
       curl
       delta
+      evcxr
       eza
       fd
       ffmpeg_7
