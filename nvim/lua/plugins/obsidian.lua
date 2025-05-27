@@ -37,6 +37,12 @@ return {
         },
         keys = {
             {
+                "<localleader>ob",
+                "<cmd>ObsidianBacklinks<cr>",
+                mode = { "n" },
+                desc = "Obsidian: backlinks",
+            },
+            {
                 "<localleader>oc",
                 "<cmd>lua require('obsidian').util.toggle_checkbox()<cr>",
                 mode = { "n" },
