@@ -105,9 +105,6 @@ return {
                 },
             })
 
-            -- Currently, setup for tailwindcss-language-server happens in tailwind-tools.lua
-            -- lsp.tailwindcss.setup({ capabilities = capabilities })
-
             -- LS for Typst
             vim.lsp.enable("tinymist")
             vim.lsp.config("tinymist", {
