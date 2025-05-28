@@ -101,7 +101,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # opentofu-ls # not yet available in lspconfig, use terraform-ls
+      # terraform-ls # replace with opentofu-ls
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -164,6 +164,7 @@ in
       nomino
       ocrmypdf
       opentofu
+      opentofu-ls # not yet available in lspconfig, use terraform-ls
       pandoc
       parallel
       pipe-rename
@@ -185,7 +186,6 @@ in
       tailwindcss-language-server # see below for permissions issue
       taplo
       tealdeer
-      terraform-ls
       tesseract
       tex-fmt
       texlab

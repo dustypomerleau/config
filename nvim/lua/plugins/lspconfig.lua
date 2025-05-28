@@ -57,7 +57,7 @@ return {
             -- LS for Nix, by Oxalica
             lsp.nil_ls.setup({ capabilities = capabilities })
             lsp.svelte.setup({ capabilities = capabilities })
-            lsp.terraformls.setup({ capabilities = capabilities })
+            lsp.tofu_ls.setup({ capabilities = capabilities })
 
             -- todo: troubleshoot, as these settings are not being applied
             lsp.texlab.setup({
