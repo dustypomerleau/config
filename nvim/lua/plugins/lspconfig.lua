@@ -15,7 +15,6 @@ return {
             setup = { rust_analyzer = function() return true end },
         },
         config = function()
-            local lsp = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             -- configure error icons and formatting of diagnostics
@@ -40,13 +39,24 @@ return {
 
             -- rust analyzer config is in rustaceanvim.lua
             -- vtsls config is in vtsls.lua
-            lsp.basedpyright.setup({ capabilities = capabilities })
-            lsp.clangd.setup({ capabilities = capabilities })
-            lsp.cssls.setup({ capabilities = capabilities })
-            lsp.html.setup({ capabilities = capabilities })
-            lsp.lua_ls.setup({ capabilities = capabilities })
 
-            lsp.markdown_oxide.setup({
+            vim.lsp.enable("basedpyright")
+            vim.lsp.config("basedpyright", { capabilities = capabilities })
+
+            vim.lsp.enable("clangd")
+            vim.lsp.config("clangd", { capabilities = capabilities })
+
+            vim.lsp.enable("cssls")
+            vim.lsp.config("cssls", { capabilities = capabilities })
+
+            vim.lsp.enable("html")
+            vim.lsp.config("html", { capabilities = capabilities })
+
+            vim.lsp.enable("lua_ls")
+            vim.lsp.config("lua_ls", { capabilities = capabilities })
+
+            vim.lsp.enable("markdown_oxide")
+            vim.lsp.config("markdown_oxide", {
                 capabilities = vim.tbl_deep_extend("force", capabilities, {
                     workspace = {
                         didChangeWatchedFiles = { dynamicRegistration = true },
@@ -55,12 +65,21 @@ return {
             })
 
             -- LS for Nix, by Oxalica
-            lsp.nil_ls.setup({ capabilities = capabilities })
-            lsp.svelte.setup({ capabilities = capabilities })
-            lsp.tofu_ls.setup({ capabilities = capabilities })
+            vim.lsp.enable("nil_ls")
+            vim.lsp.config("nil_ls", { capabilities = capabilities })
+
+            vim.lsp.enable("svelte")
+            vim.lsp.config("svelte", { capabilities = capabilities })
+
+            vim.lsp.enable("terraformls")
+            vim.lsp.config("terraformls", { capabilities = capabilities })
+
+            -- vim.lsp.enable("tofu_ls")
+            -- vim.lsp.config("tofu_ls", { capabilities = capabilities })
 
             -- todo: troubleshoot, as these settings are not being applied
-            lsp.texlab.setup({
+            vim.lsp.enable("texlab")
+            vim.lsp.config("texlab", {
                 capabilities = capabilities,
                 settings = {
                     texlab = {
@@ -90,13 +109,15 @@ return {
             -- lsp.tailwindcss.setup({ capabilities = capabilities })
 
             -- LS for Typst
-            lsp.tinymist.setup({
+            vim.lsp.enable("tinymist")
+            vim.lsp.config("tinymist", {
                 capabilities = capabilities,
                 settings = { exportPdf = "onSave" },
             })
 
             local util = require("lspconfig.util")
-            lsp.taplo.setup({
+            vim.lsp.enable("taplo")
+            vim.lsp.config("taplo", {
                 capabilities = capabilities,
                 cmd = { "taplo", "lsp", "stdio" },
                 filetypes = { "toml" },
