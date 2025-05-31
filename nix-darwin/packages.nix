@@ -196,6 +196,7 @@ in
       trash-cli # trash goes to ~/.local/share/Trash/
       typst
       typstyle
+      unrar-free
       uutils-coreutils
       vsce
       vscode-extensions.vadimcn.vscode-lldb
