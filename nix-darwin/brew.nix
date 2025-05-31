@@ -59,7 +59,6 @@
     # disable temporarily due to: https://github.com/mas-cli/mas/issues/724
     masApps = {
       "Apple Configurator" = 1037126344;
-      "Mona for Mastodon" = 1659154653;
       "WireGuard" = 1451685025;
       "Xcode" = 497799835;
     };
