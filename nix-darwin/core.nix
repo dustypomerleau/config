@@ -9,8 +9,11 @@
     ]; # required to use darwin.linux-builder
   };
 
-  # The platform the configuration will be used on.
-  nixpkgs.hostPlatform = system;
+  nixpkgs = {
+    # config.allowUnfree = true; # for unrar, remove if unrar-free becomes unbroken.
+    # The platform the configuration will be used on.
+    hostPlatform = system;
+  };
 
   # Normally the instructions would tell you to use programs to enable fish, tmux, etc.
   # But if you are managing the settings for those programs outside of Nix,

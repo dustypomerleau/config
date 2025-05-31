@@ -101,6 +101,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -196,7 +197,6 @@ in
       trash-cli # trash goes to ~/.local/share/Trash/
       typst
       typstyle
-      unrar-free
       uutils-coreutils
       vsce
       vscode-extensions.vadimcn.vscode-lldb
