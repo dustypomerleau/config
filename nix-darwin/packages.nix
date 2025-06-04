@@ -61,7 +61,7 @@ let
     };
   };
 
-  neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+  # neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 
   # /nix/store/w8fw90yrw29xx7hf7bgy6j910pm2c9vx-rimage-0.11.0.drv
   rimage = rustPlatform.buildRustPackage rec {
