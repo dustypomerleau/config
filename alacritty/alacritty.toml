@@ -57,18 +57,18 @@ family = "SauceCodePro Nerd Font"
 style = "SemiBold"
 
 [font.glyph_offset]
-y = 5
+y = 6
 
 [font.italic]
-family = "SauceCodePro Nerd Font"
+family = "CommitMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "SauceCodePro Nerd Font"
+family = "CommitMono Nerd Font"
 style = "Regular"
 
 [font.offset]
-y = 6
+y = 11
 
 [[hints.enabled]]
 binding = { key = "U", mods = "Control|Shift" }
