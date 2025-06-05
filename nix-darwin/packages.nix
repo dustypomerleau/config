@@ -217,8 +217,10 @@ in
   fonts.packages = with pkgs; [
     google-fonts
     nerd-fonts.commit-mono
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.monaspace
     nerd-fonts.sauce-code-pro
-    maple-mono.NF
   ];
 
 }
