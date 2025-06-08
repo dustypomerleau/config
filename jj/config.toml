@@ -40,7 +40,7 @@ push-bookmark-prefix = ""
 "format_short_id(id)" = "id.shortest()"
 
 [ui]
-diff.format = "git"
+diff-formatter = ":git"
 editor = "nvim"
 merge-editor = "vscode"
 pager = "delta"
