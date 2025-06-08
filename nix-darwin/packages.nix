@@ -13,7 +13,7 @@ let
 
   cargo-interactive-update = callPackage ./crates/cargo-interactive-update.nix { };
   leptosfmt = callPackage ./crates/leptosfmt.nix { };
-  neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+  # neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   rimage = callPackage ./crates/rimage.nix { };
 in
 {
@@ -25,7 +25,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # neovim
+      # neovim-nightly # use stable due to treesitter rust issues
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -80,7 +80,7 @@ in
       luajitPackages.luarocks
       markdown-oxide
       mas
-      neovim-nightly
+      neovim
       netlify-cli
       nil
       nixfmt-rfc-style
