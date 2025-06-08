@@ -4,93 +4,17 @@
 # https://github.com/NixOS/nixpkgs/pull/406936
 {
   inputs,
-  lib,
   pkgs,
   ...
 }:
+
 let
-  # todo: split out to `crates/`
-  inherit (pkgs)
-    fetchCrate
-    fetchFromGitHub
-    rustPlatform
-    ;
+  inherit (pkgs) callPackage;
 
-  cargo-interactive-update = rustPlatform.buildRustPackage rec {
-    pname = "cargo-interactive-update";
-    version = "0.6.2";
-
-    src = fetchCrate {
-      inherit pname version;
-      hash = "sha256-WgN63LavUBNjtIu5O/y7cL2gY5DeROHSxABB/b5rBHU=";
-    };
-
-    useFetchCargoVendor = true;
-    cargoHash = "sha256-J9j4+JlsTnVXly9Y/cLYZlAWBZaHy9p7oWP0ciRy0Q8=";
-    buildInputs = [ pkgs.curl ];
-
-    meta = {
-      description = "A cargo extension CLI tool to update your cargo direct dependencies interactively to the latest version";
-      homepage = "https://github.com/BenJeau/cargo-interactive-update";
-      license = lib.licenses.mit;
-      mainProgram = "cargo-interactive-update";
-    };
-  };
-
-  # nixpkgs-unstable is stuck on 0.1.30
-  leptosfmt = rustPlatform.buildRustPackage rec {
-    pname = "leptosfmt";
-    version = "0.1.33";
-
-    src = fetchFromGitHub {
-      owner = "bram209";
-      repo = pname;
-      rev = version;
-      hash = "sha256-+trLQFU8oP45xHQ3DsEESQzQX2WpvQcfpgGC9o5ITcY=";
-      fetchSubmodules = true;
-    };
-
-    useFetchCargoVendor = true;
-    cargoHash = "sha256-m9426zuxp9GfbYoljW49BVgetLTqqcqGHCb7I+Yw+bc=";
-
-    meta = {
-      description = "Formatter for the leptos view! macro";
-      mainProgram = "leptosfmt";
-      homepage = "https://github.com/bram209/leptosfmt";
-      license = lib.licenses.mit;
-    };
-  };
-
-  # neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-
-  # /nix/store/w8fw90yrw29xx7hf7bgy6j910pm2c9vx-rimage-0.11.0.drv
-  rimage = rustPlatform.buildRustPackage rec {
-    pname = "rimage";
-    version = "0.11.0";
-
-    src = fetchCrate {
-      inherit pname version;
-      hash = "sha256-sCDCAuZTpA8qmh5bia03VphuHJ4My4x7lJ4ryEB8VyI=";
-    };
-
-    useFetchCargoVendor = true;
-    cargoHash = "sha256-tsASNZaRZblzah+FqA8/82WeZ7yDpbokaVs9Mo7mI6w=";
-    # tests fail because it can't find the path of the input image files in the nix store
-    doCheck = false;
-
-    nativeBuildInputs = with pkgs; [
-      cmake
-      nasm
-      perl
-    ];
-
-    meta = {
-      description = "A powerful Rust image optimization CLI tool inspired by squoosh!.";
-      homepage = "https://github.com/SalOne22/rimage";
-      license = lib.licenses.mit;
-      mainProgram = "rimage";
-    };
-  };
+  cargo-interactive-update = callPackage ./crates/cargo-interactive-update.nix { };
+  leptosfmt = callPackage ./crates/leptosfmt.nix { };
+  neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+  rimage = callPackage ./crates/rimage.nix { };
 in
 {
   environment = {
@@ -101,13 +25,13 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # neovim-nightly # use stable while waiting on treesitter rust issue
+      # neovim
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
       bacon
-      basedpyright # temp build failure, fixed in https://github.com/NixOS/nixpkgs/pull/371176
+      basedpyright
       bat
       bfg-repo-cleaner
       bottom
@@ -156,7 +80,7 @@ in
       luajitPackages.luarocks
       markdown-oxide
       mas
-      neovim
+      neovim-nightly
       netlify-cli
       nil
       nixfmt-rfc-style
