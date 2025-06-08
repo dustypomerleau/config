@@ -1,7 +1,3 @@
-# note: mold breakage on darwin comes from this commit:
-# https://github.com/NixOS/nixpkgs/commit/59a57736847d941843bc210ca48885b2f771462f
-# from pull:
-# https://github.com/NixOS/nixpkgs/pull/406936
 {
   inputs,
   pkgs,
