@@ -71,6 +71,21 @@ return {
             vim.lsp.enable("nil_ls")
             vim.lsp.config("nil_ls", { capabilities = capabilities })
 
+            vim.lsp.enable("oxlint")
+            vim.lsp.config("oxlint", {
+                capabilities = capabilities,
+
+                filetypes = {
+                    "javascript",
+                    "javascript.jsx",
+                    "javascriptreact",
+                    "svelte",
+                    "typescript",
+                    "typescript.tsx",
+                    "typescriptreact",
+                },
+            })
+
             vim.lsp.enable("svelte")
             vim.lsp.config("svelte", { capabilities = capabilities })
 

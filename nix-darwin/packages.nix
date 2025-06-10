@@ -85,6 +85,7 @@ in
       ocrmypdf
       opentofu
       opentofu-ls
+      oxlint
       pandoc
       parallel
       pipe-rename
