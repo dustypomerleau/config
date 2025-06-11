@@ -86,7 +86,6 @@ in
       nomino
       ocrmypdf
       opentofu
-      opentofu-ls
       oxlint_1
       pandoc
       parallel
@@ -116,6 +115,7 @@ in
       tinymist
       tmux
       tmuxp # docs: https://tmuxp.git-pull.com/
+      tofu-ls
       tokei
       trash-cli # trash goes to ~/.local/share/Trash/
       typst
