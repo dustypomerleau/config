@@ -9,6 +9,7 @@ let
   cargo-interactive-update = callPackage ./crates/cargo-interactive-update.nix { };
   leptosfmt = callPackage ./crates/leptosfmt.nix { };
   # neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+  oxlint_1 = callPackage ./npm/oxlint.nix { };
   rimage = callPackage ./crates/rimage.nix { };
 in
 {
@@ -21,6 +22,7 @@ in
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
       # neovim-nightly # use stable due to treesitter rust issues
+      # oxlint
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -85,7 +87,7 @@ in
       ocrmypdf
       opentofu
       opentofu-ls
-      oxlint
+      oxlint_1
       pandoc
       parallel
       pipe-rename
