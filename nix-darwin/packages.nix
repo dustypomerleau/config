@@ -107,7 +107,6 @@ in
       svelte-language-server
       taplo
       tealdeer
-      terraform-ls # replace with https://github.com/opentofu/tofu-ls/ when it comes out of alpha
       tesseract
       tex-fmt
       texlab
