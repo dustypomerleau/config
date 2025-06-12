@@ -1,5 +1,3 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 vim.g.rustaceanvim = {
     server = {
         settings = {
@@ -17,7 +15,6 @@ vim.g.rustaceanvim = {
                 -- procMacro = { ignored = { leptos_macro = { "component", "server" } } },
                 workspace = { symbol = { search = { kind = "all_symbols" } } },
             },
-            capabilities = capabilities,
         },
     },
 }

@@ -2,9 +2,17 @@ return {
     {
         "Saecki/crates.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
-        -- tag = "stable", -- uncomment to switch from nightly to stable
         event = { "BufRead Cargo.toml" },
-        opts = { completion = { cmp = { enabled = true } } },
+
+        opts = {
+            lsp = {
+                enabled = true,
+                actions = true,
+                completion = true,
+                hover = true,
+            },
+        },
+
         keys = {
             {
                 "<localleader>ra",

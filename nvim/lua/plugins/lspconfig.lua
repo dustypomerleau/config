@@ -4,19 +4,14 @@
 -- You can paste icons directly from nerd fonts:
 -- https://www.nerdfonts.com/cheat-sheet
 
+-- rust analyzer config is in rustaceanvim.lua
+-- vtsls config is in vtsls.lua
+
 return {
     {
         "neovim/nvim-lspconfig",
         event = "VeryLazy",
-        opts = {
-            -- rust_analyzer is set up by rustaceanvim, these opts supposedly avoid duplication,
-            -- see :h rustaceanvim.mason
-            servers = { rust_analyzer = {} },
-            setup = { rust_analyzer = function() return true end },
-        },
         config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
             -- configure error icons and formatting of diagnostics
             vim.diagnostic.config({
                 underline = true,
@@ -40,8 +35,7 @@ return {
                 },
             })
 
-            -- rust analyzer config is in rustaceanvim.lua
-            -- vtsls config is in vtsls.lua
+            local capabilities = require("blink.cmp").get_lsp_capabilities()
 
             vim.lsp.enable("basedpyright")
             vim.lsp.config("basedpyright", { capabilities = capabilities })
@@ -60,14 +54,13 @@ return {
 
             vim.lsp.enable("markdown_oxide")
             vim.lsp.config("markdown_oxide", {
-                capabilities = vim.tbl_deep_extend("force", capabilities, {
-                    workspace = {
-                        didChangeWatchedFiles = { dynamicRegistration = true },
-                    },
-                }),
+                capabilities = vim.tbl_deep_extend(
+                    "force",
+                    capabilities,
+                    { workspace = { didChangeWatchedFiles = { dynamicRegistration = true } } }
+                ),
             })
 
-            -- LS for Nix, by Oxalica
             vim.lsp.enable("nil_ls")
             vim.lsp.config("nil_ls", { capabilities = capabilities })
 
@@ -99,6 +92,7 @@ return {
             vim.lsp.enable("texlab")
             vim.lsp.config("texlab", {
                 capabilities = capabilities,
+
                 settings = {
                     texlab = {
                         build = {
@@ -125,10 +119,10 @@ return {
 
             -- LS for Typst
             vim.lsp.enable("tinymist")
-            vim.lsp.config("tinymist", {
-                capabilities = capabilities,
-                settings = { exportPdf = "onSave" },
-            })
+            vim.lsp.config(
+                "tinymist",
+                { capabilities = capabilities, settings = { exportPdf = "onSave" } }
+            )
 
             local util = require("lspconfig.util")
             vim.lsp.enable("taplo")

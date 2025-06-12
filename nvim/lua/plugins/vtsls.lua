@@ -2,7 +2,6 @@ return {
     {
         "yioneko/nvim-vtsls",
         config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local configs = require("lspconfig.configs")
             local lsp = require("lspconfig")
 
@@ -23,7 +22,6 @@ return {
                         },
                     },
                 },
-                capabilities = capabilities,
             })
         end,
     },
