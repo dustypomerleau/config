@@ -4,6 +4,7 @@ return {
         "stevearc/conform.nvim",
         -- enabled = false, -- toggle if you need to turn formatting off for some reason
         event = "VeryLazy",
+
         config = function()
             require("conform").setup({
                 formatters = {
@@ -12,6 +13,7 @@ return {
                     },
                     ["tex-fmt"] = { prepend_args = { "--tabsize", "4", "--wraplen", "100" } },
                 },
+
                 formatters_by_ft = {
                     -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
                     css = { "prettierd", "prettier", stop_after_first = true },
@@ -28,6 +30,7 @@ return {
                     typst = { "prettypst", "typstyle", stop_after_first = true },
                     yaml = { "yamlfmt" },
                 },
+
                 -- setting format_on_save will automatically generate an autocommand like:
                 -- vim.api.nvim_create_autocmd("BufWritePre", {
                 --     pattern = "*",
@@ -42,5 +45,14 @@ return {
                 },
             })
         end,
+
+        keys = {
+            {
+                "<localleader>f",
+                "<cmd>ConformInfo<cr>",
+                mode = { "n" },
+                noremap = true,
+            },
+        },
     },
 }
