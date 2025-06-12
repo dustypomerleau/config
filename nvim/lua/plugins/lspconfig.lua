@@ -90,7 +90,10 @@ return {
             vim.lsp.config("svelte", { capabilities = capabilities })
 
             vim.lsp.enable("tofu_ls")
-            vim.lsp.config("tofu_ls", { capabilities = capabilities })
+            vim.lsp.config("tofu_ls", {
+                capabilities = capabilities,
+                filetypes = { "opentofu", "opentofu-vars", "terraform" },
+            })
 
             -- todo: troubleshoot, as these settings are not being applied
             vim.lsp.enable("texlab")
