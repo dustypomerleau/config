@@ -1,11 +1,15 @@
 return {
     {
         "OXY2DEV/markview.nvim",
-        lazy = false,
+        version = "*",
+
         dependencies = {
             "nvim-treesitter/nvim-treesitter",
             "nvim-tree/nvim-web-devicons",
         },
+
+        lazy = false,
+
         keys = {
             {
                 "<localleader>w",

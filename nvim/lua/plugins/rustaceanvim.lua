@@ -5,12 +5,14 @@ vim.g.rustaceanvim = {
                 -- for a list of all possible config, see:
                 -- https://github.com/rust-lang/rust-analyzer/blob/master/crates/rust-analyzer/src/config.rs
                 cargo = { features = "all" },
+
                 check = {
                     allTargets = true,
                     features = "all",
                     command = "clippy",
                     extraArgs = { "--no-deps" },
                 },
+
                 inlayHints = { maxLength = 100 },
                 -- procMacro = { ignored = { leptos_macro = { "component", "server" } } },
                 workspace = { symbol = { search = { kind = "all_symbols" } } },
@@ -22,8 +24,9 @@ vim.g.rustaceanvim = {
 return {
     {
         "mrcjkb/rustaceanvim",
-        version = "*", -- pin to releases, but allow majors
+        version = "*",
         lazy = false, -- the plugin handles its own lazy loading
+
         keys = {
             {
                 "<localleader>sj",

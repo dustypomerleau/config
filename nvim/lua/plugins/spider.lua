@@ -1,7 +1,9 @@
 return {
     {
         "chrisgrieser/nvim-spider",
+        version = false,
         config = true,
+
         keys = {
             {
                 "b",

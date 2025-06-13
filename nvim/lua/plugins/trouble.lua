@@ -1,7 +1,9 @@
 return {
     {
         "folke/trouble.nvim",
+        version = "*",
         event = "VeryLazy",
+
         opts = {
             modes = {
                 diagnostics = { -- use `s` to cycle the filter
@@ -14,10 +16,12 @@ return {
                     },
                 },
             },
+
             focus = true,
             warn_no_results = false,
             open_no_results = true,
         },
+
         keys = {
             {
                 "<leader>d",

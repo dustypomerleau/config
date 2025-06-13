@@ -2,6 +2,7 @@ return {
     {
         "Saecki/crates.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
+        version = "*",
         event = { "BufRead Cargo.toml" },
 
         opts = {

@@ -1,7 +1,9 @@
 return {
     {
         "kylechui/nvim-surround",
+        version = "*",
         event = "BufEnter",
+
         config = function()
             -- avoid conflicts with flash by changing sS to oO
             require("nvim-surround").setup({

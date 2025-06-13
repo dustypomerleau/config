@@ -13,8 +13,10 @@ end
 return {
     {
         "lewis6991/gitsigns.nvim",
+        version = "*",
         event = "VeryLazy",
         config = true,
+
         keys = {
             {
                 "<leader><leader>g",

@@ -1,7 +1,9 @@
 return {
     {
         "numtostr/comment.nvim",
+        version = false,
         event = "BufEnter",
+
         config = function()
             require("Comment").setup({})
             local ft = require("Comment.ft")

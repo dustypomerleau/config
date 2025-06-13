@@ -1,6 +1,8 @@
 return {
     {
         "yioneko/nvim-vtsls",
+        version = false,
+
         config = function()
             local configs = require("lspconfig.configs")
             local lsp = require("lspconfig")

@@ -3,6 +3,7 @@ return {
         "echasnovski/mini.nvim",
         version = "*",
         event = "VeryLazy",
+
         config = function()
             require("mini.ai").setup({})
 
@@ -23,6 +24,7 @@ return {
                     table.sort(notif_arr, function(a, b) return a.ts_update > b.ts_update end)
                     return notif_arr
                 end,
+
                 lsp_progress = { duration_last = 200 },
                 window = { config = win_config, max_width_share = 0.5 },
             })
@@ -38,6 +40,7 @@ return {
 
             -- using nvim-surround rather than mini.surround due to binding conflicts
         end,
+
         keys = {
             {
                 "-",

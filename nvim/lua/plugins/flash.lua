@@ -1,7 +1,9 @@
 return {
     {
         "folke/flash.nvim",
+        version = "*",
         event = "BufEnter",
+
         opts = {
             labels = "tnseriaodhcplfuwygmqvkzxjb",
             -- search = {
@@ -247,6 +249,7 @@ return {
             --     motion = false,
             -- },
         },
+
         keys = {
             {
                 "s",

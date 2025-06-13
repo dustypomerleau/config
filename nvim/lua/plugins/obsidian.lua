@@ -1,15 +1,17 @@
 return {
     {
         "obsidian-nvim/obsidian.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
         version = "*",
+        dependencies = { "nvim-lua/plenary.nvim" },
         ft = "markdown",
+
         opts = {
             daily_notes = {
                 folder = "daily",
                 date_format = "%Y%m%d",
                 template = "daily-template.md",
             },
+
             mappings = {
                 -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
                 ["gf"] = {
@@ -22,12 +24,15 @@ return {
                     opts = { buffer = true, expr = true },
                 },
             },
+
             templates = {
                 subdir = "templates",
                 date_format = "%Y%m%d",
                 time_format = "%H:%M",
             },
+
             ui = { enable = false },
+
             workspaces = {
                 {
                     name = "mind",
@@ -35,6 +40,7 @@ return {
                 },
             },
         },
+
         keys = {
             {
                 "<localleader>ob",
@@ -54,7 +60,6 @@ return {
                 mode = { "n" },
                 desc = "Obsidian: daily notes",
             },
-
             {
                 "<localleader>ol",
                 "<cmd>ObsidianLinks<cr>",

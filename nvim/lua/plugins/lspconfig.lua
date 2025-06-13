@@ -10,7 +10,9 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        version = "*",
         event = "VeryLazy",
+
         config = function()
             -- configure error icons and formatting of diagnostics
             vim.diagnostic.config({

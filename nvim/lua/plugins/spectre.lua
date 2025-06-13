@@ -15,12 +15,15 @@
 return {
     {
         "nvim-pack/nvim-spectre",
+        version = false,
         dependencies = { "nvim-lua/plenary.nvim" },
+
         config = function()
             require("spectre").setup({
                 default = { replace = { cmd = "oxi" } },
             })
         end,
+
         keys = {
             {
                 "<leader>e",

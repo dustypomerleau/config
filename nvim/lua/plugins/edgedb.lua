@@ -1,1 +1,1 @@
-return { { "edgedb/edgedb-vim", ft = { "edgeql", "gel" } } }
+return { { "edgedb/edgedb-vim", version = false, ft = { "edgeql", "gel" } } }

@@ -1,8 +1,10 @@
 return {
     {
         "chomosuke/typst-preview.nvim",
+        version = "*",
         ft = "typst",
         config = true,
+
         keys = {
             {
                 "<localleader>t",
