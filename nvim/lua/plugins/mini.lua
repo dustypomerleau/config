@@ -35,12 +35,6 @@ return {
                 mode = { "n" },
                 noremap = true,
             },
-            {
-                "<localleader>n",
-                "<cmd>lua MiniNotify.show_history()<cr>",
-                mode = { "n" },
-                noremap = true,
-            },
         },
     },
 }

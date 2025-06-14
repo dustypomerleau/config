@@ -82,5 +82,14 @@ return {
             statuscolumn = { enabled = false },
             words = { enabled = false },
         },
+
+        keys = {
+            {
+                "<localleader>n",
+                "<cmd>lua Snacks.notifier.show_history()<cr>",
+                mode = { "n" },
+                noremap = true,
+            },
+        },
     },
 }
