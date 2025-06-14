@@ -65,7 +65,7 @@ return {
                 scope = {
                     enabled = true,
                     priority = 200,
-                    hl = { "SnacksIndent1", "SnacksIndent2", "SnacksIndent3" },
+                    hl = { "SnacksIndentRed", "SnacksIndentYellow", "SnacksIndentBlue" },
                 },
             },
 
