@@ -17,7 +17,6 @@
     };
 
     fenix = {
-      # url = "git+file:///Users/dn/me/er/fenix"; # for local testing
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
