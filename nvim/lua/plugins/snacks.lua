@@ -85,6 +85,24 @@ return {
 
         keys = {
             {
+                "<leader>x",
+                "<cmd>lua Snacks.bufdelete()<cr>",
+                mode = { "n" },
+                noremap = true,
+            },
+            {
+                "<leader>X",
+                "<cmd>lua Snacks.bufdelete.all()<cr>",
+                mode = { "n" },
+                noremap = true,
+            },
+            {
+                "<leader>z",
+                "<cmd>lua Snacks.bufdelete.other()<cr>",
+                mode = { "n" },
+                noremap = true,
+            },
+            {
                 "<localleader>n",
                 "<cmd>lua Snacks.notifier.show_history()<cr>",
                 mode = { "n" },
