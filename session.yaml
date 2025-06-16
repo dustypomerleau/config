@@ -2,7 +2,7 @@ session_name: config
 windows:
   - window_name: nvim
     panes:
-      - nvim nix-darwin/packages.nix
+      - nvim
   - window_name: fish
     focus: true
     panes:
