@@ -9,6 +9,7 @@ return {
         },
 
         lazy = false,
+        opts = { preview = { enable = false } },
 
         keys = {
             {
