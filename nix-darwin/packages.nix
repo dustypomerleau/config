@@ -4,15 +4,14 @@
 }:
 
 let
-  inherit (pkgs) callPackage;
-
-  cargo-interactive-update = callPackage ./crates/cargo-interactive-update.nix { };
-  leptosfmt = callPackage ./crates/leptosfmt.nix { };
   # neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-  oxlint_1 = callPackage ./npm/oxlint.nix { };
-  rimage = callPackage ./crates/rimage.nix { };
 in
 {
+  imports = [
+    ./crates
+    ./npm
+  ];
+
   environment = {
     shells = with pkgs; [
       zsh
@@ -22,7 +21,7 @@ in
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
       # neovim-nightly # use stable due to treesitter rust issues
-      # oxlint
+      # oxlint # custom in ./npm
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -38,7 +37,6 @@ in
       cargo-expand
       cargo-feature
       cargo-generate
-      cargo-interactive-update
       cargo-leptos
       cargo-make
       cargo-nextest
@@ -70,7 +68,6 @@ in
       jujutsu
       kind
       kubectl
-      leptosfmt
       libressl_3_8
       lua-language-server
       luajitPackages.luacheck
@@ -86,7 +83,6 @@ in
       nomino
       ocrmypdf
       opentofu
-      oxlint_1
       pandoc
       parallel
       pipe-rename
@@ -99,7 +95,6 @@ in
       prettypst
       python3
       qmk
-      rimage
       ripgrep
       ripgrep-all
       sqlx-cli
