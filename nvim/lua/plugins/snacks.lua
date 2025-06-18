@@ -51,6 +51,7 @@ return {
     {
         "folke/snacks.nvim",
         version = "*",
+        dependencies = { "nvim-tree/nvim-web-devicons" }, -- optional dep for icon support
         priority = 1000,
         lazy = false,
 
