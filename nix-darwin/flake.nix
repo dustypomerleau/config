@@ -12,7 +12,7 @@
   inputs = {
     darwin = {
       # url = "git+file///Users/dn/me/er/nix-darwin"; # for local testing
-      url = "github:lnl7/nix-darwin";
+      url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
