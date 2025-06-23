@@ -1,6 +1,8 @@
 { specialArgs, ... }:
 {
   networking = {
+    applicationFirewall.enable = true;
+
     dns = [
       # cloudflare
       "2606:4700:4700::1111"
@@ -102,8 +104,6 @@
       SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
       WindowManager.StandardHideDesktopIcons = true;
       WindowManager.StandardHideWidgets = true;
-
-      alf.globalstate = 1; # firewall enabled
 
       dock = {
         autohide = true;
