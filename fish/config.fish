@@ -58,6 +58,7 @@ abbr --add cb "cargo build"
 abbr --add ch "cargo check"
 abbr --add chmod "uutils-chmod"
 abbr --add ci "crates-tui"
+abbr --add cl "cargo leptos watch"
 abbr --add cn "cargo nextest run --no-capture"
 abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "uutils-cp -irv"
