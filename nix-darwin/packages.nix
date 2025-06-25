@@ -8,8 +8,9 @@ let
 in
 {
   imports = [
-    ./crates
-    ./npm
+    ./node
+    ./python
+    ./rust
   ];
 
   environment = {
@@ -21,7 +22,6 @@ in
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
       # neovim-nightly # use stable due to treesitter rust issues
-      # oxlint # custom in ./npm
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -93,7 +93,6 @@ in
       postgresql_16
       prettierd
       prettypst
-      python3
       qmk
       ripgrep
       ripgrep-all
