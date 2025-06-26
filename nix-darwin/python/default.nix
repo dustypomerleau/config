@@ -3,6 +3,7 @@
 let
   inherit (pkgs.python3Packages) callPackage;
   kaleido = callPackage ./kaleido.nix { };
+
 in
 {
   environment.systemPackages = with pkgs; [
