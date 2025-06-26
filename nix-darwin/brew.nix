@@ -29,6 +29,7 @@
       "element"
       "figma"
       "firefox"
+      "google-chrome"
       "google-drive"
       "inkscape"
       "insomnia"
