@@ -64,6 +64,7 @@ abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "uutils-cp -irv"
 abbr --add cr "cargo run"
 abbr --add ct "cargo test -- --nocapture"
+abbr --add cta "cargo test --all-features -- --nocapture"
 abbr --add ctc "cargo test"
 abbr --add ctr "cargo tree --depth"
 abbr --add cu "cargo update"
