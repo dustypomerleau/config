@@ -2,12 +2,13 @@
 # nix-instantiate --eval-only --expr '(import <nixpkgs> {}).<package-name>.outPath'
 
 {
+  inputs,
   pkgs,
   ...
 }:
 
 let
-  # neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+  neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 in
 {
   imports = [
@@ -24,7 +25,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # neovim-nightly # use stable due to treesitter rust issues
+      # neovim
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -77,7 +78,7 @@ in
       luajitPackages.luarocks
       markdown-oxide
       mas
-      neovim
+      neovim-nightly # use stable if you run into treesitter rust issues
       netlify-cli
       nil
       nixfmt-rfc-style

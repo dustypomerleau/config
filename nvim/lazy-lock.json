@@ -26,14 +26,14 @@
   "obsidian.nvim": { "branch": "main", "commit": "2f0222b3eb20382cadf3e1d91f368318b768771c" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "1ab18259472d9fe5756750fec722c31bab1712da" },
-  "rustaceanvim": { "branch": "master", "commit": "b554761a920d807c3a7e8388d0dd34205ae4fd0d" },
+  "rustaceanvim": { "branch": "master", "commit": "322224d00a731d75eed6b700d38e460fd30f6e3c" },
   "snacks.nvim": { "branch": "main", "commit": "5eac729fa290248acfe10916d92a5ed5e5c0f9ed" },
   "telescope-undo.nvim": { "branch": "main", "commit": "928d0c2dc9606e01e2cc547196f48d2eaecf58e5" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "tol.nvim": { "branch": "dev", "commit": "1a18f62e1aa1b81bc1c2ff3fa1b0055025920186" },
   "trouble.nvim": { "branch": "main", "commit": "748ca2789044607f19786b1d837044544c55e80a" },
   "typst-preview.nvim": { "branch": "master", "commit": "dea4525d5420b7c32eebda7de15a6beb9d6574fa" },
-  "vimtex": { "branch": "master", "commit": "8f8a5176b33856cf4dba9ae59f827b8deecc44c9" },
+  "vimtex": { "branch": "master", "commit": "1081af7e0cf298964d0bf08311276788ecb92085" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
   "yanky.nvim": { "branch": "main", "commit": "04775cc6e10ef038c397c407bc17f00a2f52b378" }
 }
