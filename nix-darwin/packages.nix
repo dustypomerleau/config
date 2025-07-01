@@ -25,6 +25,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # evcxr # broken panic
       # neovim
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
@@ -52,7 +53,6 @@ in
       cmake
       curl
       delta
-      evcxr
       eza
       fd
       ffmpeg_7
