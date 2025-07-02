@@ -72,7 +72,7 @@ in
       jujutsu
       kind
       kubectl
-      libressl_3_8
+      libressl
       lua-language-server
       luajitPackages.luacheck
       luajitPackages.luarocks
