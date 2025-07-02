@@ -2,7 +2,7 @@
   "arshlib.nvim": { "branch": "master", "commit": "111fd439268adda206a24b133096893869a50764" },
   "blink.cmp": { "branch": "main", "commit": "9bcb14b43852a6f2bfd5ac9ef29cb5cf09b1b39b" },
   "comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
-  "conform.nvim": { "branch": "master", "commit": "4c9003aab62879612c50136649baa1b8ed36cfa1" },
+  "conform.nvim": { "branch": "master", "commit": "f54259518695178168fbad442468e25f121230d4" },
   "crates.nvim": { "branch": "main", "commit": "afcd1cc3eeceb5783676fc8464389b9216a29d05" },
   "edgedb-vim": { "branch": "master", "commit": "7f2516bec3a5ad137347fb703d0b2c88f1478f5b" },
   "flash.nvim": { "branch": "main", "commit": "ec0bf2842189f65f60fd40bf3557cac1029cc932" },
@@ -33,7 +33,7 @@
   "tol.nvim": { "branch": "dev", "commit": "1a18f62e1aa1b81bc1c2ff3fa1b0055025920186" },
   "trouble.nvim": { "branch": "main", "commit": "748ca2789044607f19786b1d837044544c55e80a" },
   "typst-preview.nvim": { "branch": "master", "commit": "dea4525d5420b7c32eebda7de15a6beb9d6574fa" },
-  "vimtex": { "branch": "master", "commit": "264230b18e2a4b70a935b3462a24ecc0c3850c01" },
+  "vimtex": { "branch": "master", "commit": "7f2633027c8f496a85284de0c11aa32f1e07e049" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
   "yanky.nvim": { "branch": "main", "commit": "04775cc6e10ef038c397c407bc17f00a2f52b378" }
 }
