@@ -55,6 +55,8 @@ abbr --add ..... "../../../.."
 abbr --add b "br" # br is a specific verb within broot
 abbr --add bo "btm"
 abbr --add cb "cargo build"
+abbr --add cg "cargo upgrade"
+abbr --add cgd "cargo upgrade --dry-run"
 abbr --add ch "cargo check"
 abbr --add chmod "uutils-chmod"
 abbr --add ci "crates-tui"
