@@ -34,7 +34,9 @@ name = "Dusty Pomerleau"
 
 [git]
 auto-local-bookmark = false
-push-bookmark-prefix = ""
+
+[templates]
+git-push-bookmark = "change_id.short()"
 
 [template-aliases]
 "format_short_id(id)" = "id.shortest()"
