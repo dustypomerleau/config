@@ -29,6 +29,7 @@ key("n", "<localleader>m", [[:let @+ = expand("%:p")<cr>]], nrs) -- yank current
 key("n", "<localleader>p", "<cmd>pwd<cr>", nr)
 key("n", "<localleader>sa", "<cmd>lua vim.lsp.buf.code_action()<cr>", nrs)
 key("n", "<localleader>sd", "<cmd>lua vim.lsp.buf.definition()<cr>", nrs)
+key("n", "<localleader>se", "<cmd>LspRestart<cr>", nr)
 key("n", "<localleader>si", "<cmd>lua vim.lsp.buf.implementation()<cr>", nrs)
 key("n", "<localleader>sn", "<cmd>lua vim.lsp.buf.rename()<cr>", nrs)
 key("n", "<localleader>sr", "<cmd>lua vim.lsp.buf.references()<cr>", nrs)
