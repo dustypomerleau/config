@@ -41,6 +41,7 @@ in
       cargo-expand
       cargo-feature
       cargo-generate
+      cargo-insta
       cargo-leptos
       cargo-make
       cargo-nextest
