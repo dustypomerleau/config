@@ -14,7 +14,7 @@
     # if you want to install HEAD or pass other arguments, you can pass a derivation instead of just a string
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
-    brews = [ ];
+    brews = [ "ocrmypdf" ];
 
     casks = [
       "1password"

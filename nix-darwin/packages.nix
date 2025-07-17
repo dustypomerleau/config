@@ -27,6 +27,7 @@ in
     systemPackages = with pkgs; [
       # neovim # use nightly
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
+      # ocrmypdf # temp brew 2/2 build failure 20250717
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -85,7 +86,6 @@ in
       nodePackages.svgo
       nodejs_24
       nomino
-      ocrmypdf
       opentofu
       pandoc
       parallel
