@@ -6,6 +6,16 @@
 # to add a linux builder, you can follow the flake example here:
 # https://ryantm.github.io/nixpkgs/builders/special/darwin-builder/#sec-darwin-builder
 
+# If there is a problem with the Lix daemon, you can revert with:
+#
+# sudo darwin-rebuild --list-generations
+# (find an old generation that might be good)
+# sudo darwin-rebuild --switch-generation <generation-number>
+
+# If you were not on nix-darwin, it would be:
+# sudo nix-env --rollback -p /nix/var/nix/profiles/default
+# sudo launchctl kickstart -k system/org.nixos.nix-daemon
+
 {
   description = "DP MBP system flake";
 

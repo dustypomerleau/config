@@ -25,10 +25,10 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # neovim # use nightly
-      # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
-      # ocrmypdf # temp brew 2/2 build failure 20250717
       # cargo-semver-checks # build failure
+      # neovim # use nightly
+      # ocrmypdf # temp brew 2/2 build failure 20250717
+      # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
