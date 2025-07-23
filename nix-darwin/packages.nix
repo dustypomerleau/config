@@ -28,6 +28,7 @@ in
       # neovim # use nightly
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       # ocrmypdf # temp brew 2/2 build failure 20250717
+      # cargo-semver-checks # build failure
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -47,7 +48,6 @@ in
       cargo-make
       cargo-nextest
       cargo-outdated
-      cargo-semver-checks
       cargo-update
       cargo-watch
       clang-tools
