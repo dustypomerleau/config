@@ -35,7 +35,6 @@
       "insomnia"
       "karabiner-elements" # pkgs.karabiner-elements is broken
       "mactex-no-gui"
-      "microsoft-office"
       "obsidian"
       "omnifocus"
       "papers"
@@ -50,6 +49,12 @@
       "visual-studio-code"
       "vivaldi"
       "vlc"
+
+      {
+        name = "microsoft-office";
+        greedy = true;
+      }
+
       # todo: not available from brew: exodus, homerow, openVPN connect
     ];
 
