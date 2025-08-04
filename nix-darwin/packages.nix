@@ -27,7 +27,6 @@ in
     systemPackages = with pkgs; [
       # cargo-semver-checks # build failure
       # neovim # use nightly
-      # ocrmypdf # temp brew 2/2 build failure 20250717
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -86,6 +85,7 @@ in
       nodePackages.svgo
       nodejs_24
       nomino
+      ocrmypdf
       opentofu
       pandoc
       parallel
