@@ -11,7 +11,7 @@
   "indent-tools.nvim": { "branch": "master", "commit": "31b839d65aa04b568fabe5e100a63cc44ef3f5d5" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lualine.nvim": { "branch": "master", "commit": "a94fc68960665e54408fe37dcf573193c4ce82c9" },
-  "markview.nvim": { "branch": "main", "commit": "b8465d5993e173bec7c2d103949bc54bb526214c" },
+  "markview.nvim": { "branch": "main", "commit": "2d68c060ad4387d9895577af43c3ace41a80de5d" },
   "mini.nvim": { "branch": "main", "commit": "94cae4660a8b2d95dbbd56e1fbc6fcfa2716d152" },
   "nvim-autopairs": { "branch": "master", "commit": "23320e75953ac82e559c610bec5a90d9c6dfa743" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "16597180b4dd81fa3d23d88c4d2f1b49154f9479" },
