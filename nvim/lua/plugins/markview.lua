@@ -9,7 +9,11 @@ return {
         },
 
         lazy = false,
-        opts = { preview = { enable = false } },
+        opts = {
+            -- prevents a warning if nvim-treesitter loads first
+            experimental = { check_rtp = false },
+            preview = { enable = false },
+        },
 
         keys = {
             {

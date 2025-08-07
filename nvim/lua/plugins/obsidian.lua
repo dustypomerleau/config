@@ -6,23 +6,12 @@ return {
         ft = "markdown",
 
         opts = {
+            legacy_commands = false, -- suppress warnings until v4 release.
+
             daily_notes = {
                 folder = "daily",
                 date_format = "%Y%m%d",
                 template = "daily-template.md",
-            },
-
-            mappings = {
-                -- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
-                ["gf"] = {
-                    action = function() return require("obsidian").util.gf_passthrough() end,
-                    opts = { noremap = false, expr = true, buffer = true },
-                },
-                -- Smart action depending on context, either follow link or toggle checkbox.
-                ["<cr>"] = {
-                    action = function() return require("obsidian").util.smart_action() end,
-                    opts = { buffer = true, expr = true },
-                },
             },
 
             templates = {
@@ -44,7 +33,7 @@ return {
         keys = {
             {
                 "<localleader>ob",
-                "<cmd>ObsidianBacklinks<cr>",
+                "<cmd>Obsidian backlinks<cr>",
                 mode = { "n" },
                 desc = "Obsidian: backlinks",
             },
@@ -56,25 +45,25 @@ return {
             },
             {
                 "<localleader>od",
-                "<cmd>ObsidianDailies<cr>",
+                "<cmd>Obsidian dailies<cr>",
                 mode = { "n" },
                 desc = "Obsidian: daily notes",
             },
             {
                 "<localleader>ol",
-                "<cmd>ObsidianLinks<cr>",
+                "<cmd>Obsidian links<cr>",
                 mode = { "n" },
                 desc = "Obsidian: links",
             },
             {
                 "<localleader>ot",
-                "<cmd>ObsidianTags<cr>",
+                "<cmd>Obsidian tags<cr>",
                 mode = { "n" },
                 desc = "Obsidian: tags",
             },
             {
                 "<localleader>on",
-                "<cmd>ObsidianNewFromTemplate<cr>",
+                "<cmd>Obsidian new_from_template<cr>",
                 mode = { "n" },
                 desc = "Obsidian: new from template",
             },
