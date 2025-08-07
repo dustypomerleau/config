@@ -42,6 +42,7 @@ git-push-bookmark = "change_id.short()"
 "format_short_id(id)" = "id.shortest()"
 
 [ui]
+diff-editor = ":builtin"
 diff-formatter = ":git"
 editor = "nvim"
 merge-editor = "vscode"
