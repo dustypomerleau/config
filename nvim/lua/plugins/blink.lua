@@ -14,7 +14,13 @@ return {
             completion = {
                 documentation = { auto_show = true },
                 ghost_text = { enabled = true },
-                list = { selection = { auto_insert = true, preselect = false } },
+                list = {
+                    selection = {
+                        -- `auto_insert = false` due to https://github.com/Saghen/blink.cmp/issues/1736
+                        auto_insert = false,
+                        preselect = false,
+                    },
+                },
                 menu = { max_height = 15 },
             },
 
