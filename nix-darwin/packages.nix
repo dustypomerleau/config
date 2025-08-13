@@ -13,7 +13,7 @@ in
 {
   imports = [
     ./node
-    ./python
+    # ./python # remove for now, as kaleido is no longer needed
     ./rust
   ];
 
