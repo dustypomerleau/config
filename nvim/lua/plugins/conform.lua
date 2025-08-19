@@ -17,17 +17,17 @@ return {
 
                 formatters_by_ft = {
                     -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
-                    css = { "prettierd", "prettier", stop_after_first = true },
-                    javascript = { "prettierd", "prettier", stop_after_first = true },
-                    json = { "prettierd", "prettier", stop_after_first = true },
-                    jsonc = { "prettierd", "prettier", stop_after_first = true },
+                    css = { "prettier" },
+                    javascript = { "prettier" },
+                    json = { "prettier" },
+                    jsonc = { "prettier" },
                     lua = { "stylua" }, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
-                    markdown = { "prettierd", "prettier", stop_after_first = true },
+                    markdown = { "prettier" },
                     nix = { "nixfmt" },
-                    svelte = { "prettierd", "prettier", stop_after_first = true },
+                    svelte = { "prettier" },
                     tex = { "tex-fmt", lsp_fallback = "never" },
                     toml = { "taplo" },
-                    typescript = { "prettierd", "prettier", stop_after_first = true },
+                    typescript = { "prettier" },
                     typst = { "prettypst", "typstyle", stop_after_first = true },
                     yaml = { "yamlfmt" },
                 },

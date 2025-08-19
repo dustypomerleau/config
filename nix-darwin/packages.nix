@@ -95,7 +95,6 @@ in
       podman
       pom
       postgresql_16
-      prettierd
       prettypst
       qmk
       ripgrep
