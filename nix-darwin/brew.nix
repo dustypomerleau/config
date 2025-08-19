@@ -23,6 +23,7 @@
       "alfred"
       "arq"
       "citrix-workspace"
+      "clariti"
       "daisydisk"
       "discord"
       "dropbox"
