@@ -215,6 +215,7 @@ abbr --add plg "pnpm list -g -depth 0"
 abbr --add po "pnpm outdated"
 abbr --add pr "pnpm run"
 abbr --add pu "pnpm update"
+abbr --add pui "pnpm update -i"
 abbr --add pug "pnpm update -g"
 abbr --add pul "pnpm update --latest" # ignores package.json and fetches latest
 abbr --add px "pnpm dlx" # equivalent to npx
