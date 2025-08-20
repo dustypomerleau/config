@@ -9,6 +9,8 @@ return {
         config = function()
             require("conform").setup({
                 formatters = {
+                    -- The --experimental-cli flag is needed to use @prettier/plugin-oxc.
+                    ["prettier"] = { prepend_args = { "--experimental-cli" } },
                     ["prettypst"] = {
                         prepend_args = { "--use-configuration", "--use-std-in", "--use-std-out" },
                     },
