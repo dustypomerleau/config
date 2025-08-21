@@ -103,6 +103,15 @@
                         "product_id": 42233,
                         "vendor_id": 936
                     }
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 42233,
+                        "vendor_id": 936
+                    },
+                    "ignore_vendor_events": true
                 }
             ],
             "fn_function_keys": [
