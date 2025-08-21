@@ -57,6 +57,8 @@
       }
 
       # todo: not available from brew: exodus, homerow, openVPN connect
+      # todo: affinity products need manual install of apps and plugins at:
+      # https://store.serif.com/en-gb/account/downloads/
     ];
 
     caskArgs.require_sha = false;
