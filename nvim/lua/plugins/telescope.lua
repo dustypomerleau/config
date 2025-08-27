@@ -9,6 +9,8 @@ local extra_args = {
     "!**/.jj/*",
     "--glob",
     "!**/*.min.js",
+    "--glob",
+    "!**/plotly_static/*",
     "--trim",
 }
 
