@@ -1,6 +1,16 @@
 local telescopeConfig = require("telescope.config")
 local rg_args = { unpack(telescopeConfig.values.vimgrep_arguments) }
-local extra_args = { "--hidden", "--glob", "!**/.git/*", "--glob", "!**/.jj/*", "--trim" }
+
+local extra_args = {
+    "--hidden",
+    "--glob",
+    "!**/.git/*",
+    "--glob",
+    "!**/.jj/*",
+    "--glob",
+    "!**/*.min.js",
+    "--trim",
+}
 
 for _, v in ipairs(extra_args) do
     table.insert(rg_args, v)
