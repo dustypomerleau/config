@@ -27,8 +27,8 @@
     };
 
     fenix = {
-      url = "github:dustypomerleau/fenix/sdk"; # until merge of https://github.com/nix-community/fenix/pull/202
-      # url = "github:nix-community/fenix";
+      # url = "github:dustypomerleau/fenix/sdk"; # until merge of https://github.com/nix-community/fenix/pull/202
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
