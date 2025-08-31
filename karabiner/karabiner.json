@@ -85,7 +85,8 @@
                         "is_keyboard": true,
                         "product_id": 50894,
                         "vendor_id": 12951
-                    }
+                    },
+                    "ignore_vendor_events": true
                 },
                 {
                     "disable_built_in_keyboard_if_exists": true,
@@ -93,7 +94,9 @@
                         "is_pointing_device": true,
                         "product_id": 50894,
                         "vendor_id": 12951
-                    }
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true
                 },
                 {
                     "disable_built_in_keyboard_if_exists": true,
