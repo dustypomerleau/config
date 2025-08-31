@@ -36,8 +36,7 @@
         "type": "github"
       },
       "original": {
-        "owner": "dustypomerleau",
-        "ref": "sdk",
+        "owner": "nix-community",
         "repo": "fenix",
         "type": "github"
       }
