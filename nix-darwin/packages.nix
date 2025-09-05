@@ -92,7 +92,7 @@ in
       pipe-rename
       pkg-config
       pnpm
-      podman
+      # podman # build failure @ 5.6.0 2/2 test
       pom
       postgresql_16
       prettypst
