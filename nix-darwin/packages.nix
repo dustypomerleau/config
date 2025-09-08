@@ -25,7 +25,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # podman # build failure @ 5.6.0 2/2 test
+      # neovim
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -78,7 +78,6 @@ in
       luajitPackages.luarocks
       markdown-oxide
       mas
-      # neovim
       neovim-nightly
       netlify-cli
       nil
@@ -93,6 +92,7 @@ in
       pipe-rename
       pkg-config
       pnpm
+      podman
       pom
       postgresql_16
       prettypst
