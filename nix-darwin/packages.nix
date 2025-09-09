@@ -12,6 +12,7 @@ let
 in
 {
   imports = [
+    ./go
     ./node
     # ./python # remove for now, as kaleido is no longer needed
     ./rust
@@ -25,6 +26,7 @@ in
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # cargo-leptos # build yourself to control wasm-bindgen compat
       # neovim
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
@@ -42,7 +44,6 @@ in
       cargo-feature
       cargo-generate
       cargo-insta
-      # cargo-leptos # build yourself to control wasm-bindgen compat
       cargo-make
       cargo-nextest
       cargo-outdated
