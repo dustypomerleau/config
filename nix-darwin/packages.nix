@@ -42,7 +42,7 @@ in
       cargo-feature
       cargo-generate
       cargo-insta
-      cargo-leptos
+      # cargo-leptos # build yourself to control wasm-bindgen compat
       cargo-make
       cargo-nextest
       cargo-outdated
