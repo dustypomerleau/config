@@ -10,6 +10,7 @@ return {
             require("conform").setup({
                 formatters = {
                     -- The --experimental-cli flag is needed to use @prettier/plugin-oxc.
+                    ["dockerfmt"] = { prepend_args = { "--indent=4" } },
                     ["prettier"] = { prepend_args = { "--experimental-cli" } },
                     ["prettypst"] = {
                         prepend_args = { "--use-configuration", "--use-std-in", "--use-std-out" },
@@ -20,6 +21,7 @@ return {
                 formatters_by_ft = {
                     -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
                     css = { "prettier" },
+                    dockerfile = { "dockerfmt" },
                     javascript = { "prettier" },
                     json = { "prettier" },
                     jsonc = { "prettier" },

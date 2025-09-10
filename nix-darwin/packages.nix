@@ -54,6 +54,7 @@ in
       cmake
       curl
       delta
+      dockerfmt
       eza
       fd
       ffmpeg_7
