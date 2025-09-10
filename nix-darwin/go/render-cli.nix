@@ -1,3 +1,6 @@
+# This likely won't work until you follow instructions like in the 'find and move the binary' section here:
+# https://github.com/render-oss/cli/blob/main/bin/install.sh
+
 {
   lib,
   buildGoModule,
