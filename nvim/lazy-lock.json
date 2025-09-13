@@ -33,7 +33,7 @@
   "tol.nvim": { "branch": "dev", "commit": "1a18f62e1aa1b81bc1c2ff3fa1b0055025920186" },
   "trouble.nvim": { "branch": "main", "commit": "748ca2789044607f19786b1d837044544c55e80a" },
   "typst-preview.nvim": { "branch": "master", "commit": "dea4525d5420b7c32eebda7de15a6beb9d6574fa" },
-  "vimtex": { "branch": "master", "commit": "dc90feacb86f7b85b0b791d8073eefc769a23725" },
+  "vimtex": { "branch": "master", "commit": "5626f960be1c0fffeb780d48718709d4830b2c62" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
   "yanky.nvim": { "branch": "main", "commit": "04775cc6e10ef038c397c407bc17f00a2f52b378" }
 }
