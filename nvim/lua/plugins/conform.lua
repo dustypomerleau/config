@@ -11,7 +11,8 @@ return {
                 formatters = {
                     -- The --experimental-cli flag is needed to use @prettier/plugin-oxc.
                     ["dockerfmt"] = { prepend_args = { "--indent=4" } },
-                    ["prettier"] = { prepend_args = { "--experimental-cli" } },
+                    -- adding the flag --experimental-cli is breaking your custom prettier `tabWidth`
+                    -- ["prettier"] = { prepend_args = { "--experimental-cli" } },
                     ["prettypst"] = {
                         prepend_args = { "--use-configuration", "--use-std-in", "--use-std-out" },
                     },
