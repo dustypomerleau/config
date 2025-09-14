@@ -1,4 +1,4 @@
-# note: you can find the installed path for a package with:
+#s note: you can find the installed path for a package with:
 # nix-instantiate --eval-only --expr '(import <nixpkgs> {}).<package-name>.outPath'
 
 {
@@ -27,7 +27,6 @@ in
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
       # cargo-leptos # build yourself to control wasm-bindgen compat
-      # neovim
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -80,6 +79,7 @@ in
       luajitPackages.luarocks
       markdown-oxide
       mas
+      neovim
       neovim-nightly
       netlify-cli
       nil
