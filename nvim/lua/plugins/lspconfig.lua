@@ -39,9 +39,6 @@ return {
 
             local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-            vim.lsp.enable("basedpyright")
-            vim.lsp.config("basedpyright", { capabilities = capabilities })
-
             vim.lsp.enable("clangd")
             vim.lsp.config("clangd", { capabilities = capabilities })
 
@@ -80,6 +77,9 @@ return {
                     "typescriptreact",
                 },
             })
+
+            vim.lsp.enable("ruff")
+            vim.lsp.config("ruff", { capabilities = capabilities })
 
             vim.lsp.enable("svelte")
             vim.lsp.config("svelte", { capabilities = capabilities })

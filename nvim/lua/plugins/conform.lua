@@ -28,6 +28,7 @@ return {
                     lua = { "stylua" }, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
                     markdown = { "prettier" },
                     nix = { "nixfmt" },
+                    python = { "ruff_format" },
                     svelte = { "prettier" },
                     tex = { "tex-fmt", lsp_fallback = "never" },
                     toml = { "taplo" },

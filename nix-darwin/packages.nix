@@ -32,7 +32,6 @@ in
       asciidoctor
       awscli2
       bacon
-      basedpyright
       bat
       bfg-repo-cleaner
       bottom
@@ -101,6 +100,7 @@ in
       qmk
       ripgrep
       ripgrep-all
+      ruff
       sqlx-cli
       stylua
       svelte-language-server
