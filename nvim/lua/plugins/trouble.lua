@@ -1,7 +1,7 @@
 return {
     {
         "folke/trouble.nvim",
-        version = "*",
+        -- version = "*", -- grab main to get the fix
         event = "VeryLazy",
 
         opts = {
