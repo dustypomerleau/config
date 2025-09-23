@@ -91,6 +91,8 @@ return {
             })
 
             -- todo: troubleshoot, as these settings are not being applied
+            -- revisit the wiki as the config has been updated:
+            -- https://github.com/latex-lsp/texlab/wiki/Configuration
             vim.lsp.enable("texlab")
             vim.lsp.config("texlab", {
                 capabilities = capabilities,
