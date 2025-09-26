@@ -9,13 +9,13 @@
 
 buildGoModule rec {
   pname = "render-cli";
-  version = "2.1.5";
+  version = "2.3.0";
 
   src = fetchFromGitHub {
     owner = "render-oss";
     repo = "cli";
     tag = "v${version}";
-    hash = "sha256-SvWU88VwTLYUmVfG5/qs7jazIX7hjV4x+6ZT/7ZBKuQ=";
+    hash = "sha256-dDNSc2o3Hfjq70ZM9ikTYKt1UHx5ut8S2snJE0hLlQc=";
   };
 
   vendorHash = "sha256-BExwkK0EKR0Mtk+bphPD3/4iyAnj942gkGWWTYUIceU=";
@@ -25,6 +25,8 @@ buildGoModule rec {
     "-w"
     "-X main.version=${version}"
   ];
+
+  cargoBuildFlags = [ "--bin=render" ];
 
   doCheck = false; # e2e testing fails
 
