@@ -26,6 +26,7 @@
       "arq"
       "citrix-workspace"
       "clariti"
+      "cloudflare-warp"
       "daisydisk"
       "discord"
       "dropbox"
