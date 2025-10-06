@@ -13,7 +13,7 @@ in
 {
   imports = [
     ./go
-    ./node
+    # ./node # remove for now, install oxlint per-project
     # ./python # remove for now, as kaleido is no longer needed
     ./rust
   ];
