@@ -46,7 +46,7 @@ in
       cargo-nextest
       cargo-outdated
       cargo-semver-checks
-      cargo-update
+      # cargo-update # build failure
       cargo-watch
       clang-tools
       cmake
@@ -121,7 +121,7 @@ in
       typstyle
       uutils-coreutils
       vsce
-      vscode-extensions.vadimcn.vscode-lldb
+      # vscode-extensions.vadimcn.vscode-lldb # build failure
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       vtsls
       wasm-pack
