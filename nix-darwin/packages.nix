@@ -27,13 +27,16 @@ in
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
       # cargo-leptos # build yourself to control wasm-bindgen compat
+      # cargo-update # build failure
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
+      # vscode-extensions.vadimcn.vscode-lldb # build failure
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
       bacon
       bat
       bfg-repo-cleaner
+      binaryen
       bottom
       broot # docs: https://dystroy.org/broot/
       cargo-binstall
@@ -46,7 +49,6 @@ in
       cargo-nextest
       cargo-outdated
       cargo-semver-checks
-      # cargo-update # build failure
       cargo-watch
       clang-tools
       cmake
@@ -121,7 +123,6 @@ in
       typstyle
       uutils-coreutils
       vsce
-      # vscode-extensions.vadimcn.vscode-lldb # build failure
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       vtsls
       wasm-pack
