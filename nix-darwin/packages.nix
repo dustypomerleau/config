@@ -100,6 +100,7 @@ in
       postgresql_16
       prettypst
       qmk
+      railway
       ripgrep
       ripgrep-all
       ruff
