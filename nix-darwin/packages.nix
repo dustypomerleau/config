@@ -11,12 +11,7 @@ let
   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
 in
 {
-  imports = [
-    ./go
-    # ./node # remove for now, install oxlint per-project
-    # ./python # remove for now, as kaleido is no longer needed
-    ./rust
-  ];
+  imports = [ ./rust ];
 
   environment = {
     shells = with pkgs; [
