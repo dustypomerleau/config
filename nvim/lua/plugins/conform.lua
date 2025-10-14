@@ -30,6 +30,7 @@ return {
                     nix = { "nixfmt" },
                     python = { "ruff_format" },
                     svelte = { "prettier" },
+                    svg = { "prettier" },
                     tex = { "tex-fmt", lsp_fallback = "never" },
                     toml = { "taplo" },
                     typescript = { "prettier" },
