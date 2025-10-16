@@ -45,6 +45,30 @@ return {
             vim.lsp.enable("cssls")
             vim.lsp.config("cssls", { capabilities = capabilities })
 
+            vim.lsp.enable("emmet_language_server")
+            vim.lsp.config("emmet_language_server", {
+                capabilities = capabilities,
+
+                filetypes = {
+                    "astro",
+                    "css",
+                    "html",
+                    "htmlangular",
+                    "htmldjango",
+                    "javascript",
+                    "javascriptreact",
+                    "less",
+                    "pug",
+                    "rust",
+                    "sass",
+                    "scss",
+                    "svelte",
+                    "templ",
+                    "typescriptreact",
+                    "vue",
+                },
+            })
+
             vim.lsp.enable("html")
             vim.lsp.config("html", { capabilities = capabilities })
 

@@ -50,6 +50,7 @@ in
       curl
       delta
       dockerfmt
+      emmet-language-server
       eza
       fd
       ffmpeg_7
