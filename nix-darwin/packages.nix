@@ -24,7 +24,6 @@ in
       # cargo-leptos # build yourself to control wasm-bindgen compat
       # cargo-update # build failure
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
-      # vscode-extensions.vadimcn.vscode-lldb # build failure
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -120,6 +119,7 @@ in
       typstyle
       uutils-coreutils
       vsce
+      vscode-extensions.vadimcn.vscode-lldb
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       vtsls
       wasm-pack
