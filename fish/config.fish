@@ -226,9 +226,9 @@ abbr --add so "source ~/.config/fish/config.fish"
 
 abbr --add sup "\
 pnpm update -g \
-&& cargo install-update -a \
 && fisher update \
 && sudo softwareupdate -aiR"
+# && cargo install-update -a \
 # && rustup update \
 
 abbr --add t "tmux"
