@@ -40,6 +40,7 @@
       cargo-generate
       cargo-insta
       cargo-make
+      cargo-nextest # waiting on https://github.com/NixOS/nixpkgs/pull/456256
       cargo-outdated
       cargo-semver-checks
       cargo-watch

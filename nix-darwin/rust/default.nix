@@ -5,7 +5,6 @@ let
 
   cargo-interactive-update = callPackage ./cargo-interactive-update.nix { };
   cargo-leptos = callPackage ./cargo-leptos.nix { };
-  cargo-nextest = callPackage ./cargo-nextest.nix { };
   leptosfmt = callPackage ./leptosfmt.nix { };
   rimage = callPackage ./rimage.nix { };
 in
@@ -13,7 +12,6 @@ in
   environment.systemPackages = [
     cargo-interactive-update
     cargo-leptos
-    cargo-nextest
     leptosfmt
     rimage
   ];
