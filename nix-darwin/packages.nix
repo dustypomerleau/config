@@ -21,7 +21,6 @@
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # cargo-leptos # build yourself to control wasm-bindgen compat
       # cargo-update # build failure
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       # neovim-nightly # stay on stable for now
@@ -41,7 +40,6 @@
       cargo-generate
       cargo-insta
       cargo-make
-      cargo-nextest
       cargo-outdated
       cargo-semver-checks
       cargo-watch
