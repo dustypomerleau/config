@@ -79,6 +79,7 @@
       netlify-cli
       nil
       nixfmt-rfc-style
+      nix-update
       nodePackages.svgo
       nodejs_24
       nomino
