@@ -1,4 +1,3 @@
-# nixpkgs-unstable is stuck on 0.1.30
 {
   fetchFromGitHub,
   rustPlatform,
@@ -12,6 +11,7 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "bram209";
     repo = pname;
+    # tag = version;
     # use latest commit on main until a release is shipped
     rev = "8b4194ba33eee417ababdd15498940014fd6d237";
     hash = "sha256-F06Ag99rCn3qZywdxyP7ULOgyhbSzWNe+drBDZJWVxo=";
