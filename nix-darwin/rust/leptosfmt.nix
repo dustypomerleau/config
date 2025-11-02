@@ -12,12 +12,13 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "bram209";
     repo = pname;
-    tag = version;
-    hash = "sha256-+trLQFU8oP45xHQ3DsEESQzQX2WpvQcfpgGC9o5ITcY=";
+    # use latest commit on main until a release is shipped
+    rev = "8b4194ba33eee417ababdd15498940014fd6d237";
+    hash = "sha256-F06Ag99rCn3qZywdxyP7ULOgyhbSzWNe+drBDZJWVxo=";
     fetchSubmodules = true;
   };
 
-  cargoHash = "sha256-m9426zuxp9GfbYoljW49BVgetLTqqcqGHCb7I+Yw+bc=";
+  cargoHash = "sha256-ihhEeOLNTHi0C8rGIvwiXJRiqIjWGTRRr7JLn6fMtNU=";
 
   meta = {
     description = "Formatter for the leptos view! macro";
