@@ -7,9 +7,9 @@
   ...
 }:
 
-# let
-#   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-# in
+let
+  neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+in
 {
   imports = [ ./rust ];
 
@@ -23,7 +23,6 @@
     systemPackages = with pkgs; [
       # cargo-update # build failure
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
-      # neovim-nightly # stay on stable for now
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -75,11 +74,12 @@
       luajitPackages.luarocks
       markdown-oxide
       mas
-      neovim
+      # neovim # use nightly
+      neovim-nightly
       netlify-cli
       nil
-      nixfmt-rfc-style
       nix-update
+      nixfmt-rfc-style
       nodePackages.svgo
       nodejs_24
       nomino
