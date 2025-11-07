@@ -46,36 +46,9 @@
           bannerTime = 10;
         };
 
-        # todo: move this to defaults.dock if they merge https://github.com/LnL7/nix-darwin/pull/1053
-        dock = {
-          showAppExposeGestureEnabled = true;
-          showDesktopGestureEnabled = false;
-          showLaunchpadGestureEnabled = false;
-          showMissionControlGestureEnabled = true;
-        };
-
         # todo: PR this, it goes in modules/system/defaults/NSGlobalDomain.nix below trackpad.scaling
         NSGlobalDomain = {
           "com.apple.trackpad.scrolling" = 0.5; # 1 is maximum
-        };
-
-        # todo: move this to defaults.trackpad if they merge https://github.com/LnL7/nix-darwin/pull/1053
-        trackpad = {
-          ActuateDetents = false;
-          DragLock = true;
-          ForceSuppressed = true;
-          TrackpadCornerSecondaryClick = 0;
-          TrackpadFourFingerHorizSwipeGesture = 0;
-          TrackpadFourFingerPinchGesture = 0;
-          TrackpadFourFingerVertSwipeGesture = 0;
-          TrackpadMomentumScroll = true;
-          TrackpadPinch = true;
-          TrackpadRotate = true;
-          TrackpadThreeFingerHorizSwipeGesture = 0;
-          TrackpadThreeFingerTapGesture = 2;
-          TrackpadThreeFingerVertSwipeGesture = 0;
-          TrackpadTwoFingerDoubleTapGesture = true;
-          TrackpadTwoFingerFromRightEdgeSwipeGesture = 0;
         };
       };
 
@@ -110,6 +83,10 @@
         autohide-delay = 1.0e-2;
         orientation = "left";
         show-recents = false;
+        showAppExposeGestureEnabled = true;
+        showDesktopGestureEnabled = false;
+        showLaunchpadGestureEnabled = false;
+        showMissionControlGestureEnabled = true;
         tilesize = 20;
         wvous-bl-corner = 2; # mission control
         wvous-br-corner = 3; # application windows
@@ -139,13 +116,28 @@
       };
 
       trackpad = {
+        ActuateDetents = false;
         ActuationStrength = 0;
         Clicking = true; # enable tap to click
+        DragLock = true;
         Dragging = true; # tap to drag (not the same as DragLock)
         FirstClickThreshold = 0;
+        ForceSuppressed = true;
         SecondClickThreshold = 0;
+        TrackpadCornerSecondaryClick = 0;
+        TrackpadFourFingerHorizSwipeGesture = 0;
+        TrackpadFourFingerPinchGesture = 0;
+        TrackpadFourFingerVertSwipeGesture = 0;
+        TrackpadMomentumScroll = true;
+        TrackpadPinch = true;
         TrackpadRightClick = true;
+        TrackpadRotate = true;
         TrackpadThreeFingerDrag = true;
+        TrackpadThreeFingerHorizSwipeGesture = 0;
+        TrackpadThreeFingerTapGesture = 2;
+        TrackpadThreeFingerVertSwipeGesture = 0;
+        TrackpadTwoFingerDoubleTapGesture = true;
+        TrackpadTwoFingerFromRightEdgeSwipeGesture = 0;
       };
 
       # setting this is only possible if the terminal you use has full disk access in System Settings
