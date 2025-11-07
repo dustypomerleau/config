@@ -23,19 +23,6 @@ sudo pmset -a womp 0 # do not wake for network access
 # echo 'disabling sudden motion sensor given it is useless with SSDs'
 # sudo pmset -a sms 0
 
-# echo 'making the crash reporter into a notification instead of a dialog'
-# defaults write com.apple.CrashReporter UseUNC 1
-
-# echo 'changing the default banner time for notifications (requires logout to activate)'
-# defaults write com.apple.notificationcenterui bannerTime 10
-
-# echo 'enabling text selection in finder quick look'
-# defaults write com.apple.finder QLEnableTextSelection -bool TRUE
-
-# echo 'enabling drag-lock for the trackpad'
-# # only drag-lock is not addressed by nix in system.defaults.trackpad
-# defaults write com.apple.AppleMultitouchTrackpad DragLock -bool true
-
 echo 'installing xcode command line tools'
 xcode-select --install
 
