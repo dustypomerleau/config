@@ -18,9 +18,7 @@
 
     casks = [
       "1password"
-      "affinity-designer"
-      "affinity-photo"
-      "affinity-publisher"
+      "affinity"
       "alacritty"
       "alfred"
       "arq"
