@@ -1,4 +1,4 @@
--- note: there is a bug in spectre that creates problems with building nvim-oxi
+-- NOTE: there is a bug in spectre that creates problems with building nvim-oxi
 -- And the fix is to simply create a spectre_oxi/.cargo/config file with the following content:
 --
 -- ```

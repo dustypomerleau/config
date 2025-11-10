@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  # note: you may need to `sudo rm -r /usr/local/lib/docker/cli-plugins`
+  # NOTE: you may need to `sudo rm -r /usr/local/lib/docker/cli-plugins`
   # see: https://github.com/Homebrew/homebrew-core/issues/45009
   # and: https://stackoverflow.com/questions/72784094/homebrew-error-permission-denied-apply2files-usr-local-lib-docker-cli-pl
 
@@ -57,12 +57,13 @@
         greedy = true;
       }
 
-      # todo: not available from brew: exodus, homerow, openVPN connect
+      # TODO: not available from brew: exodus, homerow, openVPN connect
     ];
 
     caskArgs.require_sha = false;
 
     # disable temporarily due to: https://github.com/mas-cli/mas/issues/1029
+    # TODO: manually install these if the issue is not resolved
     # masApps = {
     #   "Apple Configurator" = 1037126344;
     #   "WireGuard" = 1451685025;

@@ -1998,7 +1998,7 @@ complete -c edgedb -n "__fish_seen_subcommand_from instance; and __fish_seen_sub
 ' -r -f
 complete -c edgedb -n "__fish_seen_subcommand_from instance; and __fish_seen_subcommand_from start" -l managed-by -r -f -a "{systemd	,launchctl	,edgedb-cli	}"
 complete -c edgedb -n "__fish_seen_subcommand_from instance; and __fish_seen_subcommand_from start" -l version -d 'Print version information'
-complete -c edgedb -n "__fish_seen_subcommand_from instance; and __fish_seen_subcommand_from start" -l foreground -d 'Start the server in the foreground rather than using launchctl to manage the process (note: you might need to stop non-foreground instance first)
+complete -c edgedb -n "__fish_seen_subcommand_from instance; and __fish_seen_subcommand_from start" -l foreground -d 'Start the server in the foreground rather than using launchctl to manage the process (NOTE: you might need to stop non-foreground instance first)
 '
 complete -c edgedb -n "__fish_seen_subcommand_from instance; and __fish_seen_subcommand_from start" -l auto-restart -d 'With [49m[39m[1m--foreground[0m stops server running in background. And restarts the service back on exit.
 '

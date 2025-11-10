@@ -19,7 +19,7 @@
         # Or: https://github.com/gvolpe/neovim-flake
         # used by https://github.com/gvolpe/nix-config
         #
-        # Note: these file paths are relative to $HOME, so references are to ~/Library/..., for example.
+        # NOTE: these file paths are relative to $HOME, so references are to ~/Library/..., for example.
         file = {
           ".cargo/config.toml".source = /Users/${specialArgs.username}/.config/cargo/config.toml;
           ".gitconfig".source = /Users/${specialArgs.username}/.config/git/.gitconfig;

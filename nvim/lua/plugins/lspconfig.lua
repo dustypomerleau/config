@@ -114,7 +114,7 @@ return {
                 filetypes = { "opentofu", "opentofu-vars", "terraform" },
             })
 
-            -- todo: troubleshoot, as these settings are not being applied
+            -- TODO: troubleshoot, as these settings are not being applied
             -- revisit the wiki as the config has been updated:
             -- https://github.com/latex-lsp/texlab/wiki/Configuration
             vim.lsp.enable("texlab")

@@ -1,4 +1,4 @@
-#s note: you can find the installed path for a package with:
+#s NOTE: you can find the installed path for a package with:
 # nix-instantiate --eval-only --expr '(import <nixpkgs> {}).<package-name>.outPath'
 
 {

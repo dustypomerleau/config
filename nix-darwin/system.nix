@@ -46,7 +46,7 @@
           bannerTime = 10;
         };
 
-        # todo: PR this, it goes in modules/system/defaults/NSGlobalDomain.nix below trackpad.scaling
+        # TODO: PR this, it goes in modules/system/defaults/NSGlobalDomain.nix below trackpad.scaling
         NSGlobalDomain = {
           "com.apple.trackpad.scrolling" = 0.5; # 1 is maximum
         };

@@ -7,7 +7,7 @@ echo 'softlinking ApplicationSupport'
 ln -s ~/Library/Application\ Support ~/Library/ApplicationSupport
 
 
-# note: pmset -a applies to all, -b to just battery power, and -c to charger power
+# NOTE: pmset -a applies to all, -b to just battery power, and -c to charger power
 # sudo pmset -a autopoweroff 0 # does not apply on your laptop
 # sudo pmset -a destroyfvkeyonstandby 1 # secure, but inconvenient
 # sudo pmset -a hibernatemode 25 # left on 3 for convenience, but key will only be evicted when set to 25
