@@ -115,6 +115,7 @@
       tokei
       trash-cli # trash goes to ~/.local/share/Trash/
       tree-sitter
+      ty
       typst
       typstyle
       uutils-coreutils

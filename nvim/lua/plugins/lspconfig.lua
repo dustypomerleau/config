@@ -152,6 +152,9 @@ return {
                 { capabilities = capabilities, settings = { exportPdf = "onSave" } }
             )
 
+            vim.lsp.enable("ty")
+            vim.lsp.config("ty", { capabilities = capabilities })
+
             local util = require("lspconfig.util")
             vim.lsp.enable("taplo")
             vim.lsp.config("taplo", {
@@ -179,3 +182,4 @@ return {
         end,
     },
 }
+
