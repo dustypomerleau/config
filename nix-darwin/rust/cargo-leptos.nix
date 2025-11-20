@@ -6,22 +6,22 @@
   pkg-config,
   openssl,
 }:
+
 rustPlatform.buildRustPackage rec {
   pname = "cargo-leptos";
-  version = "0.2.47";
+  version = "0.3.0";
 
   src = fetchFromGitHub {
     owner = "leptos-rs";
     repo = "cargo-leptos";
     rev = "v${version}";
-    hash = "sha256-WUjzGLO9SFxrkdF742lMYl2iYbDDjv4Yw4Xanc4zg2Q=";
+    hash = "sha256-PBxlf7tl7RxXQoHMrVcPtTKG5jXKvNICC5C1dj/HhvE=";
   };
 
-  cargoHash = "sha256-GMtDX9ekKkceaHTKWoQLYsAo5xlXycentLX62i3mgtU=";
-
-  nativeBuildInputs = [ pkg-config ];
+  cargoHash = "sha256-WAhYKGRi1NiBuRwz36u3heRPyDVAQK+fqZ1hFBSXthI=";
 
   buildInputs = [ openssl ];
+  nativeBuildInputs = [ pkg-config ];
 
   env = {
     OPENSSL_NO_VENDOR = 1;
