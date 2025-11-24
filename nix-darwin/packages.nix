@@ -23,6 +23,7 @@
     systemPackages = with pkgs; [
       # neovim-nightly
       # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
+      _1password-cli
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2

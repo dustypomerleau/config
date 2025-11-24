@@ -62,13 +62,11 @@
 
     caskArgs.require_sha = false;
 
-    # disable temporarily due to: https://github.com/mas-cli/mas/issues/1029
-    # TODO: manually install these if the issue is not resolved
-    # masApps = {
-    #   "Apple Configurator" = 1037126344;
-    #   "WireGuard" = 1451685025;
-    #   "Xcode" = 497799835;
-    # };
+    masApps = {
+      "Apple Configurator" = 1037126344;
+      "WireGuard" = 1451685025;
+      "Xcode" = 497799835;
+    };
 
     onActivation = {
       autoUpdate = true;
@@ -79,3 +77,4 @@
     taps = [ ];
   };
 }
+
