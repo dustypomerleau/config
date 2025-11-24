@@ -21,10 +21,8 @@
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # cargo-semver-checks # build failure
-      # cargo-update # build failure
-      # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       # neovim-nightly
+      # unrar # unfree, uncomment this and nixpgks.config.allowUnfree in core.nix if needed
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -41,8 +39,10 @@
       cargo-generate
       cargo-insta
       cargo-make
-      cargo-nextest # waiting on https://github.com/NixOS/nixpkgs/pull/456256
+      cargo-nextest
       cargo-outdated
+      cargo-semver-checks
+      cargo-update
       cargo-watch
       clang-tools
       cmake
