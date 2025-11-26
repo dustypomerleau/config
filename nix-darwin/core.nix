@@ -10,7 +10,7 @@
   };
 
   nixpkgs = {
-    # config.allowUnfree = true; # for unrar, remove if unrar-free becomes unbroken.
+    config.allowUnfree = true;
     # The platform the configuration will be used on.
     hostPlatform = system;
   };
