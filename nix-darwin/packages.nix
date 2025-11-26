@@ -22,6 +22,7 @@
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
       # neovim-nightly
+      # cargo-semver-checks # build failure
       _1password-cli # unfree
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -41,7 +42,6 @@
       cargo-make
       cargo-nextest
       cargo-outdated
-      cargo-semver-checks
       cargo-update
       cargo-watch
       clang-tools
