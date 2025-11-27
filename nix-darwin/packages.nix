@@ -23,6 +23,7 @@
     systemPackages = with pkgs; [
       # neovim-nightly
       # cargo-semver-checks # build failure
+      wasm-bindgen-cli # temp until you can reenable 105 in prod
       _1password-cli # unfree
       any-nix-shell # allows fish in nix-shell
       asciidoctor
