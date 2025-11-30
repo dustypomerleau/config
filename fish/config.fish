@@ -197,6 +197,7 @@ abbr --add mktemp "uutils-mktemp" # macOS mktemp is not POSIX compliant
 abbr --add mv "uutils-mv -iv"
 abbr --add n "nvim"
 abbr --add nb "nix build"
+abbr --add nd "nix develop"
 abbr --add ni "sudo darwin-rebuild switch --flake ~/.config/nix-darwin --impure"
 abbr --add ns "sudo darwin-rebuild switch --flake ~/.config/nix-darwin"
 abbr --add nu "cd ~/.config/nix-darwin && nix flake update"
