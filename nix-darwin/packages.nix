@@ -21,9 +21,6 @@
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
-      # neovim-nightly
-      # cargo-semver-checks # build failure
-      wasm-bindgen-cli # temp until you can reenable 105 in prod
       _1password-cli # unfree
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -43,6 +40,7 @@
       cargo-make
       cargo-nextest
       cargo-outdated
+      # cargo-semver-checks # build failure
       cargo-update
       cargo-watch
       clang-tools
@@ -77,6 +75,7 @@
       markdown-oxide
       mas
       neovim
+      # neovim-nightly # use stable
       netlify-cli
       nil
       nix-update
@@ -125,6 +124,7 @@
       vscode-extensions.vadimcn.vscode-lldb
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       vtsls
+      wasm-bindgen-cli
       wasm-pack
       yamlfmt
       yazi
