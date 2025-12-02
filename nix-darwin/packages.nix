@@ -124,7 +124,7 @@
       vscode-extensions.vadimcn.vscode-lldb
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
       vtsls
-      wasm-bindgen-cli
+      # wasm-bindgen-cli # allow cargo-leptos to handle version
       wasm-pack
       yamlfmt
       yazi
