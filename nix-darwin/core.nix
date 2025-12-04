@@ -1,5 +1,13 @@
-{ config, system, ... }:
 {
+  config,
+  pkgs,
+  system,
+  ...
+}:
+{
+  # remove if using lix main
+  nix.package = pkgs.lixPackageSets.latest.lix;
+
   nix.settings = {
     experimental-features = "nix-command flakes";
     nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
@@ -13,6 +21,19 @@
     config.allowUnfree = true;
     # The platform the configuration will be used on.
     hostPlatform = system;
+
+    # remove if using lix main
+    overlays = [
+      (final: prev: {
+        inherit (prev.lixPackageSets.latest)
+          nixpkgs-review
+          nix-eval-jobs
+          nix-fast-build
+          colmena
+          ;
+      })
+    ];
+
   };
 
   # Normally the instructions would tell you to use programs to enable fish, tmux, etc.

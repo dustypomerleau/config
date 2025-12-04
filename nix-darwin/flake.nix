@@ -37,16 +37,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lix = {
-      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
-      flake = false;
-    };
+    # lix = {
+    #   url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
+    #   flake = false;
+    # };
 
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
-      inputs.lix.follows = "lix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # lix-module = {
+    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+    #   inputs.lix.follows = "lix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
@@ -58,7 +58,7 @@
       darwin,
       fenix,
       home-manager,
-      lix-module,
+      # lix-module,
       nixpkgs,
       ...
     }:
@@ -91,7 +91,7 @@
           ./packages.nix
           ./system.nix
           home-manager.darwinModules.home-manager
-          lix-module.nixosModules.default
+          # lix-module.nixosModules.default
         ];
       };
     };
