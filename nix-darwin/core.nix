@@ -5,16 +5,18 @@
   ...
 }:
 {
-  # remove if using lix main
-  nix.package = pkgs.lixPackageSets.latest.lix;
+  nix = {
+    # remove if using lix main
+    package = pkgs.lixPackageSets.latest.lix;
 
-  nix.settings = {
-    experimental-features = "nix-command flakes";
-    nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
-    trusted-users = [
-      "@admin"
-      "@root"
-    ]; # required to use darwin.linux-builder
+    settings = {
+      experimental-features = "nix-command flakes";
+      nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
+      trusted-users = [
+        "@admin"
+        "@root"
+      ]; # required to use darwin.linux-builder
+    };
   };
 
   nixpkgs = {
@@ -23,18 +25,18 @@
     hostPlatform = system;
 
     # remove if using lix main
-    # FIXME: infinite recursion, see:
-    # https://git.lix.systems/lix-project/lix/issues/980
-    # overlays = [
-    #   (final: prev: {
-    #     inherit (prev.lixPackageSets.latest)
-    #       nixpkgs-review
-    #       nix-eval-jobs
-    #       nix-fast-build
-    #       colmena
-    #       ;
-    #   })
-    # ];
+    overlays = [
+      (final: prev: {
+        inherit (prev.lixPackageSets.latest)
+          # FIXME: nixpkgs-review removed due to infinite recursion, see:
+          #  https://git.lix.systems/lix-project/lix/issues/980
+          # nixpkgs-review
+          nix-eval-jobs
+          nix-fast-build
+          colmena
+          ;
+      })
+    ];
   };
 
   # Normally the instructions would tell you to use programs to enable fish, tmux, etc.

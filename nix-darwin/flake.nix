@@ -37,11 +37,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # uncomment to use lix main (and remove commented sections in core.nix)
     # lix = {
     #   url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
     #   flake = false;
     # };
 
+    # uncomment to use lix main (and remove commented sections in core.nix)
     # lix-module = {
     #   url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
     #   inputs.lix.follows = "lix";
@@ -58,6 +60,7 @@
       darwin,
       fenix,
       home-manager,
+      # uncomment to use lix main (and remove commented sections in core.nix)
       # lix-module,
       nixpkgs,
       ...
