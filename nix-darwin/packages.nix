@@ -59,6 +59,7 @@
       gawk
       gel
       gh
+      ghostty-bin
       git
       git-filter-repo
       glow

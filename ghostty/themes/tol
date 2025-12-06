@@ -1,0 +1,41 @@
+# ANSI codes:
+
+# 0 black
+# 1 red
+# 2 green
+# 3 yellow
+# 4 blue
+# 5 purple
+# 6 cyan
+# 7 white
+
+# 8-15 
+# same as above but bright
+
+palette = 0=#242837
+palette = 1=#ee8866
+palette = 2=#bbcc33
+palette = 3=#eedd88
+palette = 4=#70b2f3
+palette = 5=#ffaabb
+palette = 6=#99ddff
+palette = 7=#fdf1d4
+
+palette = 8=#7e818b
+palette = 9=#ee8866
+palette = 10=#44bb99
+palette = 11=#eedd88
+palette = 12=#9fc3e7
+palette = 13=#ffaabb
+palette = 14=#99ddff
+palette = 15=#dddddd
+
+background = #292d3e
+foreground = #cac0a9
+
+cursor-color = #ff218c
+cursor-text = #fbfc86
+
+selection-background = #474e6c
+selection-foreground = #cac0a9
+
