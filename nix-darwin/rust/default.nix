@@ -7,7 +7,7 @@ let
   cargo-leptos = callPackage ./cargo-leptos.nix { };
   leptosfmt = callPackage ./leptosfmt.nix { };
   rimage = callPackage ./rimage.nix { };
-  # wasm-bindgen-cli = callPackage ./wasm-bindgen-cli.nix { };
+  wasm-bindgen-cli = callPackage ./wasm-bindgen-cli.nix { };
 in
 {
   environment.systemPackages = [
@@ -15,6 +15,6 @@ in
     cargo-leptos
     leptosfmt
     rimage
-    # wasm-bindgen-cli
+    wasm-bindgen-cli
   ];
 }

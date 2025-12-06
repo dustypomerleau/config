@@ -2,7 +2,6 @@
   curl,
   fetchCrate,
   lib,
-  nodejs_latest,
   openssl,
   pkg-config,
   rustPlatform,
@@ -11,18 +10,17 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "wasm-bindgen-cli";
-  version = "0.2.105";
+  version = "0.2.106";
 
   src = fetchCrate {
     inherit pname version;
-    hash = "sha256-zLPFFgnqAWq5R2KkaTGAYqVQswfBEYm9x3OPjx8DJRY=";
+    hash = "sha256-M6WuGl7EruNopHZbqBpucu4RWz44/MSdv6f0zkYw+44=";
   };
 
-  cargoHash = "sha256-a2X9bzwnMWNt0fTf30qAiJ4noal/ET1jEtf5fBFj5OU=";
+  cargoHash = "sha256-ElDatyOwdKwHg3bNH/1pcxKI7LXkhsotlDPQjiLHBwA=";
 
   buildInputs = [ openssl ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ curl ];
   nativeBuildInputs = [ pkg-config ];
-  nativeCheckInputs = [ nodejs_latest ];
 
   # tests require it to be run in the wasm-bindgen monorepo
   doCheck = false;
