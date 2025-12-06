@@ -31,6 +31,7 @@
       "element"
       "figma"
       "firefox"
+      "ghostty"
       "google-chrome"
       "google-drive"
       "inkscape"
@@ -77,4 +78,3 @@
     taps = [ ];
   };
 }
-
