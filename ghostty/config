@@ -11,7 +11,7 @@ font-style = "Regular"
 font-style-bold = "SemiBold"
 font-style-italic = "Italic"
 font-thicken = true
-font-thicken-strength = 100
+font-thicken-strength = 10
 fullscreen = true
 keybind = cmd+r=reload_config
 macos-option-as-alt = false
