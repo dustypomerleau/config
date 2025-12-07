@@ -17,6 +17,7 @@ keybind = cmd+alt+left=move_tab:-1
 keybind = cmd+alt+right=move_tab:1
 keybind = cmd+alt+t=prompt_surface_title
 keybind = cmd+r=reload_config
+macos-icon = holographic
 macos-option-as-alt = false
 macos-window-shadow = false
 maximize = true
