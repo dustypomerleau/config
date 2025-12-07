@@ -21,6 +21,7 @@ mouse-hide-while-typing = true
 quit-after-last-window-closed = true
 split-divider-color = #292d3e
 theme = tol
+unfocused-split-opacity = 0.8
 window-colorspace = display-p3
 window-new-tab-position = end
 window-padding-x = 1
