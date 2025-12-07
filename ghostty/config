@@ -1,7 +1,7 @@
 adjust-cell-height = 5
 adjust-cursor-thickness = 4
-adjust-font-baseline = 2
-adjust-underline-position = 4
+adjust-font-baseline = 4
+adjust-underline-position = 3
 adjust-underline-thickness = -1
 auto-update = download
 cursor-style-blink = false
