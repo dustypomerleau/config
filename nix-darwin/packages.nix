@@ -50,6 +50,7 @@
       dockerfmt
       emmet-language-server
       eza
+      fastfetch
       fd
       ffmpeg_7
       findutils
