@@ -13,9 +13,9 @@ font-style-italic = "Italic"
 font-thicken = true
 font-thicken-strength = 10
 fullscreen = true
-keybind = cmd+alt+left=move_tab:-1
-keybind = cmd+alt+right=move_tab:1
 keybind = cmd+alt+t=prompt_surface_title
+keybind = cmd+ctrl+left=move_tab:-1
+keybind = cmd+ctrl+right=move_tab:1
 keybind = cmd+r=reload_config
 macos-icon = holographic
 macos-option-as-alt = false
