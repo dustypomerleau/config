@@ -94,7 +94,7 @@
       pnpm
       podman
       pom
-      postgresql_16
+      postgresql_18
       prettypst
       qmk
       railway
