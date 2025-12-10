@@ -213,11 +213,12 @@ abbr --add pgs "pg_ctl -D /usr/local/var/postgres status"
 abbr --add pi "pnpm install"
 abbr --add pl "pnpm list -depth 0"
 abbr --add plg "pnpm list -g -depth 0"
+abbr --add pls "postgres-language-server"
 abbr --add po "pnpm outdated"
 abbr --add pr "pnpm run"
 abbr --add pu "pnpm update"
-abbr --add pui "pnpm update -i"
 abbr --add pug "pnpm update -g"
+abbr --add pui "pnpm update -i"
 abbr --add pul "pnpm update --latest" # ignores package.json and fetches latest
 abbr --add px "pnpm dlx" # equivalent to npx
 abbr --add renamer "renamer -e nvim"

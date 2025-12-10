@@ -102,6 +102,9 @@ return {
                 },
             })
 
+            vim.lsp.enable("postgres_lsp")
+            vim.lsp.config("postgres_lsp", { capabilities = capabilities })
+
             vim.lsp.enable("ruff")
             vim.lsp.config("ruff", { capabilities = capabilities })
 
@@ -182,4 +185,3 @@ return {
         end,
     },
 }
-
