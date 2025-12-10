@@ -94,7 +94,6 @@
       pnpm
       podman
       pom
-      postgresql_18
       postgres-language-server
       prettypst
       qmk

@@ -45,7 +45,23 @@
   programs = { };
 
   services = {
-    # see many postgres options in services.postgresql.*
+    # postgres is fairly broken on nix darwin, use brew for now
+    #
+    # postgresql = {
+    #   enable = true;
+    #   package = pkgs.postgresql_18;
+    #   ensureDatabases = [ "auditdb" ];
+    #
+    #   ensureUsers = [
+    #     {
+    #       name = "dn";
+    #       ensurePermissions = {
+    #         "DATABASE auditdb" = "ALL PRIVILEGES";
+    #       };
+    #     }
+    #   ];
+    # };
+
     # tailscale.enable = true; # reenable after https://github.com/NixOS/nixpkgs/pull/387998
   };
 }
