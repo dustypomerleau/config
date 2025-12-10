@@ -29,6 +29,7 @@ return {
                     markdown = { "prettier" },
                     nix = { "nixfmt" },
                     python = { "ruff_format" },
+                    sql = { "sqruff" },
                     svelte = { "prettier" },
                     svg = { "prettier" },
                     tex = { "tex-fmt", lsp_fallback = "never" },

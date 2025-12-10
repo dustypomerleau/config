@@ -102,6 +102,7 @@
       ripgrep-all
       ruff
       sqlx-cli
+      sqruff
       stylua
       svelte-language-server
       taplo
