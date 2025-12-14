@@ -4,6 +4,8 @@ adjust-font-baseline = 4
 adjust-underline-position = 3
 adjust-underline-thickness = -1
 auto-update = download
+bell-audio-volume = 0.0
+bell-features = no-attention,no-audio,no-system,title
 cursor-style-blink = false
 font-family = "SauceCodePro Nerd Font"
 font-size = 15
@@ -14,9 +16,13 @@ font-thicken = true
 font-thicken-strength = 10
 fullscreen = true
 keybind = cmd+alt+t=prompt_surface_title
-keybind = cmd+ctrl+left=move_tab:-1
-keybind = cmd+ctrl+right=move_tab:1
 keybind = cmd+r=reload_config
+keybind = cmd+shift+left=move_tab:-1
+keybind = cmd+shift+right=move_tab:1
+keybind = ctrl+alt+down=resize_split:down,10
+keybind = ctrl+alt+left=resize_split:left,10
+keybind = ctrl+alt+right=resize_split:right,10
+keybind = ctrl+alt+up=resize_split:up,10
 macos-icon = holographic
 macos-option-as-alt = false
 macos-window-shadow = false
