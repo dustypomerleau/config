@@ -22,7 +22,7 @@ return {
                     -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
                     css = { "prettier" },
                     dockerfile = { "dockerfmt" },
-                    javascript = { "prettier" },
+                    javascript = { "oxfmt" },
                     json = { "prettier" },
                     jsonc = { "prettier" },
                     lua = { "stylua" }, -- LSP uses EmmyLua, but it's not exactly clear how this is called (https://github.com/CppCXY/EmmyLuaCodeStyle).
@@ -34,7 +34,7 @@ return {
                     svg = { "prettier" },
                     tex = { "tex-fmt", lsp_fallback = "never" },
                     toml = { "taplo" },
-                    typescript = { "prettier" },
+                    typescript = { "oxfmt" },
                     typst = { "prettypst", "typstyle", stop_after_first = true },
                     yaml = { "yamlfmt" },
                 },
