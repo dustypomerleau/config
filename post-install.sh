@@ -20,14 +20,8 @@ sudo pmset -a standbydelayhigh 3600 # seconds until memory is powered off
 sudo pmset -a standbydelaylow 600 # seconds
 sudo pmset -a womp 0 # do not wake for network access
 
-# echo 'disabling sudden motion sensor given it is useless with SSDs'
-# sudo pmset -a sms 0
-
 echo 'installing xcode command line tools'
 xcode-select --install
-
-echo 'installing binaries only available via `cargo-install`'
-cargo binstall rimage crates-tui
 
 echo 'installing fisher to ensure post-install hook'
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
@@ -43,13 +37,6 @@ cd ~/.local/share/nvim/lazy/nvim-spectre
 echo 'adding SSH keys to agent'
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
-# no longer needed, as this is done by nix-darwin
-# echo 'setting up touchID as sudo'
-# sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
-# sudo nvim /etc/pam.d/sudo_local
-# # then add:
-# # auth       sufficient     pam_tid.so
-
 # copy your NvimLauncher.app to /Applications/ on your new machine
 # This is simply applescript to run a shell script, which contains:
 #
@@ -63,8 +50,6 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
 # Set keybindings for Mission Control (switch spaces with ctrl + alt N/E)
 # Set application keybinding for Fill (cmd + shift F)
-
-# see notes in tmux.conf for ensuring you have working undercurl/colors in tmux
 
 # manually add your terminal to System Settings > Privacy & Security > Developer Tools
 
