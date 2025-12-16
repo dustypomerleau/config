@@ -129,6 +129,7 @@
       vtsls
       wasm-pack
       yamlfmt
+      yt-dlp
       yazi
       zellij
       zoxide
