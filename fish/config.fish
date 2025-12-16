@@ -62,6 +62,7 @@ abbr --add chmod "uutils-chmod"
 abbr --add ci "crates-tui"
 abbr --add cl "cargo leptos watch --hot-reload"
 abbr --add cn "cargo nextest run --no-capture"
+abbr --add cna "cargo nextest run --no-capture --all-features"
 abbr --add co "cargo outdated -R" # root dependencies only
 abbr --add cp "uutils-cp -irv"
 abbr --add cr "cargo run"
