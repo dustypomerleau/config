@@ -29,7 +29,7 @@
       (final: prev: {
         inherit (prev.lixPackageSets.latest)
           # FIXME: nixpkgs-review removed due to infinite recursion, see:
-          #  https://git.lix.systems/lix-project/lix/issues/980
+          # https://git.lix.systems/lix-project/lix/issues/980
           # nixpkgs-review
           nix-eval-jobs
           nix-fast-build
