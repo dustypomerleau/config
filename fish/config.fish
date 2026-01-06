@@ -255,5 +255,6 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
-any-nix-shell fish | source # readme suggests `any-nix-shell fish --info-right | source`, but this clobbers your existing fish_right_prompt
+# NOTE: if you reimplement fish_right_prompt.fish in functions, you need to remove --info-right or any-nix-shell will clobber the right prompt
+any-nix-shell fish --info-right | source
 zoxide init fish | source
