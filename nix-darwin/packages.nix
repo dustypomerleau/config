@@ -102,6 +102,7 @@
       ripgrep
       ripgrep-all
       ruff
+      sqlite
       sqlx-cli
       sqruff
       stylua
