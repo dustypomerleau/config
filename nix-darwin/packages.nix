@@ -44,6 +44,7 @@
       cargo-update
       cargo-watch
       clang-tools
+      claude-code
       cmake
       curl
       delta
