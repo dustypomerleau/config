@@ -32,21 +32,21 @@ set -Ux EDITOR nvim
 set -Ux BAT_THEME Dracula
 
 # fish prompt
-set fish_prompt_pwd_full_dirs 2
 set __fish_git_prompt_char_stateseparator " "
 set __fish_git_prompt_char_upstream_prefix " "
-set __fish_git_prompt_color "#03edf0"
-set __fish_git_prompt_color_branch_detached green
+set __fish_git_prompt_color_branch "#5ebdea"
+set __fish_git_prompt_color_branch_detached "#7e818b"
 set __fish_git_prompt_color_cleanstate yellow
 set __fish_git_prompt_color_merging "#ff218c"
-set __fish_git_prompt_color_prefix "#01edf0"
-set __fish_git_prompt_color_suffix "#01edf0"
+set __fish_git_prompt_color_prefix "#292d3e"
+set __fish_git_prompt_color_suffix "#292d3e"
 set __fish_git_prompt_color_upstream yellow
 set __fish_git_prompt_show_informative_status true
 set __fish_git_prompt_showcolorhints true
 set __fish_git_prompt_showdirtystate true
 set __fish_git_prompt_showuntrackedfiles false
 set __fish_git_prompt_showupstream "informative"
+set fish_prompt_pwd_full_dirs 2
 
 # abbreviations (aliases)
 abbr --add ... "../.."
