@@ -72,6 +72,7 @@
       kind
       kubectl
       libressl
+      luajit
       lua-language-server
       luajitPackages.luacheck
       luajitPackages.luarocks

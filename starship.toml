@@ -18,6 +18,8 @@ $character
 
 right_format = """
 $nix_shell\
+$lua\
+$nodejs\
 $rust\
 $package\
 $time
@@ -31,6 +33,9 @@ threshold = 20
 format = "$output "
 shell = ["jj-starship", "--jj-symbol", "  "]
 when = "jj-starship detect"
+
+[lua]
+format = '[$symbol($version )]($style) '
 
 [nix_shell]
 format = '[$symbol$state( \($name\))]($style) '
