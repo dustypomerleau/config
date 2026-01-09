@@ -257,4 +257,5 @@ end
 
 # NOTE: if you reimplement fish_right_prompt.fish in functions, you need to remove --info-right or any-nix-shell will clobber the right prompt
 any-nix-shell fish --info-right | source
+starship init fish | source
 zoxide init fish | source

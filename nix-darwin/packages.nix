@@ -68,6 +68,7 @@
       gnused
       google-cloud-sdk
       hyperfine
+      jj-starship
       jujutsu
       kind
       kubectl
@@ -105,6 +106,7 @@
       sqlite
       sqlx-cli
       sqruff
+      starship
       stylua
       svelte-language-server
       taplo

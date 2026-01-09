@@ -37,6 +37,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    jj-starship = {
+      url = "github:dmmulroy/jj-starship";
+    };
+
     # uncomment to use lix main (and remove commented sections in core.nix)
     # lix = {
     #   url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
@@ -60,6 +64,7 @@
       darwin,
       fenix,
       home-manager,
+      jj-starship,
       # uncomment to use lix main (and remove commented sections in core.nix)
       # lix-module,
       nixpkgs,

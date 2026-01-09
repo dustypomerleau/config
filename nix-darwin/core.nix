@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   pkgs,
   system,
   ...
@@ -36,6 +37,7 @@
           colmena
           ;
       })
+      inputs.jj-starship.overlays.default
     ];
   };
 

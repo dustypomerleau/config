@@ -1,0 +1,38 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$battery\
+$directory\
+$custom\
+$docker_context\
+$env_var\
+$jobs\
+$status\
+$os\
+$container\
+$cmd_duration\
+$line_break\
+$sudo\
+$character
+"""
+
+right_format = """
+$nix_shell\
+$rust\
+$package\
+$time
+"""
+
+[[battery.display]]
+style = 'bold red'
+threshold = 20
+
+[custom.jj]
+format = "$output "
+shell = ["jj-starship", "--jj-symbol", "󱗆  "]
+when = "jj-starship detect"
+
+[time]
+disabled = false
+format = '[$time]($style) '
+style = "#7e818b"
