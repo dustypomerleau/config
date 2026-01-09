@@ -29,7 +29,7 @@ threshold = 20
 
 [custom.jj]
 format = "$output "
-shell = ["jj-starship", "--jj-symbol", "󱗆  "]
+shell = ["jj-starship", "--jj-symbol", "  "]
 when = "jj-starship detect"
 
 [nix_shell]
