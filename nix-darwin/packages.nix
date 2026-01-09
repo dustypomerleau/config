@@ -98,6 +98,7 @@
       pom
       postgres-language-server
       prettypst
+      python3
       qmk
       railway
       ripgrep
