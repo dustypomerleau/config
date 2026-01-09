@@ -35,6 +35,9 @@ when = "jj-starship detect"
 [nix_shell]
 format = '[$symbol$state( \($name\))]($style) '
 
+[nodejs]
+format = '[$symbol($version )]($style) '
+
 [package]
 format = '[$symbol$version]($style) '
 style = "white"
