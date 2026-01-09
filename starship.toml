@@ -20,6 +20,7 @@ right_format = """
 $nix_shell\
 $lua\
 $nodejs\
+$python\
 $rust\
 $package\
 $time
@@ -46,6 +47,9 @@ format = '[$symbol($version )]($style) '
 [package]
 format = '[$symbol$version]($style) '
 style = "white"
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
 
 [rust]
 format = '[$symbol($version )]($style) '
