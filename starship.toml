@@ -42,7 +42,7 @@ symbol = "  "
 
 [nix_shell]
 format = '[$symbol$state( \($name\))]($style)  '
-symbol = " —"
+symbol = "  "
 
 [nodejs]
 format = '[$symbol($version )]($style)  '
