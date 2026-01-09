@@ -32,6 +32,16 @@ format = "$output "
 shell = ["jj-starship", "--jj-symbol", "󱗆  "]
 when = "jj-starship detect"
 
+[nix_shell]
+format = '[$symbol$state( \($name\))]($style) '
+
+[package]
+format = '[$symbol$version]($style) '
+style = "white"
+
+[rust]
+format = '[$symbol($version )]($style) '
+
 [time]
 disabled = false
 format = '[$time]($style) '
