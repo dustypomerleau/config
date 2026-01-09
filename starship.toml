@@ -23,6 +23,7 @@ $nodejs\
 $python\
 $rust\
 $package\
+$shell\
 $time
 """
 
@@ -53,6 +54,11 @@ format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
 
 [rust]
 format = '[$symbol($version )]($style) '
+
+[shell]
+disabled = false
+fish_indicator = " "
+style = "cyan"
 
 [time]
 disabled = false
