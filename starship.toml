@@ -11,19 +11,17 @@ $status\
 $os\
 $container\
 $cmd_duration\
-$line_break\
-$sudo\
-$character
-"""
-
-right_format = """
+$fill\
 $nix_shell\
 $lua\
 $nodejs\
 $python\
 $rust\
 $package\
-$time
+$time\
+$line_break\
+$sudo\
+$character
 """
 
 [[battery.display]]
@@ -34,6 +32,9 @@ threshold = 20
 format = "$output "
 shell = ["jj-starship", "--jj-symbol", "  "]
 when = "jj-starship detect"
+
+[fill]
+symbol = " "
 
 [lua]
 format = '[$symbol($version )]($style)  '
