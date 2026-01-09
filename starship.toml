@@ -60,6 +60,12 @@ disabled = false
 fish_indicator = " "
 style = "cyan"
 
+[sudo]
+disabled = false
+format = '[$symbol]($style)'
+style = "#ff4ee0"
+symbol = ' '
+
 [time]
 disabled = false
 format = '[$time]($style) '
