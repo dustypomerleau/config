@@ -37,27 +37,32 @@ shell = ["jj-starship", "--jj-symbol", "  "]
 when = "jj-starship detect"
 
 [lua]
-format = '[$symbol($version )]($style) '
+format = '[$symbol($version )]($style)  '
+symbol = "  "
 
 [nix_shell]
-format = '[$symbol$state( \($name\))]($style) '
+format = '[$symbol$state( \($name\))]($style)  '
+symbol = "  "
 
 [nodejs]
-format = '[$symbol($version )]($style) '
+format = '[$symbol($version )]($style)  '
 
 [package]
-format = '[$symbol$version]($style) '
+format = '[$symbol$version]($style)  '
 style = "white"
+symbol = "  "
 
 [python]
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)  '
+symbol = "󰌠  "
 
 [rust]
-format = '[$symbol($version )]($style) '
+format = '[$symbol($version )]($style)  '
+symbol = "  "
 
 [shell]
 disabled = false
-fish_indicator = " "
+fish_indicator = "   "
 style = "cyan"
 
 [sudo]
