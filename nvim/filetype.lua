@@ -1,6 +1,6 @@
 -- :h vim.filetype
 vim.filetype.add({
-    extension = { gel = "edgeql", plist = "xml" },
+    extension = { plist = "xml" },
     filename = {},
     pattern = {},
 })

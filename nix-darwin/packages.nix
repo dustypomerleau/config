@@ -59,7 +59,6 @@
       fishPlugins.colored-man-pages
       fzf
       gawk
-      gel
       gh
       ghostty-bin
       git

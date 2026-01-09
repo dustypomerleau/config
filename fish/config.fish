@@ -85,7 +85,6 @@ abbr --add gcae "git commit -a" # e for editor
 abbr --add gce "git commit" # e for editor
 abbr --add gd "git diff"
 abbr --add gds "git diff --staged"
-abbr --add ge "gel"
 abbr --add gfu "git fetch upstream"
 
 abbr --add gl "\
