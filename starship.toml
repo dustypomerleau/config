@@ -41,7 +41,7 @@ symbol = "  "
 
 [nix_shell]
 format = '[$symbol$state( \($name\))]($style)  '
-symbol = "  "
+symbol = " —"
 
 [nodejs]
 format = '[$symbol($version )]($style)  '
@@ -67,7 +67,7 @@ symbol = "  "
 [sudo]
 disabled = false
 format = '[$symbol]($style)'
-style = "#ff4ee0"
+style = "#7e818b"
 symbol = ' '
 
 [time]
