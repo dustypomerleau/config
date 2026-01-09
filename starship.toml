@@ -23,7 +23,6 @@ $nodejs\
 $python\
 $rust\
 $package\
-$shell\
 $time
 """
 
@@ -60,10 +59,10 @@ symbol = "󰌠  "
 format = '[$symbol($version )]($style)  '
 symbol = "  "
 
-[shell]
-disabled = false
-fish_indicator = "   "
-style = "cyan"
+# [shell]
+# disabled = false
+# fish_indicator = "   "
+# style = "cyan"
 
 [sudo]
 disabled = false
