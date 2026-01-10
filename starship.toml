@@ -1,7 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$battery\
 $directory\
 $custom\
 $docker_context\
@@ -11,8 +10,8 @@ $status\
 $os\
 $container\
 $cmd_duration\
-$fill\
 $nix_shell\
+$fill\
 $lua\
 $nodejs\
 $python\
@@ -20,6 +19,7 @@ $rust\
 $package\
 $time\
 $line_break\
+$battery\
 $sudo\
 $character
 """
