@@ -6,11 +6,9 @@ $custom\
 $docker_context\
 $env_var\
 $jobs\
-$status\
-$os\
 $container\
-$cmd_duration\
 $nix_shell\
+$cmd_duration\
 $fill\
 $package\
 $lua\
@@ -60,11 +58,6 @@ symbol = "󰌠  "
 [rust]
 format = '[$symbol($version )]($style)  '
 symbol = "  "
-
-# [shell]
-# disabled = false
-# fish_indicator = "   "
-# style = "cyan"
 
 [sudo]
 disabled = false
