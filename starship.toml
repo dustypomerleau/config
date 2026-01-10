@@ -68,4 +68,4 @@ symbol = ' '
 [time]
 disabled = false
 format = '[$time]($style) '
-style = "#7e818b"
+style = "#fdf1d4"
