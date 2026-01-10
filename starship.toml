@@ -12,11 +12,11 @@ $container\
 $cmd_duration\
 $nix_shell\
 $fill\
+$package\
 $lua\
 $nodejs\
 $python\
 $rust\
-$package\
 $time\
 $line_break\
 $battery\
@@ -46,6 +46,7 @@ symbol = "  "
 
 [nodejs]
 format = '[$symbol($version )]($style)  '
+symbol = "  "
 
 [package]
 format = '[$symbol$version]($style)  '
