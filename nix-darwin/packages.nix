@@ -2,13 +2,13 @@
 # nix-instantiate --eval-only --expr '(import <nixpkgs> {}).<package-name>.outPath'
 
 {
-  inputs,
+  # inputs,
   pkgs,
   ...
 }:
 
 # let
-#   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+#   neovim-nightly = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
 # in
 {
   imports = [ ./rust ];

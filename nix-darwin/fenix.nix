@@ -5,7 +5,6 @@
 {
   pkgs,
   specialArgs,
-  system,
   ...
 }:
 let
@@ -17,7 +16,7 @@ in
   # fenix rustc includes rust-std
   environment.systemPackages = [
     (
-      with fenix.packages.${system};
+      with fenix.packages.${pkgs.stdenv.hostPlatform.system};
       combine [
         complete.cargo
         complete.clippy
