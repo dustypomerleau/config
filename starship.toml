@@ -26,56 +26,56 @@ $character
 # of the percentage text along with the symbol.
 [battery]
 format = "$symbol "
-unknown_symbol = '[󰂑 ---](fg:#f5c68f)'
+unknown_symbol = '[󰂑 --- ](fg:#f5c68f)'
 
 [[battery.display]]
-charging_symbol = '[󰂅 $percentage](fg:#96c065)'
-discharging_symbol = '[󰁹 $percentage](fg:#5ebdea)'
+charging_symbol = '[󰂅 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰁹 $percentage ](fg:#5ebdea)'
 threshold = 100
 
 [[battery.display]]
-charging_symbol = '[󰂋 $percentage](fg:#96c065)'
-discharging_symbol = '[󰂂 $percentage](fg:#5ebdea)'
+charging_symbol = '[󰂋 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰂂 $percentage ](fg:#5ebdea)'
 threshold = 90
 
 [[battery.display]]
-charging_symbol = '[󰂊 $percentage](fg:#96c065)'
-discharging_symbol = '[󰂁 $percentage](fg:#5ebdea)'
+charging_symbol = '[󰂊 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰂁 $percentage ](fg:#5ebdea)'
 threshold = 80
 
 [[battery.display]]
-charging_symbol = '[󰢞 $percentage](fg:#96c065)'
-discharging_symbol = '[󰂀 $percentage](fg:#5ebdea)'
+charging_symbol = '[󰢞 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰂀 $percentage ](fg:#5ebdea)'
 threshold = 70
 
 [[battery.display]]
-charging_symbol = '[󰂉 $percentage](fg:#96c065)'
-discharging_symbol = "[󰁿 $percentage](fg:#5ebdea)"
+charging_symbol = '[󰂉 $percentage ](fg:#96c065)'
+discharging_symbol = "[󰁿 $percentage ](fg:#5ebdea)"
 threshold = 60
 
 [[battery.display]]
-charging_symbol = '[󰢝 $percentage](fg:#96c065)'
-discharging_symbol = '[󰁾 $percentage](fg:#5ebdea)'
+charging_symbol = '[󰢝 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰁾 $percentage ](fg:#5ebdea)'
 threshold = 50
 
 [[battery.display]]
-charging_symbol = '[󰂈 $percentage](fg:#96c065)'
-discharging_symbol = '[󰁽 $percentage](fg:#5ebdea)'
+charging_symbol = '[󰂈 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰁽 $percentage ](fg:#5ebdea)'
 threshold = 40
 
 [[battery.display]]
-charging_symbol = '[󰂇 $percentage](fg:#96c065)'
-discharging_symbol = '[󰁼 $percentage](fg:#5ebdea)'
+charging_symbol = '[󰂇 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰁼 $percentage ](fg:#5ebdea)'
 threshold = 30
 
 [[battery.display]]
-charging_symbol = '[󰂆 $percentage](fg:#96c065)'
-discharging_symbol = '[󰁻 $percentage](fg:#f5c68f)'
+charging_symbol = '[󰂆 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰁻 $percentage ](fg:#f5c68f)'
 threshold = 20
 
 [[battery.display]]
-charging_symbol = '[󰢜 $percentage](fg:#96c065)'
-discharging_symbol = '[󰁺 $percentage](fg:#f46a80)'
+charging_symbol = '[󰢜 $percentage ](fg:#96c065)'
+discharging_symbol = '[󰁺 $percentage ](fg:#f46a80)'
 threshold = 10
 
 [custom.jj]
@@ -87,29 +87,33 @@ when = "jj-starship detect"
 symbol = " "
 
 [lua]
-format = '[$symbol($version )]($style)  '
-symbol = "  "
+format = '[$symbol $version  ]($style)'
+style = "#7e818b"
+symbol = " "
 
 [nix_shell]
-format = '[$symbol$state( \($name\))]($style)  '
-symbol = "  "
+format = '[$symbol $name \($state\)  ]($style)'
+symbol = " "
 
 [nodejs]
-format = '[$symbol($version )]($style)  '
-symbol = "  "
+format = '[$symbol $version  ]($style)'
+style = "#7e818b"
+symbol = " "
 
 [package]
-format = '[$symbol$version]($style)  '
-style = "white"
-symbol = "  "
+format = '[$symbol $version  ]($style)'
+style = "#7e818b"
+symbol = " "
 
 [python]
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)  '
-symbol = "󰌠  "
+format = '[$symbol $version  ]($style)'
+style = "#7e818b"
+symbol = "󰌠 "
 
 [rust]
-format = '[$symbol($version )]($style)  '
-symbol = "  "
+format = '[$symbol $version  ]($style)'
+style = "#7e818b"
+symbol = " "
 
 [sudo]
 disabled = false
@@ -119,5 +123,5 @@ symbol = ' '
 
 [time]
 disabled = false
-format = '[$time]($style) '
+format = '[$time ]($style)'
 style = "#7e818b"
