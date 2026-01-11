@@ -80,7 +80,7 @@ threshold = 10
 
 [custom.jj]
 format = "$output "
-shell = ["jj-starship", "--jj-symbol", "  "]
+shell = ["jj-starship", "--no-jj-prefix"]
 when = "jj-starship detect"
 
 [fill]
