@@ -15,16 +15,68 @@ $lua\
 $nodejs\
 $python\
 $rust\
+$battery\
 $time\
 $line_break\
-$battery\
 $sudo\
 $character
 """
 
+# By using only the symbol for the format value, we can change the color
+# of the percentage text along with the symbol.
+[battery]
+format = "$symbol "
+unknown_symbol = '[󰂑 ---](fg:#f5c68f)'
+
 [[battery.display]]
-style = 'bold red'
+charging_symbol = '[󰂅 $percentage](fg:#96c065)'
+discharging_symbol = '[󰁹 $percentage](fg:#5ebdea)'
+threshold = 100
+
+[[battery.display]]
+charging_symbol = '[󰂋 $percentage](fg:#96c065)'
+discharging_symbol = '[󰂂 $percentage](fg:#5ebdea)'
+threshold = 90
+
+[[battery.display]]
+charging_symbol = '[󰂊 $percentage](fg:#96c065)'
+discharging_symbol = '[󰂁 $percentage](fg:#5ebdea)'
+threshold = 80
+
+[[battery.display]]
+charging_symbol = '[󰢞 $percentage](fg:#96c065)'
+discharging_symbol = '[󰂀 $percentage](fg:#5ebdea)'
+threshold = 70
+
+[[battery.display]]
+charging_symbol = '[󰂉 $percentage](fg:#96c065)'
+discharging_symbol = "[󰁿 $percentage](fg:#5ebdea)"
+threshold = 60
+
+[[battery.display]]
+charging_symbol = '[󰢝 $percentage](fg:#96c065)'
+discharging_symbol = '[󰁾 $percentage](fg:#5ebdea)'
+threshold = 50
+
+[[battery.display]]
+charging_symbol = '[󰂈 $percentage](fg:#96c065)'
+discharging_symbol = '[󰁽 $percentage](fg:#5ebdea)'
+threshold = 40
+
+[[battery.display]]
+charging_symbol = '[󰂇 $percentage](fg:#96c065)'
+discharging_symbol = '[󰁼 $percentage](fg:#5ebdea)'
+threshold = 30
+
+[[battery.display]]
+charging_symbol = '[󰂆 $percentage](fg:#96c065)'
+discharging_symbol = '[󰁻 $percentage](fg:#f5c68f)'
 threshold = 20
+
+[[battery.display]]
+charging_symbol = '[󰢜 $percentage](fg:#96c065)'
+discharging_symbol = '[󰁺 $percentage](fg:#f46a80)'
+threshold = 10
 
 [custom.jj]
 format = "$output "
