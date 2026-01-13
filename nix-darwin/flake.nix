@@ -27,7 +27,6 @@
     };
 
     fenix = {
-      # url = "github:dustypomerleau/fenix/sdk"; # until merge of https://github.com/nix-community/fenix/pull/202
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -37,23 +36,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    jj-starship = {
-      url = "github:dmmulroy/jj-starship";
-    };
-
-    # uncomment to use lix main (and remove commented sections in core.nix)
-    # lix = {
-    #   url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
-    #   flake = false;
-    # };
-
-    # uncomment to use lix main (and remove commented sections in core.nix)
-    # lix-module = {
-    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
-    #   inputs.lix.follows = "lix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
+    jj-starship.url = "github:dmmulroy/jj-starship";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
@@ -65,8 +48,6 @@
       fenix,
       home-manager,
       jj-starship,
-      # uncomment to use lix main (and remove commented sections in core.nix)
-      # lix-module,
       nixpkgs,
       ...
     }:
@@ -99,7 +80,6 @@
           ./packages.nix
           ./system.nix
           home-manager.darwinModules.home-manager
-          # lix-module.nixosModules.default
         ];
       };
     };
