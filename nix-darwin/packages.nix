@@ -128,6 +128,7 @@
       typstyle
       unrar # unfree
       uutils-coreutils
+      uv
       vsce
       vscode-extensions.vadimcn.vscode-lldb
       vscode-langservers-extracted # (markdown, html, css, json, eslint)
