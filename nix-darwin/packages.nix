@@ -59,6 +59,7 @@
       fishPlugins.colored-man-pages
       fzf
       gawk
+      gemini-cli
       gh
       ghostty-bin
       git
