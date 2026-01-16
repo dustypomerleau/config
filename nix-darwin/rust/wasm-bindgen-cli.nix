@@ -19,8 +19,8 @@ rustPlatform.buildRustPackage rec {
 
   cargoHash = "sha256-iqQiWbsKlLBiJFeqIYiXo3cqxGLSjNM8SOWXGM9u43E=";
 
-  buildInputs = [ openssl ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ curl ];
   nativeBuildInputs = [ pkg-config ];
+  buildInputs = [ openssl ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ curl ];
 
   # tests require it to be run in the wasm-bindgen monorepo
   doCheck = false;
