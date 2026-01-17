@@ -40,7 +40,7 @@
       cargo-make
       cargo-nextest
       cargo-outdated
-      # cargo-semver-checks # build failure
+      cargo-semver-checks
       cargo-update
       cargo-watch
       clang-tools
