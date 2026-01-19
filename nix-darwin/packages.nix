@@ -83,13 +83,16 @@
       # neovim-nightly # use stable
       netlify-cli
       nil
+      nix-init
       nix-update
       nixfmt
       nodePackages.svgo
       nodejs_24
       nomino
+      nurl
       ocrmypdf
       opentofu
+      ouch
       pandoc
       parallel
       pipe-rename
