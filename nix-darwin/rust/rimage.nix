@@ -7,16 +7,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "rimage";
-  version = "0.12.1";
+  version = "0.12.2";
 
   src = fetchFromGitHub {
     owner = "SalOne22";
     repo = "rimage";
     tag = "v${version}";
-    hash = "sha256-RkdT4XAEtZunvupgAyndewOsTkdP/W1+Vn81Qc9yJ24=";
+    hash = "sha256-8TwkChwUV7+scu0Ibx4A96579SiFii36hUMbDDT0Guc=";
   };
 
-  cargoHash = "sha256-cdYo93i1wrb70Jlue0flGrYu+z0CrAVs+UhoelsCU6Q=";
+  cargoHash = "sha256-j31YMR1KcNrWP0hCtePWupuqtelGb7FQZNu3ZcOCoq8=";
 
   nativeBuildInputs = with pkgs; [
     cmake
@@ -32,7 +32,7 @@ rustPlatform.buildRustPackage rec {
   ];
 
   meta = {
-    description = "A powerful Rust image optimization CLI tool inspired by squoosh!";
+    description = "a powerful Rust image optimization CLI tool inspired by squoosh!";
     homepage = "https://github.com/SalOne22/rimage";
     changelog = "https://github.com/SalOne22/rimage/releases/tag/${src.tag}";
 
