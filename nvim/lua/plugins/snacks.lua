@@ -56,6 +56,8 @@ return {
         lazy = false,
 
         opts = {
+            gh = {},
+
             indent = {
                 enabled = true,
                 only_scope = true,
@@ -72,8 +74,7 @@ return {
 
             input = {},
             notifier = {}, -- options at https://github.com/folke/snacks.nvim/blob/main/docs/notifier.md
-            picker = {},
-
+            picker = { sources = { gh_issue = {}, gh_pr = {} } },
             bigfile = { enabled = false },
             dashboard = { enabled = false },
             explorer = { enabled = false },
@@ -87,27 +88,47 @@ return {
         keys = {
             {
                 "<leader>x",
-                "<cmd>lua Snacks.bufdelete()<cr>",
+                function() Snacks.bufdelete() end,
                 mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>X",
-                "<cmd>lua Snacks.bufdelete.all()<cr>",
+                function() Snacks.bufdelete.all() end,
                 mode = { "n" },
                 noremap = true,
             },
             {
                 "<leader>z",
-                "<cmd>lua Snacks.bufdelete.other()<cr>",
+                function() Snacks.bufdelete.other() end,
                 mode = { "n" },
                 noremap = true,
             },
             {
                 "<localleader>n",
-                "<cmd>lua Snacks.notifier.show_history()<cr>",
+                function() Snacks.notifier.show_history() end,
                 mode = { "n" },
                 noremap = true,
+            },
+            {
+                "<localleader>gi",
+                function() Snacks.picker.gh_issue() end,
+                desc = "GitHub Issues (open)",
+            },
+            {
+                "<localleader>gI",
+                function() Snacks.picker.gh_issue({ state = "all" }) end,
+                desc = "GitHub Issues (all)",
+            },
+            {
+                "<localleader>gt",
+                function() Snacks.picker.gh_pr() end,
+                desc = "GitHub Pull Requests (open)",
+            },
+            {
+                "<localleader>gT",
+                function() Snacks.picker.gh_pr({ state = "all" }) end,
+                desc = "GitHub Pull Requests (all)",
             },
         },
     },
