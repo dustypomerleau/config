@@ -33,7 +33,7 @@ return {
                     svelte = { "prettier" },
                     svg = { "prettier" },
                     tex = { "tex-fmt", lsp_fallback = "never" },
-                    -- toml = { "taplo" },
+                    toml = { "taplo" },
                     typescript = { "oxfmt" },
                     typst = { "prettypst", "typstyle", stop_after_first = true },
                     yaml = { "yamlfmt" },
