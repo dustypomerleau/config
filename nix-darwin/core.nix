@@ -11,12 +11,18 @@
       enable = true;
       ephemeral = true;
 
-      # config = {
-      #   virtualisation = {
-      #     cores = 8;
-      #     rosetta.enable = true;
-      #   };
-      # };
+      config = {
+        virtualisation = {
+          cores = 6;
+
+          darwin-builder = {
+            diskSize = 40 * 1024;
+            memorySize = 8 * 1024;
+          };
+
+          # rosetta.enable = true;
+        };
+      };
     };
 
     # remove if using lix main
@@ -25,12 +31,12 @@
     settings = {
       experimental-features = "nix-command flakes";
 
-      extra-platforms = [
-        "aarch64-darwin"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "x86_64-linux"
-      ];
+      # extra-platforms = [
+      #   "aarch64-darwin"
+      #   "aarch64-linux"
+      #   "x86_64-darwin"
+      #   "x86_64-linux"
+      # ];
 
       nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
 
