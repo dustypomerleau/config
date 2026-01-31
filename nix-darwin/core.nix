@@ -7,16 +7,38 @@
 }:
 {
   nix = {
+    linux-builder = {
+      enable = true;
+      ephemeral = true;
+
+      # config = {
+      #   virtualisation = {
+      #     cores = 8;
+      #     rosetta.enable = true;
+      #   };
+      # };
+    };
+
     # remove if using lix main
     package = pkgs.lixPackageSets.latest.lix;
 
     settings = {
       experimental-features = "nix-command flakes";
+
+      extra-platforms = [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "x86_64-linux"
+      ];
+
       nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
+
       trusted-users = [
         "@admin"
         "@root"
       ]; # required to use darwin.linux-builder
+
     };
   };
 
