@@ -17,10 +17,11 @@
 
           darwin-builder = {
             diskSize = 40 * 1024;
-            memorySize = 8 * 1024;
+            memorySize = 16 * 1024;
           };
 
-          # rosetta.enable = true;
+          # requires that you have previously run `softwareupdate --install-rosetta`
+          rosetta.enable = true;
         };
       };
     };
@@ -30,14 +31,6 @@
 
     settings = {
       experimental-features = "nix-command flakes";
-
-      # extra-platforms = [
-      #   "aarch64-darwin"
-      #   "aarch64-linux"
-      #   "x86_64-darwin"
-      #   "x86_64-linux"
-      # ];
-
       nix-path = config.nix.nixPath; # see comments on https://github.com/NixOS/nix/pull/11079
 
       trusted-users = [

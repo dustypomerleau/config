@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo 'installing rosetta to speed up the nix linux builder'
+softwareupdate --install-rosetta
+
 echo 'changing default shell to fish'
 chsh -s $(which fish)
 
