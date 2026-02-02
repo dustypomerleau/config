@@ -7,10 +7,28 @@
 }:
 {
   nix = {
-    linux-builder = {
-      enable = true;
-      ephemeral = true;
+    buildMachines = [
+      {
+        hostName = "localhost";
+        system = "x86_64-linux";
+        sshUser = "builder";
+        sshKey = "/etc/nix/builder_ed25519";
+        maxJobs = 4;
+        supportedFeatures = [
+          "kvm"
+          "benchmark"
+          "big-parallel"
+        ];
+      }
+    ];
 
+    distributedBuilds = true;
+
+    extraOptions = ''
+      builders-use-substitutes = true
+    '';
+
+    linux-builder = {
       config = {
         virtualisation = {
           cores = 6;
@@ -23,6 +41,14 @@
           # requires that you have previously run `softwareupdate --install-rosetta`
           rosetta.enable = true;
         };
+
+        enable = true;
+        ephemeral = true;
+
+        systems = [
+          "x86_64-linux"
+          "aarch64-linux"
+        ];
       };
     };
 
