@@ -61,6 +61,7 @@
 
       trusted-users = [
         "@admin"
+        "dn"
         "@root"
       ]; # required to use darwin.linux-builder
 
