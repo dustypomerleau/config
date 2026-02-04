@@ -103,6 +103,7 @@
       postgres-language-server
       prettypst
       python3
+      qemu
       qmk
       railway
       ripgrep

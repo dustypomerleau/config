@@ -9,11 +9,19 @@
   nix = {
     buildMachines = [
       {
-        hostName = "localhost";
-        system = "x86_64-linux";
+        hostName = "linux-builder";
+        protocol = "ssh-ng";
         sshUser = "builder";
         sshKey = "/etc/nix/builder_ed25519";
+        # publicHostKey = "c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUpCV2N4Yi9CbGFxdDFhdU90RStGOFFVV3JVb3RpQzVxQkorVXVFV2RWQ2Igcm9vdEBuaXhvcwo=";
+        publicHostKey = "AAAAC3NzaC1lZDI1NTE5AAAAIK9dd/S5EH5SndM1lJgxb7gdrYEb1Z/PGT7t/y5Y+XJE";
         maxJobs = 4;
+
+        systems = [
+          "x86_64-linux"
+          "aarch64-linux"
+        ];
+
         supportedFeatures = [
           "kvm"
           "benchmark"
@@ -30,6 +38,11 @@
 
     linux-builder = {
       config = {
+        boot.binfmt.emulatedSystems = [
+          "x86_64-linux"
+          "aarch64-linux"
+        ];
+
         virtualisation = {
           cores = 6;
 
@@ -61,7 +74,7 @@
 
       trusted-users = [
         "@admin"
-        "dn"
+        "@dn"
         "@root"
       ]; # required to use darwin.linux-builder
 
