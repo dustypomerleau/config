@@ -7,16 +7,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "rimage";
-  version = "0.12.2";
+  version = "0.12.3";
 
   src = fetchFromGitHub {
     owner = "SalOne22";
     repo = "rimage";
     tag = "v${version}";
-    hash = "sha256-8TwkChwUV7+scu0Ibx4A96579SiFii36hUMbDDT0Guc=";
+    hash = "sha256-I7nOvxRORdZeolBABt5u94Ij0PI/AiLi4wbN+C02haQ=";
   };
 
-  cargoHash = "sha256-j31YMR1KcNrWP0hCtePWupuqtelGb7FQZNu3ZcOCoq8=";
+  cargoHash = "sha256-kfOzzVkxHDqVrhX6vZF18f9hAXK9SKwezJphH0QGE4E=";
 
   nativeBuildInputs = with pkgs; [
     cmake
