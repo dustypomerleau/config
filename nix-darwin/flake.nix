@@ -55,7 +55,6 @@
       inherit (darwin.lib) darwinSystem;
       computername = "mp";
       hostname = "mp";
-      system = "aarch64-darwin";
       username = "dn";
 
       specialArgs = {
@@ -63,7 +62,6 @@
           inputs
           computername
           hostname
-          system
           username
           ;
       };

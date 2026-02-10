@@ -2,7 +2,6 @@
   config,
   inputs,
   pkgs,
-  system,
   ...
 }:
 {
@@ -84,7 +83,7 @@
   nixpkgs = {
     config.allowUnfree = true;
     # The platform the configuration will be used on.
-    hostPlatform = system;
+    hostPlatform = "aarch64-darwin";
 
     # remove if using lix main
     overlays = [
