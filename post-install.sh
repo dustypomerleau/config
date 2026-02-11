@@ -40,6 +40,9 @@ cd ~/.local/share/nvim/lazy/nvim-spectre
 echo 'adding SSH keys to agent'
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
+echo 'init and update podman machine settings'
+podman machine init --cpus 4 --disk-size 100 --memory 8192
+
 # copy your NvimLauncher.app to /Applications/ on your new machine
 # This is simply applescript to run a shell script, which contains:
 #
