@@ -22,6 +22,7 @@ return {
                     -- rustfmt/leptosfmt configuration is per-project (see rustaceanvim.lua)
                     css = { "prettier" },
                     dockerfile = { "dockerfmt" },
+                    fish = { "fish_indent" },
                     javascript = { "oxfmt" },
                     json = { "prettier" },
                     jsonc = { "prettier" },
