@@ -6,7 +6,7 @@
 
   # make sure homebrew packages are available in PATH
   # (given the way fish handles paths, I'm not sure this is necessary)
-  environment.systemPath = [ config.homebrew.brewPrefix ];
+  environment.systemPath = [ config.homebrew.prefix ];
 
   homebrew = {
     enable = true;
