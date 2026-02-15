@@ -9,6 +9,7 @@ return {
             local ft = require("Comment.ft")
             ft.edgeql = "#%s"
             ft.hjson = "#%s"
+            ft.theme = "#%s"
         end,
     },
 }

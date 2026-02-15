@@ -31,6 +31,7 @@
       binaryen
       bottom
       broot # docs: https://dystroy.org/broot/
+      btop
       cargo-binstall
       cargo-edit
       cargo-expand

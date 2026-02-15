@@ -54,6 +54,7 @@ abbr --add .... "../../.."
 abbr --add ..... "../../../.."
 abbr --add b "br" # br is a specific verb within broot
 abbr --add bo "btm"
+abbr --add bt "btop"
 abbr --add cb "cargo build"
 abbr --add ce "cargo tree --depth"
 abbr --add cg "cargo upgrade"
