@@ -45,21 +45,21 @@ set __fish_git_prompt_show_informative_status true
 set __fish_git_prompt_showcolorhints true
 set __fish_git_prompt_showdirtystate true
 set __fish_git_prompt_showuntrackedfiles false
-set __fish_git_prompt_showupstream "informative"
+set __fish_git_prompt_showupstream informative
 set fish_prompt_pwd_full_dirs 2
 
 # abbreviations (aliases)
 abbr --add ... "../.."
 abbr --add .... "../../.."
 abbr --add ..... "../../../.."
-abbr --add b "br" # br is a specific verb within broot
+abbr --add b br # br is a specific verb within broot
 abbr --add bo btop
 abbr --add cb "cargo build"
 abbr --add ce "cargo tree --depth"
 abbr --add cg "cargo upgrade"
 abbr --add cgd "cargo upgrade --dry-run"
 abbr --add ch "cargo check"
-abbr --add chmod "uutils-chmod"
+abbr --add chmod uutils-chmod
 abbr --add ci "cargo tree --all-features --invert"
 abbr --add cl "cargo leptos watch --hot-reload"
 abbr --add cn "cargo nextest run --no-capture"
@@ -76,8 +76,8 @@ abbr --add cu "cargo update"
 abbr --add cud "cargo update --dry-run"
 abbr --add e "eza -ahlmT -F --color-scale=size --git --git-ignore --icons=auto --no-permissions --no-user -L3"
 abbr --add eg "eza -ahlmT -F --color-scale=size --git --icons=auto --no-permissions --no-user -L3"
-abbr --add ev "evcxr"
-abbr --add find "uutils-find"
+abbr --add ev evcxr
+abbr --add find uutils-find
 abbr --add g "gemini -s"
 # abbr --add g "git status -bs"
 abbr --add ga "git add"
@@ -196,9 +196,9 @@ uutils-ls -1AR \
 
 abbr --add md "uutils-mkdir -pv"
 abbr --add mkdir "uutils-mkdir -pv"
-abbr --add mktemp "uutils-mktemp" # macOS mktemp is not POSIX compliant
+abbr --add mktemp uutils-mktemp # macOS mktemp is not POSIX compliant
 abbr --add mv "uutils-mv -iv"
-abbr --add n "nvim"
+abbr --add n nvim
 abbr --add nb "nix build"
 abbr --add nd "nix develop"
 abbr --add nf "nix flake update"
@@ -207,7 +207,7 @@ abbr --add nu "nix flake update --flake ~/.config/nix-darwin"
 abbr --add oc "ouch compress"
 abbr --add od "ouch decompress"
 abbr --add ofd "open ."
-abbr --add p "pnpm"
+abbr --add p pnpm
 abbr --add pa "pnpm add"
 abbr --add pad "pnpm add -D"
 abbr --add pag "pnpm add -g"
@@ -218,7 +218,7 @@ abbr --add pgs "pg_ctl -D /usr/local/var/postgres status"
 abbr --add pi "pnpm install"
 abbr --add pl "pnpm list -depth 0"
 abbr --add plg "pnpm list -g -depth 0"
-abbr --add pls "postgres-language-server"
+abbr --add pls postgres-language-server
 abbr --add po "pnpm outdated"
 abbr --add pp "/Applications/Polypane.app/Contents/MacOS/Polypane"
 abbr --add pr "pnpm run"
@@ -239,24 +239,24 @@ pnpm update -g \
 # && cargo install-update -a \
 # && rustup update \
 
-abbr --add t "tmux"
+abbr --add t tmux
 abbr --add ta "tmux attach"
-abbr --add td "tldr"
+abbr --add td tldr
 abbr --add tl "tmux list-sessions" # use `<c-a> w` for an interactive version of this
 abbr --add tm "tmuxp load session.yaml"
 abbr --add tn "tmux new -s"
 abbr --add ts "tmux attach -t" # s for 'session'
 abbr --add tx "tmux kill-session -t" # s for 'session'
 abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
-abbr --add x "extract"
-abbr --add xargs "uutils-xargs"
-abbr --add yz "yazi"
-abbr --add ze "zellij" # z is bound to zoxide
+abbr --add x extract
+abbr --add xargs uutils-xargs
+abbr --add yz yazi
+abbr --add ze zellij # z is bound to zoxide
 
 # pnpm
-set -gx PNPM_HOME "/Users/dn/Library/pnpm"
+set -gx PNPM_HOME /Users/dn/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
