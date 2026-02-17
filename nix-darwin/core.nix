@@ -35,6 +35,19 @@
       builders-use-substitutes = true
     '';
 
+    gc = {
+      automatic = true;
+
+      interval = [
+        {
+          Weekday = 1;
+          Hour = 10;
+        }
+      ];
+
+      options = "--delete-older-than 28d";
+    };
+
     linux-builder = {
       config = {
         boot.binfmt.emulatedSystems = [
@@ -62,6 +75,17 @@
           "aarch64-linux"
         ];
       };
+    };
+
+    optimise = {
+      automatic = true;
+
+      interval = [
+        {
+          Weekday = 1;
+          Hour = 11;
+        }
+      ];
     };
 
     # remove if using lix main
