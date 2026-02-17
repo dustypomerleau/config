@@ -40,7 +40,7 @@
 
       interval = [
         {
-          Weekday = 1;
+          Weekday = 1; # every Monday
           Hour = 10;
         }
       ];
@@ -100,7 +100,6 @@
         "@dn"
         "@root"
       ]; # required to use darwin.linux-builder
-
     };
   };
 
@@ -121,6 +120,7 @@
           # nixpkgs-review
           ;
       })
+
       inputs.jj-starship.overlays.default
     ];
   };
