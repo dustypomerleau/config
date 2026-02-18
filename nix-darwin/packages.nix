@@ -54,7 +54,7 @@
       eza
       fastfetch
       fd
-      ffmpeg_7
+      ffmpeg
       findutils
       fish
       fishPlugins.colored-man-pages
