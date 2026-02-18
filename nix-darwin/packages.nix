@@ -62,7 +62,6 @@
       gawk
       gemini-cli
       gh
-      ghostty-bin
       git
       git-filter-repo
       glow
