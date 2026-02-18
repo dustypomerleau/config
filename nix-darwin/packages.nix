@@ -57,7 +57,7 @@
       ffmpeg
       findutils
       fish
-      fishPlugins.colored-man-pages
+      # fishPlugins.colored-man-pages # don't duplicate this
       fzf
       gawk
       gemini-cli
