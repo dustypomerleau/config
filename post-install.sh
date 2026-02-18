@@ -58,5 +58,6 @@ podman machine init --cpus 4 --disk-size 100 --memory 8192
 # Set application keybinding for Fill (cmd + shift F)
 
 # manually add your terminal to System Settings > Privacy & Security > Developer Tools
+# manually add your terminal to System Settings > Privacy & Security > App Management
 
 # In Arq setup, import your excludes from ~/.config/arq/yyyymmdd-arq-mp-backup-exclusions.json 
