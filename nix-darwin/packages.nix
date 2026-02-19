@@ -14,6 +14,17 @@
   imports = [ ./rust ];
 
   environment = {
+    # files to link into /etc
+    # For example, do you need to manually include /etc/ssh/ssh_config.d/100-linux-builder.conf ?
+    #
+    # You can either include a source file:
+    # environment.etc.<name>.source
+    #
+    # or the file text directly
+    # environment.etc.<name>.text
+    #
+    # etc = {};
+
     shells = with pkgs; [
       zsh
       fish

@@ -16,6 +16,9 @@
     # passing only a string is shorthand for { name = ""; }
     brews = [ "postgresql@18" ];
 
+    # Prefer installing Rust packages via nixpkgs if possible.
+    # cargoPackages = [ ];
+
     casks = [
       "1password"
       "affinity"
@@ -61,7 +64,7 @@
       # TODO: not available from brew: exodus, homerow, openVPN connect
     ];
 
-    caskArgs.require_sha = false;
+    caskArgs.require_sha = true;
 
     masApps = {
       "Apple Configurator" = 1037126344;

@@ -79,6 +79,15 @@
       WindowManager.StandardHideDesktopIcons = true;
       WindowManager.StandardHideWidgets = true;
 
+      controlcenter = {
+        BatteryShowPercentage = true;
+        Bluetooth = true;
+        Display = true;
+        FocusModes = false;
+        NowPlaying = false;
+        Sound = true;
+      };
+
       dock = {
         autohide = true;
         autohide-delay = 1.0e-2;
