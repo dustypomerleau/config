@@ -28,7 +28,10 @@
     localHostName = specialArgs.hostname;
   };
 
-  security.pam.services.sudo_local.touchIdAuth = true;
+  security.pam.services.sudo_local = {
+    touchIdAuth = true;
+    watchIdAuth = true;
+  };
 
   system = {
     defaults = {
@@ -56,6 +59,10 @@
       CustomUserPreferences = { };
 
       NSGlobalDomain = {
+        "com.apple.mouse.tapBehavior" = 1; # tap to click
+        "com.apple.sound.beep.feedback" = 0; # feedback when volume is changed
+        "com.apple.trackpad.forceClick" = false;
+        "com.apple.trackpad.scaling" = 3.0; # 3 is maximum tracking speed
         AppleICUForce24HourTime = true;
         AppleInterfaceStyle = "Dark";
         AppleShowAllExtensions = true;
@@ -65,14 +72,12 @@
         NSAutomaticPeriodSubstitutionEnabled = false;
         NSAutomaticQuoteSubstitutionEnabled = false;
         NSAutomaticSpellingCorrectionEnabled = false;
+        NSAutomaticWindowAnimationsEnabled = false;
+        NSDocumentSaveNewDocumentsToCloud = false;
         NSNavPanelExpandedStateForSaveMode = true;
         NSNavPanelExpandedStateForSaveMode2 = true;
         PMPrintingExpandedStateForPrint = true;
         PMPrintingExpandedStateForPrint2 = true;
-        "com.apple.mouse.tapBehavior" = 1; # tap to click
-        "com.apple.sound.beep.feedback" = 0; # feedback when volume is changed
-        "com.apple.trackpad.forceClick" = false;
-        "com.apple.trackpad.scaling" = 3.0; # 3 is maximum tracking speed
       };
 
       SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
@@ -80,17 +85,19 @@
       WindowManager.StandardHideWidgets = true;
 
       controlcenter = {
+        AirDrop = false;
         BatteryShowPercentage = true;
         Bluetooth = true;
-        Display = true;
+        Display = false;
         FocusModes = false;
         NowPlaying = false;
-        Sound = true;
+        Sound = false;
       };
 
       dock = {
         autohide = true;
         autohide-delay = 1.0e-2;
+        expose-animation-duration = 0.0;
         orientation = "left";
         show-recents = false;
         showAppExposeGestureEnabled = true;
@@ -106,14 +113,19 @@
         AppleShowAllExtensions = true;
         CreateDesktop = false;
         FXPreferredViewStyle = "clmv"; # column view
+        NewWindowTarget = "Other";
+        NewWindowTargetPath = "~/Library/CloudStorage/Dropbox";
         ShowPathbar = true;
         ShowStatusBar = true;
         _FXShowPosixPathInTitle = true;
+        _FXEnableColumnAutoSizing = true;
+        _FXSortFoldersFirst = true;
       };
 
       loginwindow.GuestEnabled = false;
 
       menuExtraClock = {
+        FlashDateSeparators = false;
         Show24Hour = true;
         ShowDate = 1;
         ShowDayOfWeek = true;

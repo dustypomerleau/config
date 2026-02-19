@@ -12,7 +12,6 @@ The basic steps to provision a new machine are:
 1. Run the [Lix](https://lix.systems/) installer via `curl -sSf -L https://install.lix.systems/lix | sh -s -- install` (or use the [Determinate Systems Nix installer](https://github.com/DeterminateSystems/nix-installer)).
 1. Manually give full disk access to the terminal you're using via `System Settings > Privacy & Security > Full Disk Access` (this is necessary to set `universalaccess` settings like `reduceTransparency`).
 1. Edit the variables in `~/.config/nix-darwin/flake.nix`.
-1. Edit `nixpkgs.hostPlatform` in `core.nix`.
 1. Perform initial install with `nix run nix-darwin --experimental-features "nix-command flakes" -- switch --flake ~/.config/nix-darwin --impure`.
 1. Subsequent changes are activated via `darwin-rebuild switch --flake ~/.config/nix-darwin --impure`.
 1. Run `post-install.sh` to set system settings not available via nix-darwin.
