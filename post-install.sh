@@ -46,6 +46,10 @@ podman machine init --cpus 4 --disk-size 100 --memory 8192
 # copy your NvimLauncher.app to /Applications/ on your new machine
 # This is simply applescript to run a shell script, which contains:
 #
+# open -na Ghostty --args -e fish -l -c "nvim '$1'"
+#
+# previously, for alacritty, you were using:
+#
 # for f in "$@"
 # do
 # 	alacritty -e nvim "$f"
