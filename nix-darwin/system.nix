@@ -54,6 +54,96 @@
         NSGlobalDomain = {
           "com.apple.trackpad.scrolling" = 0.5; # 1 is maximum
         };
+
+        "com.apple.symbolichotkeys".AppleSymbolicHotKeys = {
+          "32".enabled = false; # Mission Control show all windows
+          "33".enabled = false; # Mission Control show app windows
+          "36".enabled = false; # Mission Control show desktop
+          "52".enabled = false; # Toggle Dock autohide
+          "60".enabled = false; # Select previous input source
+          "61".enabled = false; # Select next input source
+          "118".enabled = false;
+          "175".enabled = false;
+          "190".enabled = false;
+          "222".enabled = false;
+          "232".enabled = true; # Enable speak items to allow 230, 231 below
+          "260".enabled = false;
+
+          # ctrl + option + N to move left a space in Mission Control
+          "79" = {
+            enabled = true;
+
+            value = {
+              parameters = [
+                110
+                45
+                786432
+              ];
+
+              type = "standard";
+            };
+          };
+
+          # ctrl + option + E to move right a space in Mission Control
+          "81" = {
+            enabled = true;
+
+            value = {
+              parameters = [
+                101
+                14
+                786432
+              ];
+
+              type = "standard";
+            };
+          };
+
+          # ctrl + space to show the notification center
+          "163" = {
+            enabled = true;
+
+            value = {
+              parameters = [
+                32
+                49
+                262144
+              ];
+
+              type = "standard";
+            };
+          };
+
+          # control + option + cmd + S to toggle speak selected items
+          "230" = {
+            enabled = true;
+
+            value = {
+              parameters = [
+                115
+                1
+                1835008
+              ];
+
+              type = "standard";
+            };
+          };
+
+          # control + option + S to toggle speak items under the cursor
+          "231" = {
+            enabled = true;
+
+            value = {
+              parameters = [
+                115
+                1
+                786432
+              ];
+
+              type = "standard";
+            };
+          };
+        };
       };
 
       CustomUserPreferences = { };
@@ -177,3 +267,81 @@
 
   };
 }
+
+# helper for keycodes, from:
+# https://github.com/NUIKit/CGSInternal/blob/master/CGSHotKeys.h
+#
+# /// The system defines a limited number of "symbolic" hot keys that are remembered system-wide.  The
+# /// original intent is to have a common registry for the action of function keys and numerous
+# /// other event-generating system gestures.
+# typedef enum {
+# 	// full keyboard access hotkeys
+# 	kCGSHotKeyToggleFullKeyboardAccess = 12,
+# 	kCGSHotKeyFocusMenubar = 7,
+# 	kCGSHotKeyFocusDock = 8,
+# 	kCGSHotKeyFocusNextGlobalWindow = 9,
+# 	kCGSHotKeyFocusToolbar = 10,
+# 	kCGSHotKeyFocusFloatingWindow = 11,
+# 	kCGSHotKeyFocusApplicationWindow = 27,
+# 	kCGSHotKeyFocusNextControl = 13,
+# 	kCGSHotKeyFocusDrawer = 51,
+# 	kCGSHotKeyFocusStatusItems = 57,
+#
+# 	// screenshot hotkeys
+# 	kCGSHotKeyScreenshot = 28,
+# 	kCGSHotKeyScreenshotToClipboard = 29,
+# 	kCGSHotKeyScreenshotRegion = 30,
+# 	kCGSHotKeyScreenshotRegionToClipboard = 31,
+#
+# 	// universal access
+# 	kCGSHotKeyToggleZoom = 15,
+# 	kCGSHotKeyZoomOut = 19,
+# 	kCGSHotKeyZoomIn = 17,
+# 	kCGSHotKeyZoomToggleSmoothing = 23,
+# 	kCGSHotKeyIncreaseContrast = 25,
+# 	kCGSHotKeyDecreaseContrast = 26,
+# 	kCGSHotKeyInvertScreen = 21,
+# 	kCGSHotKeyToggleVoiceOver = 59,
+#
+# 	// Dock
+# 	kCGSHotKeyToggleDockAutohide = 52,
+# 	kCGSHotKeyExposeAllWindows = 32,
+# 	kCGSHotKeyExposeAllWindowsSlow = 34,
+# 	kCGSHotKeyExposeApplicationWindows = 33,
+# 	kCGSHotKeyExposeApplicationWindowsSlow = 35,
+# 	kCGSHotKeyExposeDesktop = 36,
+# 	kCGSHotKeyExposeDesktopsSlow = 37,
+# 	kCGSHotKeyDashboard = 62,
+# 	kCGSHotKeyDashboardSlow = 63,
+#
+# 	// spaces (Leopard and later)
+# 	kCGSHotKeySpaces = 75,
+# 	kCGSHotKeySpacesSlow = 76,
+# 	// 77 - fn F7 (disabled)
+# 	// 78 - ⇧fn F7 (disabled)
+# 	kCGSHotKeySpaceLeft = 79,
+# 	kCGSHotKeySpaceLeftSlow = 80,
+# 	kCGSHotKeySpaceRight = 81,
+# 	kCGSHotKeySpaceRightSlow = 82,
+# 	kCGSHotKeySpaceDown = 83,
+# 	kCGSHotKeySpaceDownSlow = 84,
+# 	kCGSHotKeySpaceUp = 85,
+# 	kCGSHotKeySpaceUpSlow = 86,
+#
+# 	// input
+# 	kCGSHotKeyToggleCharacterPallette = 50,
+# 	kCGSHotKeySelectPreviousInputSource = 60,
+# 	kCGSHotKeySelectNextInputSource = 61,
+#
+# 	// Spotlight
+# 	kCGSHotKeySpotlightSearchField = 64,
+# 	kCGSHotKeySpotlightWindow = 65,
+#
+# 	kCGSHotKeyToggleFrontRow = 73,
+# 	kCGSHotKeyLookUpWordInDictionary = 70,
+# 	kCGSHotKeyHelp = 98,
+#
+# 	// displays - not verified
+# 	kCGSHotKeyDecreaseDisplayBrightness = 53,
+# 	kCGSHotKeyIncreaseDisplayBrightness = 54,
+# } CGSSymbolicHotKey;
