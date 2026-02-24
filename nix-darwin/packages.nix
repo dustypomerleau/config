@@ -151,7 +151,7 @@
       vtsls
       wasm-pack
       yamlfmt
-      yt-dlp
+      # yt-dlp # build failure 2/2 deno build failure
       yazi
       zellij
       zoxide
