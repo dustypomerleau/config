@@ -55,6 +55,7 @@
           "com.apple.trackpad.scrolling" = 0.5; # 1 is maximum
         };
 
+        # For hotkeys, the `parameters` are ascii code, virtual keycode, modifier combination
         "com.apple.symbolichotkeys".AppleSymbolicHotKeys = {
           "32".enabled = false; # Mission Control show all windows
           "33".enabled = false; # Mission Control show app windows
