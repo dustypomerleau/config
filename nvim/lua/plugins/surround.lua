@@ -1,26 +1,78 @@
+vim.g.nvim_surround_no_mappings = true
+
 return {
     {
         "kylechui/nvim-surround",
         version = "*",
         event = "BufEnter",
 
-        config = function()
-            -- avoid conflicts with flash by changing sS to oO
-            require("nvim-surround").setup({
-                keymaps = {
-                    change = "co",
-                    change_line = "cO",
-                    delete = "do",
-                    insert = "<C-g>o",
-                    insert_line = "<C-g>O",
-                    normal = "yo",
-                    normal_cur = "yoo",
-                    normal_cur_line = "yOO",
-                    normal_line = "yO",
-                    visual = "O",
-                    visual_line = "gO",
-                },
-            })
-        end,
+        keys = {
+            {
+                "co",
+                "<Plug>(nvim-surround-change)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "cO",
+                "<Plug>(nvim-surround-change-line)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "do",
+                "<Plug>(nvim-surround-delete)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "<C-g>o",
+                "<Plug>(nvim-surround-insert)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "<C-g>O",
+                "<Plug>(nvim-surround-insert-line)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "yo",
+                "<Plug>(nvim-surround-normal)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "yoo",
+                "<Plug>(nvim-surround-normal-cur)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "yOO",
+                "<Plug>(nvim-surround-normal-cur-line)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "yO",
+                "<Plug>(nvim-surround-normal-line)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "O",
+                "<Plug>(nvim-surround-visual)",
+                mode = { "n" },
+                silent = true,
+            },
+            {
+                "gO",
+                "<Plug>(nvim-surround-visual-line)",
+                mode = { "n" },
+                silent = true,
+            },
+        },
     },
 }
