@@ -10,14 +10,14 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "wasm-bindgen-cli";
-  version = "0.2.108";
+  version = "0.2.113";
 
   src = fetchCrate {
     inherit pname version;
-    hash = "sha256-UsuxILm1G6PkmVw0I/JF12CRltAfCJQFOaT4hFwvR8E=";
+    hash = "sha256-CWxeRhlO1i4Yq93OVLFDvJFIaBB7q2Ps0yqk+Euz+8w=";
   };
 
-  cargoHash = "sha256-iqQiWbsKlLBiJFeqIYiXo3cqxGLSjNM8SOWXGM9u43E=";
+  cargoHash = "sha256-XmIx55PKfu+tVUGFC7MGF4AAYeV7z/p3KuLnY0bYMH8=";
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ openssl ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ curl ];
