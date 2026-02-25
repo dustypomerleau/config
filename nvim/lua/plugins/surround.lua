@@ -28,13 +28,13 @@ return {
             {
                 "<C-g>o",
                 "<Plug>(nvim-surround-insert)",
-                mode = { "n" },
+                mode = { "i" },
                 silent = true,
             },
             {
                 "<C-g>O",
                 "<Plug>(nvim-surround-insert-line)",
-                mode = { "n" },
+                mode = { "i" },
                 silent = true,
             },
             {
@@ -64,13 +64,13 @@ return {
             {
                 "O",
                 "<Plug>(nvim-surround-visual)",
-                mode = { "n" },
+                mode = { "x" },
                 silent = true,
             },
             {
                 "gO",
                 "<Plug>(nvim-surround-visual-line)",
-                mode = { "n" },
+                mode = { "x" },
                 silent = true,
             },
         },
