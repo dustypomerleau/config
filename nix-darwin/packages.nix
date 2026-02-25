@@ -101,7 +101,7 @@
       nodejs_24
       nomino
       nurl
-      # ocrmypdf # build failure
+      ocrmypdf
       opentofu
       ouch
       pandoc
