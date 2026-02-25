@@ -27,7 +27,12 @@ echo 'installing xcode command line tools'
 xcode-select --install
 
 echo 'installing fisher to ensure post-install hook'
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source \
+    && fisher install jorgebucaran/fisher \
+    && fisher install \
+        patrickf1/fzf.fish \
+        patrickf1/colored_man_pages.fish \
+        oh-my-fish/plugin-extract
 
 # install spectre_oxi (after installing nvim plugins)
 cd ~/.local/share/nvim/lazy/nvim-spectre
