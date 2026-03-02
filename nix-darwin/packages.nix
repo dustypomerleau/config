@@ -134,7 +134,7 @@
       timer
       tinymist
       tmux
-      # tmuxp # docs: https://tmuxp.git-pull.com/
+      tmuxp # docs: https://tmuxp.git-pull.com/
       tofu-ls
       tokei
       trash-cli # trash goes to ~/.local/share/Trash/
