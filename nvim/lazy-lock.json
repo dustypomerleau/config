@@ -13,7 +13,7 @@
   "markview.nvim": { "branch": "main", "commit": "03fe3f42093d47a8536276f682cf057f8c14033b" },
   "mini.nvim": { "branch": "main", "commit": "a995fe9cd4193fb492b5df69175a351a74b3d36b" },
   "nvim-autopairs": { "branch": "master", "commit": "59bce2eef357189c3305e25bc6dd2d138c1683f5" },
-  "nvim-colorizer.lua": { "branch": "master", "commit": "13e65a4bf30de5170c3351cd0ee035e3b0fae23d" },
+  "nvim-colorizer.lua": { "branch": "master", "commit": "3c3a9dc9bda4a926bc84b2a1be783374546c252c" },
   "nvim-lspconfig": { "branch": "master", "commit": "44acfe887d4056f704ccc4f17513ed41c9e2b2e6" },
   "nvim-spectre": { "branch": "master", "commit": "72f56f7585903cd7bf92c665351aa585e150af0f" },
   "nvim-spider": { "branch": "main", "commit": "4bca4dbc53f01b37385146b37ab5ce55bdc083fc" },

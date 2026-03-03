@@ -32,6 +32,8 @@
 
     # `environment.systemPackages` are installed for all users (unlike `home.packages`)
     systemPackages = with pkgs; [
+      # fishPlugins.colored-man-pages # don't duplicate this
+      # neovim-nightly # use stable
       _1password-cli # unfree
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -68,7 +70,6 @@
       ffmpeg
       findutils
       fish
-      # fishPlugins.colored-man-pages # don't duplicate this
       fzf
       gawk
       gemini-cli
@@ -84,14 +85,13 @@
       kind
       kubectl
       libressl
-      luajit
       lua-language-server
+      luajit
       luajitPackages.luacheck
       luajitPackages.luarocks
       markdown-oxide
       mas
       neovim
-      # neovim-nightly # use stable
       netlify-cli
       nil
       nix-init
@@ -151,8 +151,8 @@
       vtsls
       wasm-pack
       yamlfmt
-      # yt-dlp
       yazi
+      yt-dlp
       zellij
       zoxide
     ];
