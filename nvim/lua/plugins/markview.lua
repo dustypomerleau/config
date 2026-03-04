@@ -9,6 +9,7 @@ return {
         },
 
         lazy = false,
+
         opts = {
             -- prevents a warning if nvim-treesitter loads first
             experimental = { check_rtp = false },
