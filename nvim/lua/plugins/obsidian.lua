@@ -6,13 +6,14 @@ return {
         ft = "markdown",
 
         opts = {
-            legacy_commands = false, -- suppress warnings until v4 release.
-
             daily_notes = {
                 folder = "daily",
                 date_format = "%Y%m%d",
                 template = "daily-template.md",
             },
+
+            legacy_commands = false, -- suppress warnings until v4 release.
+            link = { style = "markdown" },
 
             templates = {
                 subdir = "templates",
