@@ -97,7 +97,6 @@
       nix-init
       nix-update
       nixfmt
-      nodePackages.svgo
       nodejs_24
       nomino
       nurl
@@ -126,6 +125,7 @@
       starship
       stylua
       svelte-language-server
+      svgo
       taplo
       tealdeer
       tesseract
