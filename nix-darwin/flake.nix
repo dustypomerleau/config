@@ -37,7 +37,8 @@
     };
 
     jj-starship.url = "github:dmmulroy/jj-starship";
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:dustypomerleau/nixpkgs/dev"; # for testing PRs
+    # nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
