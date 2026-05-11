@@ -14,7 +14,10 @@
     # if you want to install HEAD or pass other arguments, you can pass a derivation instead of just a string
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
-    brews = [ "postgresql@18" ];
+    brews = [
+      "ocrmypdf"
+      "postgresql@18"
+    ];
 
     # Prefer installing Rust packages via nixpkgs if possible.
     # cargoPackages = [ ];
