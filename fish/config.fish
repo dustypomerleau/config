@@ -233,9 +233,9 @@ abbr --add sed "sed -E"
 abbr --add so "source ~/.config/fish/config.fish"
 
 abbr --add sup "\
-pnpm update -g \
-&& fisher update \
+fisher update \
 && sudo softwareupdate -aiR"
+# pnpm update -g \
 # && cargo install-update -a \
 # && rustup update \
 
