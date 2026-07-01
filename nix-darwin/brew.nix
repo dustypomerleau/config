@@ -40,12 +40,14 @@
       "ghostty"
       "google-chrome"
       "google-drive"
+      "homerow"
       "inkscape"
       "insomnia"
       "karabiner-elements" # pkgs.karabiner-elements is broken
       "mactex-no-gui"
       "obsidian"
       "omnifocus"
+      "openvpn-connect"
       "papers"
       "pdf-expert"
       "podman-desktop"
@@ -64,7 +66,7 @@
         greedy = true;
       }
 
-      # TODO: not available from brew: exodus, homerow, openVPN connect
+      # TODO: not available from brew: exodus
     ];
 
     caskArgs.require_sha = true;
