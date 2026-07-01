@@ -108,7 +108,6 @@
       pipe-rename
       pkg-config
       pnpm
-      podman
       pom
       postgres-language-server
       prettypst
