@@ -51,6 +51,7 @@
       cargo-feature
       cargo-generate
       cargo-insta
+      cargo-leptos
       cargo-make
       cargo-nextest
       cargo-outdated
@@ -84,6 +85,7 @@
       jujutsu
       kind
       kubectl
+      leptosfmt
       libressl
       lua-language-server
       luajit
