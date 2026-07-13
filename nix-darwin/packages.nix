@@ -57,7 +57,6 @@
       cargo-outdated
       cargo-semver-checks
       cargo-update
-      cargo-watch
       clang-tools
       claude-code
       cmake
