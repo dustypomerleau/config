@@ -34,6 +34,7 @@
     systemPackages = with pkgs; [
       # fishPlugins.colored-man-pages # don't duplicate this
       # neovim-nightly # use stable
+      # ocrmypdf # build failure
       _1password-cli # unfree
       any-nix-shell # allows fish in nix-shell
       asciidoctor
@@ -101,7 +102,6 @@
       nodejs_24
       nomino
       nurl
-      # ocrmypdf # build failure
       opentofu
       ouch
       pandoc
@@ -126,7 +126,6 @@
       stylua
       svelte-language-server
       svgo
-      taplo
       tealdeer
       tesseract
       tex-fmt
@@ -137,6 +136,7 @@
       tmuxp # docs: https://tmuxp.git-pull.com/
       tofu-ls
       tokei
+      tombi
       trash-cli # trash goes to ~/.local/share/Trash/
       tree-sitter
       ty

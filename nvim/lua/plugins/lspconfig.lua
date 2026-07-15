@@ -155,20 +155,11 @@ return {
                 { capabilities = capabilities, settings = { exportPdf = "onSave" } }
             )
 
+            vim.lsp.enable("tombi")
+            vim.lsp.config("tombi", { capabilities = capabilities })
+
             vim.lsp.enable("ty")
             vim.lsp.config("ty", { capabilities = capabilities })
-
-            local util = require("lspconfig.util")
-            vim.lsp.enable("taplo")
-            vim.lsp.config("taplo", {
-                capabilities = capabilities,
-                cmd = { "taplo", "lsp", "stdio" },
-                filetypes = { "toml" },
-                root_dir = function(fname)
-                    return util.root_pattern("*.toml")(fname) or util.find_git_ancestor(fname)
-                end,
-                single_file_support = true,
-            })
 
             -- enable inlay hints on attach if the LSP supports them
             vim.api.nvim_create_autocmd("LspAttach", {
