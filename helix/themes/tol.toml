@@ -13,14 +13,14 @@
 "type.enum.variant" = { fg = "foreground", modifiers = ["italic"] }
 "variable" = { fg = "foreground" }
 "variable.builtin" = { fg = "cyan", modifiers = ["italic"] }
-"variable.parameter" = { fg ="orange", modifiers = ["italic"] }
+"variable.parameter" = { fg = "orange", modifiers = ["italic"] }
 
 "diff.plus" = { fg = "green" }
 "diff.delta" = { fg = "orange" }
 "diff.minus" = { fg = "red" }
 
 "ui.background" = { fg = "foreground", bg = "background" }
-"ui.cursor" =  { fg = "background", bg = "orange", modifiers = ["dim"] }
+"ui.cursor" = { fg = "background", bg = "orange", modifiers = ["dim"] }
 "ui.cursor.match" = { fg = "green", modifiers = ["underlined"] }
 "ui.cursor.primary" = { fg = "background", bg = "cyan", modifiers = ["dim"] }
 "ui.cursorline.primary" = { bg = "background_dark" }
@@ -41,7 +41,7 @@
 "ui.text.focus" = { fg = "cyan" }
 "ui.window" = { fg = "foreground" }
 "ui.virtual.whitespace" = { fg = "comment" }
-"ui.virtual.ruler" = { bg = "background_dark"}
+"ui.virtual.ruler" = { bg = "background_dark" }
 
 "error" = { fg = "red" }
 "warning" = { fg = "cyan" }

@@ -1,3 +1,5 @@
+# tombi: format.rules.table-keys-order = "ascending"
+
 call_parentheses = "Always"
 collapse_simple_statement = "Always"
 column_width = 100

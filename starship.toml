@@ -1,4 +1,4 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 
 format = """
 $directory\
@@ -26,56 +26,56 @@ $character
 # of the percentage text along with the symbol.
 [battery]
 format = "$symbol "
-unknown_symbol = '[󰂑 --- ](#f5c68f)'
+unknown_symbol = "[󰂑 --- ](#f5c68f)"
 
 [[battery.display]]
-charging_symbol = '[󰂅 $percentage ](#96c065)'
-discharging_symbol = '[󰁹 $percentage ](#5ebdea)'
+charging_symbol = "[󰂅 $percentage ](#96c065)"
+discharging_symbol = "[󰁹 $percentage ](#5ebdea)"
 threshold = 100
 
 [[battery.display]]
-charging_symbol = '[󰂋 $percentage ](#96c065)'
-discharging_symbol = '[󰂂 $percentage ](#5ebdea)'
+charging_symbol = "[󰂋 $percentage ](#96c065)"
+discharging_symbol = "[󰂂 $percentage ](#5ebdea)"
 threshold = 90
 
 [[battery.display]]
-charging_symbol = '[󰂊 $percentage ](#96c065)'
-discharging_symbol = '[󰂁 $percentage ](#5ebdea)'
+charging_symbol = "[󰂊 $percentage ](#96c065)"
+discharging_symbol = "[󰂁 $percentage ](#5ebdea)"
 threshold = 80
 
 [[battery.display]]
-charging_symbol = '[󰢞 $percentage ](#96c065)'
-discharging_symbol = '[󰂀 $percentage ](#5ebdea)'
+charging_symbol = "[󰢞 $percentage ](#96c065)"
+discharging_symbol = "[󰂀 $percentage ](#5ebdea)"
 threshold = 70
 
 [[battery.display]]
-charging_symbol = '[󰂉 $percentage ](#96c065)'
+charging_symbol = "[󰂉 $percentage ](#96c065)"
 discharging_symbol = "[󰁿 $percentage ](#5ebdea)"
 threshold = 60
 
 [[battery.display]]
-charging_symbol = '[󰢝 $percentage ](#96c065)'
-discharging_symbol = '[󰁾 $percentage ](#5ebdea)'
+charging_symbol = "[󰢝 $percentage ](#96c065)"
+discharging_symbol = "[󰁾 $percentage ](#5ebdea)"
 threshold = 50
 
 [[battery.display]]
-charging_symbol = '[󰂈 $percentage ](#96c065)'
-discharging_symbol = '[󰁽 $percentage ](#5ebdea)'
+charging_symbol = "[󰂈 $percentage ](#96c065)"
+discharging_symbol = "[󰁽 $percentage ](#5ebdea)"
 threshold = 40
 
 [[battery.display]]
-charging_symbol = '[󰂇 $percentage ](#96c065)'
-discharging_symbol = '[󰁼 $percentage ](#5ebdea)'
+charging_symbol = "[󰂇 $percentage ](#96c065)"
+discharging_symbol = "[󰁼 $percentage ](#5ebdea)"
 threshold = 30
 
 [[battery.display]]
-charging_symbol = '[󰂆 $percentage ](#96c065)'
-discharging_symbol = '[󰁻 $percentage ](#f5c68f)'
+charging_symbol = "[󰂆 $percentage ](#96c065)"
+discharging_symbol = "[󰁻 $percentage ](#f5c68f)"
 threshold = 20
 
 [[battery.display]]
-charging_symbol = '[󰢜 $percentage ](#96c065)'
-discharging_symbol = '[󰁺 $percentage ](#f46a80)'
+charging_symbol = "[󰢜 $percentage ](#96c065)"
+discharging_symbol = "[󰁺 $percentage ](#f46a80)"
 threshold = 10
 
 [custom.jj]
@@ -87,7 +87,7 @@ when = "jj-starship detect"
 symbol = " "
 
 [lua]
-format = '[$symbol $version  ](#7e818b)'
+format = "[$symbol $version  ](#7e818b)"
 symbol = " "
 
 [nix_shell]
@@ -95,26 +95,26 @@ format = '[$symbol $name \($state\)  ]($style)'
 symbol = " "
 
 [nodejs]
-format = '[$symbol $version  ](#7e818b)'
+format = "[$symbol $version  ](#7e818b)"
 symbol = " "
 
 [package]
-format = '[$symbol $version  ](#7e818b)'
+format = "[$symbol $version  ](#7e818b)"
 symbol = " "
 
 [python]
-format = '[$symbol $version  ](#7e818b)'
+format = "[$symbol $version  ](#7e818b)"
 symbol = "󰌠 "
 
 [rust]
-format = '[$symbol $version  ](#7e818b)'
+format = "[$symbol $version  ](#7e818b)"
 symbol = " "
 
 [sudo]
 disabled = false
-format = '[$symbol](#7e818b)'
-symbol = ' '
+format = "[$symbol](#7e818b)"
+symbol = " "
 
 [time]
 disabled = false
-format = '[$time ](#7e818b)'
+format = "[$time ](#7e818b)"
