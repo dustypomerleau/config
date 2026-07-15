@@ -24,7 +24,7 @@ key("n", "<leader>s", "<cmd>w<cr>", nr)
 key("n", "<leader>w", "<cmd>q<cr>", nr)
 key("n", "<localleader>X", "<cmd>%bd<cr>", nr)
 key("n", "<localleader>i", "<cmd>Inspect<cr>", nr)
-key("n", "<localleader>l", ":LspInfo<cr>", nrs)
+key("n", "<localleader>l", "<cmd>checkhealth vim.lsp<cr>", nrs)
 key("n", "<localleader>m", [[:let @+ = expand("%:p")<cr>]], nrs) -- yank current file path to the system clipboard
 key("n", "<localleader>p", "<cmd>pwd<cr>", nr)
 key("n", "<localleader>sa", "<cmd>lua vim.lsp.buf.code_action()<cr>", nrs)
