@@ -226,6 +226,7 @@ abbr --add pu "pnpm update"
 abbr --add pug "pnpm update -g"
 abbr --add pui "pnpm update -i"
 abbr --add pul "pnpm update --latest" # ignores package.json and fetches latest
+abbr --add puli "pnpm update --latest --interactive"
 abbr --add px "pnpm dlx" # equivalent to npx
 abbr --add renamer "renamer -e nvim"
 abbr --add rm "uutils-rm -iv"
