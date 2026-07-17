@@ -1,9 +1,7 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
 # full config options are documented at
 # https://github.com/martinvonz/jj/blob/main/docs/config.md
-
-[user]
-email = "dustypomerleau@users.noreply.github.com"
-name = "Dusty Pomerleau"
 
 # available options are listed at
 # https://github.com/martinvonz/jj/blob/main/cli/src/config/colors.toml
@@ -33,13 +31,13 @@ name = "Dusty Pomerleau"
 "working_copy timestamp" = "blue"
 
 [git]
-auto-local-bookmark = false
-
-[templates]
-git-push-bookmark = "change_id.short()"
+track-default-bookmark-on-clone = false
 
 [template-aliases]
 "format_short_id(id)" = "id.shortest()"
+
+[templates]
+git-push-bookmark = "change_id.short()"
 
 [ui]
 diff-editor = ":builtin"
@@ -47,3 +45,7 @@ diff-formatter = ":git"
 editor = "nvim"
 merge-editor = "vscode"
 pager = "delta"
+
+[user]
+email = "dustypomerleau@users.noreply.github.com"
+name = "Dusty Pomerleau"
