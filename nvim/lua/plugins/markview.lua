@@ -1,7 +1,7 @@
 return {
     {
         "OXY2DEV/markview.nvim",
-        version = "*",
+        branch = "main",
 
         dependencies = {
             "nvim-treesitter/nvim-treesitter",

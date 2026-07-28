@@ -1,7 +1,7 @@
 return {
     {
         "folke/trouble.nvim",
-        version = "*",
+        branch = "main",
         event = "VeryLazy",
 
         opts = {

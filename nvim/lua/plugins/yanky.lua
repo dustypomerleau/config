@@ -1,7 +1,7 @@
 return {
     {
         "gbprod/yanky.nvim",
-        version = false,
+        branch = "main",
         lazy = false,
 
         config = function()

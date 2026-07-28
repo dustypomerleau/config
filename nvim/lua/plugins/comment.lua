@@ -1,7 +1,7 @@
 return {
     {
         "numtostr/comment.nvim",
-        version = false,
+        branch = "master",
         event = "BufEnter",
 
         config = function()

@@ -29,7 +29,7 @@ end
 return {
     {
         "nvim-telescope/telescope.nvim",
-        version = "*",
+        branch = "master",
 
         config = function()
             require("telescope").setup({

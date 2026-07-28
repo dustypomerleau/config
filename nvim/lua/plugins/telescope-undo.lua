@@ -1,7 +1,7 @@
 return {
     {
         "debugloop/telescope-undo.nvim",
-        version = false,
+        branch = "main",
 
         dependencies = {
             {

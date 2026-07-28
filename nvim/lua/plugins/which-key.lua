@@ -1,8 +1,10 @@
 return {
     {
         "folke/which-key.nvim",
+        branch = "main",
         event = "VeryLazy",
         opts = {},
+
         keys = {
             {
                 "<leader>?",

@@ -1,7 +1,7 @@
 return {
     {
         "arsham/indent-tools.nvim",
-        version = "*",
+        branch = "master",
 
         dependencies = {
             "arsham/arshlib.nvim",

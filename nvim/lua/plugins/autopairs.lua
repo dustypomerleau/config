@@ -1,6 +1,7 @@
 return {
     {
         "windwp/nvim-autopairs",
+        branch = "master",
         event = "InsertEnter",
         config = function()
             local npairs = require("nvim-autopairs")

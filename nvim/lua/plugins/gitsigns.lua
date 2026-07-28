@@ -13,7 +13,7 @@ end
 return {
     {
         "lewis6991/gitsigns.nvim",
-        version = "*",
+        branch = "main",
         event = "VeryLazy",
         config = true,
 

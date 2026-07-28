@@ -15,7 +15,7 @@
 return {
     {
         "nvim-pack/nvim-spectre",
-        version = false,
+        branch = "master",
         dependencies = { "nvim-lua/plenary.nvim" },
 
         config = function()

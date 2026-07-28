@@ -1,7 +1,7 @@
 return {
     {
         "yioneko/nvim-vtsls",
-        version = false,
+        branch = "main",
 
         config = function()
             local configs = require("lspconfig.configs")

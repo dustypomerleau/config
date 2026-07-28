@@ -1,7 +1,7 @@
 return {
     {
         "lervag/vimtex",
-        version = false,
+        branch = "master",
         ft = { "tex", "latex" },
 
         config = function()

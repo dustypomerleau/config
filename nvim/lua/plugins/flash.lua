@@ -1,7 +1,7 @@
 return {
     {
         "folke/flash.nvim",
-        version = "*",
+        branch = "main",
         event = "BufEnter",
 
         opts = {

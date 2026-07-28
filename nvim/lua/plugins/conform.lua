@@ -2,7 +2,7 @@
 return {
     {
         "stevearc/conform.nvim",
-        version = false,
+        branch = "master",
         -- enabled = false, -- toggle if you need to turn formatting off for some reason
         event = "VeryLazy",
 

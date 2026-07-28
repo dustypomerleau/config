@@ -1,7 +1,7 @@
 return {
     {
         "nvim-lualine/lualine.nvim",
-        version = false,
+        branch = "master",
         lazy = false,
 
         config = function()

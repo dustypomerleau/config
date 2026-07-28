@@ -8,6 +8,7 @@
 return {
     {
         "catgoose/nvim-colorizer.lua",
+        branch = "master",
         version = false,
 
         config = function()
