@@ -1,7 +1,7 @@
 return {
     {
         "hiphish/rainbow-delimiters.nvim",
-        version = "*",
+        branch = "master",
         submodules = false,
         lazy = false,
 
