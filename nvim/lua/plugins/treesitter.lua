@@ -41,7 +41,6 @@ return {
                     "vimdoc",
                     "xml",
                     "yaml",
-                    -- "markdown-inline", -- works if you :TSInstall
                 },
             })
 
