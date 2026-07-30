@@ -3,45 +3,53 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
-        -- note: explicitly setting a branch breaks install at present
+
+        dependencies = {
+            {
+                "nvim-treesitter/nvim-treesitter-textobjects",
+                -- main branch is incompatible with indent-tools due to a changed function name
+                branch = "main",
+                event = "VeryLazy",
+            },
+        },
+
+        branch = "main",
         lazy = false,
         build = ":TSUpdate",
 
         config = function()
-            require("nvim-treesitter").setup({
-                ensure_installed = {
-                    "bash",
-                    "c",
-                    "css",
-                    "dockerfile",
-                    "editorconfig",
-                    "fish",
-                    "git_config",
-                    "gitignore",
-                    "hjson",
-                    "html",
-                    "javascript",
-                    "json",
-                    "jsonc",
-                    "latex",
-                    "lua",
-                    "markdown",
-                    "nix",
-                    "python",
-                    "rust",
-                    "sql",
-                    "svelte",
-                    "terraform",
-                    "tmux",
-                    "toml",
-                    "typescript",
-                    "typst",
-                    "vim",
-                    "vimdoc",
-                    "xml",
-                    "yaml",
-                },
+            require("nvim-treesitter").install({
+                "bash",
+                "c",
+                "css",
+                "dockerfile",
+                "editorconfig",
+                "fish",
+                "git_config",
+                "gitignore",
+                "hjson",
+                "html",
+                "javascript",
+                "json",
+                -- "jsonc", -- ?unsupported by update
+                "latex",
+                "lua",
+                "markdown",
+                "markdown_inline",
+                "nix",
+                "python",
+                "rust",
+                "sql",
+                "svelte",
+                "terraform",
+                -- "tmux", -- ?unsupported by update
+                "toml",
+                "typescript",
+                "typst",
+                "vim",
+                "vimdoc",
+                "xml",
+                "yaml",
             })
 
             vim.treesitter.language.register("xml", "plist")

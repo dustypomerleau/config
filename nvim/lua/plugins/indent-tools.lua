@@ -1,6 +1,7 @@
 return {
     {
         "arsham/indent-tools.nvim",
+        enabled = false,
         branch = "master",
 
         dependencies = {
