@@ -36,6 +36,7 @@
       # neovim-nightly # use stable
       # ocrmypdf # build failure
       _1password-cli # unfree
+      antigravity-cli
       any-nix-shell # allows fish in nix-shell
       asciidoctor
       awscli2
@@ -73,7 +74,6 @@
       fish
       fzf
       gawk
-      gemini-cli
       gh
       git
       git-filter-repo
