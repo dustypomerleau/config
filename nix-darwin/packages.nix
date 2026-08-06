@@ -94,7 +94,7 @@
       markdown-oxide
       mas
       neovim
-      netlify-cli
+      # netlify-cli # outdated, use brew
       nil
       nix-init
       nix-update

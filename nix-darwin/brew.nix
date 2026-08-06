@@ -15,6 +15,7 @@
     # { name = "neovim"; args = [ "--HEAD" ] }
     # passing only a string is shorthand for { name = ""; }
     brews = [
+      "netlify-cli"
       "ocrmypdf"
       "postgresql@18"
     ];
