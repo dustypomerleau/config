@@ -1,7 +1,7 @@
 return {
     {
         "echasnovski/mini.nvim",
-        version = "*",
+        branch = "main",
         event = "VeryLazy",
 
         config = function()
