@@ -12,12 +12,20 @@ return {
                 windows = { preview = true, width_preview = 100 },
             })
 
-            -- place the notifications window at the bottom right
-            local win_config = function()
-                local has_statusline = vim.o.laststatus > 0
-                local bottom_space = vim.o.cmdheight + (has_statusline and 1 or 0)
-                return { anchor = "SE", col = vim.o.columns, row = vim.o.lines - bottom_space }
-            end
+            require("mini.indentscope").setup({
+                -- We only want this module for its text objects, so we push it to the background
+                -- with priority 0 and use an empty string for the symbol.
+                draw = { delay = 0, animation = function() return 0 end, priority = 0 },
+                symbol = "",
+
+                -- -- Textobjects
+                -- object_scope = 'ii',
+                -- object_scope_with_border = 'ai',
+                --
+                -- -- Motions (jump to respective border line; if not present - body line)
+                -- goto_top = '[i',
+                -- goto_bottom = ']i',
+            })
 
             -- avoid gx, as this conflicts with gx plugin for following links
             -- keep defaults for evaluate (g=), multiply (gm), replace with register (gr), sort (gs)
@@ -26,6 +34,13 @@ return {
             require("mini.operators").setup({ exchange = { prefix = "ga" } })
 
             -- using nvim-surround rather than mini.surround due to binding conflicts with flash in visual mode
+
+            -- place the notifications window at the bottom right
+            local win_config = function()
+                local has_statusline = vim.o.laststatus > 0
+                local bottom_space = vim.o.cmdheight + (has_statusline and 1 or 0)
+                return { anchor = "SE", col = vim.o.columns, row = vim.o.lines - bottom_space }
+            end
         end,
 
         keys = {
