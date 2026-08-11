@@ -8,7 +8,9 @@ return {
             require("mini.ai").setup({})
 
             require("mini.files").setup({
-                options = { permanent_delete = false }, -- trash location is ~/.local/share/nvim/mini.files/trash/
+                -- lsp_timout is a workaround for https://github.com/nvim-mini/mini.nvim/issues/2511
+                -- trash location is ~/.local/share/nvim/mini.files/trash/
+                options = { lsp_timout = 0, permanent_delete = false },
                 windows = { preview = true, width_preview = 100 },
             })
 
