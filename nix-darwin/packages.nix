@@ -132,8 +132,8 @@
       texlab
       timer
       tinymist
-      # tmux # build failure
-      # tmuxp # build failure due to tmux build failure # docs: https://tmuxp.git-pull.com/
+      tmux
+      tmuxp
       tofu-ls
       tokei
       tombi
