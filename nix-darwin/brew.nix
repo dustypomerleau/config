@@ -61,16 +61,17 @@
       "visual-studio-code"
       "vivaldi"
       "vlc"
-
+      "zwift"
       {
         name = "microsoft-office";
         greedy = true;
       }
-
       # TODO: not available from brew: exodus
     ];
 
-    caskArgs.require_sha = true;
+    # `false` is the default here. In your case, the only app that doesn't have a checksum
+    # is zwift, so installing zwift manually would allow you to set this to `true`.
+    caskArgs.require_sha = false;
 
     masApps = {
       "Apple Configurator" = 1037126344;
