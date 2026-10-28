@@ -99,7 +99,7 @@
       nix-init
       nix-update
       nixfmt
-      nodejs_24
+      nodejs_26
       nomino
       nurl
       opentofu
