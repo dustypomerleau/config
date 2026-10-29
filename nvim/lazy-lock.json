@@ -5,7 +5,7 @@
   "crates.nvim": { "branch": "main", "commit": "afcd1cc3eeceb5783676fc8464389b9216a29d05" },
   "flash.nvim": { "branch": "main", "commit": "5f0f270fdc7c5b0c21d903ee85b9cb06f2ac636a" },
   "friendly-snippets": { "branch": "main", "commit": "b2ea5c41a150ba72fb656eedb4ed0a86d138d945" },
-  "gitsigns.nvim": { "branch": "main", "commit": "d4854fa9a94b5c8b37dd209fb4a19e98e764186f" },
+  "gitsigns.nvim": { "branch": "main", "commit": "1e9d0fbfe7ff848bc402d2c2e2854fb4eff2dce7" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "lualine.nvim": { "branch": "master", "commit": "221ce6b2d999187044529f49da6554a92f740a96" },
   "markview.nvim": { "branch": "main", "commit": "ecc5a8867daa1856f8bcc5fdbceca8f5a5ce5f5d" },
@@ -30,7 +30,7 @@
   "tol.nvim": { "branch": "dev", "commit": "512948e213a28e467f72c7abd3be037fb2480c20" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
   "typst-preview.nvim": { "branch": "master", "commit": "1c2e19486397be1c580b560fc50ee36abe329c46" },
-  "vimtex": { "branch": "master", "commit": "02eee260766d031185449c9600f03b933fa0357c" },
+  "vimtex": { "branch": "master", "commit": "8459d862eff5eabc3bf5d2601099aa0efb2f2496" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "yanky.nvim": { "branch": "main", "commit": "adcabd8512bead30184916fa9277e73c021ef099" }
 }
