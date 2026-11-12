@@ -28,8 +28,10 @@ bind \ch _fzf_search_history
 # setting -x will ensure they are exported
 # setting -U makes them universal (stored on disk, persisted after reboot)
 # setting -g makes them global, but specific to the current session 
-set -Ux EDITOR nvim
 set -Ux BAT_THEME Dracula
+set -Ux EDITOR nvim
+# setting the OSFONTDIR environment variable explicitly is necessary for lualatex to find font files installed by Nix in `Nix Fonts`.
+set -Ux OSFONTDIR "~/Library/Fonts:/Library/Fonts:/System/Library/Fonts:/Library/Fonts/Nix Fonts/"
 
 # fish prompt
 set __fish_git_prompt_char_stateseparator " "
