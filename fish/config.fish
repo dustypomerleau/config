@@ -249,7 +249,7 @@ abbr --add tm "tmuxp load session.yaml"
 abbr --add tn "tmux new -s"
 abbr --add ts "tmux attach -t" # s for 'session'
 abbr --add tx "tmux kill-session -t" # s for 'session'
-abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed"
+abbr --add tua "sudo tlmgr update --self --all --reinstall-forcibly-removed" # update all latex and tex packages
 abbr --add x extract
 abbr --add xargs uutils-xargs
 abbr --add yz yazi
