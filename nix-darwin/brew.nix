@@ -36,7 +36,7 @@
       "discord"
       "dropbox"
       "element"
-      "figma"
+      # "figma"
       "firefox"
       "ghostty"
       "google-chrome"
